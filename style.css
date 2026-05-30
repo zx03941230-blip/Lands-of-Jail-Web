@@ -753,3 +753,62 @@ footer{
         display:none;              /* Chrome / Edge / Safari */
     }
 }
+
+/* =========================================
+   Mobile Accordion + Back To Top
+========================================= */
+
+.back-to-top{
+    display:none;
+}
+
+@media(max-width:768px){
+
+    .modal-section h3{
+        cursor:pointer;
+        position:relative;
+        padding-right:28px;
+        user-select:none;
+    }
+
+    .modal-section h3::after{
+        content:"▼";
+        position:absolute;
+        right:0;
+        top:50%;
+        transform:translateY(-50%);
+        font-size:13px;
+        color:#ffb347;
+        transition:.2s;
+    }
+
+    .modal-section.collapsed h3::after{
+        transform:translateY(-50%) rotate(-90deg);
+    }
+
+    .modal-section.collapsed > :not(h3){
+        display:none;
+    }
+
+    .back-to-top{
+        display:block;
+        position:fixed;
+        right:14px;
+        bottom:18px;
+        z-index:9999;
+        width:42px;
+        height:42px;
+        border-radius:999px;
+        border:1px solid rgba(255,179,71,.45);
+        background:linear-gradient(135deg,#ff9900,#ffc15a);
+        color:#111;
+        font-size:22px;
+        font-weight:900;
+        box-shadow:0 8px 24px rgba(0,0,0,.45);
+        cursor:pointer;
+    }
+
+    .back-to-top:active{
+        transform:scale(.94);
+    }
+}

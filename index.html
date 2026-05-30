@@ -125,6 +125,37 @@
         renderSkillList("modalArrestSkills", hero.arrestSkills);
         renderSkillList("modalWarSkills", hero.warSkills);
         renderEquipment("modalEquipment", hero.exclusiveEquipment);
+        
+        initMobileSections();
+    }
+    
+    function initMobileSections() {
+        const isMobile = window.innerWidth <= 768;
+        const sections = document.querySelectorAll(".modal-section");
+
+        sections.forEach((section, index) => {
+            const title = section.querySelector("h3");
+
+            if (!title) return;
+
+            title.onclick = null;
+
+            if (!isMobile) {
+                section.classList.remove("collapsed");
+                return;
+            }
+
+            title.onclick = () => {
+                section.classList.toggle("collapsed");
+            };
+
+            // 手機預設：能力數值、全域加成展開，其餘收合
+            if (index <= 1) {
+                section.classList.remove("collapsed");
+            } else {
+                section.classList.add("collapsed");
+            }
+        });
     }
     
     function renderEquipment(targetId, equipment) {
@@ -184,6 +215,16 @@
 
     function closeHeroModal() {
         document.getElementById("heroModal").classList.remove("active");
+    }
+    
+    function scrollModalTop() {
+        const modalCard = document.querySelector(".modal-card");
+        if (modalCard) {
+            modalCard.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
     }
 
     function renderSkillList(targetId, skills) {
@@ -368,6 +409,8 @@
     </div>
   </div>
 </div>
+
+<button id="backToTop" class="back-to-top" onclick="scrollModalTop()">↑</button>
 
 </body>
 </html>
