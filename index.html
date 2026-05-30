@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lands of Jail Hero Guide</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Lands of Jail</p>
+      <h1>英雄攻略圖鑑</h1>
+      <p class="subtitle">Hero Guide Database｜搜尋、分類、快速瀏覽</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <div class="search-wrap">
+        <label for="searchInput">搜尋英雄</label>
+        <input id="searchInput" type="text" placeholder="輸入中文名、英文名、稀有度..." />
+      </div>
+
+      <div class="filter-wrap">
+        <label for="rarityFilter">稀有度篩選</label>
+        <select id="rarityFilter">
+          <option value="ALL">全部</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="summary">
+      <span id="heroCount">0</span>
+      <span>位英雄</span>
+    </section>
+
+    <section id="heroGrid" class="hero-grid"></section>
+  </main>
+
+  <footer>
+    Developed by Weber Chang
+  </footer>
+
+  <script src="heroes.js"></script>
+  <script>
+    const heroGrid = document.getElementById('heroGrid');
+    const searchInput = document.getElementById('searchInput');
+    const rarityFilter = document.getElementById('rarityFilter');
+    const heroCount = document.getElementById('heroCount');
+
+    const rarityOrder = ['R', 'SR', 'SSR S-1', 'SSR S-2', 'SSR S-3', 'SSR S-4', 'SSR S-5', 'SSR S-6'];
+
+    function imagePath(hero) {
+      return `images/heroes/${hero.image}`;
+    }
+
+    function buildRarityFilter() {
+      const rarities = [...new Set(HEROES.map(h => h.rarity))]
+        .sort((a, b) => rarityOrder.indexOf(a) - rarityOrder.indexOf(b));
+
+      rarities.forEach(rarity => {
+        const option = document.createElement('option');
+        option.value = rarity;
+        option.textContent = rarity;
+        rarityFilter.appendChild(option);
+      });
+    }
+
+    function renderHeroes() {
+      const keyword = searchInput.value.trim().toLowerCase();
+      const selectedRarity = rarityFilter.value;
+
+      const filtered = HEROES.filter(hero => {
+        const text = `${hero.rarity} ${hero.nameZh} ${hero.nameEn}`.toLowerCase();
+        const matchKeyword = !keyword || text.includes(keyword);
+        const matchRarity = selectedRarity === 'ALL' || hero.rarity === selectedRarity;
+        return matchKeyword && matchRarity;
+      });
+
+      heroCount.textContent = filtered.length;
+      heroGrid.innerHTML = '';
+
+      filtered.forEach(hero => {
+        const card = document.createElement('article');
+        card.className = 'hero-card';
+        card.innerHTML = `
+          <div class="image-box">
+            <img src="${imagePath(hero)}" alt="${hero.nameZh}" loading="lazy" onerror="this.parentElement.classList.add('missing'); this.remove();" />
+          </div>
+          <div class="card-body">
+            <span class="rarity ${hero.rarity.replaceAll(' ', '_')}">${hero.rarity}</span>
+            <h2>${hero.nameZh}</h2>
+            <p>${hero.nameEn || '&nbsp;'}</p>
+          </div>
+        `;
+        
+        // 點擊開啟 Modal
+        card.addEventListener("click", () => openHeroModal(hero));
+        
+        heroGrid.appendChild(card);
+      });
+    }
+
+    function openHeroModal(hero) {
+        document.getElementById("heroModal").classList.add("active");
+
+        document.getElementById("modalHeroImage").src = `images/heroes/${hero.image}`;
+        document.getElementById("modalHeroImage").alt = hero.displayName || hero.nameZh;
+
+        document.getElementById("modalRarity").textContent = hero.rarity || "-";
+        document.getElementById("modalNameZh").textContent = hero.nameZh || "-";
+        document.getElementById("modalNameEn").textContent = hero.nameEn || "";
+        document.getElementById("modalMeta").textContent =
+            `${hero.role || "-"} ｜ ${hero.type || "-"} ｜ ${hero.obtainSource || "-"}`;
+
+        document.getElementById("modalStats").innerHTML = `
+            <div class="stat-item"><div class="stat-label">緝捕攻擊</div><div class="stat-value">${formatNumber(hero.stats?.arrestAtk)}</div></div>
+            <div class="stat-item"><div class="stat-label">緝捕防禦</div><div class="stat-value">${formatNumber(hero.stats?.arrestDef)}</div></div>
+            <div class="stat-item"><div class="stat-label">緝捕生命</div><div class="stat-value">${formatNumber(hero.stats?.arrestHp)}</div></div>
+            <div class="stat-item"><div class="stat-label">戰爭攻防</div><div class="stat-value">${formatPercent(hero.stats?.warAtkDef)}</div></div>
+        `;
+
+        renderSkillList("modalGlobalBonus", [hero.globalBonus]);
+        renderSkillList("modalArrestSkills", hero.arrestSkills);
+        renderSkillList("modalWarSkills", hero.warSkills);
+        renderEquipment("modalEquipment", hero.exclusiveEquipment);
+    }
+    
+    function renderEquipment(targetId, equipment) {
+        const target = document.getElementById(targetId);
+
+        if (!equipment || !equipment.name || equipment.name === "-") {
+            target.innerHTML = `<p class="empty-text">無資料</p>`;
+            return;
+        }
+
+        let html = "";
+
+        html += createSkillHTML({
+            name: equipment.name,
+            description: "專屬裝備",
+            image: equipment.image
+        });
+
+        if (equipment.arrestSkill && equipment.arrestSkill.name && equipment.arrestSkill.name !== "-") {
+            html += createSkillHTML(equipment.arrestSkill);
+        }
+
+        if (equipment.warSkill && equipment.warSkill.name && equipment.warSkill.name !== "-") {
+            html += createSkillHTML(equipment.warSkill);
+        }
+
+        target.innerHTML = html;
+    }
+    
+    function formatNumber(value) {
+        if (value === undefined || value === null || value === "" || value === "-") {
+            return "-";
+        }
+
+        const num = Number(value);
+
+        if (Number.isNaN(num)) {
+            return value;
+        }
+
+        return num.toLocaleString("en-US");
+    }
+
+    function formatPercent(value) {
+        if (value === undefined || value === null || value === "" || value === "-") {
+            return "-";
+        }
+
+        const num = Number(value);
+
+        if (Number.isNaN(num)) {
+            return value;
+        }
+
+        return `${(num * 100).toFixed(2)}%`;
+    }
+
+    function closeHeroModal() {
+        document.getElementById("heroModal").classList.remove("active");
+    }
+
+    function renderSkillList(targetId, skills) {
+        const target = document.getElementById(targetId);
+
+        if (!skills || skills.length === 0) {
+            target.innerHTML = `<p class="empty-text">無資料</p>`;
+            return;
+        }
+
+        target.innerHTML = skills
+            .filter(skill => skill.name && skill.name !== "-")
+            .map(skill => createSkillHTML(skill))
+            .join("");
+
+        if (target.innerHTML.trim() === "") {
+            target.innerHTML = `<p class="empty-text">無資料</p>`;
+        }
+    }
+
+    function renderSingleSkill(targetId, item) {
+        const target = document.getElementById(targetId);
+
+        if (!item || !item.name || item.name === "-") {
+            target.innerHTML = `<p class="empty-text">無資料</p>`;
+            return;
+        }
+
+        target.innerHTML = createSkillHTML(item);
+    }
+
+    function createSkillHTML(skill) {
+        const img = skill.image && !skill.image.endsWith("_-.png")
+            ? `images/skills/${skill.image}`
+            : "";
+
+        const hasLevels = skill.template && skill.maxLevel && skill.levels;
+
+        const defaultLv = skill.maxLevel || 1;
+        const desc = hasLevels
+            ? buildSkillDescription(skill, defaultLv)
+            : (skill.description || skill.arrestDescription || skill.warDescription || "-");
+
+        const levelButtons = hasLevels
+            ? createLevelButtons(skill.maxLevel, defaultLv)
+            : "";
+
+        return `
+            <div class="skill-item">
+                ${
+                    img
+                    ? `<img src="${img}" alt="${skill.name}" onerror="this.style.display='none'">`
+                    : ""
+                }
+
+                <div class="skill-info">
+                    <h4>${skill.name || "-"}</h4>
+
+                    ${levelButtons}
+
+                    <p class="skill-desc"
+                       data-template="${escapeHtml(skill.template || "")}"
+                       data-levels='${JSON.stringify(skill.levels || {})}'>
+                       ${desc}
+                    </p>
+                </div>
+            </div>
+        `;
+    }
+    
+    function createLevelButtons(maxLevel, activeLevel) {
+        let html = `<div class="skill-levels">`;
+
+        for (let i = 1; i <= maxLevel; i++) {
+            html += `
+                <button class="level-btn ${i === activeLevel ? "active" : ""}"
+                        onclick="changeSkillLevel(this, ${i})">
+                    Lv.${i}
+                </button>
+            `;
+        }
+
+        html += `</div>`;
+        return html;
+    }
+
+    function changeSkillLevel(button, level) {
+        const skillItem = button.closest(".skill-item");
+        const descEl = skillItem.querySelector(".skill-desc");
+
+        const template = descEl.dataset.template;
+        const levels = JSON.parse(descEl.dataset.levels || "{}");
+
+        descEl.innerHTML = applySkillTemplate(template, levels[level]);
+
+        skillItem.querySelectorAll(".level-btn").forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+    }
+
+    function buildSkillDescription(skill, level) {
+        return applySkillTemplate(skill.template, skill.levels?.[level]);
+    }
+
+    function applySkillTemplate(template, values) {
+        if (!template || !values) {
+            return "-";
+        }
+
+        return escapeHtml(template)
+            .replaceAll("{A}", `<span class="skill-var">${values.A ?? "-"}</span>`)
+            .replaceAll("{B}", `<span class="skill-var">${values.B ?? "-"}</span>`)
+            .replaceAll("{C}", `<span class="skill-var">${values.C ?? "-"}</span>`);
+    }
+
+    function escapeHtml(text) {
+        return String(text)
+            .replaceAll("&", "&amp;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;");
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+
+        document.getElementById("heroModal").addEventListener("click", function (e) {
+            if (e.target.id === "heroModal") {
+                closeHeroModal();
+            }
+        });
+
+        buildRarityFilter();
+        renderHeroes();
+
+        searchInput.addEventListener('input', renderHeroes);
+        rarityFilter.addEventListener('change', renderHeroes);
+
+    });
+
+  </script>
+
+<!-- Hero Detail Modal -->
+<div id="heroModal" class="modal-overlay">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeHeroModal()">×</button>
+
+    <div class="modal-header">
+      <img id="modalHeroImage" class="modal-hero-img" src="" alt="">
+      <div>
+        <div id="modalRarity" class="modal-rarity"></div>
+        <h2 id="modalNameZh"></h2>
+        <p id="modalNameEn"></p>
+        <p id="modalMeta"></p>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h3>能力數值</h3>
+      <div id="modalStats" class="stat-grid"></div>
+    </div>
+
+    <div class="modal-section">
+      <h3>全域加成</h3>
+      <div id="modalGlobalBonus" class="skill-list"></div>
+    </div>
+
+    <div class="modal-section">
+      <h3>緝捕技能</h3>
+      <div id="modalArrestSkills" class="skill-list"></div>
+    </div>
+
+    <div class="modal-section">
+      <h3>戰爭技能</h3>
+      <div id="modalWarSkills" class="skill-list"></div>
+    </div>
+
+    <div class="modal-section">
+      <h3>專屬裝備</h3>
+      <div id="modalEquipment" class="skill-list"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
