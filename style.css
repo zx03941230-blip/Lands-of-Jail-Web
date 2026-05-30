@@ -617,49 +617,139 @@ footer{
 }
 
 /* =========================================
-   Mobile
+   Mobile Optimization
 ========================================= */
 
 @media(max-width:768px){
 
-    .topbar{
-        padding:32px 5vw;
-    }
-
-    .topbar h1{
-        font-size:32px;
-    }
-
-    .toolbar{
-        grid-template-columns:1fr;
-    }
-
-    .hero-grid{
-        grid-template-columns:
-            repeat(auto-fill,minmax(145px,1fr));
-
-        gap:14px;
-    }
-
-    .card-body h2{
-        font-size:16px;
-    }
-
-    .modal-header{
-        flex-direction:column;
+    .modal-overlay{
+        padding:10px;
         align-items:flex-start;
     }
 
+    .modal-card{
+        width:100%;
+        max-height:96vh;
+        padding:16px;
+        border-radius:18px;
+    }
+
+    .modal-close{
+        top:10px;
+        right:10px;
+        width:34px;
+        height:34px;
+        font-size:22px;
+    }
+
+    .modal-header{
+        flex-direction:row;
+        align-items:center;
+        gap:14px;
+        margin-bottom:18px;
+    }
+
     .modal-hero-img{
-        width:140px;
-        height:140px;
+        width:92px;
+        height:92px;
+        border-radius:16px;
+    }
+
+    .modal-rarity{
+        padding:5px 10px;
+        font-size:12px;
+        margin-bottom:6px;
     }
 
     .modal-header h2{
-        font-size:26px;
+        font-size:22px;
+        line-height:1.3;
     }
 
+    .modal-header p{
+        font-size:13px;
+        line-height:1.45;
+    }
+
+    .modal-section{
+        margin-top:20px;
+    }
+
+    .modal-section h3{
+        font-size:20px;
+        margin-bottom:10px;
+    }
+
+    /* 能力數值改成 2 × 2 */
+    .stat-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .stat-item{
+        padding:12px;
+        border-radius:14px;
+    }
+
+    .stat-label{
+        font-size:12px;
+    }
+
+    .stat-value{
+        font-size:22px;
+    }
+
+    /* 技能卡片手機單欄 */
     .skill-list{
         grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .skill-item{
+        gap:12px;
+        padding:12px;
+        border-radius:16px;
+        align-items:flex-start;
+    }
+
+    .skill-item img{
+        width:58px;
+        height:58px;
+        border-radius:12px;
+    }
+
+    .skill-info h4{
+        font-size:17px;
+        margin-bottom:6px;
+    }
+
+    .skill-info p,
+    .skill-desc{
+        font-size:14px;
+        line-height:1.65;
+    }
+
+    /* Lv 按鈕手機單排，可左右滑 */
+    .skill-levels{
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        gap:6px;
+        margin:6px 0 9px;
+        padding-bottom:2px;
+    }
+
+    .skill-levels{
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        gap:6px;
+        margin:6px 0 9px;
+        padding-bottom:2px;
+
+        scrollbar-width:none;      /* Firefox */
+        -ms-overflow-style:none;   /* IE / Edge Legacy */
+    }
+
+    .skill-levels::-webkit-scrollbar{
+        display:none;              /* Chrome / Edge / Safari */
     }
 }
