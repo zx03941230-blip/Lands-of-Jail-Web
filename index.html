@@ -124,6 +124,11 @@
         </div>
     </section>
 
+    <section class="lang-switch-wrap">
+      <button class="lang-btn active" data-lang="zh" onclick="setLanguage('zh', this)">中文</button>
+      <button class="lang-btn" data-lang="en" onclick="setLanguage('en', this)">English</button>
+    </section>
+
     <section class="view-tabs">
       <button class="view-tab active" data-view="ALL" onclick="setHeroView('ALL', this)">全部英雄</button>
       <button class="view-tab" data-view="FAVORITE" onclick="setHeroView('FAVORITE', this)">★ 收藏英雄</button>
@@ -162,6 +167,7 @@
     let currentHeroId = null;
     let favoriteHeroes = JSON.parse(localStorage.getItem("favoriteHeroes") || "[]");
     let currentHeroView = "ALL";
+    let currentLang = localStorage.getItem("currentLang") || "zh";
     let recentHeroes = JSON.parse(localStorage.getItem("recentHeroes") || "[]");
 
     /* =========================================
@@ -199,7 +205,7 @@
       const selectedType = typeFilter.value;
 
       const filtered = HEROES.filter(hero => {
-        const text = `${hero.rarity} ${hero.nameZh} ${hero.nameEn}`.toLowerCase();
+        const text = `${hero.rarity} ${hero.nameZh} ${hero.nameEn} ${hero.role} ${hero.type}`.toLowerCase();
 
         const heroRoleZh = String(hero.role || "").split(/\n/)[0].trim();
         const heroTypeZh = String(hero.type || "").split(/\n/)[0].trim();
@@ -229,8 +235,8 @@
           </div>
           <div class="card-body">
             <span class="rarity ${hero.rarity.replaceAll(' ', '_')}">${hero.rarity}</span>
-            <h2>${hero.nameZh}</h2>
-            <p>${hero.nameEn || '&nbsp;'}</p>
+            <h2>${getHeroDisplayName(hero)}</h2>
+            <p>${getHeroSubName(hero) || '&nbsp;'}</p>
           </div>
         `;
 
@@ -254,8 +260,8 @@
         document.getElementById("modalHeroImage").alt = hero.displayName || hero.nameZh;
 
         document.getElementById("modalRarity").textContent = hero.rarity || "-";
-        document.getElementById("modalNameZh").textContent = hero.nameZh || "-";
-        document.getElementById("modalNameEn").textContent = hero.nameEn || "";
+        document.getElementById("modalNameZh").textContent = getHeroDisplayName(hero);
+        document.getElementById("modalNameEn").textContent = getHeroSubName(hero);
         document.getElementById("modalMeta").textContent =
             `${hero.role || "-"} ｜ ${hero.type || "-"} ｜ ${hero.obtainSource || "-"}`;
 
@@ -509,7 +515,11 @@
         const defaultLv = skill.maxLevel || 1;
         const desc = hasLevels
             ? buildSkillDescription(skill, defaultLv)
-            : (skill.description || skill.arrestDescription || skill.warDescription || "-");
+            : (
+                isEnglishMode()
+                    ? (skill.descriptionEn || skill.description || skill.arrestDescription || skill.warDescription || "-")
+                    : (skill.description || skill.arrestDescription || skill.warDescription || "-")
+              );
 
         const levelButtons = hasLevels
             ? createLevelButtons(skill.maxLevel, defaultLv)
@@ -524,12 +534,12 @@
                 }
 
                 <div class="skill-info">
-                    <h4>${skill.name || "-"}</h4>
+                    ${getSkillName(skill) ? `<h4>${getSkillName(skill)}</h4>` : ""}
 
                     ${levelButtons}
 
                     <p class="skill-desc"
-                       data-template="${escapeHtml(skill.template || "")}"
+                       data-template="${escapeHtml(getSkillTemplate(skill))}"
                        data-levels='${JSON.stringify(skill.levels || {})}'>
                        ${desc}
                     </p>
@@ -571,7 +581,7 @@
     }
 
     function buildSkillDescription(skill, level) {
-        return applySkillTemplate(skill.template, skill.levels?.[level]);
+        return applySkillTemplate(getSkillTemplate(skill), skill.levels?.[level]);
     }
 
     function applySkillTemplate(template, values) {
@@ -652,7 +662,7 @@
     }
     
     /* =========================================
-       15. App Init
+       15. App Init 初始化語言按鈕
     ========================================= */
 
     window.addEventListener("DOMContentLoaded", () => {
@@ -669,6 +679,11 @@
 
         buildRarityFilter();
         buildExtraFilters();
+        
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+            btn.classList.toggle("active", btn.dataset.lang === currentLang);
+        });
+        
         renderHeroes();
         loadSiteVersion();
         openHeroFromUrl();
@@ -773,6 +788,58 @@
         recentHeroes = recentHeroes.slice(0, 20);
 
         localStorage.setItem("recentHeroes", JSON.stringify(recentHeroes));
+    }
+    
+    /* =========================================
+       19. Language Switch function
+    ========================================= */
+    
+    function setLanguage(lang, button) {
+        currentLang = lang;
+        localStorage.setItem("currentLang", lang);
+
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        renderHeroes();
+
+        if (currentHeroId) {
+            const hero = HEROES.find(h => h.id === currentHeroId);
+            if (hero && document.getElementById("heroModal").classList.contains("active")) {
+                openHeroModal(hero);
+            }
+        }
+    }
+
+    function isEnglishMode() {
+        return currentLang === "en";
+    }
+
+    function getHeroDisplayName(hero) {
+        return isEnglishMode()
+            ? (hero.nameEn || hero.nameZh || "-")
+            : (hero.nameZh || "-");
+    }
+
+    function getHeroSubName(hero) {
+        return isEnglishMode()
+            ? (hero.nameZh || "")
+            : (hero.nameEn || "");
+    }
+
+    function getSkillTemplate(skill) {
+        return isEnglishMode()
+            ? (skill.templateEn || skill.template || "")
+            : (skill.template || "");
+    }
+
+    function getSkillName(skill) {
+        return isEnglishMode()
+            ? ""
+            : (skill.name || "-");
     }
 
   </script>

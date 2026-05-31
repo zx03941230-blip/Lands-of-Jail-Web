@@ -156,6 +156,32 @@ select:focus{
 }
 
 /* =========================================
+   04B. Language Switch | 語言切換
+========================================= */
+
+.lang-switch-wrap{
+    display:flex;
+    gap:10px;
+    margin:0 0 14px;
+}
+
+.lang-btn{
+    border:1px solid rgba(255,255,255,.12);
+    background:#171717;
+    color:#bbb;
+    padding:9px 16px;
+    border-radius:999px;
+    font-weight:800;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.lang-btn.active{
+    background:linear-gradient(90deg,#ff9900,#ffc15a);
+    color:#111;
+}
+
+/* =========================================
    05. Summary
    未來新增：英雄數量、搜尋結果提示放這裡
 ========================================= */
@@ -958,6 +984,20 @@ footer{
     }
 
     .view-tab{
+        flex:1;
+        padding:9px 10px;
+        font-size:13px;
+    }
+    
+    /* =====================================
+       I. 語言切換
+       ===================================== */
+    
+    .lang-switch-wrap{
+        gap:8px;
+    }
+
+    .lang-btn{
         flex:1;
         padding:9px 10px;
         font-size:13px;
