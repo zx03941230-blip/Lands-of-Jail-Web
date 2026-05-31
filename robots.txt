@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap:
+https://zx03941230-blip.github.io/Lands-of-Jail-Web/sitemap.xml
