@@ -23,6 +23,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -32,8 +33,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "鋸刃風暴",
+        "nameEn": "",
         "description": "每0.5秒對周圍敵人造成攻擊力*110%的傷害，持續3秒。",
         "template": "每0.5秒對周圍敵人造成攻擊力*{A}%的傷害，持續3秒",
+        "templateEn": "Deals DMG equal to ATK * {A}% to surrounding enemies every 0.5s for 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "80", "B": "-", "C": "-" },
@@ -46,8 +49,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -60,8 +65,10 @@ const HEROES = [
       },
       {
         "name": "死亡轟鳴",
+        "nameEn": "",
         "description": "攻擊力提高18%。",
         "template": "攻擊力提高{A}%。",
+        "templateEn": "Increases ATK by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "6", "B": "-", "C": "-" },
@@ -76,8 +83,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "生產管控",
+        "nameEn": "",
         "description": "工廠的鈔票利潤提升10%。",
         "template": "工廠的鈔票利潤提升{A}%。",
+        "templateEn": "Increases the Factory's cash profit by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "2", "B": "-", "C": "-" },
@@ -90,8 +99,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -104,8 +115,10 @@ const HEROES = [
       },
       {
         "name": "伐木大師",
+        "nameEn": "",
         "description": "出征時木材採集速度提升25%。",
         "template": "出征時木材採集速度提升{A}%。",
+        "templateEn": "Increases Wood Gathering Speed by {A}% during expeditions.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -152,6 +165,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -161,8 +175,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "防暴盾",
+        "nameEn": "",
         "description": "給自己施加攻擊力*260%的護盾，持續8秒。",
         "template": "給自己施加攻擊力*{A}%的護盾，持續8秒。",
+        "templateEn": "Gain a Shield equal to ATK * {A}%, lasting for 8s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "180", "B": "-", "C": "-" },
@@ -175,8 +191,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -189,8 +207,10 @@ const HEROES = [
       },
       {
         "name": "強化盾牌",
+        "nameEn": "",
         "description": "防禦力提高18%。",
         "template": "防禦力提高{A}%。",
+        "templateEn": "Increases DEF by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "6", "B": "-", "C": "-" },
@@ -205,8 +225,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "生產管控",
+        "nameEn": "",
         "description": "工廠的鈔票利潤提升10%。",
         "template": "工廠的鈔票利潤提升{A}%。",
+        "templateEn": "Increases the Factory's cash profit by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "2", "B": "-", "C": "-" },
@@ -219,8 +241,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -233,8 +257,10 @@ const HEROES = [
       },
       {
         "name": "開採大師",
+        "nameEn": "",
         "description": "出征時石油採集速度提升25%。",
         "template": "出征時石油採集速度提升{A}%。",
+        "templateEn": "Increases Gasoline Gathering Speed by {A}% during expeditions.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -281,6 +307,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -290,8 +317,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "毒氣手榴彈",
+        "nameEn": "",
         "description": "丟出毒氣手榴彈，對目標及範圍敵人造成攻擊力*140%傷害。",
         "template": "丟出毒氣手榴彈，對目標及範圍敵人造成攻擊力*{A}%傷害。",
+        "templateEn": "Throws a Gas Grenade, dealing DMG equal to ATK * {A}% to the target and surrounding enemies.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "110", "B": "-", "C": "-" },
@@ -304,8 +333,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -318,8 +349,10 @@ const HEROES = [
       },
       {
         "name": "神經毒素",
+        "nameEn": "",
         "description": "被【毒氣手榴彈】命中的敵人承受中毒狀態，每秒受到攻擊力*11%的傷害，持續5秒。",
         "template": "被【毒氣手榴彈】命中的敵人承受中毒狀態，每秒受到攻擊力*{A}%的傷害，持續5秒。",
+        "templateEn": "Enemies hit by Gas Grenade are poisoned, taking DMG equal to ATK * {A}% per second for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -334,8 +367,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "生產管控",
+        "nameEn": "",
         "description": "工廠的鈔票利潤提升10%。",
         "template": "工廠的鈔票利潤提升{A}%。",
+        "templateEn": "Increases the Factory's cash profit by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "2", "B": "-", "C": "-" },
@@ -348,8 +383,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -362,8 +399,10 @@ const HEROES = [
       },
       {
         "name": "金屬大師",
+        "nameEn": "",
         "description": "出征時鋼鐵採集速度提升25%。",
         "template": "出征時鋼鐵採集速度提升{A}%。",
+        "templateEn": "Increases Steel Gathering Speed by {A}% during expeditions.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -410,6 +449,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -419,8 +459,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "旋風斬",
+        "nameEn": "",
         "description": "丟出巨鐮，造成攻擊力*256%的範圍傷害。",
         "template": "丟出巨鐮，造成攻擊力*{A}%的範圍傷害。",
+        "templateEn": "Swings a giant scythe, dealing AoE DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "184", "B": "-", "C": "-" },
@@ -433,8 +475,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -447,8 +491,10 @@ const HEROES = [
       },
       {
         "name": "磨鋒礪刃",
+        "nameEn": "",
         "description": "自身攻擊力提高18%。",
         "template": "自身攻擊力提高{A}%。",
+        "templateEn": "Increases ATK by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "6", "B": "-", "C": "-" },
@@ -463,8 +509,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "生產管控",
+        "nameEn": "",
         "description": "工廠的鈔票利潤提升10%。",
         "template": "工廠的鈔票利潤提升{A}%。",
+        "templateEn": "Increases the Factory's cash profit by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "2", "B": "-", "C": "-" },
@@ -477,8 +525,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -491,8 +541,10 @@ const HEROES = [
       },
       {
         "name": "補給管理",
+        "nameEn": "",
         "description": "出征時食物採集速度提升25%。",
         "template": "出征時食物採集速度提升{A}%。",
+        "templateEn": "Increases Food Gathering Speed by {A}% during expeditions.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -539,6 +591,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -548,8 +601,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "雷射眼",
+        "nameEn": "",
         "description": "對前方扇形範圍造成攻擊力*265%的範圍傷害，並令受擊目標的命中率降低30%，持續4秒。",
         "template": "對前方扇形範圍造成攻擊力*{A}%的範圍傷害，並令受擊目標的命中率降低30%，持續4秒。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% in a fan-shaped area in front, reducing the hit rate of affected targets by 30% for 4s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "185", "B": "-", "C": "-" },
@@ -562,8 +617,10 @@ const HEROES = [
       },
       {
         "name": "正義制裁",
+        "nameEn": "",
         "description": "對前方矩形範圍造成攻擊力*190%的範圍傷害和擊退。",
         "template": "對前方矩形範圍造成攻擊力*{A}%的範圍傷害和擊退。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% in a rectangular area in front and knocks enemies within range back.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "130", "B": "-", "C": "-" },
@@ -576,8 +633,10 @@ const HEROES = [
       },
       {
         "name": "堅不可摧",
+        "nameEn": "",
         "description": "生命值高於40%時，受到傷害降低45%。",
         "template": "生命值高於40%時，受到傷害降低{A}%。",
+        "templateEn": "When HP is higher than 40%, reduces DMG taken by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "25", "B": "-", "C": "-" },
@@ -592,8 +651,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "堅盾守護",
+        "nameEn": "",
         "description": "我軍全體部隊防禦力提升25%。",
         "template": "我軍全體部隊防禦力提升{A}%。",
+        "templateEn": "Increases DEF of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -606,8 +667,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -620,15 +683,17 @@ const HEROES = [
       },
       {
         "name": "防暴懲戒",
+        "nameEn": "",
         "description": "我軍全體部隊防禦力提升25%。",
-        "template": "我軍全體部隊防禦力提升{A}%。",
+        "template": "敵軍全體部隊攻擊力降低{A}%。",
+        "templateEn": "Enemy troops' ATK reduced by {A}%.",
         "maxLevel": 5,
         "levels": {
-        "1": { "A": "5", "B": "-", "C": "-" },
-        "2": { "A": "10", "B": "-", "C": "-" },
-        "3": { "A": "15", "B": "-", "C": "-" },
-        "4": { "A": "20", "B": "-", "C": "-" },
-        "5": { "A": "25", "B": "-", "C": "-" }
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "8", "B": "-", "C": "-" },
+        "3": { "A": "12", "B": "-", "C": "-" },
+        "4": { "A": "16", "B": "-", "C": "-" },
+        "5": { "A": "20", "B": "-", "C": "-" }
         },
         "image": "戈德_戰爭技能3_防暴懲戒.png"
       }
@@ -668,6 +733,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -677,8 +743,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "土崩掌壓",
+        "nameEn": "",
         "description": "對前方扇形範圍造成攻擊力*204%的範圍傷害，並令受擊目標攻擊速度降低8%，持續2秒。",
         "template": "對前方扇形範圍造成攻擊力*{A}%的範圍傷害，並令受擊目標攻擊速度降低{B}%，持續2秒。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% in a fan-shaped area in front, reducing the ATK Speed of affected targets by {B}% for 2s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "148", "B": "4", "C": "-" },
@@ -691,8 +759,10 @@ const HEROES = [
       },
       {
         "name": "大渦潮",
+        "nameEn": "",
         "description": "造成3次總傷害為攻擊力*128%的範圍傷害，並令受擊目標攻擊力降低5%，持續3秒。",
         "template": "造成3次總傷害為攻擊力*{A}%的範圍傷害，並令受擊目標攻擊力降低{B}%，持續3秒。",
+        "templateEn": "Deals 3 instances of AoE DMG equal to ATK * {A}%, reducing the target's ATK by {B}% for 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "80", "B": "3", "C": "-" },
@@ -705,8 +775,10 @@ const HEROES = [
       },
       {
         "name": "魔王橫綱",
+        "nameEn": "",
         "description": "自身防禦力提高24%。",
         "template": "自身防禦力提高{A}%。",
+        "templateEn": "Increases DEF by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "8", "B": "-", "C": "-" },
@@ -721,8 +793,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "鐵獄山圍",
+        "nameEn": "",
         "description": "我軍全體部隊防禦力提升14%，生命值提升12%。",
         "template": "我軍全體部隊防禦力提升{A}%，生命值提升{B}%。",
+        "templateEn": "Increases DEF of all allied Troops by {A}% and HP by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "3", "B": "2", "C": "-" },
@@ -735,8 +809,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -749,8 +825,10 @@ const HEROES = [
       },
       {
         "name": "崩裂首投",
+        "nameEn": "",
         "description": "敵軍部隊殺傷力降低20%。",
         "template": "敵軍部隊殺傷力降低{A}%。",
+        "templateEn": "Reduces enemy Troops' Lethality by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -781,8 +859,8 @@ const HEROES = [
     "id": "H007",
     "rarity": "SR",
     "nameZh": "毀滅者 • 維薩里昂",
-    "nameEn": "Vissarion",
-    "displayName": "毀滅者 • 維薩里昂 Vissarion",
+    "nameEn": "Vesaryon",
+    "displayName": "毀滅者 • 維薩里昂 Vesaryon",
     "image": "SR_毀滅者_維薩里昂.png",
     "obtainSource": "-",
     "role": "盾牌兵\nShieldbearer",
@@ -797,6 +875,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -806,8 +885,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "末日掃射",
+        "nameEn": "",
         "description": "機槍掃射，對範圍內的敵方單位造成攻擊力*340%的傷害。",
         "template": "機槍掃射，對範圍內的敵方單位造成攻擊力*{A}%的傷害。",
+        "templateEn": "Uses a Machine Gun to barrage, dealing DMG equal to ATK * {A}% to all enemy units within range.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "260", "B": "-", "C": "-" },
@@ -820,8 +901,10 @@ const HEROES = [
       },
       {
         "name": "高爆飛彈",
+        "nameEn": "",
         "description": "發射飛彈，對命中的敵方目標造成攻擊力*220%的範圍傷害。",
         "template": "發射飛彈，對命中的敵方目標造成攻擊力*{A}%的範圍傷害。",
+        "templateEn": "Launches a missile, dealing AoE DMG equal to ATK * {A}% to the hit target.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "160", "B": "-", "C": "-" },
@@ -834,8 +917,10 @@ const HEROES = [
       },
       {
         "name": "毀滅模式",
+        "nameEn": "",
         "description": "當生命值低於60%時進入毀滅模式，攻擊速度增加24%，並且普通攻擊變為範圍傷害。",
         "template": "當生命值低於60%時進入毀滅模式，攻擊速度增加{A}%，並且普通攻擊變為範圍傷害。",
+        "templateEn": "Enters Annihilation Mode when HP drops below 60%, increasing ATK Speed by {A}% and converting Basic Attack DMG to AoE DMG.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "16", "B": "-", "C": "-" },
@@ -850,8 +935,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "裝甲震懾",
+        "nameEn": "",
         "description": "敵方單位造成的傷害降低20%。",
         "template": "敵方單位造成的傷害降低{A}%。",
+        "templateEn": "Reduces DMG dealt by enemy units by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -864,8 +951,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -878,8 +967,10 @@ const HEROES = [
       },
       {
         "name": "迅速徵召",
+        "nameEn": "",
         "description": "動員大廳徵兵值恢復速度提升15%。",
         "template": "動員大廳徵兵值恢復速度提升{A}%。",
+        "templateEn": "Increases Recruitment Point recovery speed by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "3", "B": "-", "C": "-" },
@@ -926,6 +1017,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -935,8 +1027,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "朧吹雪",
+        "nameEn": "",
         "description": "揮舞皮鞭，對扇形範圍內的敵人每0.5秒造成攻擊*75%傷害，持續2秒。",
         "template": "揮舞皮鞭，對扇形範圍內的敵人每0.5秒造成攻擊*{A}%傷害，持續2秒。",
+        "templateEn": "Whips enemies in a fan-shaped area, dealing DMG equal to ATK * {A}% every 0.5s for 2s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "55", "B": "-", "C": "-" },
@@ -949,8 +1043,10 @@ const HEROES = [
       },
       {
         "name": "幻光滅",
+        "nameEn": "",
         "description": "普通攻擊會使受擊目標防禦力降低20%，持續3秒。",
         "template": "普通攻擊會使受擊目標防禦力降低{A}%，持續3秒。",
+        "templateEn": "Basic Attacks reduce DEF of targets hit by {A}% for 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "8", "B": "-", "C": "-" },
@@ -963,8 +1059,10 @@ const HEROES = [
       },
       {
         "name": "影斷空",
+        "nameEn": "",
         "description": "自身造成傷害提升30%。",
         "template": "自身造成傷害提升{A}%。",
+        "templateEn": "Increases DMG dealt by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -979,8 +1077,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "洞悉弱點",
+        "nameEn": "",
         "description": "我軍全體部隊造成傷害提升25%。",
         "template": "我軍全體部隊造成傷害提升{A}%。",
+        "templateEn": "Increases DMG dealt by all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -993,8 +1093,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -1007,8 +1109,10 @@ const HEROES = [
       },
       {
         "name": "暗殺術",
+        "nameEn": "",
         "description": "我軍全體部隊殺傷力提升25%。",
         "template": "我軍全體部隊殺傷力提升{A}%。",
+        "templateEn": "Increases Lethality of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -1055,6 +1159,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -1064,8 +1169,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "腎上腺素",
+        "nameEn": "",
         "description": "使我方全體每秒恢復相當於吉邁斯攻擊力*41%的生命，持續5秒。",
         "template": "使我方全體每秒恢復相當於吉邁斯攻擊力*{A}%的生命，持續5秒。",
+        "templateEn": "Restores HP to all allies equal to Gimes' ATK * {A}% per second for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "30", "B": "-", "C": "-" },
@@ -1078,8 +1185,10 @@ const HEROES = [
       },
       {
         "name": "屹立不倒",
+        "nameEn": "",
         "description": "當前生命低於50%時，每4秒恢復攻擊力*120%的生命。",
         "template": "當前生命低於50%時，每4秒恢復攻擊力*{A}%的生命。",
+        "templateEn": "When HP falls below 50%, restores HP equal to ATK * {A}% every 4s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "80", "B": "-", "C": "-" },
@@ -1092,8 +1201,10 @@ const HEROES = [
       },
       {
         "name": "強壯體魄",
+        "nameEn": "",
         "description": "受到腎上腺素效果的單位造成的傷害提高7%。",
         "template": "受到腎上腺素效果的單位造成的傷害提高{A}%。",
+        "templateEn": "Units affected by Adrenaline deal {A}% increased DMG.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "3", "B": "-", "C": "-" },
@@ -1108,8 +1219,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "強身健體",
+        "nameEn": "",
         "description": "全體部隊生命提高25%。",
         "template": "全體部隊生命提高{A}%。",
+        "templateEn": "Increases HP of all troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -1122,8 +1235,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -1136,8 +1251,10 @@ const HEROES = [
       },
       {
         "name": "矯健步法",
+        "nameEn": "",
         "description": "我軍全體部隊受到傷害降低20%。",
         "template": "我軍全體部隊受到傷害降低{A}%。",
+        "templateEn": "Reduces DMG taken by all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -1184,6 +1301,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -1193,8 +1311,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "天罰之火",
+        "nameEn": "",
         "description": "發射火箭彈，對目標範圍造成攻擊力*225%傷害。炮彈落點燃起火焰，敵方單位每0.5秒受到攻擊力*6%傷害，持續3秒。",
         "template": "發射火箭彈，對目標範圍造成攻擊力*{A}%傷害。炮彈落點燃起火焰，敵方單位每0.5秒受到攻擊力*{B}%傷害，持續3秒。",
+        "templateEn": "Launches rockets, dealing DMG equal to ATK * {A}% to the target area. The explosion ignites flames, inflicting DMG equal to ATK * {B}% every 0.5s for 3s on enemy units.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "165", "B": "4", "C": "-" },
@@ -1207,8 +1327,10 @@ const HEROES = [
       },
       {
         "name": "烈日眩光",
+        "nameEn": "",
         "description": "對敵方後排單位投擲閃光彈，造成攻擊力*150%範圍傷害，並且另受擊目標攻擊有10%失手率，持續5秒。",
         "template": "對敵方後排單位投擲閃光彈，造成攻擊力*{A}%範圍傷害，並且另受擊目標攻擊有10%失手率，持續5秒。",
+        "templateEn": "Throws flash grenades at back-row enemy units, dealing AoE DMG equal to ATK * {A}% and causing hit targets to have a 10% chance to miss their attacks for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "110", "B": "-", "C": "-" },
@@ -1221,8 +1343,10 @@ const HEROES = [
       },
       {
         "name": "焚城迫擊",
+        "nameEn": "",
         "description": "自身造成傷害提升30%。",
         "template": "自身造成傷害提升{A}%。",
+        "templateEn": "Increases DMG dealt by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -1237,8 +1361,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "荒漠法則",
+        "nameEn": "",
         "description": "我軍全體部隊攻擊力提升14%，殺傷力提升12%。",
         "template": "我軍全體部隊攻擊力提升{A}%，殺傷力提升{B}%。",
+        "templateEn": "Increases Troops' ATK by {A}% and Lethality by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "3", "B": "2", "C": "-" },
@@ -1251,8 +1377,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -1265,8 +1393,10 @@ const HEROES = [
       },
       {
         "name": "死亡熱風",
+        "nameEn": "",
         "description": "敵軍部隊生命值降低20%。",
         "template": "敵軍部隊生命值降低{A}%。",
+        "templateEn": "Reduces enemy Troops' HP by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -1313,6 +1443,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -1322,8 +1453,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "雙極星",
+        "nameEn": "",
         "description": "敏妍用機槍射擊3次，每次造成攻擊*97%的傷害，之後泰勳向敵方單個目標發射威力強大的炮彈，造成攻擊力*96%的大範圍傷害。",
         "template": "敏妍用機槍射擊3次，每次造成攻擊*{A}%的傷害，之後泰勳向敵方單個目標發射威力強大的炮彈，造成攻擊力*{B}%的大範圍傷害。\"",
+        "templateEn": "Minyeon fires a machine gun three times, each attack dealing DMG equal to ATK * {A}%. Then Taehun launches a powerful shell at a single enemy target, dealing AoE DMG equal to ATK * {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "71", "B": "68", "C": "-" },
@@ -1336,8 +1469,10 @@ const HEROES = [
       },
       {
         "name": "虎嘯彈",
+        "nameEn": "",
         "description": "每普通攻擊4次，泰勳便會向敵方單個目標連續發射2發炮彈，每發造成攻擊*52%的範圍傷害。",
         "template": "每普通攻擊4次，泰勳便會向敵方單個目標連續發射2發炮彈，每發造成攻擊*{A}%的範圍傷害。",
+        "templateEn": "After every 4 Basic Attacks, Taehun launches 2 shells at a single enemy target, each dealing AoE DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "36", "B": "-", "C": "-" },
@@ -1350,8 +1485,10 @@ const HEROES = [
       },
       {
         "name": "瞬火",
+        "nameEn": "",
         "description": "每次普通攻擊後，提高自身9%攻擊速度，持續4秒。此效果可疊加。",
-        "template": "每次普通攻擊後，提高自身9%攻擊速度，持續4秒。此效果可疊加。",
+        "template": "每次普通攻擊後，提高自身{A}%攻擊速度，持續4秒。此效果可疊加。",
+        "templateEn": "After each Basic Attack, increases ATK Speed by {A}% for 4s. This effect can stack.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -1366,8 +1503,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "默契出擊",
+        "nameEn": "",
         "description": "出征攻擊野怪時的傷害提升30%（對【動亂危機】活動中的敵軍也有效）。",
         "template": "出征攻擊野怪時的傷害提升{A}%（對【動亂危機】活動中的敵軍也有效）。",
+        "templateEn": "Increases DMG dealt by {A}% when attacking Wild Monsters during Expedition (also effective against enemies in the Turmoil Surge event).",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "6", "B": "-", "C": "-" },
@@ -1380,8 +1519,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -1394,8 +1535,10 @@ const HEROES = [
       },
       {
         "name": "風焰協議",
+        "nameEn": "",
         "description": "敵軍防禦力降低20%。",
         "template": "敵軍防禦力降低{A}%。",
+        "templateEn": "Reduces enemy DEF by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -1442,6 +1585,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -1451,8 +1595,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "連發速射",
+        "nameEn": "",
         "description": "對單個目標迅速射出4顆子彈，每顆子彈造成攻擊力*122.5%的傷害。",
         "template": "對單個目標迅速射出4顆子彈，每顆子彈造成攻擊力*122.5%的傷害。",
+        "templateEn": "Rapidly fires 4 bullets at a single target, each dealing DMG equal to ATK * 122.5%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "87.5", "B": "-", "C": "-" },
@@ -1465,8 +1611,10 @@ const HEROES = [
       },
       {
         "name": "抑制射擊",
+        "nameEn": "",
         "description": "對單個目標射出一顆子彈，造成攻擊力*180%的傷害，並使其攻擊速度降低50%，持續3秒。",
         "template": "對單個目標射出一顆子彈，造成攻擊力*{A}%的傷害，並使其攻擊速度降低{B}%，持續3秒。",
+        "templateEn": "Fires 1 shot at a single target, dealing DMG equal to ATK * {A}% and reducing their ATK Speed by {B}% for 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "120", "B": "30", "C": "-" },
@@ -1479,8 +1627,10 @@ const HEROES = [
       },
       {
         "name": "迅疾行動",
+        "nameEn": "",
         "description": "攻擊速度提升30%。",
         "template": "攻擊速度提升{A}%",
+        "templateEn": "Increases ATK Speed by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -1495,8 +1645,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "鷹眼",
+        "nameEn": "",
         "description": "我軍全體部隊殺傷力提升25%。",
         "template": "我軍全體部隊殺傷力提升{A}%。",
+        "templateEn": "Increases Lethality of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -1509,8 +1661,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -1523,8 +1677,10 @@ const HEROES = [
       },
       {
         "name": "搜刮",
+        "nameEn": "",
         "description": "我軍全體部隊殺傷力提升25%。",
-        "template": "我軍全體部隊殺傷力提升{A}%。",
+        "template": "全資源採集速度提升{A}%}。",
+        "templateEn": "Increases Gathering Speed of all resources by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -1571,6 +1727,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -1580,8 +1737,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "殲滅掃射",
+        "nameEn": "",
         "description": "對扇形範圍進行掃射，造成攻擊力*300%的傷害。",
         "template": "對扇形範圍進行掃射，造成攻擊力*{A}%的傷害。",
+        "templateEn": "Shoots in a fan-shaped area, dealing DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "220", "B": "-", "C": "-" },
@@ -1594,8 +1753,10 @@ const HEROES = [
       },
       {
         "name": "標記彈",
+        "nameEn": "",
         "description": "對目標發射一發子彈，造成攻擊力*180%的傷害，並使其受到的傷害增加20%，持續3秒。",
         "template": "對目標發射一發子彈，造成攻擊力*{A}%的傷害，並使其受到的傷害增加{B}%，持續3秒。",
+        "templateEn": "Fires 1 shot at the target, dealing DMG equal to ATK * {A}% and increasing their DMG taken by {B}% for 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "120", "B": "8", "C": "-" },
@@ -1608,8 +1769,10 @@ const HEROES = [
       },
       {
         "name": "極效火藥",
+        "nameEn": "",
         "description": "自身暴擊率提升20%。",
         "template": "自身暴擊率提升{A}%。",
+        "templateEn": "Increases CRIT Rate by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "7", "B": "-", "C": "-" },
@@ -1624,8 +1787,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "雷厲風行",
+        "nameEn": "",
         "description": "出征攻擊野怪時的行軍速度提高100%。",
         "template": "出征攻擊野怪時的行軍速度提高{A}%。",
+        "templateEn": "Increases Expedition Speed by {A}% during monster-hunting.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "20", "B": "-", "C": "-" },
@@ -1638,8 +1803,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -1652,8 +1819,10 @@ const HEROES = [
       },
       {
         "name": "鬥志旺盛",
+        "nameEn": "",
         "description": "弗洛拉以旺盛的鬥志鼓舞士兵，讓他們能夠頑強地繼續作戰。弗洛伐所率領的部隊中10%的重傷士兵轉為輕傷士兵。",
         "template": "弗洛拉以旺盛的鬥志鼓舞士兵，讓他們能夠頑強地繼續作戰。弗洛伐所率領的部隊中{A}%的重傷士兵轉為輕傷士兵。",
+        "templateEn": "Flora inspires her troops with unwavering determination, allowing them to keep fighting with grit. After battle, {A}% of the severely wounded soldiers in her unit are converted into lightly wounded soldiers.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "2", "B": "-", "C": "-" },
@@ -1700,6 +1869,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -1709,8 +1879,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "狙擊",
+        "nameEn": "",
         "description": "鎖定目標，造成攻擊力*560%傷害。",
         "template": "鎖定目標，造成攻擊力*\"{A}%傷害。",
+        "templateEn": "Locks onto the target, dealing DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "400", "B": "-", "C": "-" },
@@ -1723,8 +1895,10 @@ const HEROES = [
       },
       {
         "name": "一擊斃敵",
+        "nameEn": "",
         "description": "對目標發射一發攻擊力*210%傷害的子彈。",
         "template": "對目標發射一發攻擊力*{A}%傷害的子彈。",
+        "templateEn": "Fires 1 shot at the target, dealing DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "150", "B": "-", "C": "-" },
@@ -1737,8 +1911,10 @@ const HEROES = [
       },
       {
         "name": "追獵終結",
+        "nameEn": "",
         "description": "每普通攻擊3次，下一次普通攻擊必定暴擊。",
         "template": "每普通攻擊{A}次，下一次普通攻擊必定暴擊。",
+        "templateEn": "After every {A} Basic Attacks, the next Basic Attack is guaranteed to be a CRIT.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "7", "B": "-", "C": "-" },
@@ -1753,8 +1929,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "分析戰局",
+        "nameEn": "",
         "description": "我軍全體部隊攻擊力提高25%。",
         "template": "我軍全體部隊攻擊力提高{A}%。",
+        "templateEn": "Increases ATK of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -1767,8 +1945,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -1781,8 +1961,10 @@ const HEROES = [
       },
       {
         "name": "戰術突破",
+        "nameEn": "",
         "description": "我軍全體部隊攻擊時有50%機率使本次傷害提升50%。",
         "template": "我軍全體部隊攻擊時有50%機率使本次傷害提升{A}%。",
+        "templateEn": "All allied troops have a 50% chance to increase their DMG by {A}% when attacking.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -1829,6 +2011,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -1838,8 +2021,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "暮光守望",
+        "nameEn": "",
         "description": "為我方2個生命最低的英雄或囚徒裝甲施加攻擊力*220%的護盾，持續6秒。",
         "template": "為我方2個生命最低的英雄或囚徒裝甲施加攻擊力*{A}%的護盾，持續6秒。",
+        "templateEn": "Grants a Shield equal to ATK * {A}% to the 2 allied Heroes or Prisoners with the lowest HP, lasting for 6s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "140", "B": "-", "C": "-" },
@@ -1852,8 +2037,10 @@ const HEROES = [
       },
       {
         "name": "爆頭",
+        "nameEn": "",
         "description": "對目標發射一發子彈，造成攻擊力*220%的傷害和擊退。",
         "template": "對目標發射一發子彈，造成攻擊力*{A}%的傷害和擊退。",
+        "templateEn": "Fires 1 shot at the target, dealing DMG equal to ATK * {A}% and knocking them back.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "160", "B": "-", "C": "-" },
@@ -1866,8 +2053,10 @@ const HEROES = [
       },
       {
         "name": "求生法則",
+        "nameEn": "",
         "description": "自身防禦力提升24%。",
         "template": "自身防禦力提升{A}%。",
+        "templateEn": "Increases DEF by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "8", "B": "-", "C": "-" },
@@ -1882,8 +2071,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "靈活應變",
+        "nameEn": "",
         "description": "我軍全體部隊受到傷害降低25%。",
         "template": "我軍全體部隊受到傷害降低{A}%。",
+        "templateEn": "Reduces DMG taken by all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -1896,8 +2087,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -1910,8 +2103,10 @@ const HEROES = [
       },
       {
         "name": "急救學識",
+        "nameEn": "",
         "description": "醫療站的治療速度提升50%。",
         "template": "醫療站的治療速度提升{A}%。",
+        "templateEn": "Increases Medical Station's Healing Speed by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -1958,6 +2153,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -1967,8 +2163,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "爆裂彈",
+        "nameEn": "",
         "description": "對目標發射3顆榴彈，每顆榴彈造成90%範圍傷害。",
         "template": "對目標發射3顆榴彈，每顆榴彈造成{A}%範圍傷害。",
+        "templateEn": "Fires 3 grenades at the target, each dealing {A}% AoE DMG.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "70", "B": "-", "C": "-" },
@@ -1981,8 +2179,10 @@ const HEROES = [
       },
       {
         "name": "瞄準射擊",
+        "nameEn": "",
         "description": "自身傷害提升30%。",
         "template": "自身傷害提升{A}%。",
+        "templateEn": "Increases DMG dealt by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -1995,8 +2195,10 @@ const HEROES = [
       },
       {
         "name": "填彈技術",
+        "nameEn": "",
         "description": "自身攻擊速度提升30%。",
         "template": "自身攻擊速度提升{A}%。",
+        "templateEn": "Increases Attack Speed by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -2011,8 +2213,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "追緝不休",
+        "nameEn": "",
         "description": "出征體力消耗降低20%。",
         "template": "出征體力消耗降低{A}%。",
+        "templateEn": "Decreases Stamina Consumption for expeditions by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -2025,8 +2229,10 @@ const HEROES = [
       },
       {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
         "template": "-",
+        "templateEn": "-",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "-", "B": "-", "C": "-" },
@@ -2039,8 +2245,10 @@ const HEROES = [
       },
       {
         "name": "靈動之姿",
+        "nameEn": "",
         "description": "出征攻擊野怪時的行軍速度提高100%。",
         "template": "出征攻擊野怪時的行軍速度提高{A}%。",
+        "templateEn": "Increases Expedition Speed by {A}% during monster-hunting.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "20", "B": "-", "C": "-" },
@@ -2087,6 +2295,7 @@ const HEROES = [
       "name": "嗜血狂熱",
       "description": "泰倫的暴虐對監獄士兵產生了深遠的影響，他無須出征，即可使我軍全體部隊殺傷力提升15%。",
       "template": "泰倫的暴虐對監獄士兵產生了深遠的影響，他無須出征，即可使我軍全體部隊殺傷力提升{A}%。",
+      "templateEn": "Tyronn's brutality echoes throughout the Isle of the Banished, boosting Lethality of all allied troops by {A}% without him even stepping onto the battlefield.",
       "maxLevel": 5,
       "levels": {
         "1": { "A": "3", "B": "", "C": "" },
@@ -2100,8 +2309,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "摧心咆哮",
+        "nameEn": "",
         "description": "造成攻擊力*582%的範圍傷害並且使目標暈眩1.5秒。",
         "template": "造成攻擊力*{A}%的範圍傷害並且使目標暈眩1.5秒。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% and stuns the targets for 1.5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "390", "B": "-", "C": "-" },
@@ -2114,8 +2325,10 @@ const HEROES = [
       },
       {
         "name": "蠻力重擊",
+        "nameEn": "",
         "description": "猛砸地面，對範圍內造成一次攻擊力*220%的傷害。",
         "template": "猛砸地面，對範圍內造成一次攻擊力*{A}%的傷害。",
+        "templateEn": "Slams the ground, dealing DMG equal to ATK * {A}% to all enemies within range.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "160", "B": "-", "C": "-" },
@@ -2128,8 +2341,10 @@ const HEROES = [
       },
       {
         "name": "屠戮",
+        "nameEn": "",
         "description": "自身造成傷害提升32%。",
         "template": "自身造成傷害提升{A}%。",
+        "templateEn": "Increases DMG dealt by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "12", "B": "-", "C": "-" },
@@ -2144,8 +2359,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "致殘",
+        "nameEn": "",
         "description": "敵軍部隊受到傷害提升25%。",
         "template": "敵軍部隊受到傷害提升{A}%。",
+        "templateEn": "Increases DMG taken by enemy troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -2158,8 +2375,10 @@ const HEROES = [
       },
       {
         "name": "鮮血盛宴",
+        "nameEn": "",
         "description": "我軍全體部隊殺傷力提升25%。",
         "template": "我軍全體部隊殺傷力提升{A}%。",
+        "templateEn": "Increases Lethality of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -2172,8 +2391,10 @@ const HEROES = [
       },
       {
         "name": "喪鐘鳴響",
+        "nameEn": "",
         "description": "攻擊時有20%機率使敵方暈眩，持續1回合。",
         "template": "攻擊時有{A}%機率使敵方暈眩，持續1回合。",
+        "templateEn": "Has a(n) {A}% chance to stun the enemy for 1 round when attacking.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -2220,6 +2441,7 @@ const HEROES = [
       "name": "英名遠揚",
       "description": "鳳鳴的英名傳遍囚徒大陸，她無須出征，即可使我軍全體部隊攻擊力提升15%。",
       "template": "鳳鳴的英名傳遍囚徒大陸，她無須出征，即可使我軍全體部隊攻擊力提升{A}%。",
+      "templateEn": "Phoenix's legend echoes throughout the Isle of the Banished, boosting ATK of all allied troops by {A}% without her even stepping onto the battlefield.",
       "maxLevel": 5,
       "levels": {
         "1": { "A": "3", "B": "", "C": "" },
@@ -2233,8 +2455,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "雷霆震怒",
+        "nameEn": "",
         "description": "我方全體單位攻擊力提高10%，持續5秒。鳳鳴自身攻擊力額外提高25%。",
         "template": "我方全體單位攻擊力提高{A}%，持續5秒。鳳鳴自身攻擊力額外提高{B}%。",
+        "templateEn": "Increases ATK of all allied units by {A}% for 5s. Phoenix's ATK increases by an additional {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "9", "C": "-" },
@@ -2247,8 +2471,10 @@ const HEROES = [
       },
       {
         "name": "浴火之威",
+        "nameEn": "",
         "description": "生命低於20%時，立即恢復最大值*60%的生命值，每場戰鬥生效1次。",
         "template": "生命低於20%時，立即恢復最大值*{A}%的生命值，每場戰鬥生效1次。",
+        "templateEn": "When HP falls below 20%, immediately restores HP equal to {A}% of Max HP. Can be triggered once per battle.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "40", "B": "-", "C": "-" },
@@ -2261,8 +2487,10 @@ const HEROES = [
       },
       {
         "name": "天傾一擊",
+        "nameEn": "",
         "description": "每普通攻擊4次，便會在自身周圍造成攻擊力*300%的範圍傷害。",
         "template": "每普通攻擊4次，便會在自身周圍造成攻擊力*{A}%的範圍傷害。",
+        "templateEn": "After every 4 Basic Attacks, deals AoE DMG equal to ATK * {A}% to surrounding enemies.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "220", "B": "-", "C": "-" },
@@ -2277,8 +2505,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "粉碎防禦",
+        "nameEn": "",
         "description": "我軍全體部隊部隊造成傷害提升25%。",
         "template": "我軍全體部隊部隊造成傷害提升{A}%。",
+        "templateEn": "Increases DMG dealt by all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -2291,8 +2521,10 @@ const HEROES = [
       },
       {
         "name": "不屈戰意",
+        "nameEn": "",
         "description": "我軍體部隊生命值提升25%。",
         "template": "我軍體部隊生命值提升{A}%。",
+        "templateEn": "Increases HP of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -2305,8 +2537,10 @@ const HEROES = [
       },
       {
         "name": "撼地重錘",
+        "nameEn": "",
         "description": "攻擊時有20%機率使敵方暈眩，持續1回合。",
         "template": "攻擊時有{A}%機率使敵方暈眩，持續1回合。",
+        "templateEn": "Has a(n) {A}% chance to stun the enemy for 1 round when attacking.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -2353,6 +2587,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -2362,8 +2597,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "煙氣侵襲",
+        "nameEn": "",
         "description": "噴出濃煙，對前方扇形範圍內造成攻擊力*242%的傷害，並且使目標眩暈1.5秒。",
         "template": "噴出濃煙，對前方扇形範圍內造成攻擊力*{A}%的傷害，並且使目標眩暈1.5秒。",
+        "templateEn": "Spews smoke, dealing DMG equal to ATK * {A}% in a fan-shaped area and stunning targets for 1.5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "170", "B": "-", "C": "-" },
@@ -2376,8 +2613,10 @@ const HEROES = [
       },
       {
         "name": "毀滅烈焰",
+        "nameEn": "",
         "description": "使普通攻擊命中的單位防禦力降低15%，持續3秒。",
         "template": "使普通攻擊命中的單位防禦力降低{A}%，持續3秒。",
+        "templateEn": "Reduces DEF of targets hit by Basic Attacks by {A}% for 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "7", "B": "-", "C": "-" },
@@ -2390,8 +2629,10 @@ const HEROES = [
       },
       {
         "name": "火焰屏障",
+        "nameEn": "",
         "description": "自身受到的傷害降低32%。",
         "template": "自身受到的傷害降低{A}%。",
+        "templateEn": "Reduces DMG taken by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "12", "B": "-", "C": "-" },
@@ -2406,8 +2647,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "良好防護",
+        "nameEn": "",
         "description": "我軍全體部隊防禦力提升25%。",
         "template": "我軍全體部隊防禦力提升{A}%。",
+        "templateEn": "Increases DEF of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -2420,8 +2663,10 @@ const HEROES = [
       },
       {
         "name": "火場酷熱",
+        "nameEn": "",
         "description": "攻擊時有20%機率使敵方暈眩，持續1回合。",
         "template": "攻擊時有{A}%機率使敵方暈眩，持續1回合。",
+        "templateEn": "Has a {A}% chance to stun the enemy for 1 round when attacking.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -2434,8 +2679,10 @@ const HEROES = [
       },
       {
         "name": "烈火雄心",
+        "nameEn": "",
         "description": "我軍全體部隊生命值提升25%。",
         "template": "我軍全體部隊生命值提升{A}%。",
+        "templateEn": "Increases HP of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -2482,6 +2729,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -2491,8 +2739,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "舞台事故",
+        "nameEn": "",
         "description": "砸下音響，造成攻擊力*254%的範圍傷害，並使範圍內的敵人暈眩1.5秒。",
         "template": "砸下音響，造成攻擊力*{A}%的範圍傷害，並使範圍內的敵人暈眩1.5秒。",
+        "templateEn": "Drops a speaker, dealing AoE DMG equal to ATK * {A}% to targets and stunning them for 1.5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "180", "B": "-", "C": "-" },
@@ -2505,8 +2755,10 @@ const HEROES = [
       },
       {
         "name": "電音節奏",
+        "nameEn": "",
         "description": "我方全體單位攻擊速度提高25%，持續5秒。",
         "template": "我方全體單位攻擊速度提高{A}%，持續5秒。",
+        "templateEn": "Increases ATK Speed of all allied units by {A}% for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "13", "B": "-", "C": "-" },
@@ -2519,8 +2771,10 @@ const HEROES = [
       },
       {
         "name": "炫技獨奏",
+        "nameEn": "",
         "description": "每普通攻擊5次，對目標造成攻擊力*250%的傷害。",
         "template": "每普通攻擊5次，對目標造成攻擊力*{A}%的傷害。",
+        "templateEn": "Deals DMG equal to ATK * {A}% to the target after every 5 Basic Attacks.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "170", "B": "-", "C": "-" },
@@ -2535,8 +2789,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "震撼演出",
+        "nameEn": "",
         "description": "我軍全體部隊攻擊力提升25%。",
         "template": "我軍全體部隊攻擊力提升{A}%。",
+        "templateEn": "Increases HP of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -2549,8 +2805,10 @@ const HEROES = [
       },
       {
         "name": "激勵旋律",
+        "nameEn": "",
         "description": "建築升級速度提升15%。",
         "template": "建築升級速度提升{A}%。",
+        "templateEn": "Increases Building Upgrade Speed by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "3", "B": "-", "C": "-" },
@@ -2563,8 +2821,10 @@ const HEROES = [
       },
       {
         "name": "建材統籌",
+        "nameEn": "",
         "description": "建築升級所需的食物、木材、鋼鐵、汽油資源減少15%。",
         "template": "建築升級所需的食物、木材、鋼鐵、汽油資源減少{A}%。",
+        "templateEn": "Reduces the Food, Wood, Steel, and Gasoline resources required for Building Upgrades by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "3", "B": "-", "C": "-" },
@@ -2611,6 +2871,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -2620,8 +2881,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "火箭彈",
+        "nameEn": "",
         "description": "發射火箭彈，對目標範圍造成攻擊力*360%傷害。",
         "template": "發射火箭彈，對目標範圍造成攻擊力*{A}%傷害。",
+        "templateEn": "Fires rockets, dealing DMG equal to ATK * {A}% to the target area.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "280", "B": "-", "C": "-" },
@@ -2634,8 +2897,10 @@ const HEROES = [
       },
       {
         "name": "武器改裝",
+        "nameEn": "",
         "description": "自身攻擊速度提升32%。",
         "template": "自身攻擊速度提升{A}%。",
+        "templateEn": "Increases Attack Speed by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "12", "B": "-", "C": "-" },
@@ -2648,8 +2913,10 @@ const HEROES = [
       },
       {
         "name": "險情處理",
+        "nameEn": "",
         "description": "生命低於50%時，受到傷害降低30%。",
         "template": "生命低於50%時，受到傷害降低{A}%。",
+        "templateEn": "When HP falls below 50%, reduces DMG taken by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -2664,8 +2931,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "應急工事",
+        "nameEn": "",
         "description": "我軍全體部隊生命值提升25%。",
         "template": "我軍全體部隊生命值提升{A}%。",
+        "templateEn": "Increases HP of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -2678,8 +2947,10 @@ const HEROES = [
       },
       {
         "name": "驚世智慧",
+        "nameEn": "",
         "description": "科技研究速度提升15%。",
         "template": "科技研究速度提升{A}%。",
+        "templateEn": "Increases Research Speed by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "3", "B": "-", "C": "-" },
@@ -2692,8 +2963,10 @@ const HEROES = [
       },
       {
         "name": "攻堅技術",
+        "nameEn": "",
         "description": "我軍體全體部隊攻擊力提升25%。",
         "template": "我軍體全體部隊攻擊力提升{A}%。",
+        "templateEn": "Increases ATK of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -2740,6 +3013,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -2749,8 +3023,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "清空轉輪",
+        "nameEn": "",
         "description": "對目標連續發射4顆子彈，每顆子彈造成攻擊*200%傷害。",
         "template": "對目標連續發射4顆子彈，每顆子彈造成攻擊*{A}%傷害。",
+        "templateEn": "Fires 4 consecutive shots at the target, each dealing DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "146.5", "B": "-", "C": "-" },
@@ -2763,8 +3039,10 @@ const HEROES = [
       },
       {
         "name": "穿甲彈",
+        "nameEn": "",
         "description": "對目標發射一發子彈，造成攻擊力*210%傷害，並使其受到的傷害增加25%，持續5秒。",
         "template": "對目標發射一發子彈，造成攻擊力*{A}%傷害，並使其受到的傷害增加{B}%，持續5秒。",
+        "templateEn": "Fires 1 shot at the target, dealing DMG equal to ATK * {A}% and increasing their DMG taken by {B}% for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "150", "B": "13", "C": "-" },
@@ -2777,8 +3055,10 @@ const HEROES = [
       },
       {
         "name": "熾熱膛線",
+        "nameEn": "",
         "description": "自身造成傷害提升32%。",
         "template": "自身造成傷害提升{A}%。",
+        "templateEn": "Increases DMG dealt by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "12", "B": "-", "C": "-" },
@@ -2793,8 +3073,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "彈無虛發",
+        "nameEn": "",
         "description": "我軍全體部隊殺傷力提升25%。",
         "template": "我軍全體部隊殺傷力提升{A}%。",
+        "templateEn": "Increases Lethality of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -2807,8 +3089,10 @@ const HEROES = [
       },
       {
         "name": "懸賞號召",
+        "nameEn": "",
         "description": "士兵的訓練速度提升30%。",
         "template": "士兵的訓練速度提升{A}%。",
+        "templateEn": "Increases Soldier Training Speed by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "6", "B": "-", "C": "-" },
@@ -2821,8 +3105,10 @@ const HEROES = [
       },
       {
         "name": "實戰經驗",
+        "nameEn": "",
         "description": "我軍全體部隊防禦力提升25%。",
         "template": "我軍全體部隊防禦力提升{A}%。",
+        "templateEn": "Increases DEF of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -2869,6 +3155,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -2878,8 +3165,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "爆裂彈",
+        "nameEn": "",
         "description": "對目標發射3顆榴彈，每顆榴彈造成90%範圍傷害。",
         "template": "對目標發射3顆榴彈，每顆榴彈造成{A}%範圍傷害。",
+        "templateEn": "Fires 3 grenades at the target, each dealing {A}% AoE DMG.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "70", "B": "-", "C": "-" },
@@ -2892,8 +3181,10 @@ const HEROES = [
       },
       {
         "name": "瞄準射擊",
+        "nameEn": "",
         "description": "自身傷害提升30%。",
         "template": "自身傷害提升{A}%。",
+        "templateEn": "Increases DMG dealt by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -2906,8 +3197,10 @@ const HEROES = [
       },
       {
         "name": "填彈技術",
+        "nameEn": "",
         "description": "自身攻擊速度提升30%。",
         "template": "自身攻擊速度提升{A}%。",
+        "templateEn": "Increases Attack Speed by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -2922,8 +3215,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "追緝不休",
+        "nameEn": "",
         "description": "出征體力消耗降低20%。",
         "template": "出征體力消耗降低{A}%。",
+        "templateEn": "Decreases Stamina Consumption for expeditions by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -2936,8 +3231,10 @@ const HEROES = [
       },
       {
         "name": "連攜追緝",
+        "nameEn": "",
         "description": "米婭分享自己的追緝經驗，使另外2個她未上陣的部隊出征體力消耗降低20%。",
         "template": "米婭分享自己的追緝經驗，使另外{A}個她未上陣的部隊出征體力消耗降低{B}%。",
+        "templateEn": "Mia shares her pursuit experience, reducing Expedition Stamina Consumption by {B}% for {A} Squad(s) she is not deployed with.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "1", "B": "10", "C": "-" },
@@ -2950,8 +3247,10 @@ const HEROES = [
       },
       {
         "name": "靈動之姿",
+        "nameEn": "",
         "description": "出征攻擊野怪時的行軍速度提高100%。",
         "template": "出征攻擊野怪時的行軍速度提高{A}%。",
+        "templateEn": "Increases Expedition Speed by {A}% during monster-hunting.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "20", "B": "-", "C": "-" },
@@ -2998,6 +3297,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -3007,8 +3307,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "狂亂輾壓",
+        "nameEn": "",
         "description": "造成攻擊力*305%的範圍傷害，並且另目標要成的傷害降低23%，持續4秒。",
         "template": "造成攻擊力*{A}%的範圍傷害，並且另目標要成的傷害降低{B}%，持續4秒。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% and reduces DMG dealt by the target by {B}% for 4s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "225", "B": "15", "C": "-" },
@@ -3021,8 +3323,10 @@ const HEROES = [
       },
       {
         "name": "戰吼",
+        "nameEn": "",
         "description": "凱撒發出戰吼，使自身受到傷害降低34%，持續5秒。",
         "template": "凱撒發出戰吼，使自身受到傷害降低{A}%，持續5秒。",
+        "templateEn": "Caesar unleashes a Battlecry, reducing DMG taken by {A}% for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "14", "B": "-", "C": "-" },
@@ -3035,8 +3339,10 @@ const HEROES = [
       },
       {
         "name": "急速再生",
+        "nameEn": "",
         "description": "恢復相當於凱撒攻擊力*170%的生命。",
         "template": "恢復相當於凱撒攻擊力*{A}%的生命。",
+        "templateEn": "Restores HP equal to Caesar's ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "130", "B": "-", "C": "-" },
@@ -3051,8 +3357,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "基因活性",
+        "nameEn": "",
         "description": "每回合結束時，有20%機率使我軍本回合損失的士兵復活。",
         "template": "每回合結束時，有{A}%機率使我軍本回合損失的士兵復活。",
+        "templateEn": "At the end of each round, has a {A}% chance to revive soldiers lost during that round.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -3065,8 +3373,10 @@ const HEROES = [
       },
       {
         "name": "巨力攔截",
+        "nameEn": "",
         "description": "我軍全體部隊防禦力提升25%。",
         "template": "我軍全體部隊防禦力提升{A}%。",
+        "templateEn": "Increases DEF of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -3079,8 +3389,10 @@ const HEROES = [
       },
       {
         "name": "重拳壓制",
+        "nameEn": "",
         "description": "敵軍部隊生命值降低20%。",
         "template": "敵軍部隊生命值降低{A}%。",
+        "templateEn": "Reduces enemy Troops' HP by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -3127,6 +3439,7 @@ const HEROES = [
       "name": "璀璨靈光",
       "description": "愛爾芙完美無瑕，深受大眾鍾愛。她無須出征，即可鼓舞士氣，使我軍全體部隊防禦力提升15%。",
       "template": "愛爾芙完美無瑕，深受大眾鍾愛。她無須出征，即可鼓舞士氣，使我軍全體部隊防禦力提升{A}%。",
+      "templateEn": "Alph is flawless and beloved by all. Without stepping onto the battlefield, she boosts morale, increasing DEF of all allied troops by {A}%.",
       "maxLevel": 5,
       "levels": {
         "1": { "A": "3", "B": "", "C": "" },
@@ -3140,8 +3453,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "閃電衝擊",
+        "nameEn": "",
         "description": "造成攻擊力*285%的範圍傷害，並且使目標受到傷害增加17%，持續4秒。",
         "template": "造成攻擊力*{A}%的範圍傷害，並且使目標受到傷害增加{B}%，持續4秒。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% and increases DMG taken by the target by {B}% for 4s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "205", "B": "9", "C": "-" },
@@ -3154,8 +3469,10 @@ const HEROES = [
       },
       {
         "name": "靜電護盾",
+        "nameEn": "",
         "description": "賦予我方生命百分比最低的英雄或囚徒裝甲攻擊力*225%的護盾，持續6秒。",
         "template": "賦予我方生命百分比最低的英雄或囚徒裝甲攻擊力*{A}%的護盾，持續6秒。",
+        "templateEn": "Grants a Shield equal to ATK * {A}% to the allied Hero or Prisoner Armor with the lowest HP percentage, lasting for 6s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "165", "B": "-", "C": "-" },
@@ -3168,8 +3485,10 @@ const HEROES = [
       },
       {
         "name": "電力增幅",
+        "nameEn": "",
         "description": "生命值大於40%時，攻擊力提升36%。",
         "template": "生命值大於40%時，攻擊力提升{A}%。",
+        "templateEn": "Increases ATK by {A}% when HP is above 40%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "24", "B": "-", "C": "-" },
@@ -3184,8 +3503,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "光子護盾",
+        "nameEn": "",
         "description": "敵軍部殺傷力降低20%。",
         "template": "敵軍部殺傷力降低{A}%。",
+        "templateEn": "Reduces enemy Troops' Lethality by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -3198,8 +3519,10 @@ const HEROES = [
       },
       {
         "name": "巧變調諧",
+        "nameEn": "",
         "description": "若敵軍部隊的初始兵力高於我軍，則我軍全體部隊防禦力提升30%；若敵軍部隊的初始兵力低於我軍，則敵軍防禦力提升20%。",
         "template": "若敵軍部隊的初始兵力高於我軍，則我軍全體部隊防禦力提升{A}%；若敵軍部隊的初始兵力低於我軍，則敵軍防禦力提升{B}%。",
+        "templateEn": "If the enemy Troops' initial Power exceeds ours, all allied troops' DEF increases by {A}%. Otherwise, enemy troops' DEF is reduced by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "6", "B": "4", "C": "-" },
@@ -3212,8 +3535,10 @@ const HEROES = [
       },
       {
         "name": "電磁震盪",
+        "nameEn": "",
         "description": "我軍全體部隊攻擊力提升25%。",
         "template": "我軍全體部隊攻擊力提升{A}%。",
+        "templateEn": "Increases ATK of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -3260,6 +3585,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -3269,8 +3595,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "分裂炮",
+        "nameEn": "",
         "description": "造成攻擊力*258%的範圍傷害，並且使目標暈眩2秒。",
         "template": "造成攻擊力*{A}%的範圍傷害，並且使目標暈眩2秒。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% and stuns the targets for 2s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "184", "B": "-", "C": "-" },
@@ -3283,8 +3611,10 @@ const HEROES = [
       },
       {
         "name": "雷射射線",
+        "nameEn": "",
         "description": "對敵方單位發射雷射，造成攻擊力*255%的傷害。",
         "template": "對敵方單位發射雷射，造成攻擊力*{A}%的傷害。",
+        "templateEn": "Fires a laser at an enemy unit, dealing DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "175", "B": "-", "C": "-" },
@@ -3297,8 +3627,10 @@ const HEROES = [
       },
       {
         "name": "動力過載",
+        "nameEn": "",
         "description": "造成傷害提升32%。",
         "template": "造成傷害提升{A}%。",
+        "templateEn": "Increases DMG dealt by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "12", "B": "-", "C": "-" },
@@ -3313,8 +3645,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "應變改造",
+        "nameEn": "",
         "description": "若敵軍部隊的初始兵力高於我軍，則我軍全體部隊生命值提升25%；若敵軍部隊的初始兵力低於我軍，則我軍全體部隊殺傷力提升30%。",
         "template": "若敵軍部隊的初始兵力高於我軍，則我軍全體部隊生命值提升{A}%；若敵軍部隊的初始兵力低於我軍，則我軍全體部隊殺傷力提升{B}%。",
+        "templateEn": "If the enemy Troops' initial Power exceeds ours, all allied troops' HP increases by {A}%. Otherwise, all allied troops' Lethality increases by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "6", "C": "-" },
@@ -3327,8 +3661,10 @@ const HEROES = [
       },
       {
         "name": "結構分析",
+        "nameEn": "",
         "description": "我軍全體部隊攻擊時有20%機率讓低軍暈眩，持續1回合。",
         "template": "我軍全體部隊攻擊時有{A}%機率讓低軍暈眩，持續1回合。",
+        "templateEn": "All allied troops have a {A}% chance to stun the enemy when attacking, lasting for 1 round.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -3341,8 +3677,10 @@ const HEROES = [
       },
       {
         "name": "動能抵銷",
+        "nameEn": "",
         "description": "敵軍部隊傷害降低20%。",
         "template": "敵軍部隊傷害降低{A}%。",
+        "templateEn": "Reduces enemy Troops' DMG by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -3389,6 +3727,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -3398,8 +3737,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "箭雨",
+        "nameEn": "",
         "description": "造成攻擊力*290%的範圍傷害，並且使目標防禦力降低50%，持續4秒。",
         "template": "造成攻擊力*{A}%的範圍傷害，並且使目標防禦力降低{B}%，持續4秒。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% and reduces the target's DEF by {B}% for 4s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "210", "B": "9", "C": "-" },
@@ -3412,8 +3753,10 @@ const HEROES = [
       },
       {
         "name": "無影箭",
+        "nameEn": "",
         "description": "對敵方單位造成攻擊*260%的傷害。",
         "template": "對敵方單位造成攻擊*{A}%的傷害。",
+        "templateEn": "Deals DMG equal to ATK * {A}% to the target.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "180", "B": "-", "C": "-" },
@@ -3426,8 +3769,10 @@ const HEROES = [
       },
       {
         "name": "裂傷箭頭",
+        "nameEn": "",
         "description": "攻擊時，有20%機率對目標額外造成攻擊力*160%的傷害。",
         "template": "攻擊時，有20%機率對目標額外造成攻擊力*{A}%的傷害。",
+        "templateEn": "When attacking, there is a 20% chance to deal DMG equal to ATK * {A}% to the target.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "100", "B": "-", "C": "-" },
@@ -3442,8 +3787,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "融入陰影",
+        "nameEn": "",
         "description": "敵軍部隊攻擊力降低20%。",
         "template": "敵軍部隊攻擊力降低{A}%。",
+        "templateEn": "Reduces enemy Troops' ATK by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -3456,8 +3803,10 @@ const HEROES = [
       },
       {
         "name": "心眼",
+        "nameEn": "",
         "description": "我軍全體部隊攻擊力及升25%。",
         "template": "我軍全體部隊攻擊力及升{A}%。",
+        "templateEn": "Increases ATK of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -3470,8 +3819,10 @@ const HEROES = [
       },
       {
         "name": "女妖之慟",
+        "nameEn": "",
         "description": "我軍全體部隊傷害提升20%。若敵軍部隊的初始兵力低於我軍，則傷害額外提升10%。",
         "template": "我軍全體部隊傷害提升{A}%。若敵軍部隊的初始兵力低於我軍，則傷害額外提升{B}%。",
+        "templateEn": "Increases DMG of all allied troops by {A}%. If the enemy Troops' initial Power is lower than ours, DMG increases by an additional {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "2", "C": "-" },
@@ -3518,6 +3869,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -3527,8 +3879,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "酩酊酒霧",
+        "nameEn": "",
         "description": "噴出酒霧，範圍內友方英雄和囚徒裝甲獲得攻擊力*150%的護盾，友方隨從獲得攻擊力*50%的護盾，持續4秒。",
         "template": "噴出酒霧，範圍內友方英雄和囚徒裝甲獲得攻擊力*{A}%的護盾，友方隨從獲得攻擊力*{B}%的護盾，持續4秒。",
+        "templateEn": "Sprays a mist of liquor, granting allied Heroes and Prisoner Power Armors within range Shields equal to ATK * {A}%, while allied Minions receive Shields equal to ATK * {B}% for 4s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "114", "B": "38", "C": "-" },
@@ -3541,8 +3895,10 @@ const HEROES = [
       },
       {
         "name": "醉鐵刀法",
+        "nameEn": "",
         "description": "對前方扇形範圍造成攻擊力*180%的範圍傷害，受擊目標在5秒內受到傷害提升15%。",
         "template": "對前方扇形範圍造成攻擊力*{A}%的範圍傷害，受擊目標在5秒內受到傷害提升{A}%。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% to enemies in a cone area in front, and increases DMG taken by hit targets by {B}% for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "140", "B": "9", "C": "-" },
@@ -3555,8 +3911,10 @@ const HEROES = [
       },
       {
         "name": "酒縱豪情",
+        "nameEn": "",
         "description": "生命值低於40%時，防禦力提升145%。",
         "template": "生命值低於40%時，防禦力提升{A}%。",
+        "templateEn": "Increases DEF by {A}% when HP is below 40%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "45", "B": "-", "C": "-" },
@@ -3571,8 +3929,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "力劈山岳",
+        "nameEn": "",
         "description": "我軍全體部隊部隊殺傷力提升25%。",
         "template": "我軍全體部隊部隊殺傷力提升{A}%。",
+        "templateEn": "Increases Lethality of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -3585,8 +3945,10 @@ const HEROES = [
       },
       {
         "name": "鐵甲護身",
+        "nameEn": "",
         "description": "我軍全體部隊防禦力提升(%)",
         "template": "我軍全體部隊防禦力提升{A}%",
+        "templateEn": "Increases DEF of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -3599,8 +3961,10 @@ const HEROES = [
       },
       {
         "name": "枯木逢春",
+        "nameEn": "",
         "description": "我軍全體部隊受到傷害降低20%。戰鬥結束後，若我方兵力不高於兵力的80%，則立即恢復輕傷是兵中的10%。",
         "template": "我軍全體部隊受到傷害降低{A}%。戰鬥結束後，若我方兵力不高於兵力的80%，則立即恢復輕傷是兵中的{B}%。",
+        "templateEn": "Reduces DMG taken by all allied troops by {A}%. After the battle, if our troop count is reduced to 80% or less of its initial size, immediately recovers {B}% of lightly wounded soldiers.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "2", "C": "-" },
@@ -3647,6 +4011,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -3656,8 +4021,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "秘藥蒸汽",
+        "nameEn": "",
         "description": "釋放有治療效果的蒸汽，以自身為中心，範圍內的0.5秒恢復攻擊*60%的生命值。",
         "template": "釋放有治療效果的蒸汽，以自身為中心，範圍內的0.5秒恢復攻擊*{A}%的生命值。",
+        "templateEn": "Releases healing steam centered on the caster, restoring HP equal to ATK * {A}% to units within range every 0.5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "40", "B": "-", "C": "-" },
@@ -3670,8 +4037,10 @@ const HEROES = [
       },
       {
         "name": "瀕死體驗",
+        "nameEn": "",
         "description": "對單體目標造成攻擊力*210%的傷害，並使其暈眩1秒。",
         "template": "對單體目標造成攻擊力*{A}%的傷害，並使其暈眩1秒。",
+        "templateEn": "Deals DMG equal to ATK * {A}% to a single target and stuns them for 1s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "150", "B": "-", "C": "-" },
@@ -3684,8 +4053,10 @@ const HEROES = [
       },
       {
         "name": "擾亂箭矢",
+        "nameEn": "",
         "description": "普通攻擊有20%機率使目標造成的傷害降低36%，並持續3秒。",
         "template": "普通攻擊有20%機率使目標造成的傷害降低{A}%，並持續3秒。",
+        "templateEn": "Basic Attacks have a 20% chance to reduce the target's DMG dealt by {A}% for 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "24", "B": "-", "C": "-" },
@@ -3700,8 +4071,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "降咒",
+        "nameEn": "",
         "description": "敵方部隊防禦降低20%。",
         "template": "敵方部隊防禦降低{A}%。",
+        "templateEn": "Reduces enemy troops' DEF by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -3714,8 +4087,10 @@ const HEROES = [
       },
       {
         "name": "避災",
+        "nameEn": "",
         "description": "每回合有20%機率免疫所有傷害。",
         "template": "每回合有{A}%機率免疫所有傷害。",
+        "templateEn": "Each round has a {A}% chance to become immune to all DMG.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -3728,8 +4103,10 @@ const HEROES = [
       },
       {
         "name": "侵蝕",
+        "nameEn": "",
         "description": "我軍全體部隊攻擊時有50%機率使本次傷害提升50%。",
         "template": "我軍全體部隊攻擊時有50%機率使本次傷害提升{A}%。",
+        "templateEn": "All allied troops have a 50% chance to increase their DMG by {A}% when attacking.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -3776,6 +4153,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -3785,8 +4163,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "瘋狂鋸輪",
+        "nameEn": "",
         "description": "造成攻擊力*290%的範圍傷害，受擊目標暈眩1.5秒。",
         "template": "造成攻擊力*{A}%的範圍傷害，受擊目標暈眩1.5秒。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% and stuns the hit target for 1.5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "210", "B": "-", "C": "-" },
@@ -3799,8 +4179,10 @@ const HEROES = [
       },
       {
         "name": "撕裂",
+        "nameEn": "",
         "description": "對單體目標造成攻擊力*210%的傷害，並且使目標防禦力降低25%，持續3秒。",
         "template": "對單體目標造成攻擊力*{A}%的傷害，並且使目標防禦力降低{B}%，持續3秒。",
+        "templateEn": "Deals DMG equal to ATK * {A}% to a single target and reduces the target's DEF by {B}% for 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "150", "B": "13", "C": "-" },
@@ -3813,8 +4195,10 @@ const HEROES = [
       },
       {
         "name": "彈殼爆破",
+        "nameEn": "",
         "description": "每普通攻擊5次後，下一次攻擊便會造成攻擊力*124%的範圍傷害。",
         "template": "每普通攻擊5次後，下一次攻擊便會造成攻擊力*{A}%的範圍傷害。",
+        "templateEn": "After every 5 Basic Attacks, the next attack deals AoE DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "100", "B": "-", "C": "-" },
@@ -3829,8 +4213,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "廢鐵鏽蝕",
+        "nameEn": "",
         "description": "敵軍部隊生命值降低20%。",
         "template": "敵軍部隊生命值降低{A}%。",
+        "templateEn": "Reduces enemy troops' HP by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -3843,8 +4229,10 @@ const HEROES = [
       },
       {
         "name": "熱血強襲",
+        "nameEn": "",
         "description": "我軍全體部隊攻擊力提升25%。",
         "template": "我軍全體部隊攻擊力提升{A}%。",
+        "templateEn": "Increases ATK of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -3857,8 +4245,10 @@ const HEROES = [
       },
       {
         "name": "斷鋼之力",
+        "nameEn": "",
         "description": "我軍全體部隊生命值提升25%。戰鬥結束後，若提方部隊兵力不高於初始兵力的70%，則該部對的屬性加成提供者會獲得5%的防禦增幅，持續5秒。",
         "template": "我軍全體部隊生命值提升{A}%。戰鬥結束後，若提方部隊兵力不高於初始兵力的70%，則該部對的屬性加成提供者會獲得{B}%的防禦增幅，持續5秒。",
+        "templateEn": "Increases HP of all allied troops by {A}%. After the battle, if the enemy troop count is reduced to 70% or less of its initial size, the providers of that troop's Stat Bonuses receive a DEF Reduction debuff of {B}% for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "1", "C": "-" },
@@ -3905,6 +4295,7 @@ const HEROES = [
       "name": "虛無遁形",
       "description": "維羅妮卡將利用陰影掩蓋行動的技術傳授給全軍。她無須出征，即可使我軍全體部隊生命值提升15%。",
       "template": "維羅妮卡將利用陰影掩蓋行動的技術傳授給全軍。她無須出征，即可使我軍全體部隊生命值提升{A}%。",
+      "templateEn": "Veronica shares her shadow concealment techniques with the troops. Without deploying, she boosts HP of all allied troops by {A}%.",
       "maxLevel": 5,
       "levels": {
         "1": { "A": "3", "B": "", "C": "" },
@@ -3918,8 +4309,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "疾影衝鋒",
+        "nameEn": "",
         "description": "衝向目標，造成攻擊力*290%的範圍傷害，並且使受擊目標的傷害增加15%，持續5秒。",
         "template": "衝向目標，造成攻擊力*{A}%的範圍傷害，並且使受擊目標的傷害增加{B}%，持續5秒。",
+        "templateEn": "Charges at the target, dealing AoE DMG equal to ATK * {A}%. Increases the hit target's DMG taken by {B}% for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "210", "B": "9", "C": "-" },
@@ -3932,8 +4325,10 @@ const HEROES = [
       },
       {
         "name": "光弧飛旋",
+        "nameEn": "",
         "description": "造成攻擊力*54%的扇形範圍傷害。",
         "template": "造成攻擊力*{A}%的扇形範圍傷害。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% to enemies in a cone area.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "38", "B": "-", "C": "-" },
@@ -3946,8 +4341,10 @@ const HEROES = [
       },
       {
         "name": "熱融利刃",
+        "nameEn": "",
         "description": "普通攻擊有20%機率造成攻擊力*160%的額外傷害。",
         "template": "普通攻擊有20%機率造成攻擊力*{A}%的額外傷害。",
+        "templateEn": "Basic Attacks have a 20% chance to deal extra DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "100", "B": "-", "C": "-" },
@@ -3962,8 +4359,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "無光之鋒",
+        "nameEn": "",
         "description": "我軍全體部隊攻擊時有50%機率使敵方受到傷害提升50%。",
         "template": "我軍全體部隊攻擊時有50%機率使敵方受到傷害提升{A}%。",
+        "templateEn": "All allied troops have a 50% chance to increase the enemy's DMG taken by {A}% when attacking.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -3976,8 +4375,10 @@ const HEROES = [
       },
       {
         "name": "蔽目迷霧",
+        "nameEn": "",
         "description": "我軍全體部隊殺傷力提升25%。",
         "template": "我軍全體部隊殺傷力提升{A}%。",
+        "templateEn": "Increases Lethality of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -3990,8 +4391,10 @@ const HEROES = [
       },
       {
         "name": "迷蹤步",
+        "nameEn": "",
         "description": "我軍全體部隊防禦力提升25%。",
         "template": "我軍全體部隊防禦力提升{A}%。",
+        "templateEn": "Increases DEF of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -4038,6 +4441,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -4047,8 +4451,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "瘋狂震擊",
+        "nameEn": "",
         "description": "對前方半圓形範圍內的敵方單位造成攻擊力*310%的範圍傷害，並額外造成攻擊力*50%的持續傷害，持續3秒。",
         "template": "對前方半圓形範圍內的敵方單位造成攻擊力*{A}%的範圍傷害，並額外造成攻擊力*{B}%的持續傷害，持續3秒。",
+        "templateEn": "Inflicts AoE DMG equal to ATK * {A}% on enemy units in a semicircular area in front and deals an additional DoT DMG equal to ATK * {B}%, lasting 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "230", "B": "30", "C": "-" },
@@ -4061,8 +4467,10 @@ const HEROES = [
       },
       {
         "name": "狂暴引擎",
+        "nameEn": "",
         "description": "進入狂暴模式，使自身造成傷害提升60%並免疫眩暈和沉默效果，持續3秒。",
         "template": "進入狂暴模式，使自身造成傷害提升{A}%並免疫眩暈和沉默效果，持續3秒。",
+        "templateEn": "Enters Fury Mode, increasing DMG dealt by {A}% and granting immunity to Stun and Silence effects for 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "20", "B": "-", "C": "-" },
@@ -4075,8 +4483,10 @@ const HEROES = [
       },
       {
         "name": "死亡回饋",
+        "nameEn": "",
         "description": "每有一個敵方英雄死亡，自身恢復最大值*30%生命值。",
         "template": "每有一個敵方英雄死亡，自身恢復最大值*{A}%生命值。",
+        "templateEn": "Whenever an enemy Hero dies, restores HP equal to {A}% of Max HP.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "14", "B": "-", "C": "-" },
@@ -4091,8 +4501,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "循環守護",
+        "nameEn": "",
         "description": "當回合數到達4的倍數時，我軍全體部隊在本回合受到的傷害減少80%。",
         "template": "當回合數到達4的倍數時，我軍全體部隊在本回合受到的傷害減少{A}%。",
+        "templateEn": "When the round number is a multiple of 4, reduces DMG taken by all allied troops by {A}% during that round.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "16", "B": "-", "C": "-" },
@@ -4105,8 +4517,10 @@ const HEROES = [
       },
       {
         "name": "機械改造",
+        "nameEn": "",
         "description": "盾牌兵傷害提升100%。",
         "template": "盾牌兵傷害提升{A}%。",
+        "templateEn": "Increases Shieldbearer DMG by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "20", "B": "-", "C": "-" },
@@ -4119,8 +4533,10 @@ const HEROES = [
       },
       {
         "name": "巨獸反擊",
+        "nameEn": "",
         "description": "盾牌兵每次受到普通攻擊後，就會對敵方攻擊目標進行反擊，造成30%的戰術傷害。",
         "template": "盾牌兵每次受到普通攻擊後，就會對敵方攻擊目標進行反擊，造成{A}%的戰術傷害。",
+        "templateEn": "Shieldbearers retaliate against enemy attackers after taking each Basic Attack, dealing {A}% Tactical DMG.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "6", "B": "-", "C": "-" },
@@ -4167,6 +4583,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -4176,8 +4593,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "瞬切",
+        "nameEn": "",
         "description": "持刀瞬閃至敵方最後方的英雄位置，再瞬閃回原來的位置，來回都會對路徑上的單位造成攻擊力*185%的傷害。",
         "template": "持刀瞬閃至敵方最後方的英雄位置，再瞬閃回原來的位置，來回都會對路徑上的單位造成攻擊力*{A}%的傷害。",
+        "templateEn": "Dashes instantly to the position of the enemy's rearmost Hero while wielding the blade, then flashes back to the original position, dealing DMG equal to ATK * {A}% to units along the path both ways.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "125", "B": "-", "C": "-" },
@@ -4190,8 +4609,10 @@ const HEROES = [
       },
       {
         "name": "拔刀斬",
+        "nameEn": "",
         "description": "對前方目標造成攻擊力*290%的範圍傷害。",
         "template": "對前方目標造成攻擊力*{A}%的範圍傷害。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% to targets in front.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "210", "B": "-", "C": "-" },
@@ -4204,8 +4625,10 @@ const HEROES = [
       },
       {
         "name": "致命忍術",
+        "nameEn": "",
         "description": "普通攻擊有32%機率造成暴擊。",
         "template": "普通攻擊有{A}%機率造成暴擊。",
+        "templateEn": "Basic Attacks have a {A}% chance to trigger a Crit.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "12", "B": "-", "C": "-" },
@@ -4220,8 +4643,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "弱點偵破",
+        "nameEn": "",
         "description": "我軍全體部隊進行普通攻擊時，有機率爆擊25%。",
         "template": "我軍全體部隊進行普通攻擊時，有機率爆擊{A}%。",
+        "templateEn": "All allied troops have a {A}% chance to trigger a CRIT when performing Basic Attacks.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -4234,8 +4659,10 @@ const HEROES = [
       },
       {
         "name": "靈敏身姿",
+        "nameEn": "",
         "description": "我軍全體部隊有20%機率閃避敵方部隊的普通攻擊。",
         "template": "我軍全體部隊有{A}%機率閃避敵方部隊的普通攻擊。",
+        "templateEn": "All allied troops have a {A}% chance to evade enemy Basic Attacks.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "-", "C": "-" },
@@ -4248,8 +4675,10 @@ const HEROES = [
       },
       {
         "name": "連環打擊",
+        "nameEn": "",
         "description": "投彈兵每普通攻擊2次，就會額外發動1次100%傷害的普通攻擊。",
         "template": "投彈兵每普通攻擊2次，就會額外發動1次{A}%傷害的普通攻擊。",
+        "templateEn": "Every 2 Basic Attacks, Bombers launch 1 additional Basic Attack that deals {A}% DMG.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "20", "B": "-", "C": "-" },
@@ -4296,6 +4725,7 @@ const HEROES = [
       "name": "神奇重炮",
       "description": "科舍沃伊的重炮有著極遠打擊範圍與驚人精度。他無須出征便可提供火力支援，使我軍全體部隊攻擊力提升15%。",
       "template": "科舍沃伊的重炮有著極遠打擊範圍與驚人精度。他無須出征便可提供火力支援，使我軍全體部隊攻擊力提升{A}%。",
+      "templateEn": "Koschevoi's artillery possesses exceptional range and remarkable accuracy. Without deploying, he can provide fire support, increasing ATK of all allied troops by {A}%.",
       "maxLevel": 5,
       "levels": {
         "1": { "A": "3", "B": "", "C": "" },
@@ -4309,8 +4739,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "連環飛彈",
+        "nameEn": "",
         "description": "連續發射3輪飛彈，每輪飛彈都會隨機飛向敵方單位（優先選擇英雄），並在敵方單位所在位置爆炸，造成攻擊力*120%的範圍方傷害。",
         "template": "連續發射3輪飛彈，每輪飛彈都會隨機飛向敵方單位（優先選擇英雄），並在敵方單位所在位置爆炸，造成攻擊力*{A}%的範圍方傷害。",
+        "templateEn": "Fires 3 consecutive rounds of missiles. Each round randomly targets enemy units (prioritizing Heroes) and explodes at the target's location, dealing AoE DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "84", "B": "-", "C": "-" },
@@ -4323,8 +4755,10 @@ const HEROES = [
       },
       {
         "name": "逆轉電波",
+        "nameEn": "",
         "description": "身後的裝置以自身為中心發出大範圍的圓形電磁波，令範圍內我方彈位攻擊速度提升26%，敵方攻擊速度降低20%，且敵方單位受到攻擊力*240%的傷害。",
         "template": "身後的裝置以自身為中心發出大範圍的圓形電磁波，令範圍內我方彈位攻擊速度提升{A}%，敵方攻擊速度降低{B}%，且敵方單位受到攻擊力*{C}%的傷害。",
+        "templateEn": "The device emits a large circular electromagnetic wave centered on itself, increasing ATK Speed of allied units within range by {A}%, decreasing ATK Speed of enemy units by {B}%, and dealing DMG equal to ATK * {C}% to enemy units.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "18", "B": "8", "C": "160" },
@@ -4337,8 +4771,10 @@ const HEROES = [
       },
       {
         "name": "飛彈來襲",
+        "nameEn": "",
         "description": "每普通攻擊4次，就會朝攻擊目標發射兩枚追蹤飛彈，每枚飛彈造成攻擊力*180%的範圍傷害。",
         "template": "每普通攻擊4次，就會朝攻擊目標發射兩枚追蹤飛彈，每枚飛彈造成攻擊力*{A}%的範圍傷害。",
+        "templateEn": "After every 4 Basic Attacks, launches 2 tracking missiles at the attack target, each dealing AoE DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "140", "B": "-", "C": "-" },
@@ -4353,8 +4789,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "精準打擊",
+        "nameEn": "",
         "description": "我軍全體部隊傷害提升25%。",
         "template": "我軍全體部隊傷害提升{A}%。",
+        "templateEn": "Increases DMG of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -4367,8 +4805,10 @@ const HEROES = [
       },
       {
         "name": "火炮侵襲",
+        "nameEn": "",
         "description": "我軍投彈兵每回合額外造成50%戰術傷害。",
         "template": "我軍投彈兵每回合額外造成{A}%戰術傷害。",
+        "templateEn": "Bombers deal an extra {A}% Tactical DMG each round.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -4381,8 +4821,10 @@ const HEROES = [
       },
       {
         "name": "重炮加持",
+        "nameEn": "",
         "description": "我軍投彈兵攻擊力提升30%，防禦力提升15%。",
         "template": "我軍投彈兵攻擊力提升{A}%，防禦力提升{B}%。",
+        "templateEn": "Increases Bombers' ATK by {A}% and DEF by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "6", "B": "3", "C": "-" },
@@ -4429,6 +4871,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -4438,8 +4881,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "脈衝射線",
+        "nameEn": "",
         "description": "對自身前方蓄力，然後發射矩形脈衝，對脈衝範圍內的敵方單位造成攻擊力*240%的範圍傷害。",
         "template": "對自身前方蓄力，然後發射矩形脈衝，對脈衝範圍內的敵方單位造成攻擊力*{A}%的範圍傷害。",
+        "templateEn": "Charges and fires a rectangular pulse forward, dealing AoE DMG equal to ATK * {A}% to enemy units within the pulse area.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "180", "B": "-", "C": "-" },
@@ -4452,8 +4897,10 @@ const HEROES = [
       },
       {
         "name": "眩暈爆彈",
+        "nameEn": "",
         "description": "朝敵方單位發射一顆子彈，造成攻擊力*210%的範圍，傷害並令敵方單位暈眩1.5秒。",
         "template": "朝敵方單位發射一顆子彈，造成攻擊力*{A}%的範圍，傷害並令敵方單位暈眩1.5秒。",
+        "templateEn": "Fires a bullet at enemy units, dealing AoE DMG equal to ATK * {A}% and stunning enemy units for 1.5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "162", "B": "-", "C": "-" },
@@ -4466,8 +4913,10 @@ const HEROES = [
       },
       {
         "name": "無盡蓄能",
+        "nameEn": "",
         "description": "脈衝能量隨著戰鬥進程不斷累計。每經過3秒，攻擊力提升3.6%。",
         "template": "脈衝能量隨著戰鬥進程不斷累計。每經過3秒，攻擊力提升{A}%。",
+        "templateEn": "Charges pulse energy as the battle progresses, increasing ATK by {A}% every 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "2", "B": "-", "C": "-" },
@@ -4482,8 +4931,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "蓄能掃射",
+        "nameEn": "",
         "description": "當回合數到達3的倍數，我軍槍械兵將在回合結束時發動一次額外的戰術攻擊，對目標造成戰術傷害110%。",
         "template": "當回合數到達3的倍數，我軍槍械兵將在回合結束時發動一次額外的戰術攻擊，對目標造成戰術傷害{A}%。",
+        "templateEn": "When the round number is a multiple of 3, our Shooters launch an extra Tactical Attack at the end of the round, dealing {A}% Tactical DMG to the target.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "22", "B": "-", "C": "-" },
@@ -4496,8 +4947,10 @@ const HEROES = [
       },
       {
         "name": "恐怖氣場",
+        "nameEn": "",
         "description": "敵軍造成的傷害有50%機率降低40%。",
         "template": "敵軍造成的傷害有{A}%機率降低40%。",
+        "templateEn": "There is a {A}% chance to reduce enemy DMG dealt by 40%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -4510,8 +4963,10 @@ const HEROES = [
       },
       {
         "name": "地獄強化",
+        "nameEn": "",
         "description": "我軍全體部隊攻擊力提升14%，全體部隊殺傷力提升12%。",
         "template": "我軍全體部隊攻擊力提升{A}%，全體部隊殺傷力提升{B}%。",
+        "templateEn": "Increases ATK of all allied troops by {A}% and Lethality by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "3", "B": "2", "C": "-" },
@@ -4558,6 +5013,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -4567,8 +5023,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "地面震擊",
+        "nameEn": "",
         "description": "錘擊地面造成攻擊力*(%)的範圍傷害，並且使目標眩暈1.5秒。",
         "template": "錘擊地面造成攻擊力*{A}%的範圍傷害，並且使目標眩暈1.5秒。",
+        "templateEn": "Strikes the ground, dealing AoE DMG equal to ATK * {A}% and stunning targets for 1.5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "336", "B": "-", "C": "-" },
@@ -4581,8 +5039,10 @@ const HEROES = [
       },
       {
         "name": "狂暴攻勢",
+        "nameEn": "",
         "description": "每普通攻擊6次，下次攻擊將會重擊目標，造成攻擊力*(%)的傷害，並且使目標恢復的生命值減少(%)。",
         "template": "每普通攻擊6次，下次攻擊將會重擊目標，造成攻擊力*{A}%的傷害，並且使目標恢復的生命值減少{B}%。",
+        "templateEn": "Every 6 Basic Attacks, the next attack deals DMG equal to ATK * {A}% and reduces the target's HP recovery by {B}% for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "220", "B": "32", "C": "-" },
@@ -4595,8 +5055,10 @@ const HEROES = [
       },
       {
         "name": "身軀改造",
+        "nameEn": "",
         "description": "自身造成傷害提升(%)，受到傷害降低(%)。",
         "template": "自身造成傷害提升{A}%，受到傷害降低{B}%。",
+        "templateEn": "Increases DMG dealt by {A}% and reduces DMG taken by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "16", "C": "-" },
@@ -4611,8 +5073,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "怪物威懾",
+        "nameEn": "",
         "description": "當回合數到達2的倍數時，我軍全體部隊在本回合受到的普通攻擊傷害減少50%。",
         "template": "當回合數到達2的倍數時，我軍全體部隊在本回合受到的普通攻擊傷害減少{A}%。",
+        "templateEn": "When the round number is a multiple of 2, reduces Basic Attack DMG taken by all allied troops by {A}% during that round.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -4625,8 +5089,10 @@ const HEROES = [
       },
       {
         "name": "捨身作戰",
+        "nameEn": "",
         "description": "當回合數到達3的倍數時，我軍盾牌兵本回合放棄攻擊，並讓槍械兵和投彈兵在本回合額外發動1次傷害為150%的普通攻擊。",
         "template": "當回合數到達3的倍數時，我軍盾牌兵本回合放棄攻擊，並讓槍械兵和投彈兵在本回合額外發動1次傷害為{A}%的普通攻擊。",
+        "templateEn": "When the round number is a multiple of 3, our Shieldbearers do not attack during that round, allowing Shooters and Bombers to launch 1 additional Basic Attack dealing {A}% DMG.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "30", "B": "-", "C": "-" },
@@ -4639,8 +5105,10 @@ const HEROES = [
       },
       {
         "name": "死亡氣息",
+        "nameEn": "",
         "description": "盾牌兵受到的傷害減少15%，投彈兵造成的傷害增加25%。",
         "template": "盾牌兵受到的傷害減少{A}%，投彈兵造成的傷害增加{B}%。",
+        "templateEn": "Reduces Shieldbearers' DMG taken by {A}% and increases Bombers' DMG dealt by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "3", "B": "5", "C": "-" },
@@ -4687,6 +5155,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -4696,8 +5165,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "深入敵後",
+        "nameEn": "",
         "description": "造成攻擊力*(%)的範圍傷害。",
         "template": "造成攻擊力*{A}%的範圍傷害。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "360", "B": "-", "C": "-" },
@@ -4710,8 +5181,10 @@ const HEROES = [
       },
       {
         "name": "破壞射擊",
+        "nameEn": "",
         "description": "向隨機2個敵方目標射擊，造成攻擊力*(%)的傷害，並且使目標攻擊力下降(%)，持續4秒。",
         "template": "向隨機2個敵方目標射擊，造成攻擊力*{A}%的傷害，並且使目標攻擊力下降{B}%，持續4秒。",
+        "templateEn": "Shoots at 2 random enemy targets, dealing DMG equal to ATK * {A}% and reducing their ATK by {B}% for 4s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "285", "B": "24", "C": "-" },
@@ -4724,8 +5197,10 @@ const HEROES = [
       },
       {
         "name": "眩暈彈藥",
+        "nameEn": "",
         "description": "每次普通攻擊有(%)機率令目標眩暈1秒。",
         "template": "每次普通攻擊有{A}%機率令目標眩暈1秒。",
+        "templateEn": "Each Basic Attack has a {A}% chance to stun the target for 1s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "8", "B": "-", "C": "-" },
@@ -4740,8 +5215,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "隱密襲擊",
+        "nameEn": "",
         "description": "投彈兵每次攻擊，都能讓該目標受到的戰術傷害增加50%，持續1回合。",
         "template": "投彈兵每次攻擊，都能讓該目標受到的戰術傷害增加{A}%，持續1回合。",
+        "templateEn": "For each Bomber attack, the target's Tactical DMG taken is increased by {A}% for 1 round.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -4754,8 +5231,10 @@ const HEROES = [
       },
       {
         "name": "資訊支援",
+        "nameEn": "",
         "description": "我軍全體部隊生命值提升25%。",
         "template": "我軍全體部隊生命值提升{A}%。",
+        "templateEn": "Increases HP of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -4768,8 +5247,10 @@ const HEROES = [
       },
       {
         "name": "計謀連環",
+        "nameEn": "",
         "description": "每回合投彈兵有25%機率對敵方全體造成攻擊力100%的戰術傷害。",
         "template": "每回合投彈兵有25%機率對敵方全體造成攻擊力{A}%的戰術傷害。",
+        "templateEn": "Each round, Bombers have a 25% chance to deal additional Tactical DMG equal to ATK * {A}% to all enemies.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "20", "B": "-", "C": "-" },
@@ -4816,6 +5297,7 @@ const HEROES = [
       "name": "罪證鎖定",
       "description": "埃德溫列舉罪證，被其鎖定的敵人難以逃脫制裁。他無須出征，即可使我軍全體部隊殺傷力提升15%。",
       "template": "埃德溫列舉罪證，被其鎖定的敵人難以逃脫制裁。他無須出征，即可使我軍全體部隊殺傷力提升{A}%。",
+      "templateEn": "Edwin presents evidence, leaving his targets with no escape from justice. When not deployed, he increases Lethality of all allied troops by {A}%.",
       "maxLevel": 5,
       "levels": {
         "1": { "A": "3", "B": "", "C": "" },
@@ -4829,8 +5311,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "追蹤爆破",
+        "nameEn": "",
         "description": "對敵方目標造成攻擊力*(%)的範圍傷害。",
         "template": "對敵方目標造成攻擊力*{A}%的範圍傷害。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% to enemies.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "240", "B": "-", "C": "-" },
@@ -4843,8 +5327,10 @@ const HEROES = [
       },
       {
         "name": "連環射擊",
+        "nameEn": "",
         "description": "向敵方目標射擊，造成攻擊力*(%)的傷害。若該目標生命值低於50%，則額外造成(%)的傷害。",
         "template": "向敵方目標射擊，造成攻擊力*{A}%的傷害。若該目標生命值低於50%，則額外造成{B}%的傷害。",
+        "templateEn": "Shoots at the enemy target, dealing DMG equal to ATK * {A}%. If the target's HP is below 50%, deals an additional {B}% DMG.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "260", "B": "200", "C": "-" },
@@ -4857,8 +5343,10 @@ const HEROES = [
       },
       {
         "name": "勝利追擊",
+        "nameEn": "",
         "description": "連環射擊成功擊殺目標，可以提升自身(%)攻擊力且連環射擊冷卻時間減少4秒。",
         "template": "連環射擊成功擊殺目標，可以提升自身{A}%攻擊力且連環射擊冷卻時間減少{B}秒。",
+        "templateEn": "After defeating a target with Chain Shooting, increases ATK by {A}% and reduces Chain Shooting's cooldown by {B}s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "20", "B": "2", "C": "-" },
@@ -4873,8 +5361,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "鋼鐵之軀",
+        "nameEn": "",
         "description": "盾牌兵受到的傷害降低20%，槍械兵受到的傷害降低30%。",
         "template": "盾牌兵受到的傷害降低{A}%，槍械兵受到的傷害降低{B}%。",
+        "templateEn": "Reduces Shieldbearers' DMG taken by {A}% and Shooters' DMG taken by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "6", "C": "-" },
@@ -4887,8 +5377,10 @@ const HEROES = [
       },
       {
         "name": "指令射擊",
+        "nameEn": "",
         "description": "每當敵軍受到戰術傷害時，槍械兵有30%的機率對該目標造成一次攻擊力25%的普通攻擊。",
         "template": "每當敵軍受到戰術傷害時，槍械兵有30%的機率對該目標造成一次攻擊力{A}%的普通攻擊。",
+        "templateEn": "Whenever enemies take Tactical DMG, Shooters have a 30% chance to launch 1 Basic Attack against that target, dealing DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -4901,8 +5393,10 @@ const HEROES = [
       },
       {
         "name": "正義審判",
+        "nameEn": "",
         "description": "當回合數到達3的倍數時，我軍槍械兵對目標造成攻擊力125%的戰術傷害。敵軍部隊兵力比我軍部隊兵力每多1倍，傷害額外提升15%，最多提升到75%。",
         "template": "當回合數到達3的倍數時，我軍槍械兵對目標造成攻擊力{A}%的戰術傷害。敵軍部隊兵力比我軍部隊兵力每多1倍，傷害額外提升{B}%，最多提升到{C}%。",
+        "templateEn": "When the round number is a multiple of 3, our Shooters deal Tactical DMG equal to ATK * {A}% to the target. For each multiple by which the enemy troop size exceeds ours, DMG increases by an additional {B}%, up to {C}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "25", "B": "3", "C": "15" },
@@ -4949,6 +5443,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -4958,8 +5453,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "極限飛彈",
+        "nameEn": "",
         "description": "發射導彈，對敵方目標造成攻擊力*(%)的範圍傷害，並且使該目標攻擊速度降低(%)，持續3秒。",
         "template": "發射導彈，對敵方目標造成攻擊力*{A}%的範圍傷害，並且使該目標攻擊速度降低{B}%，持續3秒。",
+        "templateEn": "Launches a missile that deals AoE DMG equal to ATK * {A}% to enemy targets and reduces their ATK Speed by {B}% for 3s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "280", "B": "12", "C": "-" },
@@ -4972,8 +5469,10 @@ const HEROES = [
       },
       {
         "name": "甜蜜射擊",
+        "nameEn": "",
         "description": "向敵方目標射擊，造成攻擊力*(%)的傷害，並且對該目標施加繳械效果，使該目標6秒內無法攻擊。",
         "template": "向敵方目標射擊，造成攻擊力*{A}%的傷害，並且對該目標施加繳械效果，使該目標6秒內無法攻擊。",
+        "templateEn": "Shoots at the enemy target, dealing DMG equal to ATK * {A}% and applying a Disarm effect that prevents the target from attacking for 6s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "380", "B": "-", "C": "-" },
@@ -4986,8 +5485,10 @@ const HEROES = [
       },
       {
         "name": "歡快樂曲",
+        "nameEn": "",
         "description": "我方所有英雄和囚徒裝甲生命值提升(%)。",
         "template": "我方所有英雄和囚徒裝甲生命值提升{A}%。",
+        "templateEn": "Increases HP of all allied Heroes and Prisoner Armors by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "8", "B": "-", "C": "-" },
@@ -5002,8 +5503,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "甜蜜笑容",
+        "nameEn": "",
         "description": "降低敵方所有部隊10%防禦和15%生命。",
         "template": "降低敵方所有部隊{A}%防禦和{B}%生命。",
+        "templateEn": "Reduces all enemy troops' DEF by {A}% and HP by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "2", "B": "3", "C": "-" },
@@ -5016,8 +5519,10 @@ const HEROES = [
       },
       {
         "name": "持續破壞",
+        "nameEn": "",
         "description": "當我軍全體盾牌兵與投彈兵對敵方造成普通攻擊傷害時，槍械兵有25%機率對該目標額外造成一次攻擊力70%的普通攻擊。",
         "template": "當我軍全體盾牌兵與投彈兵對敵方造成普通攻擊傷害時，槍械兵有25%機率對該目標額外造成一次攻擊力{A}%的普通攻擊。",
+        "templateEn": "When our Shieldbearers and Bombers deal Basic Attack DMG, Shooters have a 25% chance to launch 1 additional Basic Attack against the same target, dealing DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "14", "B": "-", "C": "-" },
@@ -5030,8 +5535,10 @@ const HEROES = [
       },
       {
         "name": "火力傾瀉",
+        "nameEn": "",
         "description": "槍械兵每攻擊4回合，對敵軍全體部隊造成一次攻擊力50%的普攻傷害。",
         "template": "槍械兵每攻擊4回合，對敵軍全體部隊造成一次攻擊力{A}%的普攻傷害。",
+        "templateEn": "After every 4 attacks, Shooters launch 1 Basic Attack against all enemy troops, dealing DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -5078,6 +5585,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -5087,8 +5595,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "及時補給",
+        "nameEn": "Timely Supply",
         "description": "為我方全體單位立即恢復攻擊力*240%生命值，此外英雄還會每秒恢復攻擊力*60%生命值，持續5秒。",
         "template": "為我方全體單位立即恢復攻擊力*{A}%生命值，此外英雄還會每秒恢復攻擊力*{B}%生命值，持續5秒。",
+        "templateEn": "Instantly restores HP of all allied units equal to ATK * {A}%, and restores HP of Heroes equal to ATK * {B}% per second for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "128", "B": "12", "C": "-" },
@@ -5101,8 +5611,10 @@ const HEROES = [
       },
       {
         "name": "公平競賽",
+        "nameEn": "Fair Play",
         "description": "發射子彈，對目標造成攻擊力*580%傷害，並移除目標的增益效果。",
         "template": "發射子彈，對目標造成攻擊力*{A}%傷害，並移除目標的增益效果。",
+        "templateEn": "Fires a bullet, dealing DMG equal to ATK * {A}% to the target and removing the target's Buff effects.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "340", "B": "-", "C": "-" },
@@ -5115,8 +5627,10 @@ const HEROES = [
       },
       {
         "name": "眼花撩亂",
+        "nameEn": "Flash Burst",
         "description": "普通攻擊有40%機率施加持續1秒的暈眩狀態。",
         "template": "普通攻擊有{A}%機率施加持續1秒的暈眩狀態。",
+        "templateEn": "Basic Attacks have a {A}% chance to apply Stun for 1s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "20", "B": "-", "C": "-" },
@@ -5131,8 +5645,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "發令衝刺",
+        "nameEn": "Sprint Signal",
         "description": "我軍全體部隊攻擊力提升25%。",
         "template": "我軍全體部隊攻擊力提升{A}%。",
+        "templateEn": "Increases ATK of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -5145,8 +5661,10 @@ const HEROES = [
       },
       {
         "name": "卡位干擾",
+        "nameEn": "Position Block",
         "description": "敵方盾牌兵殺傷力降低20%，投彈兵殺傷力降低25%。",
         "template": "敵方盾牌兵殺傷力降低{A}%，投彈兵殺傷力降低{B}%。",
+        "templateEn": "Reduces enemy Shieldbearer Lethality by {A}% and Bomber Lethality by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "4", "B": "5", "C": "-" },
@@ -5159,8 +5677,10 @@ const HEROES = [
       },
       {
         "name": "彎道反超",
+        "nameEn": "Corner Overtake",
         "description": "回合數達到4的倍數時，我方全軍傷害提升43%，持續2回合。本方當前兵力與初始兵力的比例每減少10%，額外提升1%傷害。",
         "template": "回合數達到4的倍數時，我方全軍傷害提升{A}%，持續2回合。本方當前兵力與初始兵力的比例每減少10%，額外提升1%傷害。",
+        "templateEn": "Every 4 rounds, DMG of all allied troops increases by {A}% for 2 rounds. For every 10% decrease in the ratio of current troops to initial troops, DMG increases by an additional 1%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "8.6", "B": "-", "C": "-" },
@@ -5177,7 +5697,7 @@ const HEROES = [
       "image": "凱特_專屬裝備_奇思妙想.png",
       "arrestSkill": {
         "name": "熱血起跑",
-        "description": "生命值提升30%，並且令受到[及時補給]影響的目標攻擊速度提升33%。\n",
+        "description": "生命值提升30%，並且令受到[及時補給]影響的目標攻擊速度提升33%。\nIncreases HP by 30%, and increases ATK Speed of targets with Timely Supply effect by 33%.",
         "image": "凱特_緝捕裝備技能_熱血起跑.png"
       },
       "warSkill": {
@@ -5207,6 +5727,7 @@ const HEROES = [
       "name": "悖論啟示",
       "description": "沃瑞爾的程式中蘊藏著出乎意料的潛能。他無須出征，即可使我軍全體部隊防禦力提升15%。",
       "template": "沃瑞爾的程式中蘊藏著出乎意料的潛能。他無須出征，即可使我軍全體部隊防禦力提升{A}%。",
+      "templateEn": "Worrell's programming contains unexpected potential. Without deploying, he increases DEF of all allied troops by {A}%.",
       "maxLevel": 5,
       "levels": {
         "1": { "A": "3", "B": "", "C": "" },
@@ -5220,8 +5741,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "錯亂射擊",
+        "nameEn": "Chaos Shot",
         "description": "發射子彈，對目標造成攻擊力*400%傷害，並且令目標攻擊力降低20%，持續5秒。",
         "template": "發射子彈，對目標造成攻擊力*{A}%傷害，並且令目標攻擊力降低{B}%，持續5秒。",
+        "templateEn": "Fires bullets, dealing DMG equal to ATK * {A}% to the target and reducing the target's ATK by {B}% for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "320", "B": "12", "C": "-" },
@@ -5234,8 +5757,10 @@ const HEROES = [
       },
       {
         "name": "彈簧絞索",
+        "nameEn": "Spring Snare",
         "description": "造成攻擊力*320%範圍傷害，並且令目標攻擊速度降低33%，持續5秒。",
         "template": "造成攻擊力*{A}%範圍傷害，並且令目標攻擊速度降低{B}%，持續5秒。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% and reduces the target's ATK Speed by {B}% for 5s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "160", "B": "25", "C": "-" },
@@ -5248,8 +5773,10 @@ const HEROES = [
       },
       {
         "name": "破滅閾值",
+        "nameEn": "Critical Mass",
         "description": "自身生命值高於50%時，攻擊力提高26%。",
         "template": "自身生命值高於50%時，攻擊力提高{A}%。",
+        "templateEn": "Increases ATK by {A}% when HP is above 50%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "18", "B": "-", "C": "-" },
@@ -5264,8 +5791,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "蓄勢彈射",
+        "nameEn": "Charged Lanch",
         "description": "我軍全體部隊普攻傷害提升25%。",
         "template": "我軍全體部隊普攻傷害提升{A}%。",
+        "templateEn": "Increases Basic Attack DMG of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -5278,8 +5807,10 @@ const HEROES = [
       },
       {
         "name": "雙重鞭笞",
+        "nameEn": "Double Lash",
         "description": "我軍投彈兵普通攻擊時有50%概率連擊。連擊與普通攻擊效果相同，但無法觸發此技能。",
         "template": "我軍投彈兵普通攻擊時有{A}%概率連擊。連擊與普通攻擊效果相同，但無法觸發此技能。",
+        "templateEn": "Allied Bombers have a {A}% chance to trigger a combo when using Basic Attacks. The combo has the same effects as a Basic Attack, but cannot trigger this skill.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "10", "B": "-", "C": "-" },
@@ -5292,8 +5823,10 @@ const HEROES = [
       },
       {
         "name": "戰鬥推演",
+        "nameEn": "Combat Simulation",
         "description": "沃瑞爾演算一場虛擬對戰，敵我雙方將按照各自兵種構成比例，以相同數量的部隊交戰。若我方在虛擬對戰中獲勝，則本場時技戰鬥中我方投彈兵攻擊力提升75%。",
         "template": "沃瑞爾演算一場虛擬對戰，敵我雙方將按照各自兵種構成比例，以相同數量的部隊交戰。若我方在虛擬對戰中獲勝，則本場時技戰鬥中我方投彈兵攻擊力提升{A}%。",
+        "templateEn": "Worrell calculates a virtual battle in which both sides fight with equal numbers of troops based on their respective troop composition ratios. If our side wins, allied Bombers gain {A}% ATK in the actual battle.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "15", "B": "-", "C": "-" },
@@ -5310,7 +5843,7 @@ const HEROES = [
       "image": "沃瑞爾_專屬裝備_刑罰之握.png",
       "arrestSkill": {
         "name": "崩壞連鎖",
-        "description": "每有一個英雄或囚徒裝甲（不論敵我）被消滅，使我方全體英雄和囚徒裝甲受到傷害降低2%，造成傷害提升2%。\n",
+        "description": "每有一個英雄或囚徒裝甲（不論敵我）被消滅，使我方全體英雄和囚徒裝甲受到傷害降低2%，造成傷害提升2%。\nFor each Hero or Prisoner Power Armor(ally or enemy)destroyed,  all allied Heroes and Prisoner Power Armors' DMG taken reduced by 2% and DMG dealt increased by 2%.",
         "image": "沃瑞爾_緝捕裝備技能_崩壞連鎖.png"
       },
       "warSkill": {
@@ -5340,6 +5873,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -5349,8 +5883,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "棒打狂徒",
+        "nameEn": "Bludgeon Strike",
         "description": "造成攻擊力*320%的範圍傷害。",
         "template": "造成攻擊力*{A}%的範圍傷害。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "160", "B": "-", "C": "-" },
@@ -5363,8 +5899,10 @@ const HEROES = [
       },
       {
         "name": "自在幻身",
+        "nameEn": "Phantom Clone",
         "description": "呼喚出2個分身助戰，持續8秒。分身具有本體45%的攻擊、防禦和生命值，並可運用[戰天鬥地]的效果。",
         "template": "呼喚出2個分身助戰，持續8秒。分身具有本體{A}%的攻擊、防禦和生命值，並可運用[戰天鬥地]的效果。",
+        "templateEn": "Summons 2 clones to assist in battle for 8s. Clones have {A}% of the original's ATK, DEF, and HP, and can use the Celestial Fury effect.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "9", "B": "-", "C": "-" },
@@ -5377,8 +5915,10 @@ const HEROES = [
       },
       {
         "name": "戰天鬥地",
+        "nameEn": "Celestial Fury",
         "description": "每4次普通攻擊後，下次普通攻擊將會造成攻擊力*180%傷害，並恢復自身攻擊力*80%的生命值。",
         "template": "每4次普通攻擊後，下次普通攻擊將會造成攻擊力*{A}%傷害，並恢復自身攻擊力*{B}%的生命值。",
+        "templateEn": "For every 4 Basic Attacks, the next one deals DMG equal to ATK * {A}% and restores HP equal to ATK * {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "120", "B": "40", "C": "-" },
@@ -5393,8 +5933,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "三轉劫火",
+        "nameEn": "Calamity Inferno",
         "description": "回合數達到3的倍數時，我方投彈兵造成一次攻擊力150%的戰術傷害。",
         "template": "回合數達到3的倍數時，我方投彈兵造成一次攻擊力{A}%的戰術傷害。",
+        "templateEn": "Every 3 rounds, allied Bombers deal Tactical DMG equal to ATK * {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "30", "B": "-", "C": "-" },
@@ -5407,8 +5949,10 @@ const HEROES = [
       },
       {
         "name": "鬥心熾盛",
+        "nameEn": "Battle Fervor",
         "description": "我方投彈兵傷害提升25%。",
         "template": "我方投彈兵傷害提升{A}%。",
+        "templateEn": "Increases allied Bombers' DMG by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -5421,8 +5965,10 @@ const HEROES = [
       },
       {
         "name": "愈戰愈勇",
+        "nameEn": "Battle Hardened",
         "description": "我方全軍傷害提升25%。",
         "template": "我方全軍傷害提升{A}%。",
+        "templateEn": "Increases DMG of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "5", "B": "-", "C": "-" },
@@ -5439,7 +5985,7 @@ const HEROES = [
       "image": "悟空_專屬裝備_神通.png",
       "arrestSkill": {
         "name": "痛飲戰意",
-        "description": "攻擊力提高10%，且在[棒打狂徒]技能造成傷害時，恢復造成傷害*45%的生命值。\n",
+        "description": "攻擊力提高10%，且在[棒打狂徒]技能造成傷害時，恢復造成傷害*45%的生命值。\nIncreases ATK by 10%, and when Bludgeon Strike deals DMG, restores HP equal to DMG dealt * 45%.",
         "image": "悟空_緝捕裝備技能_痛飲戰意.png"
       },
       "warSkill": {
@@ -5469,6 +6015,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
+      "templateEn": "",
       "maxLevel": 0,
       "levels": {
 
@@ -5478,8 +6025,10 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "暴烈爪",
+        "nameEn": "Savage Claw",
         "description": "造成攻擊力*420%的範圍傷害，並使目標暈眩1秒。",
         "template": "造成攻擊力*{A}%的範圍傷害，並使目標暈眩1秒。",
+        "templateEn": "Deals AoE DMG equal to ATK * {A}% and stuns the targets for 1s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "260", "B": "-", "C": "-" },
@@ -5492,8 +6041,10 @@ const HEROES = [
       },
       {
         "name": "怒嘯",
+        "nameEn": "Furious Roar",
         "description": "令我方所有單位攻擊力提升15%，持續4秒。",
         "template": "令我方所有單位攻擊力提升{A}%，持續4秒。",
+        "templateEn": "Increases ATK of all allied units by {A}% for 4s.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "9", "B": "-", "C": "-" },
@@ -5506,8 +6057,10 @@ const HEROES = [
       },
       {
         "name": "絕境反撲",
+        "nameEn": "Counter Surge",
         "description": "生命值低於40%時，受到傷害降低60%。",
         "template": "生命值低於40%時，受到傷害降低{A}%。",
+        "templateEn": "When HP is below 40%, reduces DMG taken by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "12", "B": "-", "C": "-" },
@@ -5522,8 +6075,10 @@ const HEROES = [
     "warSkills": [
       {
         "name": "自然節律",
+        "nameEn": "Natural Hymn",
         "description": "回合數為單數時，盾牌手受到的戰術傷害降低60%；回合數為偶數時，盾牌手受到的普攻傷害減少40%。",
         "template": "回合數為單數時，盾牌手受到的戰術傷害降低{A}%；回合數為偶數時，盾牌手受到的普攻傷害減少{B}%。",
+        "templateEn": "On odd-numbered rounds, reduces Tactical DMG taken by Shieldbearers by {A}%; on even-numbered rounds, reduces Basic Attack DMG taken by Shieldbearers by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "12", "B": "8", "C": "-" },
@@ -5536,8 +6091,10 @@ const HEROES = [
       },
       {
         "name": "鋼鎧庇護",
+        "nameEn": "Iron Protection",
         "description": "每回合有83%機率庇護本方某一類兵種，使其受到傷害降低75%。",
         "template": "每回合有83%機率庇護本方某一類兵種，使其受到傷害降低{A}%。",
+        "templateEn": "Each round has an 83% chance to Shelter one of our troop types, reducing their DMG taken by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "15", "B": "-", "C": "-" },
@@ -5550,8 +6107,10 @@ const HEROES = [
       },
       {
         "name": "山林共鳴",
+        "nameEn": "Forest Echo",
         "description": "我軍全體部隊戰術傷害增加75%。",
         "template": "我軍全體部隊戰術傷害增加{A}%。",
+        "templateEn": "Increases Tactical DMG of all allied troops by {A}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "15", "B": "-", "C": "-" },
@@ -5568,7 +6127,7 @@ const HEROES = [
       "image": "奧托_專屬裝備_狂噬面甲.png",
       "arrestSkill": {
         "name": "破堅刃齒",
-        "description": "普通攻擊有25%機率造成攻擊力*160%傷害，並令目標防禦力降低30%。\n",
+        "description": "普通攻擊有25%機率造成攻擊力*160%傷害，並令目標防禦力降低30%。\nBasic Attacks have a 25% chance to deal DMG equal to ATK*160% and reduce the target's DEF by 30%.",
         "image": "奧托_緝捕裝備技能_破堅刃齒.png"
       },
       "warSkill": {
