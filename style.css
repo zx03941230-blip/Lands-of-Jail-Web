@@ -365,6 +365,53 @@ footer{
     color:#111;
 }
 
+.hero-header-info{
+    flex:1;
+}
+
+.hero-en-name{
+    font-size:22px;
+    color:#d0c8bb;
+    margin-top:6px;
+}
+
+.hero-meta{
+    margin-top:10px;
+    color:#a8a8a8;
+    line-height:1.5;
+}
+
+.hero-action-row{
+    display:flex;
+    gap:10px;
+    margin-top:14px;
+}
+
+.hero-action-btn{
+    border:none;
+    border-radius:999px;
+
+    padding:10px 16px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff9900,
+            #ffc15a
+        );
+
+    color:#111;
+
+    font-weight:800;
+
+    cursor:pointer;
+}
+
+.favorite-btn{
+    background:#2b2b2b;
+    color:#fff;
+}
+
 /* =========================================
    14. Modal Header
    功能：分享按鈕、收藏按鈕、英雄標題區
@@ -625,15 +672,78 @@ footer{
 }
 
 /* =========================================
-   19. Mobile Layout 手機專區 | 手機 (<768px)
-   未來新增：手機版排版調整放這裡
+19. Mobile Layout 手機專區 | 手機 (<768px)
 ========================================= */
 
 @media(max-width:768px){
 
+    /* =====================================
+       A. Toolbar 搜尋與篩選
+       新增：
+       - 搜尋框
+       - 篩選器
+       - 收藏切換
+       ===================================== */
+
     .toolbar{
         grid-template-columns:1fr;
     }
+
+    .filter-toggle{
+        display:block;
+        width:100%;
+        ...
+    }
+
+    .toolbar.collapsed{
+        display:none;
+    }
+
+
+    /* =====================================
+       B. Hero Grid 英雄列表
+       新增：
+       - 卡片尺寸
+       - 手機欄數
+       - 圖片大小
+       ===================================== */
+
+    .hero-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:10px;
+    }
+
+    .hero-card{
+        border-radius:14px;
+    }
+
+    .image-box{
+        padding:6px;
+    }
+
+    .card-body{
+        padding:8px;
+    }
+
+    .card-body h2{
+        font-size:13px;
+    }
+
+    .card-body p{
+        font-size:11px;
+    }
+
+    .rarity{
+        font-size:10px;
+    }
+
+
+    /* =====================================
+       C. Modal 外框
+       新增：
+       - Modal尺寸
+       - 關閉按鈕
+       ===================================== */
 
     .modal-overlay{
         padding:10px;
@@ -655,52 +765,65 @@ footer{
         font-size:22px;
     }
 
-    .modal-header{
-        flex-direction:row;
-        align-items:center;
+
+    /* =====================================
+       D. Hero Header 名片區
+       新增：
+       - 分享
+       - 收藏
+       - 英文名
+       - 職業資訊
+       ===================================== */
+
+    .mobile-hero-card{
+        display:grid;
+        grid-template-columns:90px 1fr;
         gap:14px;
-        margin-bottom:18px;
+        align-items:start;
+    }
+
+    .modal-header{
+        display:grid;
+        grid-template-columns:90px 1fr;
+        gap:14px;
     }
 
     .modal-hero-img{
-        width:92px;
-        height:92px;
+        width:90px;
+        height:90px;
         border-radius:16px;
     }
 
-    .modal-rarity{
-        padding:5px 10px;
-        font-size:12px;
-        margin-bottom:6px;
+    .mobile-hero-card h2{
+        font-size:26px;
     }
 
-    .modal-title-row{
-        align-items:flex-start;
+    .hero-en-name{
+        font-size:16px;
     }
 
-    .share-btn{
-        padding:6px 10px;
-        font-size:12px;
+    .hero-meta{
+        font-size:14px;
+        line-height:1.55;
     }
 
-    .modal-header h2{
-        font-size:22px;
-        line-height:1.3;
+    .hero-action-row{
+        margin-top:12px;
+        flex-wrap:wrap;
     }
 
-    .modal-header p{
+    .hero-action-btn{
+        padding:8px 14px;
         font-size:13px;
-        line-height:1.45;
     }
 
-    .modal-section{
-        margin-top:20px;
-    }
 
-    .modal-section h3{
-        font-size:20px;
-        margin-bottom:10px;
-    }
+    /* =====================================
+       E. 能力數值
+       新增：
+       - 數值卡片
+       - 百分比顯示
+       ===================================== */
 
     .stat-grid{
         grid-template-columns:repeat(2,1fr);
@@ -709,7 +832,6 @@ footer{
 
     .stat-item{
         padding:12px;
-        border-radius:14px;
     }
 
     .stat-label{
@@ -720,6 +842,15 @@ footer{
         font-size:22px;
     }
 
+
+    /* =====================================
+       F. 技能區
+       新增：
+       - 技能卡
+       - 等級按鈕
+       - 技能描述
+       ===================================== */
+
     .skill-list{
         grid-template-columns:1fr;
         gap:12px;
@@ -728,52 +859,39 @@ footer{
     .skill-item{
         gap:12px;
         padding:12px;
-        border-radius:16px;
-        align-items:flex-start;
     }
 
     .skill-item img{
         width:58px;
         height:58px;
-        border-radius:12px;
     }
 
     .skill-info h4{
         font-size:17px;
-        margin-bottom:6px;
     }
 
     .skill-info p,
     .skill-desc{
         font-size:14px;
-        line-height:1.65;
     }
 
     .skill-levels{
         flex-wrap:nowrap;
         overflow-x:auto;
         gap:6px;
-        margin:6px 0 9px;
-        padding-bottom:2px;
-        scrollbar-width:none;
-        -ms-overflow-style:none;
     }
 
     .skill-levels::-webkit-scrollbar{
         display:none;
     }
-    
-    .modal-action-row{
-        flex-direction:column;
-        align-items:flex-end;
-        gap:6px;
-    }
 
-    .favorite-btn,
-    .share-btn{
-        padding:6px 10px;
-        font-size:12px;
-    }
+
+    /* =====================================
+       G. Modal 導覽
+       新增：
+       - 上一位
+       - 下一位
+       ===================================== */
 
     .modal-nav-row{
         gap:8px;
@@ -783,7 +901,16 @@ footer{
         padding:10px 12px;
         font-size:13px;
     }
-    
+
+
+    /* =====================================
+       H. 收藏 / 最近查看 Tabs
+       新增：
+       - 全部英雄
+       - 收藏英雄
+       - 最近查看
+       ===================================== */
+
     .view-tabs{
         gap:8px;
     }
@@ -793,96 +920,9 @@ footer{
         padding:9px 10px;
         font-size:13px;
     }
-    
-    .hero-grid{
-        grid-template-columns:repeat(3,1fr);
-        gap:10px;
-    }
 
-    .hero-card{
-        border-radius:14px;
-    }
-
-    .image-box{
-        padding:6px;
-    }
-
-    .card-body{
-        padding:8px;
-    }
-
-    .card-body h2{
-        font-size:13px;
-        min-height:auto;
-        margin-bottom:3px;
-        line-height:1.35;
-    }
-
-    .card-body p{
-        font-size:11px;
-        min-height:auto;
-    }
-
-    .rarity{
-        padding:3px 7px;
-        font-size:10px;
-        margin-bottom:5px;
-    }
-    
-    .filter-toggle{
-        display:block;
-        width:100%;
-        border:none;
-        border-radius:16px;
-        padding:12px 16px;
-        margin-bottom:14px;
-        background:linear-gradient(90deg,#ff9900,#ffc15a);
-        color:#111;
-        font-weight:900;
-        font-size:15px;
-    }
-
-    .toolbar.collapsed{
-        display:none;
-    }
-    
-    .modal-header{
-        display:grid;
-        grid-template-columns:82px 1fr;
-        align-items:center;
-        gap:14px;
-    }
-
-    .modal-hero-img{
-        width:82px;
-        height:82px;
-    }
-
-    .modal-title-row{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:8px;
-    }
-
-    .modal-header h2{
-        font-size:24px;
-        line-height:1.25;
-        word-break:keep-all;
-        overflow-wrap:normal;
-    }
-
-    .modal-action-row{
-        display:flex;
-        flex-direction:row;
-        gap:8px;
-    }
-
-    .share-btn,
-    .favorite-btn{
-        padding:6px 10px;
-        font-size:12px;
-    }
 }
+
 
 /* =========================================
    19A. Tablet Layout 平板專區 | 平板 (769~1024px)
