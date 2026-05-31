@@ -119,6 +119,39 @@ select:focus{
 }
 
 /* =========================================
+   04A. View Tabs
+   未來新增：全部 / 收藏 / 最近查看 Tab 放這裡
+========================================= */
+
+.view-tabs{
+    display:flex;
+    gap:10px;
+    margin:0 0 18px;
+    flex-wrap:wrap;
+}
+
+.view-tab{
+    border:1px solid rgba(255,255,255,.12);
+    background:#171717;
+    color:#bbb;
+    padding:10px 16px;
+    border-radius:999px;
+    font-weight:800;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.view-tab:hover{
+    color:#fff;
+    border-color:rgba(255,180,70,.35);
+}
+
+.view-tab.active{
+    background:linear-gradient(90deg,#ff9900,#ffc15a);
+    color:#111;
+}
+
+/* =========================================
    05. Summary
    未來新增：英雄數量、搜尋結果提示放這裡
 ========================================= */
@@ -330,7 +363,7 @@ footer{
 
 /* =========================================
    14. Modal Header
-   未來新增：分享按鈕、收藏按鈕、英雄標題區放這裡
+   功能：分享按鈕、收藏按鈕、英雄標題區
 ========================================= */
 
 .modal-header{
@@ -395,6 +428,30 @@ footer{
     line-height:1.6;
 }
 
+.modal-action-row{
+    display:flex;
+    gap:8px;
+    align-items:center;
+}
+
+.favorite-btn{
+    border:none;
+    cursor:pointer;
+    background:#2a2a2a;
+    color:#ffca7a;
+    padding:8px 14px;
+    border-radius:10px;
+    font-weight:700;
+    font-size:13px;
+    transition:.2s;
+    white-space:nowrap;
+}
+
+.favorite-btn.active{
+    background:linear-gradient(90deg,#ff9900,#ffc15a);
+    color:#111;
+}
+
 /* =========================================
    15. Modal Sections
    未來新增：區塊標題、折疊區塊共用樣式放這裡
@@ -409,6 +466,32 @@ footer{
     margin-bottom:12px;
     border-left:4px solid #ff9900;
     padding-left:10px;
+}
+
+.modal-nav-row{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    margin-top:28px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+.modal-nav-row button{
+    flex:1;
+    border:none;
+    cursor:pointer;
+    background:#222;
+    color:#ffca7a;
+    padding:12px 16px;
+    border-radius:12px;
+    font-weight:800;
+    transition:.2s;
+}
+
+.modal-nav-row button:hover{
+    background:#ffb02e;
+    color:#111;
 }
 
 /* =========================================
@@ -674,6 +757,37 @@ footer{
 
     .skill-levels::-webkit-scrollbar{
         display:none;
+    }
+    
+    .modal-action-row{
+        flex-direction:column;
+        align-items:flex-end;
+        gap:6px;
+    }
+
+    .favorite-btn,
+    .share-btn{
+        padding:6px 10px;
+        font-size:12px;
+    }
+
+    .modal-nav-row{
+        gap:8px;
+    }
+
+    .modal-nav-row button{
+        padding:10px 12px;
+        font-size:13px;
+    }
+    
+    .view-tabs{
+        gap:8px;
+    }
+
+    .view-tab{
+        flex:1;
+        padding:9px 10px;
+        font-size:13px;
     }
 }
 

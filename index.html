@@ -44,6 +44,12 @@
         </div>
     </section>
 
+    <section class="view-tabs">
+      <button class="view-tab active" data-view="ALL" onclick="setHeroView('ALL', this)">全部英雄</button>
+      <button class="view-tab" data-view="FAVORITE" onclick="setHeroView('FAVORITE', this)">★ 收藏英雄</button>
+      <button class="view-tab" data-view="RECENT" onclick="setHeroView('RECENT', this)">🕒 最近查看</button>
+    </section>
+
     <section class="summary">
       <span id="heroCount">0</span>
       <span>位英雄</span>
@@ -72,6 +78,10 @@
     const typeFilter = document.getElementById('typeFilter');
 
     const rarityOrder = ['R', 'SR', 'SSR S-1', 'SSR S-2', 'SSR S-3', 'SSR S-4', 'SSR S-5', 'SSR S-6'];
+    let currentHeroId = null;
+    let favoriteHeroes = JSON.parse(localStorage.getItem("favoriteHeroes") || "[]");
+    let currentHeroView = "ALL";
+    let recentHeroes = JSON.parse(localStorage.getItem("recentHeroes") || "[]");
 
     /* =========================================
        01A. Asset Helpers
@@ -117,8 +127,13 @@
         const matchRarity = selectedRarity === 'ALL' || hero.rarity === selectedRarity;
         const matchRole = selectedRole === "ALL" || heroRoleZh === selectedRole;
         const matchType = selectedType === "ALL" || heroTypeZh === selectedType;
+        
+        const matchView =
+            currentHeroView === "ALL" ||
+            (currentHeroView === "FAVORITE" && favoriteHeroes.includes(hero.id)) ||
+            (currentHeroView === "RECENT" && recentHeroes.includes(hero.id));
 
-        return matchKeyword && matchRarity && matchRole && matchType;
+        return matchKeyword && matchRarity && matchRole && matchType && matchView;
       });
 
       heroCount.textContent = filtered.length;
@@ -148,6 +163,10 @@
     ========================================= */
 
     function openHeroModal(hero) {
+    
+        currentHeroId = hero.id;
+        addRecentHero(hero.id);
+        
         document.getElementById("heroModal").classList.add("active");
 
         document.getElementById("modalHeroImage").src = `images/heroes/${hero.image}`;
@@ -176,6 +195,8 @@
         const url = new URL(window.location);
         url.searchParams.set("id", hero.id);
         history.replaceState(null, "", url);
+        
+        updateFavoriteButton();
     }
     
     /* =========================================
@@ -545,6 +566,84 @@
         typeFilter.addEventListener('change', renderHeroes);
 
     });
+    
+    /* =========================================
+       16. Favorites function
+    ========================================= */
+    
+    function toggleFavoriteHero() {
+        if (!currentHeroId) return;
+
+        if (favoriteHeroes.includes(currentHeroId)) {
+            favoriteHeroes = favoriteHeroes.filter(id => id !== currentHeroId);
+        } else {
+            favoriteHeroes.push(currentHeroId);
+        }
+
+        localStorage.setItem("favoriteHeroes", JSON.stringify(favoriteHeroes));
+        updateFavoriteButton();
+    }
+
+    function updateFavoriteButton() {
+        const btn = document.querySelector(".favorite-btn");
+        if (!btn || !currentHeroId) return;
+
+        if (favoriteHeroes.includes(currentHeroId)) {
+            btn.textContent = "★ 已收藏";
+            btn.classList.add("active");
+        } else {
+            btn.textContent = "☆ 收藏";
+            btn.classList.remove("active");
+        }
+    }
+    
+    /* =========================================
+       17. 上一位 / 下一位 function
+    ========================================= */
+    
+    function getCurrentHeroIndex() {
+        return HEROES.findIndex(hero => hero.id === currentHeroId);
+    }
+
+    function openPrevHero() {
+        const index = getCurrentHeroIndex();
+        if (index < 0) return;
+
+        const prevIndex = index === 0 ? HEROES.length - 1 : index - 1;
+        openHeroModal(HEROES[prevIndex]);
+    }
+
+    function openNextHero() {
+        const index = getCurrentHeroIndex();
+        if (index < 0) return;
+
+        const nextIndex = index === HEROES.length - 1 ? 0 : index + 1;
+        openHeroModal(HEROES[nextIndex]);
+    }
+    
+    /* =========================================
+       18. 最近查看 function
+    ========================================= */
+    
+    function setHeroView(view, button) {
+        currentHeroView = view;
+
+        document.querySelectorAll(".view-tab").forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        renderHeroes();
+    }
+
+    function addRecentHero(heroId) {
+        recentHeroes = recentHeroes.filter(id => id !== heroId);
+        recentHeroes.unshift(heroId);
+        recentHeroes = recentHeroes.slice(0, 20);
+
+        localStorage.setItem("recentHeroes", JSON.stringify(recentHeroes));
+    }
 
   </script>
 
@@ -565,6 +664,11 @@
                 onclick="copyHeroLink()">
                 🔗 分享
             </button>
+            
+            <button class="favorite-btn" onclick="toggleFavoriteHero()">
+                ☆ 收藏
+            </button>
+            
         </div>
         <p id="modalNameEn"></p>
         <p id="modalMeta"></p>
@@ -595,6 +699,12 @@
       <h3>專屬裝備</h3>
       <div id="modalEquipment" class="skill-list"></div>
     </div>
+    
+    <div class="modal-nav-row">
+        <button onclick="openPrevHero()">← 上一位</button>
+        <button onclick="openNextHero()">下一位 →</button>
+    </div>
+    
   </div>
 </div>
 
