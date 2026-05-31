@@ -3,6 +3,11 @@
    Developed by Weber Chang
 ========================================= */
 
+/* =========================================
+   01. Global Reset
+   未來新增：全站通用設定放這裡
+========================================= */
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -15,28 +20,21 @@ html{
 
 body{
     font-family:"Microsoft JhengHei",Arial,sans-serif;
-    background:
-        radial-gradient(circle at top,#27211b 0,#111 42%,#070707 100%);
+    background:radial-gradient(circle at top,#27211b 0,#111 42%,#070707 100%);
     color:#f6f1e8;
     min-height:100vh;
     overflow-x:hidden;
 }
 
 /* =========================================
-   Topbar
+   02. Topbar
+   未來新增：Logo、網站標題、語言切換入口放這裡
 ========================================= */
 
 .topbar{
     padding:42px 7vw 34px;
     border-bottom:1px solid rgba(255,174,66,.25);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,136,0,.18),
-            rgba(0,0,0,.10)
-        );
-
+    background:linear-gradient(135deg,rgba(255,136,0,.18),rgba(0,0,0,.10));
     backdrop-filter:blur(12px);
 }
 
@@ -52,9 +50,7 @@ body{
     font-size:44px;
     letter-spacing:2px;
     color:#ffd28a;
-
-    text-shadow:
-        0 0 18px rgba(255,136,0,.35);
+    text-shadow:0 0 18px rgba(255,136,0,.35);
 }
 
 .subtitle{
@@ -64,7 +60,8 @@ body{
 }
 
 /* =========================================
-   Layout
+   03. Main Layout
+   未來新增：主容器、頁面寬度、區塊間距放這裡
 ========================================= */
 
 .container{
@@ -74,12 +71,13 @@ body{
 }
 
 /* =========================================
-   Toolbar
+   04. Toolbar / Filters
+   未來新增：搜尋、稀有度、兵種、類型、語言篩選放這裡
 ========================================= */
 
 .toolbar{
     display:grid;
-    grid-template-columns:1fr 220px;
+    grid-template-columns:1fr 180px 180px 180px;
     gap:18px;
     margin-bottom:20px;
 }
@@ -90,7 +88,6 @@ body{
     border:1px solid rgba(255,255,255,.12);
     border-radius:18px;
     padding:14px 16px;
-
     backdrop-filter:blur(10px);
 }
 
@@ -106,30 +103,24 @@ select{
     width:100%;
     border:0;
     outline:0;
-
     border-radius:12px;
-
     background:#171717;
     color:#fff;
-
     padding:13px 14px;
     font-size:16px;
-
     border:1px solid rgba(255,255,255,.12);
-
     transition:.2s;
 }
 
 input:focus,
 select:focus{
     border-color:#ff9f1a;
-
-    box-shadow:
-        0 0 0 3px rgba(255,159,26,.16);
+    box-shadow:0 0 0 3px rgba(255,159,26,.16);
 }
 
 /* =========================================
-   Summary
+   05. Summary
+   未來新增：英雄數量、搜尋結果提示放這裡
 ========================================= */
 
 .summary{
@@ -145,82 +136,57 @@ select:focus{
 }
 
 /* =========================================
-   Hero Grid
+   06. Hero Grid
+   未來新增：卡片排列、卡片間距放這裡
 ========================================= */
 
 .hero-grid{
     display:grid;
-
-    grid-template-columns:
-        repeat(auto-fill,minmax(190px,1fr));
-
+    grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
     gap:22px;
 }
 
 /* =========================================
-   Hero Card
+   07. Hero Card
+   未來新增：收藏星號、卡片標籤、卡片特效放這裡
 ========================================= */
 
 .hero-card{
-    background:
-        linear-gradient(180deg,#202020,#151515);
-
+    background:linear-gradient(180deg,#202020,#151515);
     border:1px solid rgba(255,255,255,.1);
-
     border-radius:22px;
-
     overflow:hidden;
-
-    box-shadow:
-        0 14px 32px rgba(0,0,0,.28);
-
-    transition:
-        transform .22s,
-        border-color .22s,
-        box-shadow .22s;
-
+    box-shadow:0 14px 32px rgba(0,0,0,.28);
+    transition:transform .22s,border-color .22s,box-shadow .22s;
     cursor:pointer;
-
     position:relative;
 }
 
 .hero-card:hover{
     transform:translateY(-5px);
-
-    border-color:
-        rgba(255,160,40,.45);
-
-    box-shadow:
-        0 18px 42px rgba(255,130,0,.16);
+    border-color:rgba(255,160,40,.45);
+    box-shadow:0 18px 42px rgba(255,130,0,.16);
 }
 
 /* =========================================
-   Hero Image
+   08. Hero Image
+   未來新增：圖片載入中、缺圖樣式放這裡
 ========================================= */
 
 .image-box{
     aspect-ratio:1/1;
-
-    background:
-        linear-gradient(135deg,#282828,#111);
-
+    background:linear-gradient(135deg,#282828,#111);
     display:flex;
     align-items:center;
     justify-content:center;
-
     padding:12px;
 }
 
 .image-box img{
     width:100%;
     height:100%;
-
     object-fit:contain;
-
-    filter:
-        drop-shadow(
-            0 10px 14px rgba(0,0,0,.42)
-        );
+    filter:drop-shadow(0 10px 14px rgba(0,0,0,.42));
 }
 
 .image-box.missing::after{
@@ -230,7 +196,8 @@ select:focus{
 }
 
 /* =========================================
-   Card Body
+   09. Card Body
+   未來新增：卡片副標、職業簡寫、快速資訊放這裡
 ========================================= */
 
 .card-body{
@@ -241,7 +208,6 @@ select:focus{
     font-size:18px;
     line-height:1.35;
     margin-bottom:6px;
-
     min-height:48px;
 }
 
@@ -252,22 +218,18 @@ select:focus{
 }
 
 /* =========================================
-   Rarity
+   10. Rarity Badge
+   未來新增：稀有度顏色、SSR特效放這裡
 ========================================= */
 
 .rarity{
     display:inline-block;
-
     padding:5px 10px;
-
     border-radius:999px;
-
     font-size:12px;
     font-weight:800;
-
     background:#333;
     color:#fff;
-
     margin-bottom:10px;
 }
 
@@ -285,18 +247,13 @@ select:focus{
 .rarity.SSR_S-4,
 .rarity.SSR_S-5,
 .rarity.SSR_S-6{
-    background:
-        linear-gradient(
-            90deg,
-            #ff8a00,
-            #ffca45
-        );
-
+    background:linear-gradient(90deg,#ff8a00,#ffca45);
     color:#211000;
 }
 
 /* =========================================
-   Empty Text
+   11. Empty Text
+   未來新增：無資料、無圖片、查無英雄提示放這裡
 ========================================= */
 
 .empty-text{
@@ -306,40 +263,31 @@ select:focus{
 }
 
 /* =========================================
-   Footer
+   12. Footer
+   未來新增：版本資訊、更新日期、作者資訊放這裡
 ========================================= */
 
 footer{
     text-align:center;
-
     color:#777;
-
-    border-top:
-        1px solid rgba(255,255,255,.08);
-
+    border-top:1px solid rgba(255,255,255,.08);
     padding:24px;
 }
 
 /* =========================================
-   Hero Modal
+   13. Hero Modal
+   未來新增：Modal 尺寸、背景、關閉按鈕放這裡
 ========================================= */
 
 .modal-overlay{
     position:fixed;
     inset:0;
-
-    background:
-        rgba(0,0,0,.75);
-
+    background:rgba(0,0,0,.75);
     display:none;
-
     justify-content:center;
     align-items:center;
-
     z-index:9999;
-
     padding:24px;
-
     backdrop-filter:blur(6px);
 }
 
@@ -349,53 +297,29 @@ footer{
 
 .modal-card{
     width:min(1100px,96vw);
-
     max-height:92vh;
-
     overflow-y:auto;
-
-    background:
-        linear-gradient(
-            180deg,
-            #1b1b1b,
-            #0f0f0f
-        );
-
-    border:
-        1px solid rgba(255,180,70,.35);
-
+    background:linear-gradient(180deg,#1b1b1b,#0f0f0f);
+    border:1px solid rgba(255,180,70,.35);
     border-radius:24px;
-
     padding:28px;
-
     color:#fff;
-
-    box-shadow:
-        0 20px 80px rgba(0,0,0,.65);
-
+    box-shadow:0 20px 80px rgba(0,0,0,.65);
     position:relative;
 }
 
 .modal-close{
     position:absolute;
-
     top:18px;
     right:18px;
-
     width:42px;
     height:42px;
-
     border:none;
-
     border-radius:50%;
-
     background:#2a2a2a;
     color:#fff;
-
     font-size:28px;
-
     cursor:pointer;
-
     transition:.2s;
 }
 
@@ -404,46 +328,34 @@ footer{
     color:#111;
 }
 
+/* =========================================
+   14. Modal Header
+   未來新增：分享按鈕、收藏按鈕、英雄標題區放這裡
+========================================= */
+
 .modal-header{
     display:flex;
     gap:24px;
     align-items:center;
-
     margin-bottom:26px;
 }
 
 .modal-hero-img{
     width:180px;
     height:180px;
-
     object-fit:cover;
-
     border-radius:22px;
-
-    border:
-        2px solid rgba(255,180,70,.6);
-
+    border:2px solid rgba(255,180,70,.6);
     background:#111;
 }
 
 .modal-rarity{
     display:inline-block;
-
     padding:6px 14px;
-
     border-radius:999px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #ff9900,
-            #ffc15a
-        );
-
+    background:linear-gradient(90deg,#ff9900,#ffc15a);
     color:#111;
-
     font-weight:bold;
-
     margin-bottom:10px;
 }
 
@@ -452,11 +364,41 @@ footer{
     margin:4px 0;
 }
 
+.modal-title-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+}
+
+.share-btn{
+    border:none;
+    cursor:pointer;
+    background:#ffb02e;
+    color:#111;
+    padding:8px 14px;
+    border-radius:10px;
+    font-weight:700;
+    font-size:13px;
+    transition:.2s;
+    white-space:nowrap;
+}
+
+.share-btn:hover{
+    transform:translateY(-2px);
+    filter:brightness(1.05);
+}
+
 .modal-header p{
     color:#bbb;
     margin:4px 0;
     line-height:1.6;
 }
+
+/* =========================================
+   15. Modal Sections
+   未來新增：區塊標題、折疊區塊共用樣式放這裡
+========================================= */
 
 .modal-section{
     margin-top:24px;
@@ -464,35 +406,26 @@ footer{
 
 .modal-section h3{
     color:#ffb347;
-
     margin-bottom:12px;
-
-    border-left:
-        4px solid #ff9900;
-
+    border-left:4px solid #ff9900;
     padding-left:10px;
 }
 
 /* =========================================
-   Stats
+   16. Stats
+   未來新增：能力數值顏色、比較數值放這裡
 ========================================= */
 
 .stat-grid{
     display:grid;
-
-    grid-template-columns:
-        repeat(auto-fit,minmax(160px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
     gap:12px;
 }
 
 .stat-item{
     background:#181818;
-
     border:1px solid #333;
-
     border-radius:14px;
-
     padding:14px;
 }
 
@@ -508,51 +441,37 @@ footer{
 }
 
 /* =========================================
-   Skills
+   17. Skills
+   未來新增：技能卡片、技能圖片、技能描述放這裡
 ========================================= */
 
 .skill-list{
     display:grid;
-
-    grid-template-columns:
-        repeat(auto-fit,minmax(260px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:14px;
 }
 
 .skill-item{
     display:flex;
-
     gap:14px;
-
     background:#181818;
-
     border:1px solid #333;
-
     border-radius:16px;
-
     padding:14px;
-
     transition:.2s;
 }
 
 .skill-item:hover{
-    border-color:
-        rgba(255,180,70,.35);
-
+    border-color:rgba(255,180,70,.35);
     transform:translateY(-2px);
 }
 
 .skill-item img{
     width:72px;
     height:72px;
-
     object-fit:cover;
-
     border-radius:14px;
-
     background:#0d0d0d;
-
     flex-shrink:0;
 }
 
@@ -563,13 +482,15 @@ footer{
 
 .skill-info p{
     margin:0;
-
     color:#bbb;
-
     line-height:1.5;
-
     font-size:14px;
 }
+
+/* =========================================
+   18. Skill Level System
+   未來新增：Lv切換、數值高亮、技能變數顏色放這裡
+========================================= */
 
 .skill-levels{
     display:flex;
@@ -617,10 +538,15 @@ footer{
 }
 
 /* =========================================
-   Mobile Optimization
+   19. Mobile Layout
+   未來新增：手機版排版調整放這裡
 ========================================= */
 
 @media(max-width:768px){
+
+    .toolbar{
+        grid-template-columns:1fr;
+    }
 
     .modal-overlay{
         padding:10px;
@@ -661,6 +587,15 @@ footer{
         margin-bottom:6px;
     }
 
+    .modal-title-row{
+        align-items:flex-start;
+    }
+
+    .share-btn{
+        padding:6px 10px;
+        font-size:12px;
+    }
+
     .modal-header h2{
         font-size:22px;
         line-height:1.3;
@@ -680,7 +615,6 @@ footer{
         margin-bottom:10px;
     }
 
-    /* 能力數值改成 2 × 2 */
     .stat-grid{
         grid-template-columns:repeat(2,1fr);
         gap:10px;
@@ -699,7 +633,6 @@ footer{
         font-size:22px;
     }
 
-    /* 技能卡片手機單欄 */
     .skill-list{
         grid-template-columns:1fr;
         gap:12px;
@@ -729,33 +662,24 @@ footer{
         line-height:1.65;
     }
 
-    /* Lv 按鈕手機單排，可左右滑 */
     .skill-levels{
         flex-wrap:nowrap;
         overflow-x:auto;
         gap:6px;
         margin:6px 0 9px;
         padding-bottom:2px;
-    }
-
-    .skill-levels{
-        flex-wrap:nowrap;
-        overflow-x:auto;
-        gap:6px;
-        margin:6px 0 9px;
-        padding-bottom:2px;
-
-        scrollbar-width:none;      /* Firefox */
-        -ms-overflow-style:none;   /* IE / Edge Legacy */
+        scrollbar-width:none;
+        -ms-overflow-style:none;
     }
 
     .skill-levels::-webkit-scrollbar{
-        display:none;              /* Chrome / Edge / Safari */
+        display:none;
     }
 }
 
 /* =========================================
-   Mobile Accordion + Back To Top
+   20. Mobile Components
+   未來新增：手機折疊、返回頂部、浮動按鈕放這裡
 ========================================= */
 
 .back-to-top{

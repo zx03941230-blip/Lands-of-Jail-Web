@@ -28,6 +28,20 @@
           <option value="ALL">全部</option>
         </select>
       </div>
+      
+      <div class="filter-wrap">
+          <label for="roleFilter">職業篩選</label>
+          <select id="roleFilter">
+            <option value="ALL">全部</option>
+          </select>
+        </div>
+
+        <div class="filter-wrap">
+          <label for="typeFilter">兵種篩選</label>
+          <select id="typeFilter">
+            <option value="ALL">全部</option>
+          </select>
+        </div>
     </section>
 
     <section class="summary">
@@ -42,18 +56,34 @@
     Developed by Weber Chang
   </footer>
 
+
   <script src="heroes.js"></script>
   <script>
+  
+    /* =========================================
+       01. DOM Elements
+    ========================================= */
+    
     const heroGrid = document.getElementById('heroGrid');
     const searchInput = document.getElementById('searchInput');
     const rarityFilter = document.getElementById('rarityFilter');
     const heroCount = document.getElementById('heroCount');
+    const roleFilter = document.getElementById('roleFilter');
+    const typeFilter = document.getElementById('typeFilter');
 
     const rarityOrder = ['R', 'SR', 'SSR S-1', 'SSR S-2', 'SSR S-3', 'SSR S-4', 'SSR S-5', 'SSR S-6'];
+
+    /* =========================================
+       01A. Asset Helpers
+    ========================================= */
 
     function imagePath(hero) {
       return `images/heroes/${hero.image}`;
     }
+
+    /* =========================================
+       02. Filter Options
+    ========================================= */
 
     function buildRarityFilter() {
       const rarities = [...new Set(HEROES.map(h => h.rarity))]
@@ -67,15 +97,28 @@
       });
     }
 
+    /* =========================================
+       03. Render Hero Cards
+    ========================================= */
+
     function renderHeroes() {
       const keyword = searchInput.value.trim().toLowerCase();
       const selectedRarity = rarityFilter.value;
+      const selectedRole = roleFilter.value;
+      const selectedType = typeFilter.value;
 
       const filtered = HEROES.filter(hero => {
         const text = `${hero.rarity} ${hero.nameZh} ${hero.nameEn}`.toLowerCase();
+
+        const heroRoleZh = String(hero.role || "").split(/\n/)[0].trim();
+        const heroTypeZh = String(hero.type || "").split(/\n/)[0].trim();
+
         const matchKeyword = !keyword || text.includes(keyword);
         const matchRarity = selectedRarity === 'ALL' || hero.rarity === selectedRarity;
-        return matchKeyword && matchRarity;
+        const matchRole = selectedRole === "ALL" || heroRoleZh === selectedRole;
+        const matchType = selectedType === "ALL" || heroTypeZh === selectedType;
+
+        return matchKeyword && matchRarity && matchRole && matchType;
       });
 
       heroCount.textContent = filtered.length;
@@ -94,13 +137,15 @@
             <p>${hero.nameEn || '&nbsp;'}</p>
           </div>
         `;
-        
-        // 點擊開啟 Modal
+
         card.addEventListener("click", () => openHeroModal(hero));
-        
         heroGrid.appendChild(card);
       });
     }
+
+    /* =========================================
+       04. Hero Modal
+    ========================================= */
 
     function openHeroModal(hero) {
         document.getElementById("heroModal").classList.add("active");
@@ -127,7 +172,15 @@
         renderEquipment("modalEquipment", hero.exclusiveEquipment);
         
         initMobileSections();
+        
+        const url = new URL(window.location);
+        url.searchParams.set("id", hero.id);
+        history.replaceState(null, "", url);
     }
+    
+    /* =========================================
+       05. Mobile Accordion
+    ========================================= */
     
     function initMobileSections() {
         const isMobile = window.innerWidth <= 768;
@@ -158,6 +211,10 @@
         });
     }
     
+    /* =========================================
+       06. Equipment Render
+    ========================================= */
+    
     function renderEquipment(targetId, equipment) {
         const target = document.getElementById(targetId);
 
@@ -175,15 +232,25 @@
         });
 
         if (equipment.arrestSkill && equipment.arrestSkill.name && equipment.arrestSkill.name !== "-") {
-            html += createSkillHTML(equipment.arrestSkill);
+            html += createSkillHTML({
+                ...equipment.arrestSkill,
+                description: getZhOnly(equipment.arrestSkill.description)
+            });
         }
 
         if (equipment.warSkill && equipment.warSkill.name && equipment.warSkill.name !== "-") {
-            html += createSkillHTML(equipment.warSkill);
+            html += createSkillHTML({
+                ...equipment.warSkill,
+                description: getZhOnly(equipment.warSkill.description)
+            });
         }
 
         target.innerHTML = html;
     }
+    
+    /* =========================================
+       07. Format Helpers
+    ========================================= */
     
     function formatNumber(value) {
         if (value === undefined || value === null || value === "" || value === "-") {
@@ -213,19 +280,62 @@
         return `${(num * 100).toFixed(2)}%`;
     }
 
+    /* =========================================
+       08. Share Hero Link
+       維護說明：
+       - 複製目前網址
+       - 搭配 ?id=Hxxx 可直接分享指定英雄
+    ========================================= */
+    function copyHeroLink() {
+        const currentUrl = window.location.href;
+        const btn = document.querySelector(".share-btn");
+
+        navigator.clipboard.writeText(currentUrl).then(() => {
+            const oldText = btn.textContent;
+
+            btn.textContent = "✓ 已複製";
+
+            setTimeout(() => {
+                btn.textContent = oldText;
+            }, 1500);
+        }).catch(() => {
+            alert("複製失敗，請手動複製網址。");
+        });
+    }
+
     function closeHeroModal() {
         document.getElementById("heroModal").classList.remove("active");
+
+        const url = new URL(window.location);
+        url.searchParams.delete("id");
+        history.replaceState(null, "", url);
     }
     
+    /* =========================================
+       09. Back To Top
+       維護說明：
+       - 首頁狀態：回到網頁最上方
+       - Modal 開啟狀態：回到 Modal 最上方
+    ========================================= */
     function scrollModalTop() {
-        const modalCard = document.querySelector(".modal-card");
-        if (modalCard) {
-            modalCard.scrollTo({
+        const activeModalCard = document.querySelector(".modal-overlay.active .modal-card");
+
+        if (activeModalCard) {
+            activeModalCard.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        } else {
+            window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
         }
     }
+
+    /* =========================================
+       10. Skill Render
+    ========================================= */
 
     function renderSkillList(targetId, skills) {
         const target = document.getElementById(targetId);
@@ -255,6 +365,10 @@
 
         target.innerHTML = createSkillHTML(item);
     }
+
+    /* =========================================
+       11. Skill Level System
+    ========================================= */
 
     function createSkillHTML(skill) {
         const img = skill.image && !skill.image.endsWith("_-.png")
@@ -342,6 +456,10 @@
             .replaceAll("{C}", `<span class="skill-var">${values.C ?? "-"}</span>`);
     }
 
+    /* =========================================
+       12. Text Helpers
+    ========================================= */
+
     function escapeHtml(text) {
         return String(text)
             .replaceAll("&", "&amp;")
@@ -349,6 +467,64 @@
             .replaceAll("<", "&lt;")
             .replaceAll(">", "&gt;");
     }
+    
+    function getZhOnly(text) {
+        if (!text) return "-";
+
+        return String(text)
+            .split(/\n/)
+            .map(line => line.trim())
+            .filter(line => line)
+            .filter(line => !/^[A-Za-z0-9\s.,%'"()\-:+/]+$/.test(line))
+            .join("\n") || "-";
+    }
+    
+    /* =========================================
+       13. URL Hero Direct Open
+    ========================================= */
+    
+    function openHeroFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const heroId = params.get("id");
+
+        if (!heroId) return;
+
+        const hero = HEROES.find(h => h.id === heroId);
+
+        if (hero) {
+            openHeroModal(hero);
+        }
+    }
+    
+    /* =========================================
+       14. Filter Builder
+    ========================================= */
+    
+    function buildExtraFilters() {
+        buildSelectFilter(roleFilter, HEROES.map(h => h.role));
+        buildSelectFilter(typeFilter, HEROES.map(h => h.type));
+    }
+    
+    function buildSelectFilter(selectEl, values) {
+        const cleanValues = [...new Set(
+            values
+                .filter(v => v && v !== "-")
+                .map(v => String(v).split(/\n/)[0])   // 只取第一行中文
+                .map(v => v.trim())
+                .filter(Boolean)
+        )].sort();
+
+        cleanValues.forEach(value => {
+            const option = document.createElement("option");
+            option.value = value;
+            option.textContent = value;
+            selectEl.appendChild(option);
+        });
+    }
+    
+    /* =========================================
+       15. App Init
+    ========================================= */
 
     window.addEventListener("DOMContentLoaded", () => {
 
@@ -359,10 +535,14 @@
         });
 
         buildRarityFilter();
+        buildExtraFilters();
         renderHeroes();
+        openHeroFromUrl();
 
         searchInput.addEventListener('input', renderHeroes);
         rarityFilter.addEventListener('change', renderHeroes);
+        roleFilter.addEventListener('change', renderHeroes);
+        typeFilter.addEventListener('change', renderHeroes);
 
     });
 
@@ -377,7 +557,15 @@
       <img id="modalHeroImage" class="modal-hero-img" src="" alt="">
       <div>
         <div id="modalRarity" class="modal-rarity"></div>
-        <h2 id="modalNameZh"></h2>
+        <div class="modal-title-row">
+            <h2 id="modalNameZh"></h2>
+
+            <button
+                class="share-btn"
+                onclick="copyHeroLink()">
+                🔗 分享
+            </button>
+        </div>
         <p id="modalNameEn"></p>
         <p id="modalMeta"></p>
       </div>
