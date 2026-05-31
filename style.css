@@ -777,44 +777,53 @@ footer{
 
     .mobile-hero-card{
         display:grid;
-        grid-template-columns:90px 1fr;
+        grid-template-columns:92px 1fr;
+        align-items:center;
         gap:14px;
-        align-items:start;
+        margin-bottom:18px;
     }
 
-    .modal-header{
-        display:grid;
-        grid-template-columns:90px 1fr;
-        gap:14px;
+    .hero-header-info{
+        min-width:0;
     }
 
     .modal-hero-img{
-        width:90px;
-        height:90px;
+        width:92px;
+        height:92px;
         border-radius:16px;
     }
 
-    .mobile-hero-card h2{
-        font-size:26px;
+    .modal-title-row{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
     }
 
-    .hero-en-name{
-        font-size:16px;
+    .modal-header h2{
+        font-size:24px;
+        line-height:1.25;
+        margin:0;
+        word-break:keep-all;
+        overflow-wrap:anywhere;
     }
 
-    .hero-meta{
-        font-size:14px;
-        line-height:1.55;
-    }
-
-    .hero-action-row{
-        margin-top:12px;
+    .modal-action-row{
+        display:flex;
+        flex-direction:row;
+        gap:8px;
         flex-wrap:wrap;
     }
 
-    .hero-action-btn{
-        padding:8px 14px;
+    .share-btn,
+    .favorite-btn{
+        padding:6px 10px;
+        font-size:12px;
+    }
+
+    .modal-header p{
         font-size:13px;
+        line-height:1.45;
     }
 
 
