@@ -16,7 +16,8 @@
   </header>
 
   <main class="container">
-    <section class="toolbar">
+    <button class="filter-toggle" onclick="toggleFilters()">🔍 搜尋 / 篩選</button>
+    <section id="toolbar" class="toolbar">
       <div class="search-wrap">
         <label for="searchInput">搜尋英雄</label>
         <input id="searchInput" type="text" placeholder="輸入中文名、英文名、稀有度..." />
@@ -197,6 +198,14 @@
         history.replaceState(null, "", url);
         
         updateFavoriteButton();
+    }
+    
+    /* =========================================
+       05. Mobile Accordion
+    ========================================= */
+    
+    function toggleFilters() {
+        document.getElementById("toolbar").classList.toggle("collapsed");
     }
     
     /* =========================================
@@ -554,6 +563,10 @@
                 closeHeroModal();
             }
         });
+        
+        if (window.innerWidth <= 768) {
+            document.getElementById("toolbar").classList.add("collapsed");
+        }
 
         buildRarityFilter();
         buildExtraFilters();
