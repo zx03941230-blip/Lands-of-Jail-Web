@@ -311,6 +311,12 @@ footer{
     padding:24px;
 }
 
+.site-version{
+    margin-top:8px;
+    color:#999;
+    font-size:12px;
+}
+
 /* =========================================
    13. Hero Modal
    未來新增：Modal 尺寸、背景、關閉按鈕放這裡
@@ -685,18 +691,44 @@ footer{
        - 收藏切換
        ===================================== */
 
-    .toolbar{
-        grid-template-columns:1fr;
-    }
-
     .filter-toggle{
         display:block;
         width:100%;
-        ...
+        border:none;
+        border-radius:16px;
+        padding:12px 16px;
+        margin-bottom:14px;
+        background:linear-gradient(90deg,#ff9900,#ffc15a);
+        color:#111;
+        font-weight:900;
+        font-size:15px;
+    }
+
+    .toolbar{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:10px;
     }
 
     .toolbar.collapsed{
         display:none;
+    }
+
+    .toolbar .search-wrap{
+        grid-column:1 / -1;
+    }
+
+    .toolbar .filter-wrap{
+        padding:10px;
+    }
+
+    .toolbar label{
+        font-size:12px;
+    }
+
+    .toolbar select{
+        padding:10px 8px;
+        font-size:14px;
     }
 
 

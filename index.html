@@ -61,6 +61,7 @@
 
   <footer>
     Developed by Weber Chang
+    <div id="siteVersion" class="site-version">版本載入中...</div>
   </footer>
 
 
@@ -191,6 +192,11 @@
         renderSkillList("modalWarSkills", hero.warSkills);
         renderEquipment("modalEquipment", hero.exclusiveEquipment);
         
+        toggleEmptySection("modalGlobalBonus");
+        toggleEmptySection("modalArrestSkills");
+        toggleEmptySection("modalWarSkills");
+        toggleEmptySection("modalEquipment");
+        
         initMobileSections();
         
         const url = new URL(window.location);
@@ -200,6 +206,20 @@
         updateFavoriteButton();
     }
     
+    function toggleEmptySection(contentId) {
+        const content = document.getElementById(contentId);
+        if (!content) return;
+
+        const section = content.closest(".modal-section");
+        if (!section) return;
+
+        const hasRealContent =
+            content.querySelector(".skill-item") ||
+            content.querySelector(".stat-item");
+
+        section.style.display = hasRealContent ? "" : "none";
+    }
+        
     /* =========================================
        05. Mobile Accordion
     ========================================= */
@@ -571,6 +591,7 @@
         buildRarityFilter();
         buildExtraFilters();
         renderHeroes();
+        loadSiteVersion();
         openHeroFromUrl();
 
         searchInput.addEventListener('input', renderHeroes);
@@ -579,6 +600,23 @@
         typeFilter.addEventListener('change', renderHeroes);
 
     });
+    
+    /* =========================================
+       15A. Site Version
+    ========================================= */
+    
+    function loadSiteVersion() {
+        fetch(`version.json?v=${Date.now()}`)
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("siteVersion").textContent =
+                    `版本 v${data.version}｜更新 ${data.updatedAt}`;
+            })
+            .catch(() => {
+                document.getElementById("siteVersion").textContent =
+                    "版本資訊無法讀取";
+            });
+    }
     
     /* =========================================
        16. Favorites function
