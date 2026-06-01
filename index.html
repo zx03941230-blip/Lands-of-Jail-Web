@@ -428,13 +428,17 @@
         navigator.clipboard.writeText(currentUrl).then(() => {
             const oldText = btn.textContent;
 
-            btn.textContent = "✓ 已複製";
+            btn.textContent = t("copied");
 
             setTimeout(() => {
-                btn.textContent = oldText;
+                btn.textContent = t("share");
             }, 1500);
         }).catch(() => {
-            alert("複製失敗，請手動複製網址。");
+            alert(
+                isEnglishMode()
+                    ? "Copy failed. Please copy the URL manually."
+                    : "複製失敗，請手動複製網址。"
+            );
         });
     }
 
@@ -527,16 +531,18 @@
 
         return `
             <div class="skill-item">
-                ${
-                    img
-                    ? `<img src="${img}" alt="${skill.name}" onerror="this.style.display='none'">`
-                    : ""
-                }
+                <div class="skill-media">
+                    ${
+                        img
+                        ? `<img src="${img}" alt="${skill.name}" onerror="this.style.display='none'">`
+                        : ""
+                    }
+
+                    ${levelButtons}
+                </div>
 
                 <div class="skill-info">
                     ${getSkillName(skill) ? `<h4>${getSkillName(skill)}</h4>` : ""}
-
-                    ${levelButtons}
 
                     <p class="skill-desc"
                        data-template="${escapeHtml(getSkillTemplate(skill))}"
@@ -685,6 +691,7 @@
         });
         
         renderHeroes();
+        updateStaticTexts();
         loadSiteVersion();
         openHeroFromUrl();
 
@@ -713,7 +720,7 @@
     }
     
     /* =========================================
-       16. Favorites function
+       16. Favorites function | 收藏
     ========================================= */
     
     function toggleFavoriteHero() {
@@ -734,10 +741,10 @@
         if (!btn || !currentHeroId) return;
 
         if (favoriteHeroes.includes(currentHeroId)) {
-            btn.textContent = "★ 已收藏";
+            btn.textContent = t("favorited");
             btn.classList.add("active");
         } else {
-            btn.textContent = "☆ 收藏";
+            btn.textContent = t("favorite");
             btn.classList.remove("active");
         }
     }
@@ -805,6 +812,7 @@
         button.classList.add("active");
 
         renderHeroes();
+        updateStaticTexts();
 
         if (currentHeroId) {
             const hero = HEROES.find(h => h.id === currentHeroId);
@@ -841,6 +849,68 @@
             ? ""
             : (skill.name || "-");
     }
+    
+    function t(key) {
+        const dict = {
+            zh: {
+                stats: "能力數值",
+                globalBonus: "全域加成",
+                arrestSkills: "緝捕技能",
+                warSkills: "戰爭技能",
+                equipment: "專屬裝備",
+                share: "🔗 分享",
+                copied: "✓ 已複製",
+                favorite: "☆ 收藏",
+                favorited: "★ 已收藏",
+                prev: "← 上一位",
+                next: "下一位 →"
+            },
+            en: {
+                stats: "Stats",
+                globalBonus: "Global Bonus",
+                arrestSkills: "Arrest Skills",
+                warSkills: "War Skills",
+                equipment: "Exclusive Equipment",
+                share: "🔗 Share",
+                copied: "✓ Copied",
+                favorite: "☆ Favorite",
+                favorited: "★ Favorited",
+                prev: "← Previous",
+                next: "Next →"
+            }
+        };
+
+        return dict[currentLang]?.[key] || dict.zh[key] || key;
+    }
+    
+    function updateStaticTexts() {
+
+        document.getElementById("titleStats").textContent =
+            t("stats");
+
+        document.getElementById("titleGlobalBonus").textContent =
+            t("globalBonus");
+
+        document.getElementById("titleArrestSkills").textContent =
+            t("arrestSkills");
+
+        document.getElementById("titleWarSkills").textContent =
+            t("warSkills");
+
+        document.getElementById("titleEquipment").textContent =
+            t("equipment");
+
+        document.getElementById("shareBtn").textContent =
+            t("share");
+
+        document.getElementById("prevHeroBtn").textContent =
+            t("prev");
+
+        document.getElementById("nextHeroBtn").textContent =
+            t("next");
+            
+        updateFavoriteButton();
+    }
 
   </script>
 
@@ -859,8 +929,18 @@
           <h2 id="modalNameZh"></h2>
 
           <div class="modal-action-row">
-            <button class="share-btn" onclick="copyHeroLink()">🔗 分享</button>
-            <button class="favorite-btn" onclick="toggleFavoriteHero()">☆ 收藏</button>
+            <button
+                id="shareBtn"
+                class="share-btn"
+                onclick="copyHeroLink()">
+                🔗 分享
+            </button>
+            <button
+                id="favoriteBtn"
+                class="favorite-btn"
+                onclick="toggleFavoriteHero()">
+                ☆ 收藏
+            </button>
           </div>
         </div>
 
@@ -870,33 +950,38 @@
     </div>
 
     <div class="modal-section">
-      <h3>能力數值</h3>
+      <h3 id="titleStats">能力數值</h3>
       <div id="modalStats" class="stat-grid"></div>
     </div>
 
     <div class="modal-section">
-      <h3>全域加成</h3>
+      <h3 id="titleGlobalBonus">全域加成</h3>
       <div id="modalGlobalBonus" class="skill-list"></div>
     </div>
 
     <div class="modal-section">
-      <h3>緝捕技能</h3>
+      <h3 id="titleArrestSkills">緝捕技能</h3>
       <div id="modalArrestSkills" class="skill-list"></div>
     </div>
 
     <div class="modal-section">
-      <h3>戰爭技能</h3>
+      <h3 id="titleWarSkills">戰爭技能</h3>
       <div id="modalWarSkills" class="skill-list"></div>
     </div>
 
     <div class="modal-section">
-      <h3>專屬裝備</h3>
+      <h3 id="titleEquipment">專屬裝備</h3>
       <div id="modalEquipment" class="skill-list"></div>
     </div>
 
     <div class="modal-nav-row">
-      <button onclick="openPrevHero()">← 上一位</button>
-      <button onclick="openNextHero()">下一位 →</button>
+      <button id="prevHeroBtn" onclick="openPrevHero()">
+          ← 上一位
+      </button>
+
+      <button id="nextHeroBtn" onclick="openNextHero()">
+          下一位 →
+      </button>
     </div>
   </div>
 </div>
