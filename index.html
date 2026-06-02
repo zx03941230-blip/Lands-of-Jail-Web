@@ -73,7 +73,7 @@
        Favicon
   ====================================== -->
 
-  <link rel="icon"
+  <script type="text/javascript" nonce="aacc0cc5008a4c13b9731dc2dad" src="//local.adguard.org?ts=1780396553749&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000b2807209a87e39ade094c4e9%26fn%3Dindex_integrated_bilingual.html%26cd%3Dattachment%26ts%3D494555%26p%3Dfs%26cid%3D1%26sig%3D128f70c8236a46393dd10a334f00177a76e473cb9026adc74ac5b5f243cbc5b3%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="aacc0cc5008a4c13b9731dc2dad" src="//local.adguard.org?ts=1780396553749&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="icon"
         href="favicon.ico">
 
   <!-- =====================================
@@ -89,35 +89,35 @@
   <header class="topbar">
     <div>
       <p class="eyebrow">Lands of Jail</p>
-      <h1>英雄攻略圖鑑</h1>
-      <p class="subtitle">Hero Guide Database｜搜尋、分類、快速瀏覽</p>
+      <h1 id="siteTitle">英雄攻略圖鑑</h1>
+      <p id="siteSubtitle" class="subtitle">Hero Guide Database｜搜尋、分類、快速瀏覽</p>
     </div>
   </header>
 
   <main class="container">
-    <button class="filter-toggle" onclick="toggleFilters()">🔍 搜尋 / 篩選</button>
+    <button id="filterToggleBtn" class="filter-toggle" onclick="toggleFilters()">🔍 搜尋 / 篩選</button>
     <section id="toolbar" class="toolbar">
       <div class="search-wrap">
-        <label for="searchInput">搜尋英雄</label>
+        <label id="searchLabel" for="searchInput">搜尋英雄</label>
         <input id="searchInput" type="text" placeholder="輸入中文名、英文名、稀有度..." />
       </div>
 
       <div class="filter-wrap">
-        <label for="rarityFilter">稀有度篩選</label>
+        <label id="rarityLabel" for="rarityFilter">稀有度篩選</label>
         <select id="rarityFilter">
           <option value="ALL">全部</option>
         </select>
       </div>
       
       <div class="filter-wrap">
-          <label for="roleFilter">兵種篩選</label>
+          <label id="roleLabel" for="roleFilter">兵種篩選</label>
           <select id="roleFilter">
             <option value="ALL">全部</option>
           </select>
         </div>
 
         <div class="filter-wrap">
-          <label for="typeFilter">類型篩選</label>
+          <label id="typeLabel" for="typeFilter">類型篩選</label>
           <select id="typeFilter">
             <option value="ALL">全部</option>
           </select>
@@ -130,14 +130,14 @@
     </section>
 
     <section class="view-tabs">
-      <button class="view-tab active" data-view="ALL" onclick="setHeroView('ALL', this)">全部英雄</button>
-      <button class="view-tab" data-view="FAVORITE" onclick="setHeroView('FAVORITE', this)">★ 收藏英雄</button>
-      <button class="view-tab" data-view="RECENT" onclick="setHeroView('RECENT', this)">🕒 最近查看</button>
+      <button id="tabAllHeroes" class="view-tab active" data-view="ALL" onclick="setHeroView('ALL', this)">全部英雄</button>
+      <button id="tabFavoriteHeroes" class="view-tab" data-view="FAVORITE" onclick="setHeroView('FAVORITE', this)">★ 收藏英雄</button>
+      <button id="tabRecentHeroes" class="view-tab" data-view="RECENT" onclick="setHeroView('RECENT', this)">🕒 最近查看</button>
     </section>
 
     <section class="summary">
       <span id="heroCount">0</span>
-      <span>位英雄</span>
+      <span id="heroCountText">位英雄</span>
     </section>
 
     <section id="heroGrid" class="hero-grid"></section>
@@ -183,6 +183,8 @@
     ========================================= */
 
     function buildRarityFilter() {
+      rarityFilter.innerHTML = `<option value="ALL">${t("all")}</option>`;
+
       const rarities = [...new Set(HEROES.map(h => h.rarity))]
         .sort((a, b) => rarityOrder.indexOf(a) - rarityOrder.indexOf(b));
 
@@ -250,47 +252,45 @@
     ========================================= */
 
     function openHeroModal(hero) {
-    
+
         currentHeroId = hero.id;
         addRecentHero(hero.id);
-        
+
         document.getElementById("heroModal").classList.add("active");
 
         document.getElementById("modalHeroImage").src = `images/heroes/${hero.image}`;
-        document.getElementById("modalHeroImage").alt = hero.displayName || hero.nameZh;
+        document.getElementById("modalHeroImage").alt = getHeroDisplayName(hero);
 
         document.getElementById("modalRarity").textContent = hero.rarity || "-";
         document.getElementById("modalNameZh").textContent = getHeroDisplayName(hero);
         document.getElementById("modalNameEn").textContent = getHeroSubName(hero);
-        document.getElementById("modalMeta").textContent =
-            `${hero.role || "-"} ｜ ${hero.type || "-"} ｜ ${hero.obtainSource || "-"}`;
+        document.getElementById("modalMeta").textContent = getHeroMeta(hero);
 
         document.getElementById("modalStats").innerHTML = `
-            <div class="stat-item"><div class="stat-label">緝捕攻擊</div><div class="stat-value">${formatNumber(hero.stats?.arrestAtk)}</div></div>
-            <div class="stat-item"><div class="stat-label">緝捕防禦</div><div class="stat-value">${formatNumber(hero.stats?.arrestDef)}</div></div>
-            <div class="stat-item"><div class="stat-label">緝捕生命</div><div class="stat-value">${formatNumber(hero.stats?.arrestHp)}</div></div>
-            <div class="stat-item"><div class="stat-label">戰爭攻防</div><div class="stat-value">${formatPercent(hero.stats?.warAtkDef)}</div></div>
+            <div class="stat-item"><div class="stat-label">${t("statArrestAtk")}</div><div class="stat-value">${formatNumber(hero.stats?.arrestAtk)}</div></div>
+            <div class="stat-item"><div class="stat-label">${t("statArrestDef")}</div><div class="stat-value">${formatNumber(hero.stats?.arrestDef)}</div></div>
+            <div class="stat-item"><div class="stat-label">${t("statArrestHp")}</div><div class="stat-value">${formatNumber(hero.stats?.arrestHp)}</div></div>
+            <div class="stat-item"><div class="stat-label">${t("statWarAtkDef")}</div><div class="stat-value">${formatPercent(hero.stats?.warAtkDef)}</div></div>
         `;
 
         renderSkillList("modalGlobalBonus", [hero.globalBonus]);
         renderSkillList("modalArrestSkills", hero.arrestSkills);
         renderSkillList("modalWarSkills", hero.warSkills);
         renderEquipment("modalEquipment", hero.exclusiveEquipment);
-        
+
         toggleEmptySection("modalGlobalBonus");
         toggleEmptySection("modalArrestSkills");
         toggleEmptySection("modalWarSkills");
         toggleEmptySection("modalEquipment");
-        
+
+        updateStaticTexts();
         initMobileSections();
-        
+
         const url = new URL(window.location);
         url.searchParams.set("id", hero.id);
         history.replaceState(null, "", url);
-        
-        updateFavoriteButton();
     }
-    
+
     function toggleEmptySection(contentId) {
         const content = document.getElementById(contentId);
         if (!content) return;
@@ -354,7 +354,7 @@
         const target = document.getElementById(targetId);
 
         if (!equipment || !equipment.name || equipment.name === "-") {
-            target.innerHTML = `<p class="empty-text">無資料</p>`;
+            target.innerHTML = `<p class="empty-text">${t("noData")}</p>`;
             return;
         }
 
@@ -362,7 +362,7 @@
 
         html += createSkillHTML({
             name: equipment.name,
-            description: "專屬裝備",
+            description: t("equipment"),
             image: equipment.image
         });
 
@@ -480,7 +480,7 @@
         const target = document.getElementById(targetId);
 
         if (!skills || skills.length === 0) {
-            target.innerHTML = `<p class="empty-text">無資料</p>`;
+            target.innerHTML = `<p class="empty-text">${t("noData")}</p>`;
             return;
         }
 
@@ -490,7 +490,7 @@
             .join("");
 
         if (target.innerHTML.trim() === "") {
-            target.innerHTML = `<p class="empty-text">無資料</p>`;
+            target.innerHTML = `<p class="empty-text">${t("noData")}</p>`;
         }
     }
 
@@ -498,7 +498,7 @@
         const target = document.getElementById(targetId);
 
         if (!item || !item.name || item.name === "-") {
-            target.innerHTML = `<p class="empty-text">無資料</p>`;
+            target.innerHTML = `<p class="empty-text">${t("noData")}</p>`;
             return;
         }
 
@@ -645,16 +645,47 @@
        14. Filter Builder
     ========================================= */
     
+    function translateRole(role){
+
+        const map = {
+
+            "槍械兵":"Shooter",
+
+            "投彈兵":"Bomber",
+
+            "盾牌兵":"Guardian"
+        };
+
+        return isEnglishMode()
+            ? (map[role] || role)
+            : role;
+    }
+    
+    function translateType(type){
+
+        const map = {
+
+            "軍事型":"Military",
+
+            "發展型":"Development"
+        };
+
+        return isEnglishMode()
+            ? (map[type] || type)
+            : type;
+    }
+    
+
     function buildExtraFilters() {
         buildSelectFilter(roleFilter, HEROES.map(h => h.role));
         buildSelectFilter(typeFilter, HEROES.map(h => h.type));
     }
-    
+
     function buildSelectFilter(selectEl, values) {
         const cleanValues = [...new Set(
             values
                 .filter(v => v && v !== "-")
-                .map(v => String(v).split(/\n/)[0])   // 只取第一行中文
+                .map(v => String(v).split(/\n/)[0])
                 .map(v => v.trim())
                 .filter(Boolean)
         )].sort();
@@ -662,11 +693,19 @@
         cleanValues.forEach(value => {
             const option = document.createElement("option");
             option.value = value;
-            option.textContent = value;
+
+            if (selectEl.id === "roleFilter") {
+                option.textContent = translateRole(value);
+            } else if (selectEl.id === "typeFilter") {
+                option.textContent = translateType(value);
+            } else {
+                option.textContent = value;
+            }
+
             selectEl.appendChild(option);
         });
     }
-    
+
     /* =========================================
        15. App Init 初始化語言按鈕
     ========================================= */
@@ -806,11 +845,10 @@
         localStorage.setItem("currentLang", lang);
 
         document.querySelectorAll(".lang-btn").forEach(btn => {
-            btn.classList.remove("active");
+            btn.classList.toggle("active", btn.dataset.lang === currentLang);
         });
 
-        button.classList.add("active");
-
+        rebuildFiltersForCurrentLanguage();
         renderHeroes();
         updateStaticTexts();
 
@@ -820,6 +858,27 @@
                 openHeroModal(hero);
             }
         }
+    }
+
+    function rebuildFiltersForCurrentLanguage() {
+        const selectedRarity = rarityFilter.value || "ALL";
+        const selectedRole = roleFilter.value || "ALL";
+        const selectedType = typeFilter.value || "ALL";
+
+        buildRarityFilter();
+        buildExtraFilters();
+
+        rarityFilter.value = [...rarityFilter.options].some(o => o.value === selectedRarity)
+            ? selectedRarity
+            : "ALL";
+
+        roleFilter.value = [...roleFilter.options].some(o => o.value === selectedRole)
+            ? selectedRole
+            : "ALL";
+
+        typeFilter.value = [...typeFilter.options].some(o => o.value === selectedType)
+            ? selectedType
+            : "ALL";
     }
 
     function isEnglishMode() {
@@ -838,6 +897,36 @@
             : (hero.nameEn || "");
     }
 
+    function getFirstLine(text) {
+        return String(text || "-").split(/\n/)[0].trim() || "-";
+    }
+
+    function getSecondLine(text) {
+        return String(text || "").split(/\n/)[1]?.trim() || "";
+    }
+
+    function getHeroRole(hero) {
+        const zh = getFirstLine(hero.role);
+        const en = getSecondLine(hero.role) || translateRole(zh);
+        return isEnglishMode() ? en : zh;
+    }
+
+    function getHeroType(hero) {
+        const zh = getFirstLine(hero.type);
+        const en = getSecondLine(hero.type) || translateType(zh);
+        return isEnglishMode() ? en : zh;
+    }
+
+    function getHeroObtainSource(hero) {
+        const zh = getFirstLine(hero.obtainSource);
+        const en = getSecondLine(hero.obtainSource);
+        return isEnglishMode() ? (en || zh) : zh;
+    }
+
+    function getHeroMeta(hero) {
+        return `${getHeroRole(hero)} ｜ ${getHeroType(hero)} ｜ ${getHeroObtainSource(hero)}`;
+    }
+
     function getSkillTemplate(skill) {
         return isEnglishMode()
             ? (skill.templateEn || skill.template || "")
@@ -851,8 +940,30 @@
     }
     
     function t(key) {
+
         const dict = {
+
             zh: {
+                title: "英雄攻略圖鑑",
+                subtitle: "Hero Guide Database｜搜尋、分類、快速瀏覽",
+                filterToggle: "🔍 搜尋 / 篩選",
+                searchHero: "搜尋英雄",
+                searchPlaceholder: "輸入中文名、英文名、稀有度...",
+                rarityFilter: "稀有度篩選",
+                roleFilter: "兵種篩選",
+                typeFilter: "類型篩選",
+                heroCount: "位英雄",
+                allHeroes: "全部英雄",
+                favoriteHeroes: "★ 收藏英雄",
+                recentHeroes: "🕒 最近查看",
+                all: "全部",
+
+                shooter: "槍械兵",
+                bomber: "投彈兵",
+                guardian: "盾牌兵",
+                military: "軍事型",
+                development: "發展型",
+
                 stats: "能力數值",
                 globalBonus: "全域加成",
                 arrestSkills: "緝捕技能",
@@ -863,9 +974,36 @@
                 favorite: "☆ 收藏",
                 favorited: "★ 已收藏",
                 prev: "← 上一位",
-                next: "下一位 →"
+                next: "下一位 →",
+                noData: "無資料",
+
+                statArrestAtk: "緝捕攻擊",
+                statArrestDef: "緝捕防禦",
+                statArrestHp: "緝捕生命",
+                statWarAtkDef: "戰爭攻防"
             },
+
             en: {
+                title: "Hero Guide",
+                subtitle: "Search · Filter · Browse Heroes",
+                filterToggle: "🔍 Search / Filters",
+                searchHero: "Search Hero",
+                searchPlaceholder: "Hero name, rarity...",
+                rarityFilter: "Rarity",
+                roleFilter: "Troop Type",
+                typeFilter: "Category",
+                heroCount: "Heroes",
+                allHeroes: "All Heroes",
+                favoriteHeroes: "★ Favorites",
+                recentHeroes: "🕒 Recent",
+                all: "All",
+
+                shooter: "Shooter",
+                bomber: "Bomber",
+                guardian: "Guardian",
+                military: "Military",
+                development: "Development",
+
                 stats: "Stats",
                 globalBonus: "Global Bonus",
                 arrestSkills: "Arrest Skills",
@@ -876,14 +1014,60 @@
                 favorite: "☆ Favorite",
                 favorited: "★ Favorited",
                 prev: "← Previous",
-                next: "Next →"
+                next: "Next →",
+                noData: "No data",
+
+                statArrestAtk: "Arrest ATK",
+                statArrestDef: "Arrest DEF",
+                statArrestHp: "Arrest HP",
+                statWarAtkDef: "War ATK/DEF"
             }
         };
 
-        return dict[currentLang]?.[key] || dict.zh[key] || key;
+        return dict[currentLang]?.[key]
+            || dict.zh[key]
+            || key;
     }
-    
+
     function updateStaticTexts() {
+
+        document.documentElement.lang = isEnglishMode() ? "en" : "zh-Hant";
+
+        document.getElementById("siteTitle").textContent =
+            t("title");
+
+        document.getElementById("siteSubtitle").textContent =
+            t("subtitle");
+
+        document.getElementById("filterToggleBtn").textContent =
+            t("filterToggle");
+
+        document.getElementById("searchLabel").textContent =
+            t("searchHero");
+
+        searchInput.placeholder =
+            t("searchPlaceholder");
+
+        document.getElementById("rarityLabel").textContent =
+            t("rarityFilter");
+
+        document.getElementById("roleLabel").textContent =
+            t("roleFilter");
+
+        document.getElementById("typeLabel").textContent =
+            t("typeFilter");
+
+        document.getElementById("tabAllHeroes").textContent =
+            t("allHeroes");
+
+        document.getElementById("tabFavoriteHeroes").textContent =
+            t("favoriteHeroes");
+
+        document.getElementById("tabRecentHeroes").textContent =
+            t("recentHeroes");
+
+        document.getElementById("heroCountText").textContent =
+            t("heroCount");
 
         document.getElementById("titleStats").textContent =
             t("stats");
@@ -908,7 +1092,7 @@
 
         document.getElementById("nextHeroBtn").textContent =
             t("next");
-            
+
         updateFavoriteButton();
     }
 
