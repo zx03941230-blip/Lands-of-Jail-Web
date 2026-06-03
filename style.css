@@ -327,7 +327,7 @@ select:focus{
 
 /* =========================================
    12. Footer
-   未來新增：版本資訊、更新日期、作者資訊放這裡
+   未來新增：版本資訊、更新日期、作者資訊、瀏覽人數放這裡
 ========================================= */
 
 footer{
@@ -341,6 +341,18 @@ footer{
     margin-top:8px;
     color:#999;
     font-size:12px;
+}
+
+.site-stats{
+    text-align:center;
+    margin-top:20px;
+    font-size:14px;
+    color:#ccc;
+}
+
+.site-stats span{
+    color:#ffb347;
+    font-weight:700;
 }
 
 /* =========================================

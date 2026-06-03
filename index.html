@@ -73,8 +73,7 @@
        Favicon
   ====================================== -->
 
-  <script type="text/javascript" nonce="aacc0cc5008a4c13b9731dc2dad" src="//local.adguard.org?ts=1780396553749&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000b2807209a87e39ade094c4e9%26fn%3Dindex_integrated_bilingual.html%26cd%3Dattachment%26ts%3D494555%26p%3Dfs%26cid%3D1%26sig%3D128f70c8236a46393dd10a334f00177a76e473cb9026adc74ac5b5f243cbc5b3%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="aacc0cc5008a4c13b9731dc2dad" src="//local.adguard.org?ts=1780396553749&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="icon"
-        href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
 
   <!-- =====================================
        CSS
@@ -144,8 +143,23 @@
   </main>
 
   <footer>
+  
+    <div class="site-stats">
+
+        👥 Visitors :
+        <span id="visitorCount">0</span>
+
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+
+        🟢 Online :
+        <span id="onlineCount">0</span>
+
+    </div>
+  
     Developed by Weber Chang
+    
     <div id="siteVersion" class="site-version">版本載入中...</div>
+    
   </footer>
 
 
@@ -318,10 +332,10 @@
     ========================================= */
     
     function initMobileSections() {
-        const isMobile = window.innerWidth <= 768;
+        const isMobile = window.innerWidth <= 1024;
         const sections = document.querySelectorAll(".modal-section");
 
-        sections.forEach((section, index) => {
+        sections.forEach(section => {
             const title = section.querySelector("h3");
 
             if (!title) return;
@@ -337,12 +351,8 @@
                 section.classList.toggle("collapsed");
             };
 
-            // 手機預設：能力數值、全域加成展開，其餘收合
-            if (index <= 1) {
-                section.classList.remove("collapsed");
-            } else {
-                section.classList.add("collapsed");
-            }
+            // 非 PC 版：全部預設收合
+            section.classList.add("collapsed");
         });
     }
     
@@ -677,26 +687,31 @@
     
 
     function buildExtraFilters() {
-        buildSelectFilter(roleFilter, HEROES.map(h => h.role));
-        buildSelectFilter(typeFilter, HEROES.map(h => h.type));
+        buildSelectFilter(roleFilter, HEROES.map(h => h.role), "role");
+        buildSelectFilter(typeFilter, HEROES.map(h => h.type), "type");
     }
 
-    function buildSelectFilter(selectEl, values) {
+    function getPrimaryZhValue(value) {
+        return String(value || "")
+            .split(/\n/)
+            .map(v => v.trim())
+            .filter(Boolean)[0] || "";
+    }
+
+    function buildSelectFilter(selectEl, values, kind) {
         const cleanValues = [...new Set(
             values
+                .map(getPrimaryZhValue)
                 .filter(v => v && v !== "-")
-                .map(v => String(v).split(/\n/)[0])
-                .map(v => v.trim())
-                .filter(Boolean)
         )].sort();
 
         cleanValues.forEach(value => {
             const option = document.createElement("option");
             option.value = value;
 
-            if (selectEl.id === "roleFilter") {
+            if (kind === "role") {
                 option.textContent = translateRole(value);
-            } else if (selectEl.id === "typeFilter") {
+            } else if (kind === "type") {
                 option.textContent = translateType(value);
             } else {
                 option.textContent = value;
@@ -710,34 +725,120 @@
        15. App Init 初始化語言按鈕
     ========================================= */
 
-    window.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("DOMContentLoaded", async () => {
 
-        document.getElementById("heroModal").addEventListener("click", function (e) {
-            if (e.target.id === "heroModal") {
-                closeHeroModal();
-            }
-        });
-        
+        /* =========================
+           Modal 點背景關閉
+        ========================= */
+
+        document
+            .getElementById("heroModal")
+            .addEventListener("click", function (e) {
+
+                if (e.target.id === "heroModal") {
+                    closeHeroModal();
+                }
+
+            });
+
+        /* =========================
+           手機預設收合搜尋
+        ========================= */
+
         if (window.innerWidth <= 768) {
-            document.getElementById("toolbar").classList.add("collapsed");
+
+            document
+                .getElementById("toolbar")
+                .classList.add("collapsed");
+
         }
+
+        /* =========================
+           建立篩選器
+        ========================= */
 
         buildRarityFilter();
         buildExtraFilters();
-        
-        document.querySelectorAll(".lang-btn").forEach(btn => {
-            btn.classList.toggle("active", btn.dataset.lang === currentLang);
-        });
-        
+
+        /* =========================
+           初始化語言按鈕
+        ========================= */
+
+        document
+            .querySelectorAll(".lang-btn")
+            .forEach(btn => {
+
+                btn.classList.toggle(
+                    "active",
+                    btn.dataset.lang === currentLang
+                );
+
+            });
+
+        /* =========================
+           首次渲染
+           先顯示英雄，避免 Firebase 失敗影響畫面
+        ========================= */
+
         renderHeroes();
+
         updateStaticTexts();
+
         loadSiteVersion();
+
         openHeroFromUrl();
 
-        searchInput.addEventListener('input', renderHeroes);
-        rarityFilter.addEventListener('change', renderHeroes);
-        roleFilter.addEventListener('change', renderHeroes);
-        typeFilter.addEventListener('change', renderHeroes);
+        /* =========================
+           搜尋事件
+        ========================= */
+
+        searchInput.addEventListener(
+            "input",
+            renderHeroes
+        );
+
+        rarityFilter.addEventListener(
+            "change",
+            renderHeroes
+        );
+
+        roleFilter.addEventListener(
+            "change",
+            renderHeroes
+        );
+
+        typeFilter.addEventListener(
+            "change",
+            renderHeroes
+        );
+
+        /* =========================
+           Firebase 統計
+           放最後，失敗也不影響英雄列表
+        ========================= */
+
+        try {
+
+            if (typeof initVisitorCounter === "function") {
+                await initVisitorCounter();
+            }
+
+            if (typeof initOnlineCounter === "function") {
+                await initOnlineCounter();
+            }
+
+            if (typeof startVisitorDisplay === "function") {
+                startVisitorDisplay();
+            }
+
+        } catch (err) {
+
+            console.warn(
+                "Firebase Stats Init Failed",
+                err
+            );
+
+        }
 
     });
     
@@ -864,6 +965,15 @@
         const selectedRarity = rarityFilter.value || "ALL";
         const selectedRole = roleFilter.value || "ALL";
         const selectedType = typeFilter.value || "ALL";
+
+        rarityFilter.innerHTML =
+            `<option value="ALL">${t("all")}</option>`;
+
+        roleFilter.innerHTML =
+            `<option value="ALL">${t("all")}</option>`;
+
+        typeFilter.innerHTML =
+            `<option value="ALL">${t("all")}</option>`;
 
         buildRarityFilter();
         buildExtraFilters();
@@ -1095,6 +1205,86 @@
 
         updateFavoriteButton();
     }
+    
+    /* =========================================
+       20. Visitor Counter | 統計在線人數資料相關
+    ========================================= */
+    
+    /* －－－－ 累積訪客 －－－－ */ 
+    
+    async function initVisitorCounter(){
+
+        if(localStorage.getItem("visited")){
+            return;
+        }
+
+        const counterRef =
+            firebaseRef(firebaseDB,"site/visitors");
+
+        const snap =
+            await firebaseGet(counterRef);
+
+        let count = 0;
+
+        if(snap.exists()){
+            count = snap.val();
+        }
+
+        count++;
+
+        await firebaseSet(counterRef,count);
+
+        localStorage.setItem("visited","1");
+    }
+    
+    /* －－－－ 在線人數 －－－－ */ 
+    
+    async function initOnlineCounter(){
+
+        const userId =
+            crypto.randomUUID();
+
+        const onlineRef =
+            firebaseRef(firebaseDB,
+            `online/${userId}`);
+
+        await firebaseSet(onlineRef,true);
+
+        firebaseOnDisconnect(onlineRef).remove();
+
+        firebaseOnValue(
+            firebaseRef(firebaseDB,"online"),
+            snapshot=>{
+
+                const online =
+                    snapshot.exists()
+                    ? Object.keys(snapshot.val()).length
+                    : 0;
+
+                document.getElementById(
+                    "onlineCount"
+                ).textContent = online;
+
+            }
+        );
+    }
+    
+    /* －－－－ 更新訪客數 －－－－ */ 
+    
+    function startVisitorDisplay(){
+
+        firebaseOnValue(
+            firebaseRef(firebaseDB,"site/visitors"),
+            snapshot=>{
+
+                document.getElementById(
+                    "visitorCount"
+                ).textContent =
+                    snapshot.val() || 0;
+
+            }
+        );
+    }
 
   </script>
 
@@ -1171,6 +1361,45 @@
 </div>
 
 <button id="backToTop" class="back-to-top" onclick="scrollModalTop()">↑</button>
+
+  <script type="module">
+
+  import { initializeApp }
+  from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+
+  import {
+    getDatabase,
+    ref,
+    get,
+    set,
+    update,
+    onValue,
+    onDisconnect
+  }
+  from "https://www.gstatic.com/firebasejs/12.14.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBDoK1997T6r38GlGWONnDNDJZld1ohb4Y",
+    authDomain: "landsofjailheroguide.firebaseapp.com",
+    databaseURL: "https://landsofjailheroguide-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "landsofjailheroguide",
+    storageBucket: "landsofjailheroguide.firebasestorage.app",
+    messagingSenderId: "719438956568",
+    appId: "1:719438956568:web:b104bb0191fa20ae2f9b6d"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  window.firebaseDB = db;
+  window.firebaseRef = ref;
+  window.firebaseGet = get;
+  window.firebaseSet = set;
+  window.firebaseUpdate = update;
+  window.firebaseOnValue = onValue;
+  window.firebaseOnDisconnect = onDisconnect;
+
+  </script>
 
 </body>
 </html>
