@@ -5990,7 +5990,7 @@ const HEROES = [
       },
       "warSkill": {
         "name": "橫掃六合",
-        "description": "集結進攻時，我軍全體部隊生命值增幅16%。\nRally attack, troops gain add 16% to their existing HP bonus.",
+        "description": "集結進攻時，我軍全體部隊殺傷增幅16%。\nRally attack, troops gain add 16% to their existing Lethality bonus.",
         "image": "悟空_戰爭裝備技能_橫掃六合.png"
       }
     }
