@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 
@@ -73,7 +73,7 @@
        Favicon
   ====================================== -->
 
-  <link rel="icon" href="favicon.ico">
+  <script type="text/javascript" nonce="ae9296e6272744adb2ab944276e" src="//local.adguard.org?ts=1780572237247&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_000000007b2c72069d1ecbe313a01e63%26fn%3Dindex_updated_EE_bilingual.html%26cd%3Dattachment%26ts%3D494603%26p%3Dfs%26cid%3D1%26sig%3Dc1dfc838e2b5db9a0e67b0e5c69764514abea7fb0cc86c3d74cd25d25adbb655%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="ae9296e6272744adb2ab944276e" src="//local.adguard.org?ts=1780572237247&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="icon" href="favicon.ico">
 
   <!-- =====================================
        CSS
@@ -144,15 +144,27 @@
 
   <footer>
   
-    <div class="site-stats">
+    <div id="siteStats">
 
-        👥 Visitors :
-        <span id="visitorCount">0</span>
+        👥
+        <span id="visitorLabel">
+            累積訪客
+        </span>
+        :
+        <span id="visitorCount">
+            0
+        </span>
 
-        &nbsp;&nbsp;|&nbsp;&nbsp;
+        &nbsp; | &nbsp;
 
-        🟢 Online :
-        <span id="onlineCount">0</span>
+        🟢
+        <span id="onlineLabel">
+            在線人數
+        </span>
+        :
+        <span id="onlineCount">
+            0
+        </span>
 
     </div>
   
@@ -372,21 +384,24 @@
 
         html += createSkillHTML({
             name: equipment.name,
+            nameEn: equipment.nameEn || equipment.name,
             description: t("equipment"),
-            image: equipment.image
+            descriptionEn: t("equipment"),
+            image: equipment.image,
+            showNameInEnglish: true
         });
 
         if (equipment.arrestSkill && equipment.arrestSkill.name && equipment.arrestSkill.name !== "-") {
             html += createSkillHTML({
                 ...equipment.arrestSkill,
-                description: getZhOnly(equipment.arrestSkill.description)
+                showNameInEnglish: true
             });
         }
 
         if (equipment.warSkill && equipment.warSkill.name && equipment.warSkill.name !== "-") {
             html += createSkillHTML({
                 ...equipment.warSkill,
-                description: getZhOnly(equipment.warSkill.description)
+                showNameInEnglish: true
             });
         }
 
@@ -1044,9 +1059,13 @@
     }
 
     function getSkillName(skill) {
-        return isEnglishMode()
-            ? ""
-            : (skill.name || "-");
+        if (isEnglishMode()) {
+            return skill.showNameInEnglish
+                ? (skill.nameEn || skill.name || "")
+                : "";
+        }
+
+        return skill.name || "-";
     }
     
     function t(key) {
@@ -1090,7 +1109,10 @@
                 statArrestAtk: "緝捕攻擊",
                 statArrestDef: "緝捕防禦",
                 statArrestHp: "緝捕生命",
-                statWarAtkDef: "戰爭攻防"
+                statWarAtkDef: "戰爭攻防",
+                
+                visitors: "累積訪客",
+                online: "在線人數",
             },
 
             en: {
@@ -1130,7 +1152,10 @@
                 statArrestAtk: "Arrest ATK",
                 statArrestDef: "Arrest DEF",
                 statArrestHp: "Arrest HP",
-                statWarAtkDef: "War ATK/DEF"
+                statWarAtkDef: "War ATK/DEF",
+                
+                visitors: "Visitors",
+                online: "Online",
             }
         };
 
@@ -1202,6 +1227,14 @@
 
         document.getElementById("nextHeroBtn").textContent =
             t("next");
+        
+        document.getElementById(
+            "visitorLabel"
+        ).textContent = t("visitors");
+
+        document.getElementById(
+            "onlineLabel"
+        ).textContent = t("online");
 
         updateFavoriteButton();
     }
@@ -1245,15 +1278,17 @@
             crypto.randomUUID();
 
         const onlineRef =
-            firebaseRef(firebaseDB,
-            `online/${userId}`);
+            firebaseRef(
+                firebaseDB,
+                `site/online/${userId}`
+            );
 
         await firebaseSet(onlineRef,true);
 
         firebaseOnDisconnect(onlineRef).remove();
 
         firebaseOnValue(
-            firebaseRef(firebaseDB,"online"),
+            firebaseRef(firebaseDB,"site/online"),
             snapshot=>{
 
                 const online =
@@ -1263,7 +1298,8 @@
 
                 document.getElementById(
                     "onlineCount"
-                ).textContent = online;
+                ).textContent =
+                    Number(online).toLocaleString();
 
             }
         );
@@ -1271,19 +1307,22 @@
     
     /* －－－－ 更新訪客數 －－－－ */ 
     
-    function startVisitorDisplay(){
+    function startVisitorDisplay() {
 
         firebaseOnValue(
-            firebaseRef(firebaseDB,"site/visitors"),
-            snapshot=>{
+            firebaseRef(firebaseDB, "site/visitors"),
+            (snapshot) => {
+
+                const count = snapshot.val() || 0;
 
                 document.getElementById(
                     "visitorCount"
                 ).textContent =
-                    snapshot.val() || 0;
+                    Number(count).toLocaleString();
 
             }
         );
+
     }
 
   </script>

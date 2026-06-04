@@ -33,7 +33,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "鋸刃風暴",
-        "nameEn": "",
+        "nameEn": "Cleave Storm",
         "description": "每0.5秒對周圍敵人造成攻擊力*110%的傷害，持續3秒。",
         "template": "每0.5秒對周圍敵人造成攻擊力*{A}%的傷害，持續3秒",
         "templateEn": "Deals DMG equal to ATK * {A}% to surrounding enemies every 0.5s for 3s.",
@@ -65,7 +65,7 @@ const HEROES = [
       },
       {
         "name": "死亡轟鳴",
-        "nameEn": "",
+        "nameEn": "Death Roar",
         "description": "攻擊力提高18%。",
         "template": "攻擊力提高{A}%。",
         "templateEn": "Increases ATK by {A}%.",
@@ -83,7 +83,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "生產管控",
-        "nameEn": "",
+        "nameEn": "Production Control",
         "description": "工廠的鈔票利潤提升10%。",
         "template": "工廠的鈔票利潤提升{A}%。",
         "templateEn": "Increases the Factory's cash profit by {A}%.",
@@ -115,7 +115,7 @@ const HEROES = [
       },
       {
         "name": "伐木大師",
-        "nameEn": "",
+        "nameEn": "Lumberjack Master",
         "description": "出征時木材採集速度提升25%。",
         "template": "出征時木材採集速度提升{A}%。",
         "templateEn": "Increases Wood Gathering Speed by {A}% during expeditions.",
@@ -132,15 +132,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -175,7 +188,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "防暴盾",
-        "nameEn": "",
+        "nameEn": "Riot Sheild",
         "description": "給自己施加攻擊力*260%的護盾，持續8秒。",
         "template": "給自己施加攻擊力*{A}%的護盾，持續8秒。",
         "templateEn": "Gain a Shield equal to ATK * {A}%, lasting for 8s.",
@@ -207,7 +220,7 @@ const HEROES = [
       },
       {
         "name": "強化盾牌",
-        "nameEn": "",
+        "nameEn": "Reinforced Shield",
         "description": "防禦力提高18%。",
         "template": "防禦力提高{A}%。",
         "templateEn": "Increases DEF by {A}%.",
@@ -225,7 +238,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "生產管控",
-        "nameEn": "",
+        "nameEn": "Production Control",
         "description": "工廠的鈔票利潤提升10%。",
         "template": "工廠的鈔票利潤提升{A}%。",
         "templateEn": "Increases the Factory's cash profit by {A}%.",
@@ -257,7 +270,7 @@ const HEROES = [
       },
       {
         "name": "開採大師",
-        "nameEn": "",
+        "nameEn": "Mining Master",
         "description": "出征時石油採集速度提升25%。",
         "template": "出征時石油採集速度提升{A}%。",
         "templateEn": "Increases Gasoline Gathering Speed by {A}% during expeditions.",
@@ -274,15 +287,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -317,7 +343,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "毒氣手榴彈",
-        "nameEn": "",
+        "nameEn": "Gas Grenade",
         "description": "丟出毒氣手榴彈，對目標及範圍敵人造成攻擊力*140%傷害。",
         "template": "丟出毒氣手榴彈，對目標及範圍敵人造成攻擊力*{A}%傷害。",
         "templateEn": "Throws a Gas Grenade, dealing DMG equal to ATK * {A}% to the target and surrounding enemies.",
@@ -349,7 +375,7 @@ const HEROES = [
       },
       {
         "name": "神經毒素",
-        "nameEn": "",
+        "nameEn": "Neurotoxin",
         "description": "被【毒氣手榴彈】命中的敵人承受中毒狀態，每秒受到攻擊力*11%的傷害，持續5秒。",
         "template": "被【毒氣手榴彈】命中的敵人承受中毒狀態，每秒受到攻擊力*{A}%的傷害，持續5秒。",
         "templateEn": "Enemies hit by Gas Grenade are poisoned, taking DMG equal to ATK * {A}% per second for 5s.",
@@ -367,7 +393,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "生產管控",
-        "nameEn": "",
+        "nameEn": "Production Control",
         "description": "工廠的鈔票利潤提升10%。",
         "template": "工廠的鈔票利潤提升{A}%。",
         "templateEn": "Increases the Factory's cash profit by {A}%.",
@@ -399,7 +425,7 @@ const HEROES = [
       },
       {
         "name": "金屬大師",
-        "nameEn": "",
+        "nameEn": "Forge Master",
         "description": "出征時鋼鐵採集速度提升25%。",
         "template": "出征時鋼鐵採集速度提升{A}%。",
         "templateEn": "Increases Steel Gathering Speed by {A}% during expeditions.",
@@ -416,15 +442,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -459,7 +498,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "旋風斬",
-        "nameEn": "",
+        "nameEn": "Whirlwind Slash",
         "description": "丟出巨鐮，造成攻擊力*256%的範圍傷害。",
         "template": "丟出巨鐮，造成攻擊力*{A}%的範圍傷害。",
         "templateEn": "Swings a giant scythe, dealing AoE DMG equal to ATK * {A}%.",
@@ -491,7 +530,7 @@ const HEROES = [
       },
       {
         "name": "磨鋒礪刃",
-        "nameEn": "",
+        "nameEn": "Sharp Blades",
         "description": "自身攻擊力提高18%。",
         "template": "自身攻擊力提高{A}%。",
         "templateEn": "Increases ATK by {A}%.",
@@ -509,7 +548,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "生產管控",
-        "nameEn": "",
+        "nameEn": "Production Control",
         "description": "工廠的鈔票利潤提升10%。",
         "template": "工廠的鈔票利潤提升{A}%。",
         "templateEn": "Increases the Factory's cash profit by {A}%.",
@@ -541,7 +580,7 @@ const HEROES = [
       },
       {
         "name": "補給管理",
-        "nameEn": "",
+        "nameEn": "Supply Management",
         "description": "出征時食物採集速度提升25%。",
         "template": "出征時食物採集速度提升{A}%。",
         "templateEn": "Increases Food Gathering Speed by {A}% during expeditions.",
@@ -558,15 +597,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -601,7 +653,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "雷射眼",
-        "nameEn": "",
+        "nameEn": "Laser Eye",
         "description": "對前方扇形範圍造成攻擊力*265%的範圍傷害，並令受擊目標的命中率降低30%，持續4秒。",
         "template": "對前方扇形範圍造成攻擊力*{A}%的範圍傷害，並令受擊目標的命中率降低30%，持續4秒。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% in a fan-shaped area in front, reducing the hit rate of affected targets by 30% for 4s.",
@@ -617,7 +669,7 @@ const HEROES = [
       },
       {
         "name": "正義制裁",
-        "nameEn": "",
+        "nameEn": "Justifield Sanction",
         "description": "對前方矩形範圍造成攻擊力*190%的範圍傷害和擊退。",
         "template": "對前方矩形範圍造成攻擊力*{A}%的範圍傷害和擊退。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% in a rectangular area in front and knocks enemies within range back.",
@@ -633,7 +685,7 @@ const HEROES = [
       },
       {
         "name": "堅不可摧",
-        "nameEn": "",
+        "nameEn": "Indomitable",
         "description": "生命值高於40%時，受到傷害降低45%。",
         "template": "生命值高於40%時，受到傷害降低{A}%。",
         "templateEn": "When HP is higher than 40%, reduces DMG taken by {A}%.",
@@ -651,7 +703,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "堅盾守護",
-        "nameEn": "",
+        "nameEn": "Sturdy Shield",
         "description": "我軍全體部隊防禦力提升25%。",
         "template": "我軍全體部隊防禦力提升{A}%。",
         "templateEn": "Increases DEF of all allied troops by {A}%.",
@@ -683,7 +735,7 @@ const HEROES = [
       },
       {
         "name": "防暴懲戒",
-        "nameEn": "",
+        "nameEn": "Riot Punishment",
         "description": "我軍全體部隊防禦力提升25%。",
         "template": "敵軍全體部隊攻擊力降低{A}%。",
         "templateEn": "Enemy troops' ATK reduced by {A}%.",
@@ -700,15 +752,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -743,7 +808,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "土崩掌壓",
-        "nameEn": "",
+        "nameEn": "Crushing Palm",
         "description": "對前方扇形範圍造成攻擊力*204%的範圍傷害，並令受擊目標攻擊速度降低8%，持續2秒。",
         "template": "對前方扇形範圍造成攻擊力*{A}%的範圍傷害，並令受擊目標攻擊速度降低{B}%，持續2秒。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% in a fan-shaped area in front, reducing the ATK Speed of affected targets by {B}% for 2s.",
@@ -759,7 +824,7 @@ const HEROES = [
       },
       {
         "name": "大渦潮",
-        "nameEn": "",
+        "nameEn": "Whirlpool",
         "description": "造成3次總傷害為攻擊力*128%的範圍傷害，並令受擊目標攻擊力降低5%，持續3秒。",
         "template": "造成3次總傷害為攻擊力*{A}%的範圍傷害，並令受擊目標攻擊力降低{B}%，持續3秒。",
         "templateEn": "Deals 3 instances of AoE DMG equal to ATK * {A}%, reducing the target's ATK by {B}% for 3s.",
@@ -775,7 +840,7 @@ const HEROES = [
       },
       {
         "name": "魔王橫綱",
-        "nameEn": "",
+        "nameEn": "Yokozuna Demon",
         "description": "自身防禦力提高24%。",
         "template": "自身防禦力提高{A}%。",
         "templateEn": "Increases DEF by {A}%.",
@@ -793,7 +858,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "鐵獄山圍",
-        "nameEn": "",
+        "nameEn": "Iron Prison Encirclement",
         "description": "我軍全體部隊防禦力提升14%，生命值提升12%。",
         "template": "我軍全體部隊防禦力提升{A}%，生命值提升{B}%。",
         "templateEn": "Increases DEF of all allied Troops by {A}% and HP by {B}%.",
@@ -825,7 +890,7 @@ const HEROES = [
       },
       {
         "name": "崩裂首投",
-        "nameEn": "",
+        "nameEn": "Shattering Srike",
         "description": "敵軍部隊殺傷力降低20%。",
         "template": "敵軍部隊殺傷力降低{A}%。",
         "templateEn": "Reduces enemy Troops' Lethality by {A}%.",
@@ -842,15 +907,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -885,7 +963,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "末日掃射",
-        "nameEn": "",
+        "nameEn": "Apocalyptic Barrage",
         "description": "機槍掃射，對範圍內的敵方單位造成攻擊力*340%的傷害。",
         "template": "機槍掃射，對範圍內的敵方單位造成攻擊力*{A}%的傷害。",
         "templateEn": "Uses a Machine Gun to barrage, dealing DMG equal to ATK * {A}% to all enemy units within range.",
@@ -901,7 +979,7 @@ const HEROES = [
       },
       {
         "name": "高爆飛彈",
-        "nameEn": "",
+        "nameEn": "Explosive Blast",
         "description": "發射飛彈，對命中的敵方目標造成攻擊力*220%的範圍傷害。",
         "template": "發射飛彈，對命中的敵方目標造成攻擊力*{A}%的範圍傷害。",
         "templateEn": "Launches a missile, dealing AoE DMG equal to ATK * {A}% to the hit target.",
@@ -917,7 +995,7 @@ const HEROES = [
       },
       {
         "name": "毀滅模式",
-        "nameEn": "",
+        "nameEn": "Annihilation Mode",
         "description": "當生命值低於60%時進入毀滅模式，攻擊速度增加24%，並且普通攻擊變為範圍傷害。",
         "template": "當生命值低於60%時進入毀滅模式，攻擊速度增加{A}%，並且普通攻擊變為範圍傷害。",
         "templateEn": "Enters Annihilation Mode when HP drops below 60%, increasing ATK Speed by {A}% and converting Basic Attack DMG to AoE DMG.",
@@ -935,7 +1013,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "裝甲震懾",
-        "nameEn": "",
+        "nameEn": "Armored Intimidation",
         "description": "敵方單位造成的傷害降低20%。",
         "template": "敵方單位造成的傷害降低{A}%。",
         "templateEn": "Reduces DMG dealt by enemy units by {A}%.",
@@ -967,7 +1045,7 @@ const HEROES = [
       },
       {
         "name": "迅速徵召",
-        "nameEn": "",
+        "nameEn": "Rapid Recruitment",
         "description": "動員大廳徵兵值恢復速度提升15%。",
         "template": "動員大廳徵兵值恢復速度提升{A}%。",
         "templateEn": "Increases Recruitment Point recovery speed by {A}%.",
@@ -984,15 +1062,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -1027,7 +1118,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "朧吹雪",
-        "nameEn": "",
+        "nameEn": "Snowveil Slash",
         "description": "揮舞皮鞭，對扇形範圍內的敵人每0.5秒造成攻擊*75%傷害，持續2秒。",
         "template": "揮舞皮鞭，對扇形範圍內的敵人每0.5秒造成攻擊*{A}%傷害，持續2秒。",
         "templateEn": "Whips enemies in a fan-shaped area, dealing DMG equal to ATK * {A}% every 0.5s for 2s.",
@@ -1043,7 +1134,7 @@ const HEROES = [
       },
       {
         "name": "幻光滅",
-        "nameEn": "",
+        "nameEn": "Illusionary Light",
         "description": "普通攻擊會使受擊目標防禦力降低20%，持續3秒。",
         "template": "普通攻擊會使受擊目標防禦力降低{A}%，持續3秒。",
         "templateEn": "Basic Attacks reduce DEF of targets hit by {A}% for 3s.",
@@ -1059,7 +1150,7 @@ const HEROES = [
       },
       {
         "name": "影斷空",
-        "nameEn": "",
+        "nameEn": "Shadow Cleave",
         "description": "自身造成傷害提升30%。",
         "template": "自身造成傷害提升{A}%。",
         "templateEn": "Increases DMG dealt by {A}%.",
@@ -1077,7 +1168,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "洞悉弱點",
-        "nameEn": "",
+        "nameEn": "Insight",
         "description": "我軍全體部隊造成傷害提升25%。",
         "template": "我軍全體部隊造成傷害提升{A}%。",
         "templateEn": "Increases DMG dealt by all allied troops by {A}%.",
@@ -1109,7 +1200,7 @@ const HEROES = [
       },
       {
         "name": "暗殺術",
-        "nameEn": "",
+        "nameEn": "Assassination",
         "description": "我軍全體部隊殺傷力提升25%。",
         "template": "我軍全體部隊殺傷力提升{A}%。",
         "templateEn": "Increases Lethality of all allied troops by {A}%.",
@@ -1126,15 +1217,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -1169,7 +1273,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "腎上腺素",
-        "nameEn": "",
+        "nameEn": "Adrenaline",
         "description": "使我方全體每秒恢復相當於吉邁斯攻擊力*41%的生命，持續5秒。",
         "template": "使我方全體每秒恢復相當於吉邁斯攻擊力*{A}%的生命，持續5秒。",
         "templateEn": "Restores HP to all allies equal to Gimes' ATK * {A}% per second for 5s.",
@@ -1185,7 +1289,7 @@ const HEROES = [
       },
       {
         "name": "屹立不倒",
-        "nameEn": "",
+        "nameEn": "Unyielding",
         "description": "當前生命低於50%時，每4秒恢復攻擊力*120%的生命。",
         "template": "當前生命低於50%時，每4秒恢復攻擊力*{A}%的生命。",
         "templateEn": "When HP falls below 50%, restores HP equal to ATK * {A}% every 4s.",
@@ -1201,7 +1305,7 @@ const HEROES = [
       },
       {
         "name": "強壯體魄",
-        "nameEn": "",
+        "nameEn": "Strong Physique",
         "description": "受到腎上腺素效果的單位造成的傷害提高7%。",
         "template": "受到腎上腺素效果的單位造成的傷害提高{A}%。",
         "templateEn": "Units affected by Adrenaline deal {A}% increased DMG.",
@@ -1219,7 +1323,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "強身健體",
-        "nameEn": "",
+        "nameEn": "Robust Build",
         "description": "全體部隊生命提高25%。",
         "template": "全體部隊生命提高{A}%。",
         "templateEn": "Increases HP of all troops by {A}%.",
@@ -1251,7 +1355,7 @@ const HEROES = [
       },
       {
         "name": "矯健步法",
-        "nameEn": "",
+        "nameEn": "Agile Footwork",
         "description": "我軍全體部隊受到傷害降低20%。",
         "template": "我軍全體部隊受到傷害降低{A}%。",
         "templateEn": "Reduces DMG taken by all allied troops by {A}%.",
@@ -1268,15 +1372,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -1311,7 +1428,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "天罰之火",
-        "nameEn": "",
+        "nameEn": "Wrath of Fire",
         "description": "發射火箭彈，對目標範圍造成攻擊力*225%傷害。炮彈落點燃起火焰，敵方單位每0.5秒受到攻擊力*6%傷害，持續3秒。",
         "template": "發射火箭彈，對目標範圍造成攻擊力*{A}%傷害。炮彈落點燃起火焰，敵方單位每0.5秒受到攻擊力*{B}%傷害，持續3秒。",
         "templateEn": "Launches rockets, dealing DMG equal to ATK * {A}% to the target area. The explosion ignites flames, inflicting DMG equal to ATK * {B}% every 0.5s for 3s on enemy units.",
@@ -1327,7 +1444,7 @@ const HEROES = [
       },
       {
         "name": "烈日眩光",
-        "nameEn": "",
+        "nameEn": "Solar Glare",
         "description": "對敵方後排單位投擲閃光彈，造成攻擊力*150%範圍傷害，並且另受擊目標攻擊有10%失手率，持續5秒。",
         "template": "對敵方後排單位投擲閃光彈，造成攻擊力*{A}%範圍傷害，並且另受擊目標攻擊有10%失手率，持續5秒。",
         "templateEn": "Throws flash grenades at back-row enemy units, dealing AoE DMG equal to ATK * {A}% and causing hit targets to have a 10% chance to miss their attacks for 5s.",
@@ -1343,7 +1460,7 @@ const HEROES = [
       },
       {
         "name": "焚城迫擊",
-        "nameEn": "",
+        "nameEn": "Scorching Mortar",
         "description": "自身造成傷害提升30%。",
         "template": "自身造成傷害提升{A}%。",
         "templateEn": "Increases DMG dealt by {A}%.",
@@ -1361,7 +1478,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "荒漠法則",
-        "nameEn": "",
+        "nameEn": "Harsh Rule",
         "description": "我軍全體部隊攻擊力提升14%，殺傷力提升12%。",
         "template": "我軍全體部隊攻擊力提升{A}%，殺傷力提升{B}%。",
         "templateEn": "Increases Troops' ATK by {A}% and Lethality by {B}%.",
@@ -1393,7 +1510,7 @@ const HEROES = [
       },
       {
         "name": "死亡熱風",
-        "nameEn": "",
+        "nameEn": "Blazing Gust",
         "description": "敵軍部隊生命值降低20%。",
         "template": "敵軍部隊生命值降低{A}%。",
         "templateEn": "Reduces enemy Troops' HP by {A}%.",
@@ -1410,15 +1527,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -1453,7 +1583,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "雙極星",
-        "nameEn": "",
+        "nameEn": "Bipolar Star",
         "description": "敏妍用機槍射擊3次，每次造成攻擊*97%的傷害，之後泰勳向敵方單個目標發射威力強大的炮彈，造成攻擊力*96%的大範圍傷害。",
         "template": "敏妍用機槍射擊3次，每次造成攻擊*{A}%的傷害，之後泰勳向敵方單個目標發射威力強大的炮彈，造成攻擊力*{B}%的大範圍傷害。\"",
         "templateEn": "Minyeon fires a machine gun three times, each attack dealing DMG equal to ATK * {A}%. Then Taehun launches a powerful shell at a single enemy target, dealing AoE DMG equal to ATK * {B}%.",
@@ -1469,7 +1599,7 @@ const HEROES = [
       },
       {
         "name": "虎嘯彈",
-        "nameEn": "",
+        "nameEn": "Tiger Roar Blast",
         "description": "每普通攻擊4次，泰勳便會向敵方單個目標連續發射2發炮彈，每發造成攻擊*52%的範圍傷害。",
         "template": "每普通攻擊4次，泰勳便會向敵方單個目標連續發射2發炮彈，每發造成攻擊*{A}%的範圍傷害。",
         "templateEn": "After every 4 Basic Attacks, Taehun launches 2 shells at a single enemy target, each dealing AoE DMG equal to ATK * {A}%.",
@@ -1485,7 +1615,7 @@ const HEROES = [
       },
       {
         "name": "瞬火",
-        "nameEn": "",
+        "nameEn": "Instant Fire",
         "description": "每次普通攻擊後，提高自身9%攻擊速度，持續4秒。此效果可疊加。",
         "template": "每次普通攻擊後，提高自身{A}%攻擊速度，持續4秒。此效果可疊加。",
         "templateEn": "After each Basic Attack, increases ATK Speed by {A}% for 4s. This effect can stack.",
@@ -1503,7 +1633,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "默契出擊",
-        "nameEn": "",
+        "nameEn": "Tacit Strike",
         "description": "出征攻擊野怪時的傷害提升30%（對【動亂危機】活動中的敵軍也有效）。",
         "template": "出征攻擊野怪時的傷害提升{A}%（對【動亂危機】活動中的敵軍也有效）。",
         "templateEn": "Increases DMG dealt by {A}% when attacking Wild Monsters during Expedition (also effective against enemies in the Turmoil Surge event).",
@@ -1535,7 +1665,7 @@ const HEROES = [
       },
       {
         "name": "風焰協議",
-        "nameEn": "",
+        "nameEn": "Flameborne Protocol",
         "description": "敵軍防禦力降低20%。",
         "template": "敵軍防禦力降低{A}%。",
         "templateEn": "Reduces enemy DEF by {A}%.",
@@ -1552,15 +1682,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -1595,7 +1738,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "連發速射",
-        "nameEn": "",
+        "nameEn": "Blitzfire",
         "description": "對單個目標迅速射出4顆子彈，每顆子彈造成攻擊力*122.5%的傷害。",
         "template": "對單個目標迅速射出4顆子彈，每顆子彈造成攻擊力*122.5%的傷害。",
         "templateEn": "Rapidly fires 4 bullets at a single target, each dealing DMG equal to ATK * 122.5%.",
@@ -1611,7 +1754,7 @@ const HEROES = [
       },
       {
         "name": "抑制射擊",
-        "nameEn": "",
+        "nameEn": "Suppressive Fire",
         "description": "對單個目標射出一顆子彈，造成攻擊力*180%的傷害，並使其攻擊速度降低50%，持續3秒。",
         "template": "對單個目標射出一顆子彈，造成攻擊力*{A}%的傷害，並使其攻擊速度降低{B}%，持續3秒。",
         "templateEn": "Fires 1 shot at a single target, dealing DMG equal to ATK * {A}% and reducing their ATK Speed by {B}% for 3s.",
@@ -1627,7 +1770,7 @@ const HEROES = [
       },
       {
         "name": "迅疾行動",
-        "nameEn": "",
+        "nameEn": "Swift Operation",
         "description": "攻擊速度提升30%。",
         "template": "攻擊速度提升{A}%",
         "templateEn": "Increases ATK Speed by {A}%.",
@@ -1645,7 +1788,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "鷹眼",
-        "nameEn": "",
+        "nameEn": "Hawkeye",
         "description": "我軍全體部隊殺傷力提升25%。",
         "template": "我軍全體部隊殺傷力提升{A}%。",
         "templateEn": "Increases Lethality of all allied troops by {A}%.",
@@ -1677,7 +1820,7 @@ const HEROES = [
       },
       {
         "name": "搜刮",
-        "nameEn": "",
+        "nameEn": "Scavenge",
         "description": "我軍全體部隊殺傷力提升25%。",
         "template": "全資源採集速度提升{A}%}。",
         "templateEn": "Increases Gathering Speed of all resources by {A}%.",
@@ -1694,15 +1837,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -1737,7 +1893,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "殲滅掃射",
-        "nameEn": "",
+        "nameEn": "Annihilation Barrage",
         "description": "對扇形範圍進行掃射，造成攻擊力*300%的傷害。",
         "template": "對扇形範圍進行掃射，造成攻擊力*{A}%的傷害。",
         "templateEn": "Shoots in a fan-shaped area, dealing DMG equal to ATK * {A}%.",
@@ -1753,7 +1909,7 @@ const HEROES = [
       },
       {
         "name": "標記彈",
-        "nameEn": "",
+        "nameEn": "Marking Shots",
         "description": "對目標發射一發子彈，造成攻擊力*180%的傷害，並使其受到的傷害增加20%，持續3秒。",
         "template": "對目標發射一發子彈，造成攻擊力*{A}%的傷害，並使其受到的傷害增加{B}%，持續3秒。",
         "templateEn": "Fires 1 shot at the target, dealing DMG equal to ATK * {A}% and increasing their DMG taken by {B}% for 3s.",
@@ -1769,7 +1925,7 @@ const HEROES = [
       },
       {
         "name": "極效火藥",
-        "nameEn": "",
+        "nameEn": "Efficiency Gunpoweder",
         "description": "自身暴擊率提升20%。",
         "template": "自身暴擊率提升{A}%。",
         "templateEn": "Increases CRIT Rate by {A}%.",
@@ -1787,7 +1943,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "雷厲風行",
-        "nameEn": "",
+        "nameEn": "Own Beat",
         "description": "出征攻擊野怪時的行軍速度提高100%。",
         "template": "出征攻擊野怪時的行軍速度提高{A}%。",
         "templateEn": "Increases Expedition Speed by {A}% during monster-hunting.",
@@ -1819,7 +1975,7 @@ const HEROES = [
       },
       {
         "name": "鬥志旺盛",
-        "nameEn": "",
+        "nameEn": "Vigorous Spirit",
         "description": "弗洛拉以旺盛的鬥志鼓舞士兵，讓他們能夠頑強地繼續作戰。弗洛伐所率領的部隊中10%的重傷士兵轉為輕傷士兵。",
         "template": "弗洛拉以旺盛的鬥志鼓舞士兵，讓他們能夠頑強地繼續作戰。弗洛伐所率領的部隊中{A}%的重傷士兵轉為輕傷士兵。",
         "templateEn": "Flora inspires her troops with unwavering determination, allowing them to keep fighting with grit. After battle, {A}% of the severely wounded soldiers in her unit are converted into lightly wounded soldiers.",
@@ -1836,15 +1992,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -1879,7 +2048,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "狙擊",
-        "nameEn": "",
+        "nameEn": "Snipe",
         "description": "鎖定目標，造成攻擊力*560%傷害。",
         "template": "鎖定目標，造成攻擊力*\"{A}%傷害。",
         "templateEn": "Locks onto the target, dealing DMG equal to ATK * {A}%.",
@@ -1895,7 +2064,7 @@ const HEROES = [
       },
       {
         "name": "一擊斃敵",
-        "nameEn": "",
+        "nameEn": "Deathblow",
         "description": "對目標發射一發攻擊力*210%傷害的子彈。",
         "template": "對目標發射一發攻擊力*{A}%傷害的子彈。",
         "templateEn": "Fires 1 shot at the target, dealing DMG equal to ATK * {A}%.",
@@ -1911,7 +2080,7 @@ const HEROES = [
       },
       {
         "name": "追獵終結",
-        "nameEn": "",
+        "nameEn": "Hunt to the End",
         "description": "每普通攻擊3次，下一次普通攻擊必定暴擊。",
         "template": "每普通攻擊{A}次，下一次普通攻擊必定暴擊。",
         "templateEn": "After every {A} Basic Attacks, the next Basic Attack is guaranteed to be a CRIT.",
@@ -1929,7 +2098,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "分析戰局",
-        "nameEn": "",
+        "nameEn": "Strategic Insight",
         "description": "我軍全體部隊攻擊力提高25%。",
         "template": "我軍全體部隊攻擊力提高{A}%。",
         "templateEn": "Increases ATK of all allied troops by {A}%.",
@@ -1961,7 +2130,7 @@ const HEROES = [
       },
       {
         "name": "戰術突破",
-        "nameEn": "",
+        "nameEn": "Tactical Move",
         "description": "我軍全體部隊攻擊時有50%機率使本次傷害提升50%。",
         "template": "我軍全體部隊攻擊時有50%機率使本次傷害提升{A}%。",
         "templateEn": "All allied troops have a 50% chance to increase their DMG by {A}% when attacking.",
@@ -1978,15 +2147,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -2021,7 +2203,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "暮光守望",
-        "nameEn": "",
+        "nameEn": "Twilight Vigil",
         "description": "為我方2個生命最低的英雄或囚徒裝甲施加攻擊力*220%的護盾，持續6秒。",
         "template": "為我方2個生命最低的英雄或囚徒裝甲施加攻擊力*{A}%的護盾，持續6秒。",
         "templateEn": "Grants a Shield equal to ATK * {A}% to the 2 allied Heroes or Prisoners with the lowest HP, lasting for 6s.",
@@ -2037,7 +2219,7 @@ const HEROES = [
       },
       {
         "name": "爆頭",
-        "nameEn": "",
+        "nameEn": "Headshot",
         "description": "對目標發射一發子彈，造成攻擊力*220%的傷害和擊退。",
         "template": "對目標發射一發子彈，造成攻擊力*{A}%的傷害和擊退。",
         "templateEn": "Fires 1 shot at the target, dealing DMG equal to ATK * {A}% and knocking them back.",
@@ -2053,7 +2235,7 @@ const HEROES = [
       },
       {
         "name": "求生法則",
-        "nameEn": "",
+        "nameEn": "Law of Survival",
         "description": "自身防禦力提升24%。",
         "template": "自身防禦力提升{A}%。",
         "templateEn": "Increases DEF by {A}%.",
@@ -2071,7 +2253,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "靈活應變",
-        "nameEn": "",
+        "nameEn": "Adaptability",
         "description": "我軍全體部隊受到傷害降低25%。",
         "template": "我軍全體部隊受到傷害降低{A}%。",
         "templateEn": "Reduces DMG taken by all allied troops by {A}%.",
@@ -2103,7 +2285,7 @@ const HEROES = [
       },
       {
         "name": "急救學識",
-        "nameEn": "",
+        "nameEn": "First Aid Knowledge",
         "description": "醫療站的治療速度提升50%。",
         "template": "醫療站的治療速度提升{A}%。",
         "templateEn": "Increases Medical Station's Healing Speed by {A}%.",
@@ -2120,15 +2302,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -2163,7 +2358,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "爆裂彈",
-        "nameEn": "",
+        "nameEn": "Explosive Shell",
         "description": "對目標發射3顆榴彈，每顆榴彈造成90%範圍傷害。",
         "template": "對目標發射3顆榴彈，每顆榴彈造成{A}%範圍傷害。",
         "templateEn": "Fires 3 grenades at the target, each dealing {A}% AoE DMG.",
@@ -2179,7 +2374,7 @@ const HEROES = [
       },
       {
         "name": "瞄準射擊",
-        "nameEn": "",
+        "nameEn": "Take Aim",
         "description": "自身傷害提升30%。",
         "template": "自身傷害提升{A}%。",
         "templateEn": "Increases DMG dealt by {A}%.",
@@ -2195,7 +2390,7 @@ const HEROES = [
       },
       {
         "name": "填彈技術",
-        "nameEn": "",
+        "nameEn": "Reload Technique",
         "description": "自身攻擊速度提升30%。",
         "template": "自身攻擊速度提升{A}%。",
         "templateEn": "Increases Attack Speed by {A}%.",
@@ -2213,7 +2408,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "追緝不休",
-        "nameEn": "",
+        "nameEn": "Unyielding Pursuit",
         "description": "出征體力消耗降低20%。",
         "template": "出征體力消耗降低{A}%。",
         "templateEn": "Decreases Stamina Consumption for expeditions by {A}%.",
@@ -2245,7 +2440,7 @@ const HEROES = [
       },
       {
         "name": "靈動之姿",
-        "nameEn": "",
+        "nameEn": "Spiritual Balance",
         "description": "出征攻擊野怪時的行軍速度提高100%。",
         "template": "出征攻擊野怪時的行軍速度提高{A}%。",
         "templateEn": "Increases Expedition Speed by {A}% during monster-hunting.",
@@ -2262,15 +2457,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -2309,7 +2517,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "摧心咆哮",
-        "nameEn": "",
+        "nameEn": "Wrathful Roar",
         "description": "造成攻擊力*582%的範圍傷害並且使目標暈眩1.5秒。",
         "template": "造成攻擊力*{A}%的範圍傷害並且使目標暈眩1.5秒。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% and stuns the targets for 1.5s.",
@@ -2325,7 +2533,7 @@ const HEROES = [
       },
       {
         "name": "蠻力重擊",
-        "nameEn": "",
+        "nameEn": "Mighty Smash",
         "description": "猛砸地面，對範圍內造成一次攻擊力*220%的傷害。",
         "template": "猛砸地面，對範圍內造成一次攻擊力*{A}%的傷害。",
         "templateEn": "Slams the ground, dealing DMG equal to ATK * {A}% to all enemies within range.",
@@ -2341,7 +2549,7 @@ const HEROES = [
       },
       {
         "name": "屠戮",
-        "nameEn": "",
+        "nameEn": "Massacre",
         "description": "自身造成傷害提升32%。",
         "template": "自身造成傷害提升{A}%。",
         "templateEn": "Increases DMG dealt by {A}%.",
@@ -2359,7 +2567,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "致殘",
-        "nameEn": "",
+        "nameEn": "Cripple",
         "description": "敵軍部隊受到傷害提升25%。",
         "template": "敵軍部隊受到傷害提升{A}%。",
         "templateEn": "Increases DMG taken by enemy troops by {A}%.",
@@ -2375,7 +2583,7 @@ const HEROES = [
       },
       {
         "name": "鮮血盛宴",
-        "nameEn": "",
+        "nameEn": "Blood Feast",
         "description": "我軍全體部隊殺傷力提升25%。",
         "template": "我軍全體部隊殺傷力提升{A}%。",
         "templateEn": "Increases Lethality of all allied troops by {A}%.",
@@ -2391,7 +2599,7 @@ const HEROES = [
       },
       {
         "name": "喪鐘鳴響",
-        "nameEn": "",
+        "nameEn": "Death Toll",
         "description": "攻擊時有20%機率使敵方暈眩，持續1回合。",
         "template": "攻擊時有{A}%機率使敵方暈眩，持續1回合。",
         "templateEn": "Has a(n) {A}% chance to stun the enemy for 1 round when attacking.",
@@ -2408,15 +2616,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "殘暴拳刃",
+      "nameEn": "Brutal Gauntlets",
       "image": "泰倫_專屬裝備_殘暴拳刃.png",
       "arrestSkill": {
         "name": "破壞欲",
-        "description": "提升我方所有英雄和囚徒裝甲8%的攻擊力。\nIncrease all allied heroes ATK by 8%.",
+        "nameEn": "Frenzied Destruction",
+        "description": "提升我方所有英雄和囚徒裝甲8%的攻擊力。",
+        "template": "提升我方所有英雄和囚徒裝甲{A}%的攻擊力。",
+        "templateEn": "Increase all allied heroes ATK by {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "", "B": "", "C": "" },
+        "2": { "A": "", "B": "", "C": "" },
+        "3": { "A": "", "B": "", "C": "" },
+        "4": { "A": "", "B": "", "C": "" },
+        "5": { "A": "", "B": "", "C": "" }
+        },
         "image": "泰倫_緝捕裝備技能_破壞欲.png"
       },
       "warSkill": {
         "name": "橫衝直撞",
-        "description": "集結進攻時，我軍全體部隊攻擊力增幅16%。\nRally attack, all troops gain add 16% to their existing ATK bonus.",
+        "nameEn": "Bull Rush",
+        "description": "集結進攻時，我軍全體部隊攻擊力增幅16%。",
+        "template": "集結進攻時，我軍全體部隊攻擊力增幅{A}%。",
+        "templateEn": "During rally attacks, all our troops' ATK Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "泰倫_戰爭裝備技能_橫衝直撞.png"
       }
     }
@@ -2455,7 +2686,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "雷霆震怒",
-        "nameEn": "",
+        "nameEn": "Thundering Rage",
         "description": "我方全體單位攻擊力提高10%，持續5秒。鳳鳴自身攻擊力額外提高25%。",
         "template": "我方全體單位攻擊力提高{A}%，持續5秒。鳳鳴自身攻擊力額外提高{B}%。",
         "templateEn": "Increases ATK of all allied units by {A}% for 5s. Phoenix's ATK increases by an additional {B}%.",
@@ -2471,7 +2702,7 @@ const HEROES = [
       },
       {
         "name": "浴火之威",
-        "nameEn": "",
+        "nameEn": "Ashes Reborn",
         "description": "生命低於20%時，立即恢復最大值*60%的生命值，每場戰鬥生效1次。",
         "template": "生命低於20%時，立即恢復最大值*{A}%的生命值，每場戰鬥生效1次。",
         "templateEn": "When HP falls below 20%, immediately restores HP equal to {A}% of Max HP. Can be triggered once per battle.",
@@ -2487,7 +2718,7 @@ const HEROES = [
       },
       {
         "name": "天傾一擊",
-        "nameEn": "",
+        "nameEn": "Heavenly Srike",
         "description": "每普通攻擊4次，便會在自身周圍造成攻擊力*300%的範圍傷害。",
         "template": "每普通攻擊4次，便會在自身周圍造成攻擊力*{A}%的範圍傷害。",
         "templateEn": "After every 4 Basic Attacks, deals AoE DMG equal to ATK * {A}% to surrounding enemies.",
@@ -2505,7 +2736,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "粉碎防禦",
-        "nameEn": "",
+        "nameEn": "Crush Defense",
         "description": "我軍全體部隊部隊造成傷害提升25%。",
         "template": "我軍全體部隊部隊造成傷害提升{A}%。",
         "templateEn": "Increases DMG dealt by all allied troops by {A}%.",
@@ -2521,7 +2752,7 @@ const HEROES = [
       },
       {
         "name": "不屈戰意",
-        "nameEn": "",
+        "nameEn": "Unyielding Spirit",
         "description": "我軍體部隊生命值提升25%。",
         "template": "我軍體部隊生命值提升{A}%。",
         "templateEn": "Increases HP of all allied troops by {A}%.",
@@ -2537,7 +2768,7 @@ const HEROES = [
       },
       {
         "name": "撼地重錘",
-        "nameEn": "",
+        "nameEn": "Earth-Shaking Hammer",
         "description": "攻擊時有20%機率使敵方暈眩，持續1回合。",
         "template": "攻擊時有{A}%機率使敵方暈眩，持續1回合。",
         "templateEn": "Has a(n) {A}% chance to stun the enemy for 1 round when attacking.",
@@ -2554,15 +2785,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "千鈞錘",
+      "nameEn": "Colossus Hammer",
       "image": "鳳鳴_專屬裝備_千鈞錘.png",
       "arrestSkill": {
         "name": "熾星墜雲",
-        "description": "當生命低於50時，攻擊速度提升100%。\nWhen HP under 50.%, icrease ATK speed by 100%.",
+        "nameEn": "Blzing Cloud",
+        "description": "當生命低於50時，攻擊速度提升100%。",
+        "template": "當生命低於50時，攻擊速度提升{A}%。",
+        "templateEn": "When HP under 50%, icrease ATK speed by {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "20", "B": "-", "C": "-" },
+        "2": { "A": "40", "B": "-", "C": "-" },
+        "3": { "A": "60", "B": "-", "C": "-" },
+        "4": { "A": "80", "B": "-", "C": "-" },
+        "5": { "A": "100", "B": "-", "C": "-" }
+        },
         "image": "鳳鳴_緝捕裝備技能_熾星墜雲.png"
       },
       "warSkill": {
         "name": "一錘定音",
-        "description": "[單人作戰]時，我軍全體部隊生命增幅16%。\nDuring solo combat, troops gain an additional 16% boost to their existing HP bonus.",
+        "nameEn": "Decisive Strike",
+        "description": "[單人作戰]時，我軍全體部隊生命值增幅16%。",
+        "template": "[單人作戰]時，我軍全體部隊生命值增幅{A}%。",
+        "templateEn": "During solo combats, all allied troops gain {A}% HP Boost.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "鳳鳴_戰爭裝備技能_一錘定音.png"
       }
     }
@@ -2597,7 +2851,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "煙氣侵襲",
-        "nameEn": "",
+        "nameEn": "Smoke Invasion",
         "description": "噴出濃煙，對前方扇形範圍內造成攻擊力*242%的傷害，並且使目標眩暈1.5秒。",
         "template": "噴出濃煙，對前方扇形範圍內造成攻擊力*{A}%的傷害，並且使目標眩暈1.5秒。",
         "templateEn": "Spews smoke, dealing DMG equal to ATK * {A}% in a fan-shaped area and stunning targets for 1.5s.",
@@ -2613,7 +2867,7 @@ const HEROES = [
       },
       {
         "name": "毀滅烈焰",
-        "nameEn": "",
+        "nameEn": "Destructive Flames",
         "description": "使普通攻擊命中的單位防禦力降低15%，持續3秒。",
         "template": "使普通攻擊命中的單位防禦力降低{A}%，持續3秒。",
         "templateEn": "Reduces DEF of targets hit by Basic Attacks by {A}% for 3s.",
@@ -2629,7 +2883,7 @@ const HEROES = [
       },
       {
         "name": "火焰屏障",
-        "nameEn": "",
+        "nameEn": "Fire Barrier",
         "description": "自身受到的傷害降低32%。",
         "template": "自身受到的傷害降低{A}%。",
         "templateEn": "Reduces DMG taken by {A}%.",
@@ -2647,7 +2901,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "良好防護",
-        "nameEn": "",
+        "nameEn": "Solid Defense",
         "description": "我軍全體部隊防禦力提升25%。",
         "template": "我軍全體部隊防禦力提升{A}%。",
         "templateEn": "Increases DEF of all allied troops by {A}%.",
@@ -2663,7 +2917,7 @@ const HEROES = [
       },
       {
         "name": "火場酷熱",
-        "nameEn": "",
+        "nameEn": "Blazing Heat",
         "description": "攻擊時有20%機率使敵方暈眩，持續1回合。",
         "template": "攻擊時有{A}%機率使敵方暈眩，持續1回合。",
         "templateEn": "Has a {A}% chance to stun the enemy for 1 round when attacking.",
@@ -2679,7 +2933,7 @@ const HEROES = [
       },
       {
         "name": "烈火雄心",
-        "nameEn": "",
+        "nameEn": "Fiery Ambition",
         "description": "我軍全體部隊生命值提升25%。",
         "template": "我軍全體部隊生命值提升{A}%。",
         "templateEn": "Increases HP of all allied troops by {A}%.",
@@ -2696,15 +2950,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "煉獄之息",
+      "nameEn": "Infernal Breath",
       "image": "托蒙德_專屬裝備_煉獄之息.png",
       "arrestSkill": {
         "name": "高溫鍛鐵",
-        "description": "自身防禦力提升28%。\nIncrease DEF by 28%.",
+        "nameEn": "High-Temperature Forging",
+        "description": "自身防禦力提升28%。",
+        "template": "自身防禦力提升{A}%。",
+        "templateEn": "Increase DEF by {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "12", "B": "-", "C": "-" },
+        "2": { "A": "16", "B": "-", "C": "-" },
+        "3": { "A": "20", "B": "-", "C": "-" },
+        "4": { "A": "24", "B": "-", "C": "-" },
+        "5": { "A": "28", "B": "-", "C": "-" }
+        },
         "image": "托蒙德_緝捕裝備技能_高溫鍛鐵.png"
       },
       "warSkill": {
         "name": "囤積燃料",
-        "description": "[防守]時，我軍全體部隊防禦力增幅16%。\nDefending, all our troops gain add 16% to their existing DEF bonus.",
+        "nameEn": "Fuel Stockpile",
+        "description": "[防守]時，我軍全體部隊防禦力增幅16%。",
+        "template": "[防守]時，我軍全體部隊防禦力增幅{A}%。",
+        "templateEn": "While defending, all our troops' DEF Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "托蒙德_戰爭裝備技能_囤積燃料.png"
       }
     }
@@ -2739,7 +3016,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "舞台事故",
-        "nameEn": "",
+        "nameEn": "Stage Mishap",
         "description": "砸下音響，造成攻擊力*254%的範圍傷害，並使範圍內的敵人暈眩1.5秒。",
         "template": "砸下音響，造成攻擊力*{A}%的範圍傷害，並使範圍內的敵人暈眩1.5秒。",
         "templateEn": "Drops a speaker, dealing AoE DMG equal to ATK * {A}% to targets and stunning them for 1.5s.",
@@ -2755,7 +3032,7 @@ const HEROES = [
       },
       {
         "name": "電音節奏",
-        "nameEn": "",
+        "nameEn": "Electronic Beat",
         "description": "我方全體單位攻擊速度提高25%，持續5秒。",
         "template": "我方全體單位攻擊速度提高{A}%，持續5秒。",
         "templateEn": "Increases ATK Speed of all allied units by {A}% for 5s.",
@@ -2771,7 +3048,7 @@ const HEROES = [
       },
       {
         "name": "炫技獨奏",
-        "nameEn": "",
+        "nameEn": "Mastery Solo",
         "description": "每普通攻擊5次，對目標造成攻擊力*250%的傷害。",
         "template": "每普通攻擊5次，對目標造成攻擊力*{A}%的傷害。",
         "templateEn": "Deals DMG equal to ATK * {A}% to the target after every 5 Basic Attacks.",
@@ -2789,7 +3066,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "震撼演出",
-        "nameEn": "",
+        "nameEn": "Stunning Act",
         "description": "我軍全體部隊攻擊力提升25%。",
         "template": "我軍全體部隊攻擊力提升{A}%。",
         "templateEn": "Increases HP of all allied troops by {A}%.",
@@ -2805,7 +3082,7 @@ const HEROES = [
       },
       {
         "name": "激勵旋律",
-        "nameEn": "",
+        "nameEn": "Inspiring Melody",
         "description": "建築升級速度提升15%。",
         "template": "建築升級速度提升{A}%。",
         "templateEn": "Increases Building Upgrade Speed by {A}%.",
@@ -2821,7 +3098,7 @@ const HEROES = [
       },
       {
         "name": "建材統籌",
-        "nameEn": "",
+        "nameEn": "Building Material Coordination",
         "description": "建築升級所需的食物、木材、鋼鐵、汽油資源減少15%。",
         "template": "建築升級所需的食物、木材、鋼鐵、汽油資源減少{A}%。",
         "templateEn": "Reduces the Food, Wood, Steel, and Gasoline resources required for Building Upgrades by {A}%.",
@@ -2838,15 +3115,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "靈魂彗星",
+      "nameEn": "Soul Comet",
       "image": "薇薇安_專屬裝備_靈魂彗星.png",
       "arrestSkill": {
         "name": "崩壞急曲",
-        "description": "自身攻擊力提升28%。\nIncrease ATK by 28%.",
+        "nameEn": "Destructive Finale",
+        "description": "自身攻擊力提升28%。",
+        "template": "自身攻擊力提升{A}%。",
+        "templateEn": "Increase ATK by {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "12", "B": "-", "C": "-" },
+        "2": { "A": "16", "B": "-", "C": "-" },
+        "3": { "A": "20", "B": "-", "C": "-" },
+        "4": { "A": "24", "B": "-", "C": "-" },
+        "5": { "A": "28", "B": "-", "C": "-" }
+        },
         "image": "薇薇安_緝捕裝備技能_崩壞急曲.png"
       },
       "warSkill": {
         "name": "死亡金屬",
-        "description": "集結進攻時，我軍全體部隊殺傷力增幅16%。\nRally attack, all our troops gain 16% to their existing lethality bonus.",
+        "nameEn": "Death Metal",
+        "description": "集結進攻時，我軍全體部隊殺傷力增幅16%。",
+        "template": "集結進攻時，我軍全體部隊殺傷力增幅{A}%。",
+        "templateEn": "During rally attacks, all our troops' Lethality Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "薇薇安_戰爭裝備技能_死亡金屬.png"
       }
     }
@@ -2881,7 +3181,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "火箭彈",
-        "nameEn": "",
+        "nameEn": "Rocket Launcher",
         "description": "發射火箭彈，對目標範圍造成攻擊力*360%傷害。",
         "template": "發射火箭彈，對目標範圍造成攻擊力*{A}%傷害。",
         "templateEn": "Fires rockets, dealing DMG equal to ATK * {A}% to the target area.",
@@ -2897,7 +3197,7 @@ const HEROES = [
       },
       {
         "name": "武器改裝",
-        "nameEn": "",
+        "nameEn": "Weapon Modification",
         "description": "自身攻擊速度提升32%。",
         "template": "自身攻擊速度提升{A}%。",
         "templateEn": "Increases Attack Speed by {A}%.",
@@ -2913,7 +3213,7 @@ const HEROES = [
       },
       {
         "name": "險情處理",
-        "nameEn": "",
+        "nameEn": "Danger Handling",
         "description": "生命低於50%時，受到傷害降低30%。",
         "template": "生命低於50%時，受到傷害降低{A}%。",
         "templateEn": "When HP falls below 50%, reduces DMG taken by {A}%.",
@@ -2931,7 +3231,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "應急工事",
-        "nameEn": "",
+        "nameEn": "Emergency Construction",
         "description": "我軍全體部隊生命值提升25%。",
         "template": "我軍全體部隊生命值提升{A}%。",
         "templateEn": "Increases HP of all allied troops by {A}%.",
@@ -2947,7 +3247,7 @@ const HEROES = [
       },
       {
         "name": "驚世智慧",
-        "nameEn": "",
+        "nameEn": "Grand Wisdom",
         "description": "科技研究速度提升15%。",
         "template": "科技研究速度提升{A}%。",
         "templateEn": "Increases Research Speed by {A}%.",
@@ -2963,7 +3263,7 @@ const HEROES = [
       },
       {
         "name": "攻堅技術",
-        "nameEn": "",
+        "nameEn": "Siege Tactics",
         "description": "我軍體全體部隊攻擊力提升25%。",
         "template": "我軍體全體部隊攻擊力提升{A}%。",
         "templateEn": "Increases ATK of all allied troops by {A}%.",
@@ -2980,15 +3280,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "鋼鐵哨兵",
+      "nameEn": "Iron Sentinel",
       "image": "伊娜塔_專屬裝備_鋼鐵哨兵.png",
       "arrestSkill": {
         "name": "愈戰愈勇",
-        "description": "每次普通攻擊後都會恢復攻擊力*18%的生命。\nEvery basic attack restore HP rqual to 18% of ATK.",
+        "nameEn": "Courageous",
+        "description": "每次普通攻擊後都會恢復攻擊力*18%的生命。",
+        "template": "每次普通攻擊後都會恢復攻擊力*{A}%的生命。",
+        "templateEn": "Every basic attack restore HP rqual to {A}% of ATK.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "6", "B": "-", "C": "-" },
+        "2": { "A": "9", "B": "-", "C": "-" },
+        "3": { "A": "12", "B": "-", "C": "-" },
+        "4": { "A": "15", "B": "-", "C": "-" },
+        "5": { "A": "18", "B": "-", "C": "-" }
+        },
         "image": "伊娜塔_緝捕裝備技能_愈戰愈勇.png"
       },
       "warSkill": {
         "name": "守城者",
-        "description": "[防守]時，我軍全體部隊生命值增幅16%。\nDefending, all our troops gain add 16% to their existing HP bonus.",
+        "nameEn": "Defender",
+        "description": "[防守]時，我軍全體部隊生命值增幅16%。",
+        "template": "[防守]時，我軍全體部隊生命值增幅{A}%。",
+        "templateEn": "While defending, all our troops' HP Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "伊娜塔_戰爭裝備技能_守城者.png"
       }
     }
@@ -3023,7 +3346,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "清空轉輪",
-        "nameEn": "",
+        "nameEn": "Bullet Blitz",
         "description": "對目標連續發射4顆子彈，每顆子彈造成攻擊*200%傷害。",
         "template": "對目標連續發射4顆子彈，每顆子彈造成攻擊*{A}%傷害。",
         "templateEn": "Fires 4 consecutive shots at the target, each dealing DMG equal to ATK * {A}%.",
@@ -3039,7 +3362,7 @@ const HEROES = [
       },
       {
         "name": "穿甲彈",
-        "nameEn": "",
+        "nameEn": "Armor-Piercing Shots",
         "description": "對目標發射一發子彈，造成攻擊力*210%傷害，並使其受到的傷害增加25%，持續5秒。",
         "template": "對目標發射一發子彈，造成攻擊力*{A}%傷害，並使其受到的傷害增加{B}%，持續5秒。",
         "templateEn": "Fires 1 shot at the target, dealing DMG equal to ATK * {A}% and increasing their DMG taken by {B}% for 5s.",
@@ -3055,7 +3378,7 @@ const HEROES = [
       },
       {
         "name": "熾熱膛線",
-        "nameEn": "",
+        "nameEn": "Hot Rifling",
         "description": "自身造成傷害提升32%。",
         "template": "自身造成傷害提升{A}%。",
         "templateEn": "Increases DMG dealt by {A}%.",
@@ -3073,7 +3396,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "彈無虛發",
-        "nameEn": "",
+        "nameEn": "Sharpshooter",
         "description": "我軍全體部隊殺傷力提升25%。",
         "template": "我軍全體部隊殺傷力提升{A}%。",
         "templateEn": "Increases Lethality of all allied troops by {A}%.",
@@ -3089,7 +3412,7 @@ const HEROES = [
       },
       {
         "name": "懸賞號召",
-        "nameEn": "",
+        "nameEn": "Bounty Call",
         "description": "士兵的訓練速度提升30%。",
         "template": "士兵的訓練速度提升{A}%。",
         "templateEn": "Increases Soldier Training Speed by {A}%.",
@@ -3105,7 +3428,7 @@ const HEROES = [
       },
       {
         "name": "實戰經驗",
-        "nameEn": "",
+        "nameEn": "Combat Experience",
         "description": "我軍全體部隊防禦力提升25%。",
         "template": "我軍全體部隊防禦力提升{A}%。",
         "templateEn": "Increases DEF of all allied troops by {A}%.",
@@ -3122,15 +3445,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "獵隼",
+      "nameEn": "Falcon",
       "image": "黛維蘭_專屬裝備_獵隼.png",
       "arrestSkill": {
         "name": "午時將至",
-        "description": "每普通攻擊4次，攻擊力提升10%。此效果可疊加。\nIncrease ATK by 10% every 4 basic attack. Effect can stack.",
+        "nameEn": "High Noon",
+        "description": "每普通攻擊4次，攻擊力提升10%。此效果可疊加。",
+        "template": "每普通攻擊4次，攻擊力提升{A}%。此效果可疊加。",
+        "templateEn": "Increase ATK by {A}% every 4 basic attack. Effect can stack.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "6", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "8", "B": "-", "C": "-" },
+        "4": { "A": "9", "B": "-", "C": "-" },
+        "5": { "A": "10", "B": "-", "C": "-" }
+        },
         "image": "黛維蘭_緝捕裝備技能_午時將至.png"
       },
       "warSkill": {
         "name": "陽炎過境",
-        "description": "集結進攻時，我軍全體部隊防禦力增幅16%。\nRally, attack, all allied troops gain add 16% to their existing DEF bonus.",
+        "nameEn": "Efficiency Surge",
+        "description": "集結進攻時，我軍全體部隊防禦力增幅16%。",
+        "template": "集結進攻時，我軍全體部隊防禦力增幅{A}%。",
+        "templateEn": "During rally attacks, all our troops' DEF Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "黛維蘭_戰爭裝備技能_陽炎過境.png"
       }
     }
@@ -3165,7 +3511,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "爆裂彈",
-        "nameEn": "",
+        "nameEn": "Explosive Shell",
         "description": "對目標發射3顆榴彈，每顆榴彈造成90%範圍傷害。",
         "template": "對目標發射3顆榴彈，每顆榴彈造成{A}%範圍傷害。",
         "templateEn": "Fires 3 grenades at the target, each dealing {A}% AoE DMG.",
@@ -3181,7 +3527,7 @@ const HEROES = [
       },
       {
         "name": "瞄準射擊",
-        "nameEn": "",
+        "nameEn": "Take Aim",
         "description": "自身傷害提升30%。",
         "template": "自身傷害提升{A}%。",
         "templateEn": "Increases DMG dealt by {A}%.",
@@ -3197,7 +3543,7 @@ const HEROES = [
       },
       {
         "name": "填彈技術",
-        "nameEn": "",
+        "nameEn": "Reload Technique",
         "description": "自身攻擊速度提升30%。",
         "template": "自身攻擊速度提升{A}%。",
         "templateEn": "Increases Attack Speed by {A}%.",
@@ -3215,7 +3561,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "追緝不休",
-        "nameEn": "",
+        "nameEn": "Unyielding Pursuit",
         "description": "出征體力消耗降低20%。",
         "template": "出征體力消耗降低{A}%。",
         "templateEn": "Decreases Stamina Consumption for expeditions by {A}%.",
@@ -3231,7 +3577,7 @@ const HEROES = [
       },
       {
         "name": "連攜追緝",
-        "nameEn": "",
+        "nameEn": "Joint Pursuit",
         "description": "米婭分享自己的追緝經驗，使另外2個她未上陣的部隊出征體力消耗降低20%。",
         "template": "米婭分享自己的追緝經驗，使另外{A}個她未上陣的部隊出征體力消耗降低{B}%。",
         "templateEn": "Mia shares her pursuit experience, reducing Expedition Stamina Consumption by {B}% for {A} Squad(s) she is not deployed with.",
@@ -3247,7 +3593,7 @@ const HEROES = [
       },
       {
         "name": "靈動之姿",
-        "nameEn": "",
+        "nameEn": "Spiritual Balance",
         "description": "出征攻擊野怪時的行軍速度提高100%。",
         "template": "出征攻擊野怪時的行軍速度提高{A}%。",
         "templateEn": "Increases Expedition Speed by {A}% during monster-hunting.",
@@ -3264,15 +3610,28 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "-",
+      "nameEn": "-",
       "image": "",
       "arrestSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       },
       "warSkill": {
         "name": "-",
+        "nameEn": "-",
         "description": "-",
+        "template": "-",
+        "templateEn": "-",
+        "maxLevel": 0,
+        "levels": {
+        },
         "image": ""
       }
     }
@@ -3307,7 +3666,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "狂亂輾壓",
-        "nameEn": "",
+        "nameEn": "Frenzy Crush",
         "description": "造成攻擊力*305%的範圍傷害，並且另目標要成的傷害降低23%，持續4秒。",
         "template": "造成攻擊力*{A}%的範圍傷害，並且另目標要成的傷害降低{B}%，持續4秒。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% and reduces DMG dealt by the target by {B}% for 4s.",
@@ -3323,7 +3682,7 @@ const HEROES = [
       },
       {
         "name": "戰吼",
-        "nameEn": "",
+        "nameEn": "Battlecry",
         "description": "凱撒發出戰吼，使自身受到傷害降低34%，持續5秒。",
         "template": "凱撒發出戰吼，使自身受到傷害降低{A}%，持續5秒。",
         "templateEn": "Caesar unleashes a Battlecry, reducing DMG taken by {A}% for 5s.",
@@ -3339,7 +3698,7 @@ const HEROES = [
       },
       {
         "name": "急速再生",
-        "nameEn": "",
+        "nameEn": "Rapid Regen",
         "description": "恢復相當於凱撒攻擊力*170%的生命。",
         "template": "恢復相當於凱撒攻擊力*{A}%的生命。",
         "templateEn": "Restores HP equal to Caesar's ATK * {A}%.",
@@ -3357,7 +3716,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "基因活性",
-        "nameEn": "",
+        "nameEn": "Gene Activity",
         "description": "每回合結束時，有20%機率使我軍本回合損失的士兵復活。",
         "template": "每回合結束時，有{A}%機率使我軍本回合損失的士兵復活。",
         "templateEn": "At the end of each round, has a {A}% chance to revive soldiers lost during that round.",
@@ -3373,7 +3732,7 @@ const HEROES = [
       },
       {
         "name": "巨力攔截",
-        "nameEn": "",
+        "nameEn": "Impact Barrier",
         "description": "我軍全體部隊防禦力提升25%。",
         "template": "我軍全體部隊防禦力提升{A}%。",
         "templateEn": "Increases DEF of all allied troops by {A}%.",
@@ -3389,7 +3748,7 @@ const HEROES = [
       },
       {
         "name": "重拳壓制",
-        "nameEn": "",
+        "nameEn": "Crushing Blow",
         "description": "敵軍部隊生命值降低20%。",
         "template": "敵軍部隊生命值降低{A}%。",
         "templateEn": "Reduces enemy Troops' HP by {A}%.",
@@ -3406,15 +3765,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "分裂枷鎖",
+      "nameEn": "Fusion Shackles",
       "image": "凱撒_專屬裝備_分裂枷鎖.png",
       "arrestSkill": {
         "name": "異變型態",
-        "description": "生命值高於40%時，防禦力提升36%。\nWhen HP above 40%, DEF icreases by 36%.",
+        "nameEn": "Mutated Form",
+        "description": "生命值高於40%時，防禦力提升36%。",
+        "template": "生命值高於40%時，防禦力提升{A}%。",
+        "templateEn": "When HP above 40%, DEF icreases by {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "24", "B": "-", "C": "-" },
+        "2": { "A": "27", "B": "-", "C": "-" },
+        "3": { "A": "30", "B": "-", "C": "-" },
+        "4": { "A": "33", "B": "-", "C": "-" },
+        "5": { "A": "36", "B": "-", "C": "-" }
+        },
         "image": "凱撒_緝捕裝備技能_異變型態.png"
       },
       "warSkill": {
         "name": "復仇之怒",
-        "description": "[防守]時，我軍全體部隊攻擊力增幅16%。\nDefending, all allied troops gain an additional 16% to their current ATK bonus.",
+        "nameEn": "Avenger's Fury",
+        "description": "[防守]時，我軍全體部隊攻擊力增幅16%。",
+        "template": "[防守]時，我軍全體部隊攻擊力增幅{A}%。",
+        "templateEn": "While defending, all our troops' ATK Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "凱撒_戰爭裝備技能_復仇之怒.png"
       }
     }
@@ -3453,7 +3835,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "閃電衝擊",
-        "nameEn": "",
+        "nameEn": "Shockwave Surge",
         "description": "造成攻擊力*285%的範圍傷害，並且使目標受到傷害增加17%，持續4秒。",
         "template": "造成攻擊力*{A}%的範圍傷害，並且使目標受到傷害增加{B}%，持續4秒。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% and increases DMG taken by the target by {B}% for 4s.",
@@ -3469,7 +3851,7 @@ const HEROES = [
       },
       {
         "name": "靜電護盾",
-        "nameEn": "",
+        "nameEn": "Electrostaic Shield",
         "description": "賦予我方生命百分比最低的英雄或囚徒裝甲攻擊力*225%的護盾，持續6秒。",
         "template": "賦予我方生命百分比最低的英雄或囚徒裝甲攻擊力*{A}%的護盾，持續6秒。",
         "templateEn": "Grants a Shield equal to ATK * {A}% to the allied Hero or Prisoner Armor with the lowest HP percentage, lasting for 6s.",
@@ -3485,7 +3867,7 @@ const HEROES = [
       },
       {
         "name": "電力增幅",
-        "nameEn": "",
+        "nameEn": "Electric Surge",
         "description": "生命值大於40%時，攻擊力提升36%。",
         "template": "生命值大於40%時，攻擊力提升{A}%。",
         "templateEn": "Increases ATK by {A}% when HP is above 40%.",
@@ -3503,7 +3885,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "光子護盾",
-        "nameEn": "",
+        "nameEn": "Photon Shield",
         "description": "敵軍部殺傷力降低20%。",
         "template": "敵軍部殺傷力降低{A}%。",
         "templateEn": "Reduces enemy Troops' Lethality by {A}%.",
@@ -3519,7 +3901,7 @@ const HEROES = [
       },
       {
         "name": "巧變調諧",
-        "nameEn": "",
+        "nameEn": "Clever Tuning",
         "description": "若敵軍部隊的初始兵力高於我軍，則我軍全體部隊防禦力提升30%；若敵軍部隊的初始兵力低於我軍，則敵軍防禦力提升20%。",
         "template": "若敵軍部隊的初始兵力高於我軍，則我軍全體部隊防禦力提升{A}%；若敵軍部隊的初始兵力低於我軍，則敵軍防禦力提升{B}%。",
         "templateEn": "If the enemy Troops' initial Power exceeds ours, all allied troops' DEF increases by {A}%. Otherwise, enemy troops' DEF is reduced by {B}%.",
@@ -3535,7 +3917,7 @@ const HEROES = [
       },
       {
         "name": "電磁震盪",
-        "nameEn": "",
+        "nameEn": "Magnetic Shock",
         "description": "我軍全體部隊攻擊力提升25%。",
         "template": "我軍全體部隊攻擊力提升{A}%。",
         "templateEn": "Increases ATK of all allied troops by {A}%.",
@@ -3552,15 +3934,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "夢之翼",
+      "nameEn": "Dreamwings",
       "image": "愛爾芙_專屬裝備_夢之翼.png",
       "arrestSkill": {
         "name": "精靈曼舞",
-        "description": "每次攻擊，為我方生命百分比最低的英雄恢復攻擊力*150%的生命。\nEach attack restore HP equal to ATK 150% for our hero with lowest HP%.",
+        "nameEn": "Elven Dance",
+        "description": "每次攻擊，為我方生命百分比最低的英雄恢復攻擊力*150%的生命。",
+        "template": "每次攻擊，為我方生命百分比最低的英雄恢復攻擊力*{A}%的生命。",
+        "templateEn": "Each attack restore HP equal to ATK {A}% for our hero with lowest HP%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "110", "B": "-", "C": "-" },
+        "2": { "A": "120", "B": "-", "C": "-" },
+        "3": { "A": "130", "B": "-", "C": "-" },
+        "4": { "A": "140", "B": "-", "C": "-" },
+        "5": { "A": "150", "B": "-", "C": "-" }
+        },
         "image": "愛爾芙_緝捕裝備技能_精靈曼舞.png"
       },
       "warSkill": {
         "name": "幻雷力場",
-        "description": "[單人作戰]時，我軍全體部隊攻擊力提升16%。\nIncrease all troops ATK 16% during solo combat.",
+        "nameEn": "Lightning Veil",
+        "description": "[單人作戰]時，我軍全體部隊攻擊力提升16%。",
+        "template": "[單人作戰]時，我軍全體部隊攻擊力提升{A}%。",
+        "templateEn": "During solo combats, all allied troops gain {A}% ATK Boost.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "愛爾芙_戰爭裝備技能_幻雷力場.png"
       }
     }
@@ -3595,7 +4000,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "分裂炮",
-        "nameEn": "",
+        "nameEn": "Shatter Blast",
         "description": "造成攻擊力*258%的範圍傷害，並且使目標暈眩2秒。",
         "template": "造成攻擊力*{A}%的範圍傷害，並且使目標暈眩2秒。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% and stuns the targets for 2s.",
@@ -3611,7 +4016,7 @@ const HEROES = [
       },
       {
         "name": "雷射射線",
-        "nameEn": "",
+        "nameEn": "Laser Beam",
         "description": "對敵方單位發射雷射，造成攻擊力*255%的傷害。",
         "template": "對敵方單位發射雷射，造成攻擊力*{A}%的傷害。",
         "templateEn": "Fires a laser at an enemy unit, dealing DMG equal to ATK * {A}%.",
@@ -3627,7 +4032,7 @@ const HEROES = [
       },
       {
         "name": "動力過載",
-        "nameEn": "",
+        "nameEn": "Energy Overdrive",
         "description": "造成傷害提升32%。",
         "template": "造成傷害提升{A}%。",
         "templateEn": "Increases DMG dealt by {A}%.",
@@ -3645,7 +4050,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "應變改造",
-        "nameEn": "",
+        "nameEn": "Adaptive Transformation",
         "description": "若敵軍部隊的初始兵力高於我軍，則我軍全體部隊生命值提升25%；若敵軍部隊的初始兵力低於我軍，則我軍全體部隊殺傷力提升30%。",
         "template": "若敵軍部隊的初始兵力高於我軍，則我軍全體部隊生命值提升{A}%；若敵軍部隊的初始兵力低於我軍，則我軍全體部隊殺傷力提升{B}%。",
         "templateEn": "If the enemy Troops' initial Power exceeds ours, all allied troops' HP increases by {A}%. Otherwise, all allied troops' Lethality increases by {B}%.",
@@ -3661,7 +4066,7 @@ const HEROES = [
       },
       {
         "name": "結構分析",
-        "nameEn": "",
+        "nameEn": "Structural Analysis",
         "description": "我軍全體部隊攻擊時有20%機率讓低軍暈眩，持續1回合。",
         "template": "我軍全體部隊攻擊時有{A}%機率讓低軍暈眩，持續1回合。",
         "templateEn": "All allied troops have a {A}% chance to stun the enemy when attacking, lasting for 1 round.",
@@ -3677,7 +4082,7 @@ const HEROES = [
       },
       {
         "name": "動能抵銷",
-        "nameEn": "",
+        "nameEn": "Kinetic Offset",
         "description": "敵軍部隊傷害降低20%。",
         "template": "敵軍部隊傷害降低{A}%。",
         "templateEn": "Reduces enemy Troops' DMG by {A}%.",
@@ -3694,15 +4099,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "萬用爪",
+      "nameEn": "Omni Claws",
       "image": "蘭切斯特_專屬裝備_萬用爪.png",
       "arrestSkill": {
         "name": "火力除錯",
-        "description": "使用[分裂炮]後，攻擊力提升25%，可多次疊加，持續到戰鬥結束。\nATK increase 25% Effect can stack multiple till end",
+        "nameEn": "Weapon Tuning",
+        "description": "使用[分裂炮]後，攻擊力提升25%，可多次疊加，持續到戰鬥結束。",
+        "template": "使用[分裂炮]後，攻擊力提升{A}%，可多次疊加，持續到戰鬥結束。",
+        "templateEn": "ATK increase {A}% Effect can stack multiple till end",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "", "B": "", "C": "" },
+        "2": { "A": "", "B": "", "C": "" },
+        "3": { "A": "", "B": "", "C": "" },
+        "4": { "A": "", "B": "", "C": "" },
+        "5": { "A": "", "B": "", "C": "" }
+        },
         "image": "蘭切斯特_緝捕裝備技能_火力除錯.png"
       },
       "warSkill": {
         "name": "機械飛升",
-        "description": "[防守]時，我軍全體部隊防禦力增幅16%。\nDefending, all our troops add 16% to their existing DEF bonus.",
+        "nameEn": "Mech Ascension",
+        "description": "[防守]時，我軍全體部隊防禦力增幅16%。",
+        "template": "[防守]時，我軍全體部隊防禦力增幅{A}%。",
+        "templateEn": "While defending, all our troops' DEF Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "蘭切斯特_戰爭裝備技能_機械飛升.png"
       }
     }
@@ -3737,7 +4165,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "箭雨",
-        "nameEn": "",
+        "nameEn": "Rain of Arrows",
         "description": "造成攻擊力*290%的範圍傷害，並且使目標防禦力降低50%，持續4秒。",
         "template": "造成攻擊力*{A}%的範圍傷害，並且使目標防禦力降低{B}%，持續4秒。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% and reduces the target's DEF by {B}% for 4s.",
@@ -3753,7 +4181,7 @@ const HEROES = [
       },
       {
         "name": "無影箭",
-        "nameEn": "",
+        "nameEn": "Spectral Shot",
         "description": "對敵方單位造成攻擊*260%的傷害。",
         "template": "對敵方單位造成攻擊*{A}%的傷害。",
         "templateEn": "Deals DMG equal to ATK * {A}% to the target.",
@@ -3769,7 +4197,7 @@ const HEROES = [
       },
       {
         "name": "裂傷箭頭",
-        "nameEn": "",
+        "nameEn": "Sundering Bolt",
         "description": "攻擊時，有20%機率對目標額外造成攻擊力*160%的傷害。",
         "template": "攻擊時，有20%機率對目標額外造成攻擊力*{A}%的傷害。",
         "templateEn": "When attacking, there is a 20% chance to deal DMG equal to ATK * {A}% to the target.",
@@ -3787,7 +4215,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "融入陰影",
-        "nameEn": "",
+        "nameEn": "Stealth Cloak",
         "description": "敵軍部隊攻擊力降低20%。",
         "template": "敵軍部隊攻擊力降低{A}%。",
         "templateEn": "Reduces enemy Troops' ATK by {A}%.",
@@ -3803,7 +4231,7 @@ const HEROES = [
       },
       {
         "name": "心眼",
-        "nameEn": "",
+        "nameEn": "Mind's Eye",
         "description": "我軍全體部隊攻擊力及升25%。",
         "template": "我軍全體部隊攻擊力及升{A}%。",
         "templateEn": "Increases ATK of all allied troops by {A}%.",
@@ -3819,7 +4247,7 @@ const HEROES = [
       },
       {
         "name": "女妖之慟",
-        "nameEn": "",
+        "nameEn": "Banshee's Lament",
         "description": "我軍全體部隊傷害提升20%。若敵軍部隊的初始兵力低於我軍，則傷害額外提升10%。",
         "template": "我軍全體部隊傷害提升{A}%。若敵軍部隊的初始兵力低於我軍，則傷害額外提升{B}%。",
         "templateEn": "Increases DMG of all allied troops by {A}%. If the enemy Troops' initial Power is lower than ours, DMG increases by an additional {B}%.",
@@ -3836,15 +4264,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "黯月",
+      "nameEn": "Darkmoon",
       "image": "彌蕾雅_專屬裝備_黯月.png",
       "arrestSkill": {
         "name": "索命之弦",
-        "description": "對生命值低於40%的目標造成的傷害增加60%。\nIncrease DMG dealt to targe with HP below 40% by 60%.",
+        "nameEn": "Reaper's Pull",
+        "description": "對生命值低於40%的目標造成的傷害增加60%。",
+        "template": "對生命值低於40%的目標造成的傷害增加{A}%。",
+        "templateEn": "Increase DMG dealt to targe with HP below 40% by {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "", "B": "", "C": "" },
+        "2": { "A": "", "B": "", "C": "" },
+        "3": { "A": "", "B": "", "C": "" },
+        "4": { "A": "", "B": "", "C": "" },
+        "5": { "A": "", "B": "", "C": "" }
+        },
         "image": "彌蕾雅_緝捕裝備技能_索命之弦.png"
       },
       "warSkill": {
         "name": "亡魂低語",
-        "description": "集結進攻時，我軍全體部隊殺傷力增幅16%。\nRally attack, all our troops gain additional 16% to their existing lethality bonus.",
+        "nameEn": "Whispering Death",
+        "description": "集結進攻時，我軍全體部隊殺傷力增幅16%。",
+        "template": "集結進攻時，我軍全體部隊殺傷力增幅{A}%。",
+        "templateEn": "During rally attacks, all our troops' Lethality Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "彌蕾雅_戰爭裝備技能_亡魂低語.png"
       }
     }
@@ -3879,7 +4330,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "酩酊酒霧",
-        "nameEn": "",
+        "nameEn": "Liquor Mist",
         "description": "噴出酒霧，範圍內友方英雄和囚徒裝甲獲得攻擊力*150%的護盾，友方隨從獲得攻擊力*50%的護盾，持續4秒。",
         "template": "噴出酒霧，範圍內友方英雄和囚徒裝甲獲得攻擊力*{A}%的護盾，友方隨從獲得攻擊力*{B}%的護盾，持續4秒。",
         "templateEn": "Sprays a mist of liquor, granting allied Heroes and Prisoner Power Armors within range Shields equal to ATK * {A}%, while allied Minions receive Shields equal to ATK * {B}% for 4s.",
@@ -3895,7 +4346,7 @@ const HEROES = [
       },
       {
         "name": "醉鐵刀法",
-        "nameEn": "",
+        "nameEn": "Drunken Slash",
         "description": "對前方扇形範圍造成攻擊力*180%的範圍傷害，受擊目標在5秒內受到傷害提升15%。",
         "template": "對前方扇形範圍造成攻擊力*{A}%的範圍傷害，受擊目標在5秒內受到傷害提升{A}%。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% to enemies in a cone area in front, and increases DMG taken by hit targets by {B}% for 5s.",
@@ -3911,7 +4362,7 @@ const HEROES = [
       },
       {
         "name": "酒縱豪情",
-        "nameEn": "",
+        "nameEn": "Fury Unleashed",
         "description": "生命值低於40%時，防禦力提升145%。",
         "template": "生命值低於40%時，防禦力提升{A}%。",
         "templateEn": "Increases DEF by {A}% when HP is below 40%.",
@@ -3929,7 +4380,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "力劈山岳",
-        "nameEn": "",
+        "nameEn": "Mountain Cleaver",
         "description": "我軍全體部隊部隊殺傷力提升25%。",
         "template": "我軍全體部隊部隊殺傷力提升{A}%。",
         "templateEn": "Increases Lethality of all allied troops by {A}%.",
@@ -3945,7 +4396,7 @@ const HEROES = [
       },
       {
         "name": "鐵甲護身",
-        "nameEn": "",
+        "nameEn": "Ironclad Protection",
         "description": "我軍全體部隊防禦力提升(%)",
         "template": "我軍全體部隊防禦力提升{A}%",
         "templateEn": "Increases DEF of all allied troops by {A}%.",
@@ -3961,7 +4412,7 @@ const HEROES = [
       },
       {
         "name": "枯木逢春",
-        "nameEn": "",
+        "nameEn": "Vital Surge",
         "description": "我軍全體部隊受到傷害降低20%。戰鬥結束後，若我方兵力不高於兵力的80%，則立即恢復輕傷是兵中的10%。",
         "template": "我軍全體部隊受到傷害降低{A}%。戰鬥結束後，若我方兵力不高於兵力的80%，則立即恢復輕傷是兵中的{B}%。",
         "templateEn": "Reduces DMG taken by all allied troops by {A}%. After the battle, if our troop count is reduced to 80% or less of its initial size, immediately recovers {B}% of lightly wounded soldiers.",
@@ -3978,15 +4429,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "墨淵刀",
+      "nameEn": "Ink Blade",
       "image": "玄明_專屬裝備_墨淵刀.png",
       "arrestSkill": {
         "name": "醉裡乾坤",
-        "description": "受到[酩酊酒霧]影響的單位攻擊力提升32%，持續5秒。\nAttack of the units increase 32% for 5 sec.",
+        "nameEn": "Liquor Force",
+        "description": "受到[酩酊酒霧]影響的單位攻擊力提升32%，持續5秒。",
+        "template": "受到[酩酊酒霧]影響的單位攻擊力提升{A}%，持續5秒。",
+        "templateEn": "Attack of the units increase {A}% for 5 sec.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "", "B": "", "C": "" },
+        "2": { "A": "", "B": "", "C": "" },
+        "3": { "A": "", "B": "", "C": "" },
+        "4": { "A": "", "B": "", "C": "" },
+        "5": { "A": "", "B": "", "C": "" }
+        },
         "image": "玄明_緝捕裝備技能_醉裡乾坤.png"
       },
       "warSkill": {
         "name": "奇門陣法",
-        "description": "[防守]時，我軍全體部隊攻擊力增幅16%。\nDefending, troops gain an additional 16% boost to their existing lethality bonus.",
+        "nameEn": "Qimen Formation",
+        "description": "[防守]時，我軍全體部隊攻擊力增幅16%。",
+        "template": "[防守]時，我軍全體部隊攻擊力增幅{A}%。",
+        "templateEn": "While defending, all our troops' ATK Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "玄明_戰爭裝備技能_奇門陣法.png"
       }
     }
@@ -4021,7 +4495,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "秘藥蒸汽",
-        "nameEn": "",
+        "nameEn": "Elixir Steam",
         "description": "釋放有治療效果的蒸汽，以自身為中心，範圍內的0.5秒恢復攻擊*60%的生命值。",
         "template": "釋放有治療效果的蒸汽，以自身為中心，範圍內的0.5秒恢復攻擊*{A}%的生命值。",
         "templateEn": "Releases healing steam centered on the caster, restoring HP equal to ATK * {A}% to units within range every 0.5s.",
@@ -4037,7 +4511,7 @@ const HEROES = [
       },
       {
         "name": "瀕死體驗",
-        "nameEn": "",
+        "nameEn": "Fatal Rush",
         "description": "對單體目標造成攻擊力*210%的傷害，並使其暈眩1秒。",
         "template": "對單體目標造成攻擊力*{A}%的傷害，並使其暈眩1秒。",
         "templateEn": "Deals DMG equal to ATK * {A}% to a single target and stuns them for 1s.",
@@ -4053,7 +4527,7 @@ const HEROES = [
       },
       {
         "name": "擾亂箭矢",
-        "nameEn": "",
+        "nameEn": "Disruptive Arrows",
         "description": "普通攻擊有20%機率使目標造成的傷害降低36%，並持續3秒。",
         "template": "普通攻擊有20%機率使目標造成的傷害降低{A}%，並持續3秒。",
         "templateEn": "Basic Attacks have a 20% chance to reduce the target's DMG dealt by {A}% for 3s.",
@@ -4071,7 +4545,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "降咒",
-        "nameEn": "",
+        "nameEn": "Curse",
         "description": "敵方部隊防禦降低20%。",
         "template": "敵方部隊防禦降低{A}%。",
         "templateEn": "Reduces enemy troops' DEF by {A}%.",
@@ -4087,7 +4561,7 @@ const HEROES = [
       },
       {
         "name": "避災",
-        "nameEn": "",
+        "nameEn": "Evacuation",
         "description": "每回合有20%機率免疫所有傷害。",
         "template": "每回合有{A}%機率免疫所有傷害。",
         "templateEn": "Each round has a {A}% chance to become immune to all DMG.",
@@ -4103,7 +4577,7 @@ const HEROES = [
       },
       {
         "name": "侵蝕",
-        "nameEn": "",
+        "nameEn": "Erosion",
         "description": "我軍全體部隊攻擊時有50%機率使本次傷害提升50%。",
         "template": "我軍全體部隊攻擊時有50%機率使本次傷害提升{A}%。",
         "templateEn": "All allied troops have a 50% chance to increase their DMG by {A}% when attacking.",
@@ -4120,15 +4594,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "迷幻之吻",
+      "nameEn": "Illusional Kiss",
       "image": "薇斯帕_專屬裝備_迷幻之吻.png",
       "arrestSkill": {
         "name": "彼岸繁花",
-        "description": "使受到[密藥蒸汽]影響的有方單位防禦力提升32%，持續5秒。\nIncrease DEF of allied unit 32% for 5 sec.",
+        "nameEn": "Bloom Ward",
+        "description": "使受到[密藥蒸汽]影響的有方單位防禦力提升32%，持續5秒。",
+        "template": "使受到[密藥蒸汽]影響的有方單位防禦力提升{A}%，持續5秒。",
+        "templateEn": "Increase DEF of allied unit {A}% for 5 sec.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "16", "B": "-", "C": "-" },
+        "2": { "A": "20", "B": "-", "C": "-" },
+        "3": { "A": "24", "B": "-", "C": "-" },
+        "4": { "A": "28", "B": "-", "C": "-" },
+        "5": { "A": "32", "B": "-", "C": "-" }
+        },
         "image": "薇斯帕_緝捕裝備技能_彼岸繁花.png"
       },
       "warSkill": {
         "name": "黃泉甘露",
-        "description": "集結進攻時，我軍全體部隊殺傷力增幅16%。\nRally attack, all our troops gain add 16% to their existing lethality bonus.",
+        "nameEn": "Nether Nectar",
+        "description": "集結進攻時，我軍全體部隊殺傷力增幅16%。",
+        "template": "集結進攻時，我軍全體部隊殺傷力增幅{A}%。",
+        "templateEn": "During rally attacks, all our troops' Lethality Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "薇斯帕_戰爭裝備技能_黃泉甘露.png"
       }
     }
@@ -4163,7 +4660,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "瘋狂鋸輪",
-        "nameEn": "",
+        "nameEn": "Saw Frenzy",
         "description": "造成攻擊力*290%的範圍傷害，受擊目標暈眩1.5秒。",
         "template": "造成攻擊力*{A}%的範圍傷害，受擊目標暈眩1.5秒。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% and stuns the hit target for 1.5s.",
@@ -4179,7 +4676,7 @@ const HEROES = [
       },
       {
         "name": "撕裂",
-        "nameEn": "",
+        "nameEn": "Steel Tear",
         "description": "對單體目標造成攻擊力*210%的傷害，並且使目標防禦力降低25%，持續3秒。",
         "template": "對單體目標造成攻擊力*{A}%的傷害，並且使目標防禦力降低{B}%，持續3秒。",
         "templateEn": "Deals DMG equal to ATK * {A}% to a single target and reduces the target's DEF by {B}% for 3s.",
@@ -4195,7 +4692,7 @@ const HEROES = [
       },
       {
         "name": "彈殼爆破",
-        "nameEn": "",
+        "nameEn": "Shell Blast",
         "description": "每普通攻擊5次後，下一次攻擊便會造成攻擊力*124%的範圍傷害。",
         "template": "每普通攻擊5次後，下一次攻擊便會造成攻擊力*{A}%的範圍傷害。",
         "templateEn": "After every 5 Basic Attacks, the next attack deals AoE DMG equal to ATK * {A}%.",
@@ -4213,7 +4710,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "廢鐵鏽蝕",
-        "nameEn": "",
+        "nameEn": "Rust Erosion",
         "description": "敵軍部隊生命值降低20%。",
         "template": "敵軍部隊生命值降低{A}%。",
         "templateEn": "Reduces enemy troops' HP by {A}%.",
@@ -4229,7 +4726,7 @@ const HEROES = [
       },
       {
         "name": "熱血強襲",
-        "nameEn": "",
+        "nameEn": "Rage Strike",
         "description": "我軍全體部隊攻擊力提升25%。",
         "template": "我軍全體部隊攻擊力提升{A}%。",
         "templateEn": "Increases ATK of all allied troops by {A}%.",
@@ -4245,7 +4742,7 @@ const HEROES = [
       },
       {
         "name": "斷鋼之力",
-        "nameEn": "",
+        "nameEn": "Steel Rend",
         "description": "我軍全體部隊生命值提升25%。戰鬥結束後，若提方部隊兵力不高於初始兵力的70%，則該部對的屬性加成提供者會獲得5%的防禦增幅，持續5秒。",
         "template": "我軍全體部隊生命值提升{A}%。戰鬥結束後，若提方部隊兵力不高於初始兵力的70%，則該部對的屬性加成提供者會獲得{B}%的防禦增幅，持續5秒。",
         "templateEn": "Increases HP of all allied troops by {A}%. After the battle, if the enemy troop count is reduced to 70% or less of its initial size, the providers of that troop's Stat Bonuses receive a DEF Reduction debuff of {B}% for 5s.",
@@ -4262,15 +4759,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "絞肉機",
+      "nameEn": "Meat Grinder",
       "image": "索耶_專屬裝備_絞肉機.png",
       "arrestSkill": {
         "name": "限制解除",
-        "description": "造成傷害提升28%。\nIncrease DMG 28%.",
+        "nameEn": "Break Free",
+        "description": "造成傷害提升28%。",
+        "template": "造成傷害提升{A}%。",
+        "templateEn": "Increase DMG by {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "12", "B": "-", "C": "-" },
+        "2": { "A": "16", "B": "-", "C": "-" },
+        "3": { "A": "20", "B": "-", "C": "-" },
+        "4": { "A": "24", "B": "-", "C": "-" },
+        "5": { "A": "28", "B": "-", "C": "-" }
+        },
         "image": "索耶_緝捕裝備技能_限制解除.png"
       },
       "warSkill": {
         "name": "呼嘯引擎",
-        "description": "集結進攻時，我軍全體部隊生命值增幅16%。\nRally attack, troops gain add 16% to their existing HP bonus.",
+        "nameEn": "Howling Engine",
+        "description": "集結進攻時，我軍全體部隊生命值增幅16%。",
+        "template": "集結進攻時，我軍全體部隊生命值增幅{A}%。",
+        "templateEn": "During rally attacks, all our troops' HP Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "索耶_戰爭裝備技能_呼嘯引擎.png"
       }
     }
@@ -4309,7 +4829,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "疾影衝鋒",
-        "nameEn": "",
+        "nameEn": "Shadow Charge",
         "description": "衝向目標，造成攻擊力*290%的範圍傷害，並且使受擊目標的傷害增加15%，持續5秒。",
         "template": "衝向目標，造成攻擊力*{A}%的範圍傷害，並且使受擊目標的傷害增加{B}%，持續5秒。",
         "templateEn": "Charges at the target, dealing AoE DMG equal to ATK * {A}%. Increases the hit target's DMG taken by {B}% for 5s.",
@@ -4325,7 +4845,7 @@ const HEROES = [
       },
       {
         "name": "光弧飛旋",
-        "nameEn": "",
+        "nameEn": "Arc Spin",
         "description": "造成攻擊力*54%的扇形範圍傷害。",
         "template": "造成攻擊力*{A}%的扇形範圍傷害。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% to enemies in a cone area.",
@@ -4341,7 +4861,7 @@ const HEROES = [
       },
       {
         "name": "熱融利刃",
-        "nameEn": "",
+        "nameEn": "Molten Blade",
         "description": "普通攻擊有20%機率造成攻擊力*160%的額外傷害。",
         "template": "普通攻擊有20%機率造成攻擊力*{A}%的額外傷害。",
         "templateEn": "Basic Attacks have a 20% chance to deal extra DMG equal to ATK * {A}%.",
@@ -4359,7 +4879,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "無光之鋒",
-        "nameEn": "",
+        "nameEn": "Darkness Blade",
         "description": "我軍全體部隊攻擊時有50%機率使敵方受到傷害提升50%。",
         "template": "我軍全體部隊攻擊時有50%機率使敵方受到傷害提升{A}%。",
         "templateEn": "All allied troops have a 50% chance to increase the enemy's DMG taken by {A}% when attacking.",
@@ -4375,7 +4895,7 @@ const HEROES = [
       },
       {
         "name": "蔽目迷霧",
-        "nameEn": "",
+        "nameEn": "Veiling Mist",
         "description": "我軍全體部隊殺傷力提升25%。",
         "template": "我軍全體部隊殺傷力提升{A}%。",
         "templateEn": "Increases Lethality of all allied troops by {A}%.",
@@ -4391,7 +4911,7 @@ const HEROES = [
       },
       {
         "name": "迷蹤步",
-        "nameEn": "",
+        "nameEn": "Phantom Steps",
         "description": "我軍全體部隊防禦力提升25%。",
         "template": "我軍全體部隊防禦力提升{A}%。",
         "templateEn": "Increases DEF of all allied troops by {A}%.",
@@ -4408,15 +4928,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "赤紅姐妹",
+      "nameEn": "Scarlet Sisters",
       "image": "維羅妮卡_專屬裝備_赤紅姐妹.png",
       "arrestSkill": {
         "name": "暗影薄葬",
-        "description": "每擊敗一個敵方英雄，自身攻擊力提升14%。\nIncrease ATK by 14% for each enemy hero defeated.",
+        "nameEn": "Shadow Burial",
+        "description": "每擊敗一個敵方英雄，自身攻擊力提升14%。",
+        "template": "每擊敗一個敵方英雄，自身攻擊力提升{A}%。",
+        "templateEn": "Increase ATK by {A}% for each enemy hero defeated.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "6", "B": "-", "C": "-" },
+        "2": { "A": "8", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "12", "B": "-", "C": "-" },
+        "5": { "A": "14", "B": "-", "C": "-" }
+        },
         "image": "維羅妮卡_緝捕裝備技能_暗影薄葬.png"
       },
       "warSkill": {
         "name": "赤刃追魂",
-        "description": "[單人作戰]時，我軍全體部隊殺傷力增幅16%\nDuring solo combat, icrease troop lethality 16%.",
+        "nameEn": "Scarlet Pursuit",
+        "description": "[單人作戰]時，我軍全體部隊攻擊力提升16%。",
+        "template": "[單人作戰]時，我軍全體部隊攻擊力提升{A}%。",
+        "templateEn": "During solo combats, all allied troops gain {A}% Lethality Boost.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "維羅妮卡_戰爭裝備技能_赤刃追魂.png"
       }
     }
@@ -4451,7 +4994,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "瘋狂震擊",
-        "nameEn": "",
+        "nameEn": "Frenzied Shock",
         "description": "對前方半圓形範圍內的敵方單位造成攻擊力*310%的範圍傷害，並額外造成攻擊力*50%的持續傷害，持續3秒。",
         "template": "對前方半圓形範圍內的敵方單位造成攻擊力*{A}%的範圍傷害，並額外造成攻擊力*{B}%的持續傷害，持續3秒。",
         "templateEn": "Inflicts AoE DMG equal to ATK * {A}% on enemy units in a semicircular area in front and deals an additional DoT DMG equal to ATK * {B}%, lasting 3s.",
@@ -4467,7 +5010,7 @@ const HEROES = [
       },
       {
         "name": "狂暴引擎",
-        "nameEn": "",
+        "nameEn": "Fury Engine",
         "description": "進入狂暴模式，使自身造成傷害提升60%並免疫眩暈和沉默效果，持續3秒。",
         "template": "進入狂暴模式，使自身造成傷害提升{A}%並免疫眩暈和沉默效果，持續3秒。",
         "templateEn": "Enters Fury Mode, increasing DMG dealt by {A}% and granting immunity to Stun and Silence effects for 3s.",
@@ -4483,7 +5026,7 @@ const HEROES = [
       },
       {
         "name": "死亡回饋",
-        "nameEn": "",
+        "nameEn": "Final Gift",
         "description": "每有一個敵方英雄死亡，自身恢復最大值*30%生命值。",
         "template": "每有一個敵方英雄死亡，自身恢復最大值*{A}%生命值。",
         "templateEn": "Whenever an enemy Hero dies, restores HP equal to {A}% of Max HP.",
@@ -4501,7 +5044,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "循環守護",
-        "nameEn": "",
+        "nameEn": "Cycle Protection",
         "description": "當回合數到達4的倍數時，我軍全體部隊在本回合受到的傷害減少80%。",
         "template": "當回合數到達4的倍數時，我軍全體部隊在本回合受到的傷害減少{A}%。",
         "templateEn": "When the round number is a multiple of 4, reduces DMG taken by all allied troops by {A}% during that round.",
@@ -4517,7 +5060,7 @@ const HEROES = [
       },
       {
         "name": "機械改造",
-        "nameEn": "",
+        "nameEn": "Mecha Upgrade",
         "description": "盾牌兵傷害提升100%。",
         "template": "盾牌兵傷害提升{A}%。",
         "templateEn": "Increases Shieldbearer DMG by {A}%.",
@@ -4533,7 +5076,7 @@ const HEROES = [
       },
       {
         "name": "巨獸反擊",
-        "nameEn": "",
+        "nameEn": "Behemoth's Wrath",
         "description": "盾牌兵每次受到普通攻擊後，就會對敵方攻擊目標進行反擊，造成30%的戰術傷害。",
         "template": "盾牌兵每次受到普通攻擊後，就會對敵方攻擊目標進行反擊，造成{A}%的戰術傷害。",
         "templateEn": "Shieldbearers retaliate against enemy attackers after taking each Basic Attack, dealing {A}% Tactical DMG.",
@@ -4550,15 +5093,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "極限電鋸",
+      "nameEn": "Extreme Chainsaw",
       "image": "佐爾坦_專屬裝備_極限電鋸.png",
       "arrestSkill": {
         "name": "高能模式",
-        "description": "延長狂暴引擎的持續時間3秒並讓死亡回饋的恢復效果提升75%。\nExtend duration of fury engine by 3 sec and enhances the recovery effect of final gift by 75%.",
+        "nameEn": "High-Energy Mode",
+        "description": "延長狂暴引擎的持續時間3秒並讓死亡回饋的恢復效果提升75%。",
+        "template": "延長狂暴引擎的持續時間{A}秒並讓死亡回饋的恢復效果提升{B}%。",
+        "templateEn": "Extend duration of fury engine by {A} sec and enhances the recovery effect of final gift by {B}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "1", "B": "15", "C": "-" },
+        "2": { "A": "1.5", "B": "30", "C": "-" },
+        "3": { "A": "2", "B": "45", "C": "-" },
+        "4": { "A": "2.5", "B": "60", "C": "-" },
+        "5": { "A": "3", "B": "75", "C": "-" }
+        },
         "image": "佐爾坦_緝捕裝備技能_高能模式.png"
       },
       "warSkill": {
         "name": "救贖之盾",
-        "description": "[防守]時，我軍全體部隊防禦力增幅16%。\nDefending, increase all our troops DEF by 16%.",
+        "nameEn": "Redemption Sheild",
+        "description": "[防守]時，我軍全體部隊防禦力增幅16%。",
+        "template": "[防守]時，我軍全體部隊防禦力增幅{A}%。",
+        "templateEn": "While defending, all our troops' DEF Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "佐爾坦_戰爭裝備技能_救贖之盾.png"
       }
     }
@@ -4593,7 +5159,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "瞬切",
-        "nameEn": "",
+        "nameEn": "Instant Slash",
         "description": "持刀瞬閃至敵方最後方的英雄位置，再瞬閃回原來的位置，來回都會對路徑上的單位造成攻擊力*185%的傷害。",
         "template": "持刀瞬閃至敵方最後方的英雄位置，再瞬閃回原來的位置，來回都會對路徑上的單位造成攻擊力*{A}%的傷害。",
         "templateEn": "Dashes instantly to the position of the enemy's rearmost Hero while wielding the blade, then flashes back to the original position, dealing DMG equal to ATK * {A}% to units along the path both ways.",
@@ -4609,7 +5175,7 @@ const HEROES = [
       },
       {
         "name": "拔刀斬",
-        "nameEn": "",
+        "nameEn": "Drawn Slash",
         "description": "對前方目標造成攻擊力*290%的範圍傷害。",
         "template": "對前方目標造成攻擊力*{A}%的範圍傷害。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% to targets in front.",
@@ -4625,7 +5191,7 @@ const HEROES = [
       },
       {
         "name": "致命忍術",
-        "nameEn": "",
+        "nameEn": "Fatal Jutsu",
         "description": "普通攻擊有32%機率造成暴擊。",
         "template": "普通攻擊有{A}%機率造成暴擊。",
         "templateEn": "Basic Attacks have a {A}% chance to trigger a Crit.",
@@ -4643,7 +5209,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "弱點偵破",
-        "nameEn": "",
+        "nameEn": "Weakness Detection",
         "description": "我軍全體部隊進行普通攻擊時，有機率爆擊25%。",
         "template": "我軍全體部隊進行普通攻擊時，有機率爆擊{A}%。",
         "templateEn": "All allied troops have a {A}% chance to trigger a CRIT when performing Basic Attacks.",
@@ -4659,7 +5225,7 @@ const HEROES = [
       },
       {
         "name": "靈敏身姿",
-        "nameEn": "",
+        "nameEn": "Agile Stance",
         "description": "我軍全體部隊有20%機率閃避敵方部隊的普通攻擊。",
         "template": "我軍全體部隊有{A}%機率閃避敵方部隊的普通攻擊。",
         "templateEn": "All allied troops have a {A}% chance to evade enemy Basic Attacks.",
@@ -4675,7 +5241,7 @@ const HEROES = [
       },
       {
         "name": "連環打擊",
-        "nameEn": "",
+        "nameEn": "Combo Strikes",
         "description": "投彈兵每普通攻擊2次，就會額外發動1次100%傷害的普通攻擊。",
         "template": "投彈兵每普通攻擊2次，就會額外發動1次{A}%傷害的普通攻擊。",
         "templateEn": "Every 2 Basic Attacks, Bombers launch 1 additional Basic Attack that deals {A}% DMG.",
@@ -4692,15 +5258,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "白鬼",
+      "nameEn": "White Phantom",
       "image": "伊東龍一_專屬裝備_白鬼.png",
       "arrestSkill": {
         "name": "劍道之心",
-        "description": "每次釋放瞬切都會使自身攻擊力提升25%。\nIncrease ATK by 25% for each time an Instant slash is lunched.",
+        "nameEn": "Heart of Sword",
+        "description": "每次釋放瞬切都會使自身攻擊力提升25%。",
+        "template": "每次釋放瞬切都會使自身攻擊力提升{A}%。",
+        "templateEn": "Increase ATK by {A}% for each time an Instant slash is lunched.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "17", "B": "-", "C": "-" },
+        "2": { "A": "19", "B": "-", "C": "-" },
+        "3": { "A": "21", "B": "-", "C": "-" },
+        "4": { "A": "23", "B": "-", "C": "-" },
+        "5": { "A": "25", "B": "-", "C": "-" }
+        },
         "image": "伊東龍一_緝捕裝備技能_劍道之心.png"
       },
       "warSkill": {
         "name": "集中突破",
-        "description": "集結進攻時，我軍全體部隊攻擊力增幅16%。\nRally, increase all our troop ATK by 16%.",
+        "nameEn": "Pinpoint Assault",
+        "description": "集結進攻時，我軍全體部隊攻擊力增幅16%。",
+        "template": "集結進攻時，我軍全體部隊攻擊力增幅{A}%。",
+        "templateEn": "During rally attacks, all our troops' ATK Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "伊東龍一_戰爭裝備技能_集中突破.png"
       }
     }
@@ -4739,7 +5328,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "連環飛彈",
-        "nameEn": "",
+        "nameEn": "Missile Combo",
         "description": "連續發射3輪飛彈，每輪飛彈都會隨機飛向敵方單位（優先選擇英雄），並在敵方單位所在位置爆炸，造成攻擊力*120%的範圍方傷害。",
         "template": "連續發射3輪飛彈，每輪飛彈都會隨機飛向敵方單位（優先選擇英雄），並在敵方單位所在位置爆炸，造成攻擊力*{A}%的範圍方傷害。",
         "templateEn": "Fires 3 consecutive rounds of missiles. Each round randomly targets enemy units (prioritizing Heroes) and explodes at the target's location, dealing AoE DMG equal to ATK * {A}%.",
@@ -4755,7 +5344,7 @@ const HEROES = [
       },
       {
         "name": "逆轉電波",
-        "nameEn": "",
+        "nameEn": "Reverse Wave",
         "description": "身後的裝置以自身為中心發出大範圍的圓形電磁波，令範圍內我方彈位攻擊速度提升26%，敵方攻擊速度降低20%，且敵方單位受到攻擊力*240%的傷害。",
         "template": "身後的裝置以自身為中心發出大範圍的圓形電磁波，令範圍內我方彈位攻擊速度提升{A}%，敵方攻擊速度降低{B}%，且敵方單位受到攻擊力*{C}%的傷害。",
         "templateEn": "The device emits a large circular electromagnetic wave centered on itself, increasing ATK Speed of allied units within range by {A}%, decreasing ATK Speed of enemy units by {B}%, and dealing DMG equal to ATK * {C}% to enemy units.",
@@ -4771,7 +5360,7 @@ const HEROES = [
       },
       {
         "name": "飛彈來襲",
-        "nameEn": "",
+        "nameEn": "Incoming Missile",
         "description": "每普通攻擊4次，就會朝攻擊目標發射兩枚追蹤飛彈，每枚飛彈造成攻擊力*180%的範圍傷害。",
         "template": "每普通攻擊4次，就會朝攻擊目標發射兩枚追蹤飛彈，每枚飛彈造成攻擊力*{A}%的範圍傷害。",
         "templateEn": "After every 4 Basic Attacks, launches 2 tracking missiles at the attack target, each dealing AoE DMG equal to ATK * {A}%.",
@@ -4789,7 +5378,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "精準打擊",
-        "nameEn": "",
+        "nameEn": "Precision Strike",
         "description": "我軍全體部隊傷害提升25%。",
         "template": "我軍全體部隊傷害提升{A}%。",
         "templateEn": "Increases DMG of all allied troops by {A}%.",
@@ -4805,7 +5394,7 @@ const HEROES = [
       },
       {
         "name": "火炮侵襲",
-        "nameEn": "",
+        "nameEn": "Cannon Barrage",
         "description": "我軍投彈兵每回合額外造成50%戰術傷害。",
         "template": "我軍投彈兵每回合額外造成{A}%戰術傷害。",
         "templateEn": "Bombers deal an extra {A}% Tactical DMG each round.",
@@ -4821,7 +5410,7 @@ const HEROES = [
       },
       {
         "name": "重炮加持",
-        "nameEn": "",
+        "nameEn": "Artillery Support",
         "description": "我軍投彈兵攻擊力提升30%，防禦力提升15%。",
         "template": "我軍投彈兵攻擊力提升{A}%，防禦力提升{B}%。",
         "templateEn": "Increases Bombers' ATK by {A}% and DEF by {B}%.",
@@ -4838,15 +5427,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "磁暴",
+      "nameEn": "Magnetar",
       "image": "科舍沃伊_專屬裝備_磁暴.png",
       "arrestSkill": {
         "name": "極限磁場",
-        "description": "強化逆轉電波，使其造成的傷害增加120%，並使敵方防禦力降低12.5%。\nEnhances reverse wave, increasing DMG dealt by 120%, and decreasing enemy DEF by 12.5%.",
+        "nameEn": "Magnetic Vortex",
+        "description": "強化逆轉電波，使其造成的傷害增加120%，並使敵方防禦力降低12.5%。",
+        "template": "強化逆轉電波，使其造成的傷害增加{A}%，並使敵方防禦力降低{B}%。",
+        "templateEn": "Enhances reverse wave, increasing DMG dealt by {A}%, and decreasing enemy DEF by {B}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "80", "B": "6.5", "C": "-" },
+        "2": { "A": "90", "B": "8", "C": "-" },
+        "3": { "A": "100", "B": "9.5", "C": "-" },
+        "4": { "A": "110", "B": "11", "C": "-" },
+        "5": { "A": "120", "B": "12.5", "C": "-" }
+        },
         "image": "科舍沃伊_緝捕裝備技能_極限磁場.png"
       },
       "warSkill": {
         "name": "警戒探頭",
-        "description": "[單人作戰]時，我軍全體部隊防禦力增幅16%。\nDuring solo combat, increase all our troops DEF by 16%.",
+        "nameEn": "Surveillance Probe",
+        "description": "[單人作戰]時，我軍全體部隊防禦力增幅16%。",
+        "template": "[單人作戰]時，我軍全體部隊防禦力增幅{A}%。",
+        "templateEn": "During solo combat, increase all our troops DEF by {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "科舍沃伊_戰爭裝備技能_警戒探頭.png"
       }
     }
@@ -4881,7 +5493,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "脈衝射線",
-        "nameEn": "",
+        "nameEn": "Pulse Laser",
         "description": "對自身前方蓄力，然後發射矩形脈衝，對脈衝範圍內的敵方單位造成攻擊力*240%的範圍傷害。",
         "template": "對自身前方蓄力，然後發射矩形脈衝，對脈衝範圍內的敵方單位造成攻擊力*{A}%的範圍傷害。",
         "templateEn": "Charges and fires a rectangular pulse forward, dealing AoE DMG equal to ATK * {A}% to enemy units within the pulse area.",
@@ -4897,7 +5509,7 @@ const HEROES = [
       },
       {
         "name": "眩暈爆彈",
-        "nameEn": "",
+        "nameEn": "Stun Bullet",
         "description": "朝敵方單位發射一顆子彈，造成攻擊力*210%的範圍，傷害並令敵方單位暈眩1.5秒。",
         "template": "朝敵方單位發射一顆子彈，造成攻擊力*{A}%的範圍，傷害並令敵方單位暈眩1.5秒。",
         "templateEn": "Fires a bullet at enemy units, dealing AoE DMG equal to ATK * {A}% and stunning enemy units for 1.5s.",
@@ -4913,7 +5525,7 @@ const HEROES = [
       },
       {
         "name": "無盡蓄能",
-        "nameEn": "",
+        "nameEn": "Limitless Charge",
         "description": "脈衝能量隨著戰鬥進程不斷累計。每經過3秒，攻擊力提升3.6%。",
         "template": "脈衝能量隨著戰鬥進程不斷累計。每經過3秒，攻擊力提升{A}%。",
         "templateEn": "Charges pulse energy as the battle progresses, increasing ATK by {A}% every 3s.",
@@ -4931,7 +5543,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "蓄能掃射",
-        "nameEn": "",
+        "nameEn": "Charged Barrage",
         "description": "當回合數到達3的倍數，我軍槍械兵將在回合結束時發動一次額外的戰術攻擊，對目標造成戰術傷害110%。",
         "template": "當回合數到達3的倍數，我軍槍械兵將在回合結束時發動一次額外的戰術攻擊，對目標造成戰術傷害{A}%。",
         "templateEn": "When the round number is a multiple of 3, our Shooters launch an extra Tactical Attack at the end of the round, dealing {A}% Tactical DMG to the target.",
@@ -4947,7 +5559,7 @@ const HEROES = [
       },
       {
         "name": "恐怖氣場",
-        "nameEn": "",
+        "nameEn": "Fear Aura",
         "description": "敵軍造成的傷害有50%機率降低40%。",
         "template": "敵軍造成的傷害有{A}%機率降低40%。",
         "templateEn": "There is a {A}% chance to reduce enemy DMG dealt by 40%.",
@@ -4963,7 +5575,7 @@ const HEROES = [
       },
       {
         "name": "地獄強化",
-        "nameEn": "",
+        "nameEn": "Infermal Surge",
         "description": "我軍全體部隊攻擊力提升14%，全體部隊殺傷力提升12%。",
         "template": "我軍全體部隊攻擊力提升{A}%，全體部隊殺傷力提升{B}%。",
         "templateEn": "Increases ATK of all allied troops by {A}% and Lethality by {B}%.",
@@ -4980,15 +5592,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "地獄剋星",
+      "nameEn": "Hellbane",
       "image": "德雷克_專屬裝備_地獄剋星.png",
       "arrestSkill": {
         "name": "脈衝改造",
-        "description": "對脈衝槍進行強化，造成的傷害提升28%。\nUpgrade the pulse gun, increasing DMG dealt by 28%.",
+        "nameEn": "Pulse Upgrade",
+        "description": "對脈衝槍進行強化，造成的傷害提升28%。",
+        "template": "對脈衝槍進行強化，造成的傷害提升{A}%。",
+        "templateEn": "Upgrade the pulse gun, increasing DMG dealt by {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "12", "B": "-", "C": "-" },
+        "2": { "A": "16", "B": "-", "C": "-" },
+        "3": { "A": "20", "B": "-", "C": "-" },
+        "4": { "A": "24", "B": "-", "C": "-" },
+        "5": { "A": "28", "B": "-", "C": "-" }
+        },
         "image": "德雷克_緝捕裝備技能_脈衝改造.png"
       },
       "warSkill": {
         "name": "突破重圍",
-        "description": "[防守]時，我軍全體部隊殺傷力增幅16%。\nDefending, increase all our troops lethality by 16%.",
+        "nameEn": "Break Out",
+        "description": "[防守]時，我軍全體部隊殺傷力增幅16%。",
+        "template": "[防守]時，我軍全體部隊殺傷力增幅{A}%。",
+        "templateEn": "While defending, all our troops' Lethality Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "德雷克_戰爭裝備技能_突破重圍.png"
       }
     }
@@ -5023,7 +5658,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "地面震擊",
-        "nameEn": "",
+        "nameEn": "Ground Shock",
         "description": "錘擊地面造成攻擊力*(%)的範圍傷害，並且使目標眩暈1.5秒。",
         "template": "錘擊地面造成攻擊力*{A}%的範圍傷害，並且使目標眩暈1.5秒。",
         "templateEn": "Strikes the ground, dealing AoE DMG equal to ATK * {A}% and stunning targets for 1.5s.",
@@ -5039,7 +5674,7 @@ const HEROES = [
       },
       {
         "name": "狂暴攻勢",
-        "nameEn": "",
+        "nameEn": "Frenzied Assault",
         "description": "每普通攻擊6次，下次攻擊將會重擊目標，造成攻擊力*(%)的傷害，並且使目標恢復的生命值減少(%)。",
         "template": "每普通攻擊6次，下次攻擊將會重擊目標，造成攻擊力*{A}%的傷害，並且使目標恢復的生命值減少{B}%。",
         "templateEn": "Every 6 Basic Attacks, the next attack deals DMG equal to ATK * {A}% and reduces the target's HP recovery by {B}% for 5s.",
@@ -5055,7 +5690,7 @@ const HEROES = [
       },
       {
         "name": "身軀改造",
-        "nameEn": "",
+        "nameEn": "Body Modification",
         "description": "自身造成傷害提升(%)，受到傷害降低(%)。",
         "template": "自身造成傷害提升{A}%，受到傷害降低{B}%。",
         "templateEn": "Increases DMG dealt by {A}% and reduces DMG taken by {B}%.",
@@ -5073,7 +5708,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "怪物威懾",
-        "nameEn": "",
+        "nameEn": "Monster Intimidation",
         "description": "當回合數到達2的倍數時，我軍全體部隊在本回合受到的普通攻擊傷害減少50%。",
         "template": "當回合數到達2的倍數時，我軍全體部隊在本回合受到的普通攻擊傷害減少{A}%。",
         "templateEn": "When the round number is a multiple of 2, reduces Basic Attack DMG taken by all allied troops by {A}% during that round.",
@@ -5089,7 +5724,7 @@ const HEROES = [
       },
       {
         "name": "捨身作戰",
-        "nameEn": "",
+        "nameEn": "Self-Sacrificing Battle",
         "description": "當回合數到達3的倍數時，我軍盾牌兵本回合放棄攻擊，並讓槍械兵和投彈兵在本回合額外發動1次傷害為150%的普通攻擊。",
         "template": "當回合數到達3的倍數時，我軍盾牌兵本回合放棄攻擊，並讓槍械兵和投彈兵在本回合額外發動1次傷害為{A}%的普通攻擊。",
         "templateEn": "When the round number is a multiple of 3, our Shieldbearers do not attack during that round, allowing Shooters and Bombers to launch 1 additional Basic Attack dealing {A}% DMG.",
@@ -5105,7 +5740,7 @@ const HEROES = [
       },
       {
         "name": "死亡氣息",
-        "nameEn": "",
+        "nameEn": "Death Aura",
         "description": "盾牌兵受到的傷害減少15%，投彈兵造成的傷害增加25%。",
         "template": "盾牌兵受到的傷害減少{A}%，投彈兵造成的傷害增加{B}%。",
         "templateEn": "Reduces Shieldbearers' DMG taken by {A}% and increases Bombers' DMG dealt by {B}%.",
@@ -5122,15 +5757,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "鋼鐵手臂",
+      "nameEn": "Steel Arm",
       "image": "馬庫斯_專屬裝備_鋼鐵手臂.png",
       "arrestSkill": {
         "name": "致命震盪",
-        "description": "地面震擊命中的敵方單位，防禦力降低36%，持續3秒。\nReduces DEF of enemy umits hit by 36% for 3s.",
+        "nameEn": "Fatal Shockwave",
+        "description": "地面震擊命中的敵方單位，防禦力降低36%，持續3秒。",
+        "template": "地面震擊命中的敵方單位，防禦力降低{A}%，持續3秒。",
+        "templateEn": "Reduces DEF of enemy umits hit by {A}% for 3s.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "12", "B": "-", "C": "-" },
+        "2": { "A": "18", "B": "-", "C": "-" },
+        "3": { "A": "24", "B": "-", "C": "-" },
+        "4": { "A": "30", "B": "-", "C": "-" },
+        "5": { "A": "36", "B": "-", "C": "-" }
+        },
         "image": "馬庫斯_緝捕裝備技能_致命震盪.png"
       },
       "warSkill": {
         "name": "血肉復甦",
-        "description": "[防守]時，我軍全體部隊生命值增幅16%。\nDefending, all our troops gain add 16% to their existing HP bonus.",
+        "nameEn": "Flesh Revival",
+        "description": "[防守]時，我軍全體部隊生命值增幅16%。",
+        "template": "[防守]時，我軍全體部隊生命值增幅{A}%。",
+        "templateEn": "While defending, all our troops' HP Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "馬庫斯_戰爭裝備技能_血肉復甦.png"
       }
     }
@@ -5165,7 +5823,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "深入敵後",
-        "nameEn": "",
+        "nameEn": "Behind Enemy Lines",
         "description": "造成攻擊力*(%)的範圍傷害。",
         "template": "造成攻擊力*{A}%的範圍傷害。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}%.",
@@ -5181,7 +5839,7 @@ const HEROES = [
       },
       {
         "name": "破壞射擊",
-        "nameEn": "",
+        "nameEn": "Destructive Shot",
         "description": "向隨機2個敵方目標射擊，造成攻擊力*(%)的傷害，並且使目標攻擊力下降(%)，持續4秒。",
         "template": "向隨機2個敵方目標射擊，造成攻擊力*{A}%的傷害，並且使目標攻擊力下降{B}%，持續4秒。",
         "templateEn": "Shoots at 2 random enemy targets, dealing DMG equal to ATK * {A}% and reducing their ATK by {B}% for 4s.",
@@ -5197,7 +5855,7 @@ const HEROES = [
       },
       {
         "name": "眩暈彈藥",
-        "nameEn": "",
+        "nameEn": "Stun Ammo",
         "description": "每次普通攻擊有(%)機率令目標眩暈1秒。",
         "template": "每次普通攻擊有{A}%機率令目標眩暈1秒。",
         "templateEn": "Each Basic Attack has a {A}% chance to stun the target for 1s.",
@@ -5215,7 +5873,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "隱密襲擊",
-        "nameEn": "",
+        "nameEn": "Stealth Assault",
         "description": "投彈兵每次攻擊，都能讓該目標受到的戰術傷害增加50%，持續1回合。",
         "template": "投彈兵每次攻擊，都能讓該目標受到的戰術傷害增加{A}%，持續1回合。",
         "templateEn": "For each Bomber attack, the target's Tactical DMG taken is increased by {A}% for 1 round.",
@@ -5231,7 +5889,7 @@ const HEROES = [
       },
       {
         "name": "資訊支援",
-        "nameEn": "",
+        "nameEn": "Intel Support",
         "description": "我軍全體部隊生命值提升25%。",
         "template": "我軍全體部隊生命值提升{A}%。",
         "templateEn": "Increases HP of all allied troops by {A}%.",
@@ -5247,7 +5905,7 @@ const HEROES = [
       },
       {
         "name": "計謀連環",
-        "nameEn": "",
+        "nameEn": "Strategic Chain",
         "description": "每回合投彈兵有25%機率對敵方全體造成攻擊力100%的戰術傷害。",
         "template": "每回合投彈兵有25%機率對敵方全體造成攻擊力{A}%的戰術傷害。",
         "templateEn": "Each round, Bombers have a 25% chance to deal additional Tactical DMG equal to ATK * {A}% to all enemies.",
@@ -5264,15 +5922,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "紳士之杖",
+      "nameEn": "Gentleman's Cane",
       "image": "李_專屬裝備_紳士之杖.png",
       "arrestSkill": {
         "name": "特工訓練",
-        "description": "生命值大於60%時，攻擊力提升26%，攻擊速度提升32%。\nWhen HP is above 60%, increases ATK by 26% and ATK Speed by 32%.",
+        "nameEn": "Agent Training",
+        "description": "生命值大於60%時，攻擊力提升26%，攻擊速度提升32%。",
+        "template": "生命值大於60%時，攻擊力提升{A}%，攻擊速度提升{B}%。",
+        "templateEn": "When HP is above 60%, increases ATK by {A}% and ATK Speed by {B}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "12", "B": "24", "C": "-" },
+        "2": { "A": "15.5", "B": "26", "C": "-" },
+        "3": { "A": "19", "B": "28", "C": "-" },
+        "4": { "A": "22.5", "B": "30", "C": "-" },
+        "5": { "A": "26", "B": "32", "C": "-" }
+        },
         "image": "李_緝捕裝備技能_特工訓練.png"
       },
       "warSkill": {
         "name": "精心埋伏",
-        "description": "[防守]時，我軍全體部隊攻擊力增幅16%。\nDefending, troops gain an additional 16% boost to their existing lethality bonus.",
+        "nameEn": "Careful Ambush",
+        "description": "[防守]時，我軍全體部隊攻擊力增幅16%。",
+        "template": "[防守]時，我軍全體部隊攻擊力增幅{A}%。",
+        "templateEn": "While defending, all our troops' ATK Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "李_戰爭裝備技能_精心埋伏.png"
       }
     }
@@ -5311,7 +5992,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "追蹤爆破",
-        "nameEn": "",
+        "nameEn": "Tracking Blast",
         "description": "對敵方目標造成攻擊力*(%)的範圍傷害。",
         "template": "對敵方目標造成攻擊力*{A}%的範圍傷害。",
         "templateEn": "Deals AoE DMG equal to ATK * {A}% to enemies.",
@@ -5327,7 +6008,7 @@ const HEROES = [
       },
       {
         "name": "連環射擊",
-        "nameEn": "",
+        "nameEn": "Chain Shooting",
         "description": "向敵方目標射擊，造成攻擊力*(%)的傷害。若該目標生命值低於50%，則額外造成(%)的傷害。",
         "template": "向敵方目標射擊，造成攻擊力*{A}%的傷害。若該目標生命值低於50%，則額外造成{B}%的傷害。",
         "templateEn": "Shoots at the enemy target, dealing DMG equal to ATK * {A}%. If the target's HP is below 50%, deals an additional {B}% DMG.",
@@ -5343,7 +6024,7 @@ const HEROES = [
       },
       {
         "name": "勝利追擊",
-        "nameEn": "",
+        "nameEn": "Victorty Pursuit",
         "description": "連環射擊成功擊殺目標，可以提升自身(%)攻擊力且連環射擊冷卻時間減少4秒。",
         "template": "連環射擊成功擊殺目標，可以提升自身{A}%攻擊力且連環射擊冷卻時間減少{B}秒。",
         "templateEn": "After defeating a target with Chain Shooting, increases ATK by {A}% and reduces Chain Shooting's cooldown by {B}s.",
@@ -5361,7 +6042,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "鋼鐵之軀",
-        "nameEn": "",
+        "nameEn": "Iron Body",
         "description": "盾牌兵受到的傷害降低20%，槍械兵受到的傷害降低30%。",
         "template": "盾牌兵受到的傷害降低{A}%，槍械兵受到的傷害降低{B}%。",
         "templateEn": "Reduces Shieldbearers' DMG taken by {A}% and Shooters' DMG taken by {B}%.",
@@ -5377,7 +6058,7 @@ const HEROES = [
       },
       {
         "name": "指令射擊",
-        "nameEn": "",
+        "nameEn": "Command Shooting",
         "description": "每當敵軍受到戰術傷害時，槍械兵有30%的機率對該目標造成一次攻擊力25%的普通攻擊。",
         "template": "每當敵軍受到戰術傷害時，槍械兵有30%的機率對該目標造成一次攻擊力{A}%的普通攻擊。",
         "templateEn": "Whenever enemies take Tactical DMG, Shooters have a 30% chance to launch 1 Basic Attack against that target, dealing DMG equal to ATK * {A}%.",
@@ -5393,7 +6074,7 @@ const HEROES = [
       },
       {
         "name": "正義審判",
-        "nameEn": "",
+        "nameEn": "Judgment of Justice",
         "description": "當回合數到達3的倍數時，我軍槍械兵對目標造成攻擊力125%的戰術傷害。敵軍部隊兵力比我軍部隊兵力每多1倍，傷害額外提升15%，最多提升到75%。",
         "template": "當回合數到達3的倍數時，我軍槍械兵對目標造成攻擊力{A}%的戰術傷害。敵軍部隊兵力比我軍部隊兵力每多1倍，傷害額外提升{B}%，最多提升到{C}%。",
         "templateEn": "When the round number is a multiple of 3, our Shooters deal Tactical DMG equal to ATK * {A}% to the target. For each multiple by which the enemy troop size exceeds ours, DMG increases by an additional {B}%, up to {C}%.",
@@ -5410,15 +6091,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "審判者",
+      "nameEn": "Judicator",
       "image": "埃德溫_專屬裝備_審判者.png",
       "arrestSkill": {
         "name": "律法加持",
-        "description": "自身造成傷害提升36%。\nIcreases DMG dealt by 36%.",
+        "nameEn": "Law's Blessing",
+        "description": "自身造成傷害提升36%。",
+        "template": "自身造成傷害提升{A}%。",
+        "templateEn": "Icreases DMG dealt by {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "24", "B": "-", "C": "-" },
+        "2": { "A": "27", "B": "-", "C": "-" },
+        "3": { "A": "30", "B": "-", "C": "-" },
+        "4": { "A": "33", "B": "-", "C": "-" },
+        "5": { "A": "36", "B": "-", "C": "-" }
+        },
         "image": "埃德溫_緝捕裝備技能_律法加持.png"
       },
       "warSkill": {
         "name": "堅毅之心",
-        "description": "[單人作戰]時，我軍全體部隊生命增幅16%。\nDuring solo combat, troops gain an additional 16% boost to their existing HP bonus.",
+        "nameEn": "Resolute Heart",
+        "description": "[單人作戰]時，我軍全體部隊生命值增幅16%。",
+        "template": "[單人作戰]時，我軍全體部隊生命值增幅{A}%。",
+        "templateEn": "During solo combats, all allied troops gain {A}% HP Boost.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "埃德溫_戰爭裝備技能_堅毅之心.png"
       }
     }
@@ -5453,7 +6157,7 @@ const HEROES = [
     "arrestSkills": [
       {
         "name": "極限飛彈",
-        "nameEn": "",
+        "nameEn": "Extreme Missile",
         "description": "發射導彈，對敵方目標造成攻擊力*(%)的範圍傷害，並且使該目標攻擊速度降低(%)，持續3秒。",
         "template": "發射導彈，對敵方目標造成攻擊力*{A}%的範圍傷害，並且使該目標攻擊速度降低{B}%，持續3秒。",
         "templateEn": "Launches a missile that deals AoE DMG equal to ATK * {A}% to enemy targets and reduces their ATK Speed by {B}% for 3s.",
@@ -5469,7 +6173,7 @@ const HEROES = [
       },
       {
         "name": "甜蜜射擊",
-        "nameEn": "",
+        "nameEn": "Sweet  Shot",
         "description": "向敵方目標射擊，造成攻擊力*(%)的傷害，並且對該目標施加繳械效果，使該目標6秒內無法攻擊。",
         "template": "向敵方目標射擊，造成攻擊力*{A}%的傷害，並且對該目標施加繳械效果，使該目標6秒內無法攻擊。",
         "templateEn": "Shoots at the enemy target, dealing DMG equal to ATK * {A}% and applying a Disarm effect that prevents the target from attacking for 6s.",
@@ -5485,7 +6189,7 @@ const HEROES = [
       },
       {
         "name": "歡快樂曲",
-        "nameEn": "",
+        "nameEn": "Joyful Melody",
         "description": "我方所有英雄和囚徒裝甲生命值提升(%)。",
         "template": "我方所有英雄和囚徒裝甲生命值提升{A}%。",
         "templateEn": "Increases HP of all allied Heroes and Prisoner Armors by {A}%.",
@@ -5503,7 +6207,7 @@ const HEROES = [
     "warSkills": [
       {
         "name": "甜蜜笑容",
-        "nameEn": "",
+        "nameEn": "Sweet Smile",
         "description": "降低敵方所有部隊10%防禦和15%生命。",
         "template": "降低敵方所有部隊{A}%防禦和{B}%生命。",
         "templateEn": "Reduces all enemy troops' DEF by {A}% and HP by {B}%.",
@@ -5519,7 +6223,7 @@ const HEROES = [
       },
       {
         "name": "持續破壞",
-        "nameEn": "",
+        "nameEn": "Continuous Destruction",
         "description": "當我軍全體盾牌兵與投彈兵對敵方造成普通攻擊傷害時，槍械兵有25%機率對該目標額外造成一次攻擊力70%的普通攻擊。",
         "template": "當我軍全體盾牌兵與投彈兵對敵方造成普通攻擊傷害時，槍械兵有25%機率對該目標額外造成一次攻擊力{A}%的普通攻擊。",
         "templateEn": "When our Shieldbearers and Bombers deal Basic Attack DMG, Shooters have a 25% chance to launch 1 additional Basic Attack against the same target, dealing DMG equal to ATK * {A}%.",
@@ -5535,7 +6239,7 @@ const HEROES = [
       },
       {
         "name": "火力傾瀉",
-        "nameEn": "",
+        "nameEn": "Firepower Barrage",
         "description": "槍械兵每攻擊4回合，對敵軍全體部隊造成一次攻擊力50%的普攻傷害。",
         "template": "槍械兵每攻擊4回合，對敵軍全體部隊造成一次攻擊力{A}%的普攻傷害。",
         "templateEn": "After every 4 attacks, Shooters launch 1 Basic Attack against all enemy troops, dealing DMG equal to ATK * {A}%.",
@@ -5552,15 +6256,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "甜蜜之吻",
+      "nameEn": "Sweet Kiss",
       "image": "艾達_專屬裝備_甜蜜之吻.png",
       "arrestSkill": {
         "name": "狂暴姿態",
-        "description": "我方所有英雄和囚徒裝甲攻擊力提升8%。\nIncrease ATK of all allied Heroes and  Prisoner Armous by 8%.",
+        "nameEn": "Frenzied Stance",
+        "description": "我方所有英雄和囚徒裝甲攻擊力提升8%。",
+        "template": "我方所有英雄和囚徒裝甲攻擊力提升{A}%。",
+        "templateEn": "Increase ATK of all allied Heroes and  Prisoner Armous by {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "5", "B": "-", "C": "-" },
+        "3": { "A": "6", "B": "-", "C": "-" },
+        "4": { "A": "7", "B": "-", "C": "-" },
+        "5": { "A": "8", "B": "-", "C": "-" }
+        },
         "image": "艾達_緝捕裝備技能_狂暴姿態.png"
       },
       "warSkill": {
         "name": "槍械專精",
-        "description": "集結進攻時，我軍全體部隊攻擊力增幅16%。\nDuring Rally attacks, all our troops gain an additional 16% boost t.o their existing ATK bohus",
+        "nameEn": "Firearm Mastery",
+        "description": "集結進攻時，我軍全體部隊攻擊力增幅16%。",
+        "template": "集結進攻時，我軍全體部隊攻擊力增幅{A}%。",
+        "templateEn": "During rally attacks, all our troops' ATK Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "艾達_戰爭裝備技能_槍械專精.png"
       }
     }
@@ -5694,15 +6421,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "奇思妙想",
+      "nameEn": "Wild Idea",
       "image": "凱特_專屬裝備_奇思妙想.png",
       "arrestSkill": {
         "name": "熱血起跑",
-        "description": "生命值提升30%，並且令受到[及時補給]影響的目標攻擊速度提升33%。\nIncreases HP by 30%, and increases ATK Speed of targets with Timely Supply effect by 33%.",
+        "nameEn": "Hot Start",
+        "description": "生命值提升30%，並且令受到[及時補給]影響的目標攻擊速度提升33%。",
+        "template": "生命值提升30%，並且令受到[及時補給]影響的目標攻擊速度提升33%。",
+        "templateEn": "Increases HP by 30%, and increases ATK Speed of targets with Timely Supply effect by 33%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "", "B": "", "C": "" },
+        "2": { "A": "", "B": "", "C": "" },
+        "3": { "A": "", "B": "", "C": "" },
+        "4": { "A": "", "B": "", "C": "" },
+        "5": { "A": "", "B": "", "C": "" }
+        },
         "image": "凱特_緝捕裝備技能_熱血起跑.png"
       },
       "warSkill": {
         "name": "主場優勢",
-        "description": "[防守]時，我軍全體部隊殺傷力增幅16%。\nDefending, increase all our troops lethality by 16%.",
+        "nameEn": "Home Advantage",
+        "description": "[防守]時，我軍全體部隊殺傷力增幅16%。",
+        "template": "[防守]時，我軍全體部隊殺傷力增幅{A}%。",
+        "templateEn": "While defending, all our troops' Lethality Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "凱特_戰爭裝備技能_主場優勢.png"
       }
     }
@@ -5840,15 +6590,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "刑罰之握",
+      "nameEn": "Punisher's Grip",
       "image": "沃瑞爾_專屬裝備_刑罰之握.png",
       "arrestSkill": {
         "name": "崩壞連鎖",
-        "description": "每有一個英雄或囚徒裝甲（不論敵我）被消滅，使我方全體英雄和囚徒裝甲受到傷害降低2%，造成傷害提升2%。\nFor each Hero or Prisoner Power Armor(ally or enemy)destroyed,  all allied Heroes and Prisoner Power Armors' DMG taken reduced by 2% and DMG dealt increased by 2%.",
+        "nameEn": "Collapse Chain",
+        "description": "每有一個英雄或囚徒裝甲（不論敵我）被消滅，使我方全體英雄和囚徒裝甲受到傷害降低2%，造成傷害提升2%。",
+        "template": "每有一個英雄或囚徒裝甲（不論敵我）被消滅，使我方全體英雄和囚徒裝甲受到傷害降低2%，造成傷害提升2%。",
+        "templateEn": "For each Hero or Prisoner Power Armor(ally or enemy)destroyed,  all allied Heroes and Prisoner Power Armors' DMG taken reduced by 2% and DMG dealt increased by 2%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "", "B": "", "C": "" },
+        "2": { "A": "", "B": "", "C": "" },
+        "3": { "A": "", "B": "", "C": "" },
+        "4": { "A": "", "B": "", "C": "" },
+        "5": { "A": "", "B": "", "C": "" }
+        },
         "image": "沃瑞爾_緝捕裝備技能_崩壞連鎖.png"
       },
       "warSkill": {
         "name": "最高權限",
-        "description": "[單人作戰]時，我軍全體部隊攻擊力提升16%。\nIncrease all troops ATK 16% during solo combat.",
+        "nameEn": "Supreme Authority",
+        "description": "[單人作戰]時，我軍全體部隊攻擊力提升16%。",
+        "template": "[單人作戰]時，我軍全體部隊攻擊力提升{A}%。",
+        "templateEn": "During solo combats, all allied troops gain {A}% ATK Boost.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "沃瑞爾_戰爭裝備技能_最高權限.png"
       }
     }
@@ -5982,15 +6755,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "神通",
+      "nameEn": "Divine Power",
       "image": "悟空_專屬裝備_神通.png",
       "arrestSkill": {
         "name": "痛飲戰意",
-        "description": "攻擊力提高10%，且在[棒打狂徒]技能造成傷害時，恢復造成傷害*45%的生命值。\nIncreases ATK by 10%, and when Bludgeon Strike deals DMG, restores HP equal to DMG dealt * 45%.",
+        "nameEn": "Battle Thirst",
+        "description": "攻擊力提高10%，且在[棒打狂徒]技能造成傷害時，恢復造成傷害*45%的生命值。",
+        "template": "攻擊力提高10%，且在[棒打狂徒]技能造成傷害時，恢復造成傷害*45%的生命值。",
+        "templateEn": "Increases ATK by 10%, and when Bludgeon Strike deals DMG, restores HP equal to DMG dealt * 45%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "", "B": "", "C": "" },
+        "2": { "A": "", "B": "", "C": "" },
+        "3": { "A": "", "B": "", "C": "" },
+        "4": { "A": "", "B": "", "C": "" },
+        "5": { "A": "", "B": "", "C": "" }
+        },
         "image": "悟空_緝捕裝備技能_痛飲戰意.png"
       },
       "warSkill": {
         "name": "橫掃六合",
-        "description": "集結進攻時，我軍全體部隊殺傷增幅16%。\nRally attack, troops gain add 16% to their existing Lethality bonus.",
+        "nameEn": "Total Sweep",
+        "description": "集結進攻時，我軍全體部隊殺傷力增幅16%。",
+        "template": "集結進攻時，我軍全體部隊殺傷力增幅{A}%。",
+        "templateEn": "During rally attacks, all our troops' Lethality Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "悟空_戰爭裝備技能_橫掃六合.png"
       }
     }
@@ -6124,15 +6920,38 @@ const HEROES = [
     ],
     "exclusiveEquipment": {
       "name": "狂噬面甲",
+      "nameEn": "Devouring Mask",
       "image": "奧托_專屬裝備_狂噬面甲.png",
       "arrestSkill": {
         "name": "破堅刃齒",
-        "description": "普通攻擊有25%機率造成攻擊力*160%傷害，並令目標防禦力降低30%。\nBasic Attacks have a 25% chance to deal DMG equal to ATK*160% and reduce the target's DEF by 30%.",
+        "nameEn": "Piercing Edge",
+        "description": "普通攻擊有25%機率造成攻擊力*160%傷害，並令目標防禦力降低30%。",
+        "template": "普通攻擊有25%機率造成攻擊力*160%傷害，並令目標防禦力降低30%。",
+        "templateEn": "Basic Attacks have a 25% chance to deal DMG equal to ATK*160% and reduce the target's DEF by 30%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "", "B": "", "C": "" },
+        "2": { "A": "", "B": "", "C": "" },
+        "3": { "A": "", "B": "", "C": "" },
+        "4": { "A": "", "B": "", "C": "" },
+        "5": { "A": "", "B": "", "C": "" }
+        },
         "image": "奧托_緝捕裝備技能_破堅刃齒.png"
       },
       "warSkill": {
         "name": "盤踞之勢",
-        "description": "[防守]時，我軍全體部隊防禦力增幅16%。\nDefending, all our troops gain add 16% to their existing DEF bonus.",
+        "nameEn": "Entrenched Position",
+        "description": "[防守]時，我軍全體部隊防禦力增幅16%。",
+        "template": "[防守]時，我軍全體部隊防禦力增幅{A}%。",
+        "templateEn": "While defending, all our troops' DEF Boost {A}%.",
+        "maxLevel": 5,
+        "levels": {
+        "1": { "A": "4", "B": "-", "C": "-" },
+        "2": { "A": "7", "B": "-", "C": "-" },
+        "3": { "A": "10", "B": "-", "C": "-" },
+        "4": { "A": "13", "B": "-", "C": "-" },
+        "5": { "A": "16", "B": "-", "C": "-" }
+        },
         "image": "奧托_戰爭裝備技能_盤踞之勢.png"
       }
     }
