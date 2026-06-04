@@ -832,27 +832,28 @@
            放最後，失敗也不影響英雄列表
         ========================= */
 
-        setTimeout(async () => {
+        try {
 
-            try {
-
-                if (typeof initVisitorCounter === "function") {
-                    await initVisitorCounter();
-                }
-
-                if (typeof initOnlineCounter === "function") {
-                    await initOnlineCounter();
-                }
-
-                if (typeof startVisitorDisplay === "function") {
-                    startVisitorDisplay();
-                }
-
-            } catch (err) {
-                console.warn("Firebase Stats Init Failed", err);
+            if (typeof initVisitorCounter === "function") {
+                await initVisitorCounter();
             }
 
-        }, 500);
+            if (typeof initOnlineCounter === "function") {
+                await initOnlineCounter();
+            }
+
+            if (typeof startVisitorDisplay === "function") {
+                startVisitorDisplay();
+            }
+
+        } catch (err) {
+
+            console.warn(
+                "Firebase Stats Init Failed",
+                err
+            );
+
+        }
 
     });
     
@@ -1279,7 +1280,7 @@
         const onlineRef =
             firebaseRef(
                 firebaseDB,
-                `site/online/${userId}`
+                `online/${userId}`
             );
 
         await firebaseSet(onlineRef,true);
@@ -1287,7 +1288,7 @@
         firebaseOnDisconnect(onlineRef).remove();
 
         firebaseOnValue(
-            firebaseRef(firebaseDB,"site/online"),
+            firebaseRef(firebaseDB,"online"),
             snapshot=>{
 
                 const online =
