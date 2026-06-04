@@ -832,28 +832,27 @@
            放最後，失敗也不影響英雄列表
         ========================= */
 
-        try {
+        setTimeout(async () => {
 
-            if (typeof initVisitorCounter === "function") {
-                await initVisitorCounter();
+            try {
+
+                if (typeof initVisitorCounter === "function") {
+                    await initVisitorCounter();
+                }
+
+                if (typeof initOnlineCounter === "function") {
+                    await initOnlineCounter();
+                }
+
+                if (typeof startVisitorDisplay === "function") {
+                    startVisitorDisplay();
+                }
+
+            } catch (err) {
+                console.warn("Firebase Stats Init Failed", err);
             }
 
-            if (typeof initOnlineCounter === "function") {
-                await initOnlineCounter();
-            }
-
-            if (typeof startVisitorDisplay === "function") {
-                startVisitorDisplay();
-            }
-
-        } catch (err) {
-
-            console.warn(
-                "Firebase Stats Init Failed",
-                err
-            );
-
-        }
+        }, 500);
 
     });
     
