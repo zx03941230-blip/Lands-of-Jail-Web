@@ -279,6 +279,21 @@
 
     function openHeroModal(hero) {
 
+        // SEO Title
+        const seoHeroName = getHeroDisplayName(hero);
+        
+        document.title =
+        `${seoHeroName} | Lands of Jail 英雄圖鑑`;
+        
+        // SEO Description
+        const seoDescription =
+        `${seoHeroName} 的英雄技能、能力數值、專屬裝備、兵種分類與戰爭定位完整資料。`;
+
+        updateMetaTag("description", seoDescription);
+        updateMetaProperty("og:title", document.title);
+        updateMetaProperty("og:description", seoDescription);
+        updateMetaProperty("og:url", window.location.href);
+                
         currentHeroId = hero.id;
         addRecentHero(hero.id);
 
@@ -317,6 +332,10 @@
         history.replaceState(null, "", url);
     }
 
+    /* =========================================
+       04A. Hero Modal Helper Functions
+    ========================================= */
+
     function toggleEmptySection(contentId) {
         const content = document.getElementById(contentId);
         if (!content) return;
@@ -329,6 +348,30 @@
             content.querySelector(".stat-item");
 
         section.style.display = hasRealContent ? "" : "none";
+    }
+    
+    function updateMetaTag(name, content) {
+        let tag = document.querySelector(`meta[name="${name}"]`);
+
+        if (!tag) {
+            tag = document.createElement("meta");
+            tag.setAttribute("name", name);
+            document.head.appendChild(tag);
+        }
+
+        tag.setAttribute("content", content);
+    }
+
+    function updateMetaProperty(property, content) {
+        let tag = document.querySelector(`meta[property="${property}"]`);
+
+        if (!tag) {
+            tag = document.createElement("meta");
+            tag.setAttribute("property", property);
+            document.head.appendChild(tag);
+        }
+
+        tag.setAttribute("content", content);
     }
         
     /* =========================================
@@ -468,6 +511,10 @@
     }
 
     function closeHeroModal() {
+    
+        document.title =
+        "Lands of Jail 英雄圖鑑｜英雄技能、專武、收藏查詢";
+        
         document.getElementById("heroModal").classList.remove("active");
 
         const url = new URL(window.location);
