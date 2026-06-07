@@ -220,9 +220,35 @@ a.guide-menu-card:hover{
    09. Hero Star Table | 英雄升星專用
 ========================================= */
 
+.guide-table-scroll{
+    overflow-x:auto;
+    position:relative;
+}
+
+.hero-star-table{
+    min-width:900px;
+}
+
 .hero-star-table td{
     font-size:20px;
     font-weight:800;
+}
+
+.hero-star-table th:first-child,
+.hero-star-table td:first-child{
+    position:sticky;
+    left:0;
+    z-index:2;
+    background:#161616;
+}
+
+.hero-star-table th:first-child{
+    z-index:3;
+    background:#5a2a88;
+}
+
+.hero-star-table td:first-child{
+    box-shadow:4px 0 10px rgba(0,0,0,.35);
 }
 
 .star-head{
@@ -244,39 +270,19 @@ a.guide-menu-card:hover{
     object-fit:contain;
 }
 
-.guide-table-scroll{
-    overflow-x:auto;
-    position:relative;
-}
+/* =========================================
+   10. VIP Level Table | VIP 等級專用
+========================================= */
 
-.hero-star-table th:first-child,
-.hero-star-table td:first-child{
-    position:sticky;
-    left:0;
-    z-index:2;
-    background:#161616;
-}
-
-.hero-star-table th:first-child{
-    z-index:3;
-    background:#5a2a88;
-}
-
-.hero-star-table td:first-child{
-    box-shadow:4px 0 10px rgba(0,0,0,.35);
-}
-
-.hero-star-table{
-    min-width:900px;
+.vip-level-table{
+    max-width:720px;
+    min-width:0;
+    margin:0 auto;
 }
 
 /* =========================================
-   10. Mobile Guide | 手機攻略頁
+   11. Mobile Guide | 手機攻略頁
 ========================================= */
-
-.mobile-hero-star-list{
-    display:none;
-}
 
 @media(max-width:768px){
 
@@ -286,16 +292,6 @@ a.guide-menu-card:hover{
 
     .guide-card{
         padding:10px;
-    }
-
-    .guide-table{
-        min-width:680px;
-    }
-
-    .guide-table th,
-    .guide-table td{
-        padding:10px;
-        font-size:14px;
     }
 
     .guide-progress-box{
@@ -321,52 +317,9 @@ a.guide-menu-card:hover{
         margin-top:24px;
     }
 
-    .star-head img,
-    .star-icon{
-        width:42px;
-        height:42px;
-    }
-
-    .hero-star-card{
-        background:linear-gradient(180deg,#202020,#151515);
-        border:1px solid rgba(255,255,255,.12);
-        border-radius:18px;
-        padding:16px;
-    }
-
-    .hero-star-card-title{
-        color:#ffb347;
-        font-size:22px;
-        font-weight:900;
-        margin-bottom:12px;
-    }
-
-    .hero-star-row{
-        display:flex;
-        justify-content:space-between;
-        padding:8px 0;
-        border-bottom:1px solid rgba(255,255,255,.08);
-        color:#ddd;
-    }
-
-    .hero-star-row b{
-        color:#fff;
-    }
-
-    .hero-star-row.total{
-        border-bottom:none;
-        margin-top:6px;
-        color:#ffb347;
-        font-weight:900;
-    }
-
-    .hero-star-row.total b{
-        color:#ffb347;
-    }
-    
     .hero-star-table{
-    min-width:760px;
-}
+        min-width:760px;
+    }
 
     .hero-star-table th,
     .hero-star-table td{
@@ -387,5 +340,27 @@ a.guide-menu-card:hover{
     .star-icon{
         width:44px;
         height:44px;
+    }
+
+    .vip-level-table{
+        width:100%;
+        min-width:0;
+    }
+
+    .vip-level-table th,
+    .vip-level-table td{
+        padding:12px 10px;
+        font-size:15px;
+        white-space:nowrap;
+    }
+
+    .vip-level-table th:first-child,
+    .vip-level-table td:first-child{
+        width:55%;
+    }
+
+    .vip-level-table th:last-child,
+    .vip-level-table td:last-child{
+        width:45%;
     }
 }
