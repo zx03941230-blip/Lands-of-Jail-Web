@@ -1052,7 +1052,7 @@ footer{
 
 
 /* =========================================
-   19A. Tablet Layout 平板專區 | 平板 (769~1024px)
+   20. Tablet Layout 平板專區 | 平板 (769~1024px)
 ========================================= */
 
 @media(min-width:769px) and (max-width:1024px){
@@ -1065,7 +1065,7 @@ footer{
 }
 
 /* =========================================
-   20. Mobile Components | 手機組件
+   21. Mobile Components | 手機組件
    未來新增：手機折疊、返回頂部、浮動按鈕放這裡
 ========================================= */
 
@@ -1136,4 +1136,87 @@ footer{
     .back-to-top:active{
         transform:scale(.94);
     }
+}
+
+/* =========================================
+   22. Guide Table | 攻略表格
+========================================= */
+
+.guide-table-wrap{
+    overflow-x:auto;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;
+    padding:12px;
+}
+
+.guide-table{
+    width:100%;
+    min-width:720px;
+    border-collapse:collapse;
+    color:#f6f1e8;
+}
+
+.guide-table th{
+    background:#5a2a88;
+    color:#fff;
+    padding:12px;
+    border:1px solid rgba(255,255,255,.18);
+    text-align:center;
+}
+
+.guide-table td{
+    padding:12px;
+    border:1px solid rgba(255,255,255,.12);
+    text-align:center;
+    background:#161616;
+}
+
+.guide-table tbody tr:nth-child(even) td{
+    background:#1f1f1f;
+}
+
+.guide-table td:last-child{
+    color:#ffb347;
+    font-weight:900;
+}
+
+/* =========================================
+   23. Guide Menu | 攻略首頁卡片
+========================================= */
+
+.guide-menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    gap:18px;
+    margin-top:24px;
+}
+
+.guide-menu-card{
+    display:block;
+    text-decoration:none;
+    color:#f6f1e8;
+    background:linear-gradient(180deg,#202020,#151515);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:22px;
+    padding:22px;
+    box-shadow:0 14px 32px rgba(0,0,0,.28);
+    transition:.22s;
+}
+
+.guide-menu-card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(255,160,40,.45);
+    box-shadow:0 18px 42px rgba(255,130,0,.16);
+}
+
+.guide-menu-card h2{
+    color:#ffb347;
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.guide-menu-card p{
+    color:#bbb;
+    font-size:15px;
 }

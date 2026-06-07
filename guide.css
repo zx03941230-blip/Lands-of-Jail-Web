@@ -1,0 +1,303 @@
+/* =========================================
+   Guide CSS | 攻略頁專用樣式
+   Developed by Weber Chang
+========================================= */
+
+/* =========================================
+   01. Guide Section | 攻略內容區塊
+========================================= */
+
+.guide-section{
+    margin-bottom:48px;
+}
+
+.guide-title{
+    color:#ffb347;
+    font-size:32px;
+    font-weight:900;
+    margin-bottom:24px;
+}
+
+/* =========================================
+   02. Guide Card | 表格外框卡片
+========================================= */
+
+.guide-card{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:20px;
+    padding:14px;
+    overflow-x:auto;
+}
+
+/* =========================================
+   03. Guide Table | 攻略表格
+========================================= */
+
+.guide-table{
+    width:100%;
+    min-width:720px;
+    border-collapse:collapse;
+    color:#f6f1e8;
+}
+
+.guide-table th{
+    background:#5a2a88;
+    color:#fff;
+    padding:12px;
+    border:1px solid rgba(255,255,255,.18);
+    text-align:center;
+}
+
+.guide-table td{
+    padding:12px;
+    border:1px solid rgba(255,255,255,.12);
+    text-align:center;
+    background:#161616;
+}
+
+.guide-table tbody tr:nth-child(even) td{
+    background:#1f1f1f;
+}
+
+.guide-table td:last-child{
+    color:#ffb347;
+    font-weight:900;
+}
+
+/* =========================================
+   04. Highlight / Total | 高亮與總計列
+========================================= */
+
+.highlight{
+    color:#ffb347;
+    font-weight:900;
+}
+
+.total-row td{
+    background:#050505 !important;
+    color:#fff;
+    font-weight:900;
+}
+
+.total-row td:last-child{
+    color:#ffb347;
+}
+
+/* =========================================
+   05. Guide Progress | 攻略完成進度
+========================================= */
+
+.guide-progress-box{
+    margin:0 0 24px;
+    max-width:480px;
+}
+
+.guide-progress-head{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    color:#cfc7bb;
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.guide-progress-head strong{
+    color:#ffb347;
+}
+
+.guide-progress{
+    height:10px;
+    background:#222;
+    border-radius:999px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.10);
+}
+
+.guide-progress-bar{
+    width:22.22%;
+    height:100%;
+    background:linear-gradient(90deg,#ff9900,#ffc15a);
+}
+
+/* =========================================
+   06. Guide Menu | 攻略首頁卡片
+========================================= */
+
+.guide-menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    gap:18px;
+    margin-top:24px;
+}
+
+.guide-menu-card{
+    display:block;
+    position:relative;
+    min-height:124px;
+    text-decoration:none;
+    color:#f6f1e8;
+    background:linear-gradient(180deg,#202020,#151515);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:22px;
+    padding:22px;
+    box-shadow:0 14px 32px rgba(0,0,0,.28);
+    transition:.22s;
+}
+
+a.guide-menu-card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(255,160,40,.45);
+    box-shadow:0 18px 42px rgba(255,130,0,.16);
+}
+
+.guide-menu-card h2{
+    color:#ffb347;
+    font-size:22px;
+    margin-top:26px;
+    margin-bottom:8px;
+}
+
+.guide-menu-card p{
+    color:#bbb;
+    font-size:15px;
+}
+
+/* =========================================
+   07. Guide Status | 攻略製作狀態
+========================================= */
+
+.guide-status{
+    position:absolute;
+    top:14px;
+    right:14px;
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:900;
+}
+
+.guide-status.done{
+    background:#2e7d32;
+    color:#fff;
+}
+
+.guide-status.progress{
+    background:#ff9800;
+    color:#111;
+}
+
+.guide-status.planned{
+    background:#555;
+    color:#eee;
+}
+
+.completed-card{
+    border-color:rgba(46,125,50,.45);
+}
+
+.progress-card{
+    opacity:.82;
+    cursor:not-allowed;
+}
+
+.planned-card{
+    opacity:.65;
+    cursor:not-allowed;
+}
+
+/* =========================================
+   08. Guide Meta | 版本與資料來源
+========================================= */
+
+.guide-meta{
+    color:#999;
+    font-size:14px;
+    margin-top:8px;
+}
+
+/* =========================================
+   09. Hero Star Table | 英雄升星專用
+========================================= */
+
+.hero-star-table td{
+    font-size:20px;
+    font-weight:800;
+}
+
+.star-head{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+}
+
+.star-head img{
+    width:54px;
+    height:54px;
+    object-fit:contain;
+}
+
+.star-icon{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+}
+
+/* =========================================
+   10. Mobile Guide | 手機攻略頁
+========================================= */
+
+@media(max-width:768px){
+
+    .guide-title{
+        font-size:26px;
+    }
+
+    .guide-card{
+        padding:10px;
+    }
+
+    .guide-table{
+        min-width:680px;
+    }
+
+    .guide-table th,
+    .guide-table td{
+        padding:10px;
+        font-size:14px;
+    }
+
+    .guide-progress-box{
+        max-width:100%;
+    }
+
+    .guide-progress-head{
+        font-size:13px;
+    }
+
+    .guide-menu-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .guide-menu-card{
+        min-height:112px;
+        padding:18px;
+    }
+
+    .guide-menu-card h2{
+        font-size:20px;
+        margin-top:24px;
+    }
+
+    .star-head img{
+        width:42px;
+        height:42px;
+    }
+
+    .star-icon{
+        width:42px;
+        height:42px;
+    }
+}
