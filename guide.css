@@ -327,15 +327,6 @@ a.guide-menu-card:hover{
         height:42px;
     }
 
-    .desktop-guide-table{
-        display:none;
-    }
-
-    .mobile-hero-star-list{
-        display:grid;
-        gap:14px;
-    }
-
     .hero-star-card{
         background:linear-gradient(180deg,#202020,#151515);
         border:1px solid rgba(255,255,255,.12);
