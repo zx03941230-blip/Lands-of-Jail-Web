@@ -248,6 +248,10 @@ a.guide-menu-card:hover{
    10. Mobile Guide | 手機攻略頁
 ========================================= */
 
+.mobile-hero-star-list{
+    display:none;
+}
+
 @media(max-width:768px){
 
     .guide-title{
@@ -291,13 +295,55 @@ a.guide-menu-card:hover{
         margin-top:24px;
     }
 
-    .star-head img{
+    .star-head img,
+    .star-icon{
         width:42px;
         height:42px;
     }
 
-    .star-icon{
-        width:42px;
-        height:42px;
+    .desktop-guide-table{
+        display:none;
+    }
+
+    .mobile-hero-star-list{
+        display:grid;
+        gap:14px;
+    }
+
+    .hero-star-card{
+        background:linear-gradient(180deg,#202020,#151515);
+        border:1px solid rgba(255,255,255,.12);
+        border-radius:18px;
+        padding:16px;
+    }
+
+    .hero-star-card-title{
+        color:#ffb347;
+        font-size:22px;
+        font-weight:900;
+        margin-bottom:12px;
+    }
+
+    .hero-star-row{
+        display:flex;
+        justify-content:space-between;
+        padding:8px 0;
+        border-bottom:1px solid rgba(255,255,255,.08);
+        color:#ddd;
+    }
+
+    .hero-star-row b{
+        color:#fff;
+    }
+
+    .hero-star-row.total{
+        border-bottom:none;
+        margin-top:6px;
+        color:#ffb347;
+        font-weight:900;
+    }
+
+    .hero-star-row.total b{
+        color:#ffb347;
     }
 }
