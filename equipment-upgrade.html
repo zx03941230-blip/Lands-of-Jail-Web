@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lands of Jail 晉升材料需求一覽</title>
+    <title>裝備升品｜Lands of Jail</title>
 
-    <link rel="stylesheet" href="style.css?v=1.0.5">
-    <link rel="stylesheet" href="guide.css?v=1.0.1">
+    <script type="text/javascript" nonce="ae9296e6272744adb2ab944276e" src="//local.adguard.org?ts=1780935361761&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_0000000029187209a35899ad5920e0a0%26fn%3Dequipment-upgrade_official.html%26cd%3Dattachment%26ts%3D494704%26p%3Dfs%26cid%3D1%26sig%3D0ca052b7020a7d8c4414f6fe47308baada0095ac9e510751d81095ad25ceb5b0%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="ae9296e6272744adb2ab944276e" src="//local.adguard.org?ts=1780935361761&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="stylesheet" href="style.css?v=1.0.5">
+    <link rel="stylesheet" href="guide.css?v=1.0.3">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 <header class="topbar">
     <div>
         <h1>裝備升品</h1>
-        <p class="subtitle">Equipment-upgrade｜裝備升品材料需求</p>
+        <p class="subtitle">Equipment Upgrade｜裝備品質提升需求</p>
     </div>
 </header>
 
@@ -29,70 +29,197 @@
     <section class="guide-section">
 
         <h2 class="guide-title">
-            ⬆️ 裝備升品 Equipment-upgrade Level
+            ⬆️ 裝備升品 Equipment Upgrade
         </h2>
 
-        <div class="guide-card">
+        <div class="guide-card equipment-upgrade-scroll">
 
-            <table class="guide-table">
+            <div class="equipment-upgrade-board">
 
-                <thead>
+                <div class="equipment-upgrade-head">
+                    <div>品質 / 等級<br><span>QLTY / Lv.</span></div>
+                    <div></div>
+                    <div>需求數量<br><span>Pcs</span></div>
+                    <div></div>
+                    <div>升品後<br><span>Result</span></div>
+                </div>
 
-                    <tr>
+                <!-- 起始品質 -->
+                <div class="equipment-upgrade-row start-row">
 
-                        <th>星級</th>
-                        <th>Recruit</th>
-                        <th>Part 1</th>
-                        <th>Part 2</th>
-                        <th>Part 3</th>
-                        <th>Part 4</th>
-                        <th>Part 5</th>
-                        <th>Part 6</th>
-                        <th>Total</th>
+                    <div class="upgrade-side">
+                        <span class="quality-badge legendary">傳說</span>
+                        <span class="level-badge lv100">100</span>
+                    </div>
 
-                    </tr>
+                    <div class="upgrade-plus">＋</div>
 
-                </thead>
+                    <div class="upgrade-materials-inline empty-material">
+                        起始品質，無升品材料需求
+                    </div>
 
-                <tbody>
+                    <div class="upgrade-row-arrow">➡</div>
 
-                    <tr>
+                    <div class="upgrade-side result-empty">—</div>
 
-                        <td>1★</td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
+                </div>
 
-                        <td class="highlight">
-                            20
-                        </td>
+                <!-- 傳說T1 → 傳說T2 -->
+                <div class="equipment-upgrade-row">
 
-                    </tr>
+                    <div class="upgrade-side">
+                        <span class="quality-badge legendary">傳說T1</span>
+                        <span class="level-badge lv120">120</span>
+                    </div>
 
-                    <tr>
+                    <div class="upgrade-plus">＋</div>
 
-                        <td>2★</td>
-                        <td>-</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>15</td>
+                    <div class="upgrade-materials-inline">
+                        <div class="material-pair">
+                            <span class="material-count">600</span>
+                            <img src="images/guide/materials/magnet.png" alt="磁鐵">
+                        </div>
 
-                        <td class="highlight">
-                            40
-                        </td>
+                        <div class="material-pair">
+                            <span class="material-count">20</span>
+                            <img src="images/guide/materials/potential-coil.png" alt="潛能線圈">
+                        </div>
+                    </div>
 
-                    </tr>
+                    <div class="upgrade-row-arrow">➡</div>
 
-                </tbody>
+                    <div class="upgrade-side">
+                        <span class="quality-badge legendary">傳說T2</span>
+                        <span class="level-badge lv120">120</span>
+                    </div>
 
-            </table>
+                </div>
+
+                <!-- 傳說T2 → 巔峰 -->
+                <div class="equipment-upgrade-row">
+
+                    <div class="upgrade-side">
+                        <span class="quality-badge legendary">傳說T2</span>
+                        <span class="level-badge lv140">140</span>
+                    </div>
+
+                    <div class="upgrade-plus">＋</div>
+
+                    <div class="upgrade-materials-inline">
+                        <div class="material-pair">
+                            <span class="material-count">1,000</span>
+                            <img src="images/guide/materials/magnet.png" alt="磁鐵">
+                        </div>
+
+                        <div class="material-pair">
+                            <span class="material-count">40</span>
+                            <img src="images/guide/materials/potential-coil.png" alt="潛能線圈">
+                        </div>
+                    </div>
+
+                    <div class="upgrade-row-arrow">➡</div>
+
+                    <div class="upgrade-side">
+                        <span class="quality-badge mythic">巔峰</span>
+                        <span class="level-badge lv140">140</span>
+                    </div>
+
+                </div>
+
+                <!-- 巔峰 → 巔峰T1 -->
+                <div class="equipment-upgrade-row">
+
+                    <div class="upgrade-side">
+                        <span class="quality-badge mythic">巔峰</span>
+                        <span class="level-badge lv160">160</span>
+                    </div>
+
+                    <div class="upgrade-plus">＋</div>
+
+                    <div class="upgrade-materials-inline">
+                        <div class="material-pair">
+                            <span class="material-count">1,000</span>
+                            <img src="images/guide/materials/magnet.png" alt="磁鐵">
+                        </div>
+
+                        <div class="material-pair">
+                            <span class="material-count">60</span>
+                            <img src="images/guide/materials/potential-coil.png" alt="潛能線圈">
+                        </div>
+                    </div>
+
+                    <div class="upgrade-row-arrow">➡</div>
+
+                    <div class="upgrade-side">
+                        <span class="quality-badge mythic">巔峰T1</span>
+                        <span class="level-badge lv160">160</span>
+                    </div>
+
+                </div>
+
+                <!-- 巔峰T1 → 巔峰T2 -->
+                <div class="equipment-upgrade-row">
+
+                    <div class="upgrade-side">
+                        <span class="quality-badge mythic">巔峰T1</span>
+                        <span class="level-badge lv180">180</span>
+                    </div>
+
+                    <div class="upgrade-plus">＋</div>
+
+                    <div class="upgrade-materials-inline">
+                        <div class="material-pair">
+                            <span class="material-count">2,000</span>
+                            <img src="images/guide/materials/magnet.png" alt="磁鐵">
+                        </div>
+
+                        <div class="material-pair">
+                            <span class="material-count">80</span>
+                            <img src="images/guide/materials/potential-coil.png" alt="潛能線圈">
+                        </div>
+                    </div>
+
+                    <div class="upgrade-row-arrow">➡</div>
+
+                    <div class="upgrade-side">
+                        <span class="quality-badge mythic">巔峰T2</span>
+                        <span class="level-badge lv180">180</span>
+                    </div>
+
+                </div>
+
+                <!-- 巔峰T2 → 巔峰T3 -->
+                <div class="equipment-upgrade-row">
+
+                    <div class="upgrade-side">
+                        <span class="quality-badge mythic">巔峰T2</span>
+                        <span class="level-badge lv200">200</span>
+                    </div>
+
+                    <div class="upgrade-plus">＋</div>
+
+                    <div class="upgrade-materials-inline">
+                        <div class="material-pair">
+                            <span class="material-count">2,000</span>
+                            <img src="images/guide/materials/magnet.png" alt="磁鐵">
+                        </div>
+
+                        <div class="material-pair">
+                            <span class="material-count">100</span>
+                            <img src="images/guide/materials/potential-coil.png" alt="潛能線圈">
+                        </div>
+                    </div>
+
+                    <div class="upgrade-row-arrow">➡</div>
+
+                    <div class="upgrade-side">
+                        <span class="quality-badge mythic">巔峰T3</span>
+                        <span class="level-badge lv200">200</span>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -102,10 +229,9 @@
 
 <footer>
     Developed by Weber Chang
-    
+
     <div class="guide-meta">
-        Version：2026-06-07 ｜ 
-        Source：Players collect in the game
+        Version：2026-06-08 ｜ Source：Players collect in the game
     </div>
 </footer>
 
