@@ -464,6 +464,46 @@ a.guide-menu-card:hover{
 }
 
 /* =========================================
+   11A. Equipment Upgrade Mobile Cards | 裝備升品手機卡片版
+========================================= */
+
+.equipment-mobile-view{
+    display:none;
+}
+
+.equipment-mobile-card{
+    background:linear-gradient(180deg,#203a66,#182f56);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:18px;
+    padding:18px;
+    margin-bottom:16px;
+    box-shadow:0 14px 32px rgba(0,0,0,.28);
+}
+
+.equipment-mobile-from,
+.equipment-mobile-to{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.equipment-mobile-materials{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    margin:18px 0;
+}
+
+.equipment-mobile-arrow{
+    text-align:center;
+    color:#ffb347;
+    font-size:28px;
+    font-weight:900;
+    margin-bottom:14px;
+}
+
+/* =========================================
    12. Exclusive Equipment | 英雄專屬裝備專用
 ========================================= */
 
