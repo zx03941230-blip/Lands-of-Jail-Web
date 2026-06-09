@@ -287,95 +287,87 @@ a.guide-menu-card:hover{
     margin:0 auto;
 }
 
+
+
 /* =========================================
-   11. Equipment Upgrade Card | 裝備升品專用
+   11. Equipment Upgrade Official Board | 裝備升品官方攻略版
 ========================================= */
 
-.upgrade-path-card{
-    background:linear-gradient(180deg,#202020,#151515);
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:20px;
-    padding:24px;
-    margin-bottom:20px;
+.equipment-upgrade-scroll{
+    overflow-x:auto;
 }
 
-.start-card{
-    text-align:center;
+.equipment-upgrade-board{
+    min-width:860px;
+    max-width:980px;
+    margin:0 auto;
+    padding:14px;
+    border-radius:18px;
+    background:#203a66;
+    border:1px solid rgba(255,255,255,.16);
+    box-shadow:0 18px 42px rgba(0,0,0,.28);
 }
 
-.upgrade-header{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:12px;
-    margin-bottom:20px;
-}
-
-.upgrade-from,
-.upgrade-to{
-    text-align:center;
-    font-size:28px;
-    font-weight:900;
-}
-
-.upgrade-note{
-    color:#bbb;
-    font-size:15px;
-    margin-top:10px;
-}
-
-.upgrade-materials{
-    display:flex;
-    justify-content:center;
-    gap:50px;
-    margin:24px 0;
-}
-
-.material-item{
-    display:flex;
-    flex-direction:column;
+.equipment-upgrade-head,
+.equipment-upgrade-row{
+    display:grid;
+    grid-template-columns:220px 48px 1fr 64px 220px;
     align-items:center;
     gap:10px;
 }
 
-.material-item img{
-    width:72px;
-    height:72px;
-    object-fit:contain;
-}
-
-.material-item span{
-    font-size:24px;
+.equipment-upgrade-head{
+    color:#111;
+    background:#e8e8e8;
+    border-radius:10px 10px 0 0;
+    padding:10px 12px;
+    font-size:22px;
     font-weight:900;
-    color:#fff;
+    text-align:center;
 }
 
-.upgrade-arrow{
-    text-align:center;
-    font-size:42px;
-    color:#ffb347;
-    margin-bottom:18px;
+.equipment-upgrade-head span{
+    font-size:18px;
+    font-weight:700;
+}
+
+.equipment-upgrade-row{
+    padding:8px 12px;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.equipment-upgrade-row:last-child{
+    border-bottom:none;
+}
+
+.upgrade-side{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    white-space:nowrap;
 }
 
 .quality-badge,
 .level-badge{
     display:inline-flex;
-    justify-content:center;
     align-items:center;
-    font-weight:900;
+    justify-content:center;
     color:#fff;
+    font-weight:900;
+    line-height:1;
 }
 
 .quality-badge{
     min-width:96px;
-    padding:8px 14px;
-    border-radius:12px;
+    padding:7px 12px;
+    border-radius:10px;
     font-size:24px;
 }
 
 .level-badge{
-    min-width:72px;
-    padding:8px 14px;
+    min-width:64px;
+    padding:7px 12px;
     border-radius:999px;
     font-size:24px;
 }
@@ -383,7 +375,7 @@ a.guide-menu-card:hover{
 .legendary,
 .legendary-t1,
 .legendary-t2{
-    background:#f28a34;
+    background:#f47f28;
 }
 
 .mythic,
@@ -417,6 +409,60 @@ a.guide-menu-card:hover{
     background:#d70000;
 }
 
+.upgrade-plus,
+.upgrade-row-arrow{
+    color:#c9d4e8;
+    font-weight:900;
+    text-align:center;
+    line-height:1;
+}
+
+.upgrade-plus{
+    font-size:38px;
+}
+
+.upgrade-row-arrow{
+    font-size:34px;
+}
+
+.upgrade-materials-inline{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:34px;
+    min-height:60px;
+}
+
+.material-pair{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    width:88px;
+    flex-shrink:0;
+}
+
+.material-pair img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+    border-radius:8px;
+}
+
+.material-count{
+    min-width:72px;
+    color:#fff;
+    font-size:26px;
+    font-weight:900;
+    text-align:right;
+}
+
+.material-empty{
+    width:88px;
+    height:48px;
+    flex-shrink:0;
+}
+
 /* =========================================
    12. Exclusive Equipment | 英雄專屬裝備專用
 ========================================= */
@@ -442,6 +488,8 @@ a.guide-menu-card:hover{
 .exclusive-pack-table td{
     white-space:nowrap;
 }
+
+
 
 /* =========================================
    13. Mobile Guide | 手機攻略頁
@@ -537,241 +585,7 @@ a.guide-menu-card:hover{
         width:45%;
     }
 
-    /* 13-10. Equipment Upgrade | 裝備升品卡片手機版 */
-    .upgrade-path-card{
-        padding:18px;
-    }
-
-    .upgrade-header{
-        gap:8px;
-    }
-
-    .quality-badge{
-        min-width:82px;
-        font-size:20px;
-        padding:7px 10px;
-    }
-
-    .level-badge{
-        min-width:60px;
-        font-size:20px;
-        padding:7px 10px;
-    }
-
-    .upgrade-materials{
-        gap:28px;
-    }
-
-    .material-item img{
-        width:58px;
-        height:58px;
-    }
-
-    .material-item span{
-        font-size:20px;
-    }
-
-    /* 13-11. Exclusive Equipment | 專屬裝備手機版 */
-    .exclusive-layout{
-        grid-template-columns:1fr;
-    }
-
-    .exclusive-equipment-table,
-    .exclusive-pack-table{
-        width:100%;
-        min-width:0;
-    }
-
-    .exclusive-equipment-table th,
-    .exclusive-equipment-table td,
-    .exclusive-pack-table th,
-    .exclusive-pack-table td{
-        padding:12px 10px;
-        font-size:14px;
-    }
-}
-
-
-/* =========================================
-   14. Equipment Upgrade Official Board | 裝備升品官方攻略版
-========================================= */
-
-.equipment-upgrade-scroll{
-    overflow-x:auto;
-}
-
-.equipment-upgrade-board{
-    min-width:860px;
-    max-width:980px;
-    margin:0 auto;
-    padding:14px;
-    border-radius:18px;
-    background:#203a66;
-    border:1px solid rgba(255,255,255,.16);
-    box-shadow:0 18px 42px rgba(0,0,0,.28);
-}
-
-.equipment-upgrade-head,
-.equipment-upgrade-row{
-    display:grid;
-    grid-template-columns:220px 48px 1fr 64px 220px;
-    align-items:center;
-    gap:10px;
-}
-
-.equipment-upgrade-head{
-    color:#111;
-    background:#e8e8e8;
-    border-radius:10px 10px 0 0;
-    padding:10px 12px;
-    font-size:22px;
-    font-weight:900;
-    text-align:center;
-}
-
-.equipment-upgrade-head span{
-    font-size:18px;
-    font-weight:700;
-}
-
-.equipment-upgrade-row{
-    padding:8px 12px;
-    border-bottom:1px solid rgba(255,255,255,.12);
-}
-
-.equipment-upgrade-row:last-child{
-    border-bottom:none;
-}
-
-.upgrade-side{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    white-space:nowrap;
-}
-
-.equipment-upgrade-board .quality-badge{
-    min-width:96px;
-    padding:7px 12px;
-    border-radius:10px;
-    font-size:24px;
-    line-height:1;
-}
-
-.equipment-upgrade-board .level-badge{
-    min-width:64px;
-    padding:7px 12px;
-    border-radius:999px;
-    font-size:24px;
-    line-height:1;
-}
-
-.upgrade-plus{
-    color:#c9d4e8;
-    font-size:38px;
-    font-weight:900;
-    text-align:center;
-    line-height:1;
-}
-
-.upgrade-row-arrow{
-    color:#c9d4e8;
-    font-size:34px;
-    font-weight:900;
-    text-align:center;
-    line-height:1;
-}
-
-.upgrade-materials-inline{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:34px;
-    min-height:60px;
-}
-
-.material-pair{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.material-pair img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
-    border-radius:8px;
-}
-
-.material-count{
-    color:#fff;
-    min-width:72px;
-    font-size:26px;
-    font-weight:900;
-    text-align:right;
-}
-
-.empty-material{
-    color:#d7deea;
-    font-size:16px;
-    font-weight:700;
-}
-
-.result-empty{
-    color:rgba(255,255,255,.35);
-    font-size:24px;
-    font-weight:900;
-}
-
-.equipment-upgrade-board .legendary,
-.equipment-upgrade-board .legendary-t1,
-.equipment-upgrade-board .legendary-t2{
-    background:#f47f28;
-    color:#fff;
-}
-
-.equipment-upgrade-board .mythic,
-.equipment-upgrade-board .mythic-t1,
-.equipment-upgrade-board .mythic-t2,
-.equipment-upgrade-board .mythic-t3{
-    background:#d60000;
-    color:#fff;
-}
-
-.equipment-upgrade-board .lv100{
-    background:#777;
-    color:#fff;
-}
-
-.equipment-upgrade-board .lv120{
-    background:#08cfae;
-    color:#fff;
-}
-
-.equipment-upgrade-board .lv140{
-    background:#1498ff;
-    color:#fff;
-}
-
-.equipment-upgrade-board .lv160{
-    background:#e68aff;
-    color:#fff;
-}
-
-.equipment-upgrade-board .lv180{
-    background:#f08a2b;
-    color:#fff;
-}
-
-.equipment-upgrade-board .lv200{
-    background:#d70000;
-    color:#fff;
-}
-
-@media(max-width:768px){
-
-    /* 14-1. Equipment Upgrade Official Board | 裝備升品官方表手機版橫向滑動 */
+    /* 13-10. Equipment Upgrade Official Board | 裝備升品官方表手機版橫向滑動 */
     .equipment-upgrade-board{
         min-width:760px;
         padding:10px;
@@ -792,13 +606,13 @@ a.guide-menu-card:hover{
         font-size:14px;
     }
 
-    .equipment-upgrade-board .quality-badge{
+    .quality-badge{
         min-width:78px;
         font-size:19px;
         padding:7px 9px;
     }
 
-    .equipment-upgrade-board .level-badge{
+    .level-badge{
         min-width:54px;
         font-size:19px;
         padding:7px 9px;
@@ -817,7 +631,8 @@ a.guide-menu-card:hover{
     }
 
     .material-pair{
-        gap:8px;
+        width:76px;
+        gap:6px;
     }
 
     .material-pair img{
@@ -830,7 +645,28 @@ a.guide-menu-card:hover{
         font-size:21px;
     }
 
-    .empty-material{
+    .material-empty{
+        width:76px;
+        height:40px;
+        flex-shrink:0;
+    }
+
+    /* 13-11. Exclusive Equipment | 專屬裝備手機版 */
+    .exclusive-layout{
+        grid-template-columns:1fr;
+    }
+
+    .exclusive-equipment-table,
+    .exclusive-pack-table{
+        width:100%;
+        min-width:0;
+    }
+
+    .exclusive-equipment-table th,
+    .exclusive-equipment-table td,
+    .exclusive-pack-table th,
+    .exclusive-pack-table td{
+        padding:12px 10px;
         font-size:14px;
     }
 }
