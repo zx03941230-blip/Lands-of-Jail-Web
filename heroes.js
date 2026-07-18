@@ -2506,11 +2506,11 @@ const HEROES = [
       "templateEn": "Tyronn's brutality echoes throughout the Isle of the Banished, boosting Lethality of all allied troops by {A}% without him even stepping onto the battlefield.",
       "maxLevel": 5,
       "levels": {
-        "1": { "A": "3", "B": "", "C": "" },
-        "2": { "A": "6", "B": "", "C": "" },
-        "3": { "A": "9", "B": "", "C": "" },
-        "4": { "A": "12", "B": "", "C": "" },
-        "5": { "A": "15", "B": "", "C": "" }
+        "1": { "A": "3", "B": "-", "C": "-" },
+        "2": { "A": "6", "B": "-", "C": "-" },
+        "3": { "A": "9", "B": "-", "C": "-" },
+        "4": { "A": "12", "B": "-", "C": "-" },
+        "5": { "A": "15", "B": "-", "C": "-" }
       },
       "image": "泰倫_全域加成_嗜血狂熱.png"
     },
@@ -2626,11 +2626,11 @@ const HEROES = [
         "templateEn": "Increase all allied heroes ATK by {A}%.",
         "maxLevel": 5,
         "levels": {
-        "1": { "A": "", "B": "", "C": "" },
-        "2": { "A": "", "B": "", "C": "" },
-        "3": { "A": "", "B": "", "C": "" },
-        "4": { "A": "", "B": "", "C": "" },
-        "5": { "A": "", "B": "", "C": "" }
+        "1": { "A": "-", "B": "-", "C": "-" },
+        "2": { "A": "-", "B": "-", "C": "-" },
+        "3": { "A": "-", "B": "-", "C": "-" },
+        "4": { "A": "-", "B": "-", "C": "-" },
+        "5": { "A": "-", "B": "-", "C": "-" }
         },
         "image": "泰倫_緝捕裝備技能_破壞欲.png"
       },
@@ -2675,11 +2675,11 @@ const HEROES = [
       "templateEn": "Phoenix's legend echoes throughout the Isle of the Banished, boosting ATK of all allied troops by {A}% without her even stepping onto the battlefield.",
       "maxLevel": 5,
       "levels": {
-        "1": { "A": "3", "B": "", "C": "" },
-        "2": { "A": "6", "B": "", "C": "" },
-        "3": { "A": "9", "B": "", "C": "" },
-        "4": { "A": "12", "B": "", "C": "" },
-        "5": { "A": "15", "B": "", "C": "" }
+        "1": { "A": "3", "B": "-", "C": "-" },
+        "2": { "A": "6", "B": "-", "C": "-" },
+        "3": { "A": "9", "B": "-", "C": "-" },
+        "4": { "A": "12", "B": "-", "C": "-" },
+        "5": { "A": "15", "B": "-", "C": "-" }
       },
       "image": "鳳鳴_全域加成_英名遠揚.png"
     },
@@ -3824,11 +3824,11 @@ const HEROES = [
       "templateEn": "Alph is flawless and beloved by all. Without stepping onto the battlefield, she boosts morale, increasing DEF of all allied troops by {A}%.",
       "maxLevel": 5,
       "levels": {
-        "1": { "A": "3", "B": "", "C": "" },
-        "2": { "A": "6", "B": "", "C": "" },
-        "3": { "A": "9", "B": "", "C": "" },
-        "4": { "A": "12", "B": "", "C": "" },
-        "5": { "A": "15", "B": "", "C": "" }
+        "1": { "A": "3", "B": "-", "C": "-" },
+        "2": { "A": "6", "B": "-", "C": "-" },
+        "3": { "A": "9", "B": "-", "C": "-" },
+        "4": { "A": "12", "B": "-", "C": "-" },
+        "5": { "A": "15", "B": "-", "C": "-" }
       },
       "image": "愛爾芙_全域加成_璀璨靈光.png"
     },
@@ -4109,11 +4109,11 @@ const HEROES = [
         "templateEn": "ATK increase {A}% Effect can stack multiple till end",
         "maxLevel": 5,
         "levels": {
-        "1": { "A": "", "B": "", "C": "" },
-        "2": { "A": "", "B": "", "C": "" },
-        "3": { "A": "", "B": "", "C": "" },
-        "4": { "A": "", "B": "", "C": "" },
-        "5": { "A": "", "B": "", "C": "" }
+        "1": { "A": "-", "B": "-", "C": "-" },
+        "2": { "A": "-", "B": "-", "C": "-" },
+        "3": { "A": "-", "B": "-", "C": "-" },
+        "4": { "A": "-", "B": "-", "C": "-" },
+        "5": { "A": "-", "B": "-", "C": "-" }
         },
         "image": "蘭切斯特_緝捕裝備技能_火力除錯.png"
       },
@@ -4274,11 +4274,11 @@ const HEROES = [
         "templateEn": "Increase DMG dealt to targe with HP below 40% by {A}%.",
         "maxLevel": 5,
         "levels": {
-        "1": { "A": "", "B": "", "C": "" },
-        "2": { "A": "", "B": "", "C": "" },
-        "3": { "A": "", "B": "", "C": "" },
-        "4": { "A": "", "B": "", "C": "" },
-        "5": { "A": "", "B": "", "C": "" }
+        "1": { "A": "-", "B": "-", "C": "-" },
+        "2": { "A": "-", "B": "-", "C": "-" },
+        "3": { "A": "-", "B": "-", "C": "-" },
+        "4": { "A": "-", "B": "-", "C": "-" },
+        "5": { "A": "-", "B": "-", "C": "-" }
         },
         "image": "彌蕾雅_緝捕裝備技能_索命之弦.png"
       },
@@ -4439,11 +4439,11 @@ const HEROES = [
         "templateEn": "Attack of the units increase {A}% for 5 sec.",
         "maxLevel": 5,
         "levels": {
-        "1": { "A": "", "B": "", "C": "" },
-        "2": { "A": "", "B": "", "C": "" },
-        "3": { "A": "", "B": "", "C": "" },
-        "4": { "A": "", "B": "", "C": "" },
-        "5": { "A": "", "B": "", "C": "" }
+        "1": { "A": "-", "B": "-", "C": "-" },
+        "2": { "A": "-", "B": "-", "C": "-" },
+        "3": { "A": "-", "B": "-", "C": "-" },
+        "4": { "A": "-", "B": "-", "C": "-" },
+        "5": { "A": "-", "B": "-", "C": "-" }
         },
         "image": "玄明_緝捕裝備技能_醉裡乾坤.png"
       },
@@ -4818,11 +4818,11 @@ const HEROES = [
       "templateEn": "Veronica shares her shadow concealment techniques with the troops. Without deploying, she boosts HP of all allied troops by {A}%.",
       "maxLevel": 5,
       "levels": {
-        "1": { "A": "3", "B": "", "C": "" },
-        "2": { "A": "6", "B": "", "C": "" },
-        "3": { "A": "9", "B": "", "C": "" },
-        "4": { "A": "12", "B": "", "C": "" },
-        "5": { "A": "15", "B": "", "C": "" }
+        "1": { "A": "3", "B": "-", "C": "-" },
+        "2": { "A": "6", "B": "-", "C": "-" },
+        "3": { "A": "9", "B": "-", "C": "-" },
+        "4": { "A": "12", "B": "-", "C": "-" },
+        "5": { "A": "15", "B": "-", "C": "-" }
       },
       "image": "維羅妮卡_全域加成_虛無遁形.png"
     },
@@ -5317,11 +5317,11 @@ const HEROES = [
       "templateEn": "Koschevoi's artillery possesses exceptional range and remarkable accuracy. Without deploying, he can provide fire support, increasing ATK of all allied troops by {A}%.",
       "maxLevel": 5,
       "levels": {
-        "1": { "A": "3", "B": "", "C": "" },
-        "2": { "A": "6", "B": "", "C": "" },
-        "3": { "A": "9", "B": "", "C": "" },
-        "4": { "A": "12", "B": "", "C": "" },
-        "5": { "A": "15", "B": "", "C": "" }
+        "1": { "A": "3", "B": "-", "C": "-" },
+        "2": { "A": "6", "B": "-", "C": "-" },
+        "3": { "A": "9", "B": "-", "C": "-" },
+        "4": { "A": "12", "B": "-", "C": "-" },
+        "5": { "A": "15", "B": "-", "C": "-" }
       },
       "image": "科舍沃伊_全域加成_神奇重炮.png"
     },
@@ -5981,11 +5981,11 @@ const HEROES = [
       "templateEn": "Edwin presents evidence, leaving his targets with no escape from justice. When not deployed, he increases Lethality of all allied troops by {A}%.",
       "maxLevel": 5,
       "levels": {
-        "1": { "A": "3", "B": "", "C": "" },
-        "2": { "A": "6", "B": "", "C": "" },
-        "3": { "A": "9", "B": "", "C": "" },
-        "4": { "A": "12", "B": "", "C": "" },
-        "5": { "A": "15", "B": "", "C": "" }
+        "1": { "A": "3", "B": "-", "C": "-" },
+        "2": { "A": "6", "B": "-", "C": "-" },
+        "3": { "A": "9", "B": "-", "C": "-" },
+        "4": { "A": "12", "B": "-", "C": "-" },
+        "5": { "A": "15", "B": "-", "C": "-" }
       },
       "image": "埃德溫_全域加成_罪證鎖定.png"
     },
@@ -6480,11 +6480,11 @@ const HEROES = [
       "templateEn": "Worrell's programming contains unexpected potential. Without deploying, he increases DEF of all allied troops by {A}%.",
       "maxLevel": 5,
       "levels": {
-        "1": { "A": "3", "B": "", "C": "" },
-        "2": { "A": "6", "B": "", "C": "" },
-        "3": { "A": "9", "B": "", "C": "" },
-        "4": { "A": "12", "B": "", "C": "" },
-        "5": { "A": "15", "B": "", "C": "" }
+        "1": { "A": "3", "B": "-", "C": "-" },
+        "2": { "A": "6", "B": "-", "C": "-" },
+        "3": { "A": "9", "B": "-", "C": "-" },
+        "4": { "A": "12", "B": "-", "C": "-" },
+        "5": { "A": "15", "B": "-", "C": "-" }
       },
       "image": "沃瑞爾_全域加成_悖論啟示.png"
     },
@@ -6600,8 +6600,8 @@ const HEROES = [
         "templateEn": "For each Hero or Prisoner Power Armor(ally or enemy)destroyed,  all allied Heroes and Prisoner Power Armors' DMG taken reduced by {A}% and DMG dealt increased by {B}%.",
         "maxLevel": 5,
         "levels": {
-        "1": { "A": "40", "B": "40", "C": "-" },
-        "2": { "A": "80", "B": "80", "C": "-" },
+        "1": { "A": "0.4", "B": "0.4", "C": "-" },
+        "2": { "A": "0.8", "B": "0.8", "C": "-" },
         "3": { "A": "1.2", "B": "1.2", "C": "-" },
         "4": { "A": "1.6", "B": "1.6", "C": "-" },
         "5": { "A": "2", "B": "2", "C": "-" }
