@@ -23,7 +23,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -178,7 +178,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -333,7 +333,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -488,7 +488,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -643,7 +643,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -798,7 +798,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -953,7 +953,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -1108,7 +1108,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -1263,7 +1263,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -1418,7 +1418,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -1573,7 +1573,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -1728,7 +1728,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -1883,7 +1883,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -2038,7 +2038,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -2193,7 +2193,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -2348,7 +2348,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -2841,7 +2841,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -3006,7 +3006,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -3171,7 +3171,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -3336,7 +3336,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -3501,7 +3501,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -3656,7 +3656,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -3990,7 +3990,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -4155,7 +4155,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -4320,7 +4320,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -4485,7 +4485,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -4650,7 +4650,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -4984,7 +4984,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -5149,7 +5149,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -5483,7 +5483,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -5648,7 +5648,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -5813,7 +5813,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -6147,7 +6147,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -6312,7 +6312,7 @@ const HEROES = [
       "name": "-",
       "description": "-",
       "template": "-",
-      "templateEn": "",
+      "templateEn": "-",
       "maxLevel": 0,
       "levels": {
 
@@ -6431,11 +6431,11 @@ const HEROES = [
         "templateEn": "Increases HP by 30%, and increases ATK Speed of targets with Timely Supply effect by 33%.",
         "maxLevel": 5,
         "levels": {
-        "1": { "A": "", "B": "", "C": "" },
-        "2": { "A": "", "B": "", "C": "" },
-        "3": { "A": "", "B": "", "C": "" },
-        "4": { "A": "", "B": "", "C": "" },
-        "5": { "A": "", "B": "", "C": "" }
+        "1": { "A": "18", "B": "25", "C": "-" },
+        "2": { "A": "21", "B": "27", "C": "-" },
+        "3": { "A": "24", "B": "29", "C": "-" },
+        "4": { "A": "27", "B": "31", "C": "-" },
+        "5": { "A": "30", "B": "33", "C": "-" }
         },
         "image": "凱特_緝捕裝備技能_熱血起跑.png"
       },
@@ -6600,11 +6600,11 @@ const HEROES = [
         "templateEn": "For each Hero or Prisoner Power Armor(ally or enemy)destroyed,  all allied Heroes and Prisoner Power Armors' DMG taken reduced by 2% and DMG dealt increased by 2%.",
         "maxLevel": 5,
         "levels": {
-        "1": { "A": "", "B": "", "C": "" },
-        "2": { "A": "", "B": "", "C": "" },
-        "3": { "A": "", "B": "", "C": "" },
-        "4": { "A": "", "B": "", "C": "" },
-        "5": { "A": "", "B": "", "C": "" }
+        "1": { "A": "40", "B": "40", "C": "-" },
+        "2": { "A": "80", "B": "80", "C": "-" },
+        "3": { "A": "1.2", "B": "1.2", "C": "-" },
+        "4": { "A": "1.6", "B": "1.6", "C": "-" },
+        "5": { "A": "2", "B": "2", "C": "-" }
         },
         "image": "沃瑞爾_緝捕裝備技能_崩壞連鎖.png"
       },
@@ -6761,15 +6761,15 @@ const HEROES = [
         "name": "痛飲戰意",
         "nameEn": "Battle Thirst",
         "description": "攻擊力提高10%，且在[棒打狂徒]技能造成傷害時，恢復造成傷害*45%的生命值。",
-        "template": "攻擊力提高10%，且在[棒打狂徒]技能造成傷害時，恢復造成傷害*45%的生命值。",
-        "templateEn": "Increases ATK by 10%, and when Bludgeon Strike deals DMG, restores HP equal to DMG dealt * 45%.",
+        "template": "攻擊力提高{A}%，且在[棒打狂徒]技能造成傷害時，恢復造成傷害*{B}%的生命值。",
+        "templateEn": "Increases ATK by {A}%, and when Bludgeon Strike deals DMG, restores HP equal to DMG dealt * {B}%.",
         "maxLevel": 5,
         "levels": {
-        "1": { "A": "", "B": "", "C": "" },
-        "2": { "A": "", "B": "", "C": "" },
-        "3": { "A": "", "B": "", "C": "" },
-        "4": { "A": "", "B": "", "C": "" },
-        "5": { "A": "", "B": "", "C": "" }
+        "1": { "A": "6", "B": "25", "C": "-" },
+        "2": { "A": "7", "B": "30", "C": "-" },
+        "3": { "A": "8", "B": "35", "C": "-" },
+        "4": { "A": "9", "B": "40", "C": "-" },
+        "5": { "A": "10", "B": "45", "C": "-" }
         },
         "image": "悟空_緝捕裝備技能_痛飲戰意.png"
       },
@@ -6926,15 +6926,15 @@ const HEROES = [
         "name": "破堅刃齒",
         "nameEn": "Piercing Edge",
         "description": "普通攻擊有25%機率造成攻擊力*160%傷害，並令目標防禦力降低30%。",
-        "template": "普通攻擊有25%機率造成攻擊力*160%傷害，並令目標防禦力降低30%。",
-        "templateEn": "Basic Attacks have a 25% chance to deal DMG equal to ATK*160% and reduce the target's DEF by 30%.",
+        "template": "普通攻擊有25%機率造成攻擊力*{A}%傷害，並令目標防禦力降低{B}%。",
+        "templateEn": "Basic Attacks have a 25% chance to deal DMG equal to ATK*{A}% and reduce the target's DEF by {B}%.",
         "maxLevel": 5,
         "levels": {
-        "1": { "A": "", "B": "", "C": "" },
-        "2": { "A": "", "B": "", "C": "" },
-        "3": { "A": "", "B": "", "C": "" },
-        "4": { "A": "", "B": "", "C": "" },
-        "5": { "A": "", "B": "", "C": "" }
+        "1": { "A": "100", "B": "6", "C": "-" },
+        "2": { "A": "115", "B": "12", "C": "-" },
+        "3": { "A": "130", "B": "18", "C": "-" },
+        "4": { "A": "145", "B": "24", "C": "-" },
+        "5": { "A": "160", "B": "30", "C": "-" }
         },
         "image": "奧托_緝捕裝備技能_破堅刃齒.png"
       },
