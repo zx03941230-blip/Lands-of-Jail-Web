@@ -6427,8 +6427,8 @@ const HEROES = [
         "name": "熱血起跑",
         "nameEn": "Hot Start",
         "description": "生命值提升30%，並且令受到[及時補給]影響的目標攻擊速度提升33%。",
-        "template": "生命值提升30%，並且令受到[及時補給]影響的目標攻擊速度提升33%。",
-        "templateEn": "Increases HP by 30%, and increases ATK Speed of targets with Timely Supply effect by 33%.",
+        "template": "生命值提升{A}%，並且令受到[及時補給]影響的目標攻擊速度提升{B}%。",
+        "templateEn": "Increases HP by {A}%, and increases ATK Speed of targets with Timely Supply effect by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "18", "B": "25", "C": "-" },
@@ -6596,8 +6596,8 @@ const HEROES = [
         "name": "崩壞連鎖",
         "nameEn": "Collapse Chain",
         "description": "每有一個英雄或囚徒裝甲（不論敵我）被消滅，使我方全體英雄和囚徒裝甲受到傷害降低2%，造成傷害提升2%。",
-        "template": "每有一個英雄或囚徒裝甲（不論敵我）被消滅，使我方全體英雄和囚徒裝甲受到傷害降低2%，造成傷害提升2%。",
-        "templateEn": "For each Hero or Prisoner Power Armor(ally or enemy)destroyed,  all allied Heroes and Prisoner Power Armors' DMG taken reduced by 2% and DMG dealt increased by 2%.",
+        "template": "每有一個英雄或囚徒裝甲（不論敵我）被消滅，使我方全體英雄和囚徒裝甲受到傷害降低{A}%，造成傷害提升{B}%。",
+        "templateEn": "For each Hero or Prisoner Power Armor(ally or enemy)destroyed,  all allied Heroes and Prisoner Power Armors' DMG taken reduced by {A}% and DMG dealt increased by {B}%.",
         "maxLevel": 5,
         "levels": {
         "1": { "A": "40", "B": "40", "C": "-" },
